@@ -1,0 +1,30 @@
+/cd %{HOME}/tf/warlock
+/addworld -T"lp" Gosc warlock.pl 23
+/addworld -T"lp" Nazwa imie haslo_bez-spacji warlock.zdz.krakow.pl 23
+
+/set sub=full
+/set TERM=vt100
+/set histsize=30000
+/set isize=2
+/set nie_za_czesto=0
+/set wrapspace=0
+/set hiliteattr=n
+/eval /set TFDIR=$(/pwd)
+/eval /set TFPATH=%{TFDIR} %{TFLIBDIR} %{HOME}
+/histsize -g 30000
+/histsize -i 3000
+/histsize -l 3000
+
+/require alias.tf
+/require spedwalk.tf
+/require kbbind.tf
+/require map.tf
+/require textutil.tf
+/require lisp.tf
+/require complete.tf
+/require relog.tf
+/require kbstack.tf
+/require at.tf
+/load warlock.tf
+
+/repeat -1800 1000 !nagraj

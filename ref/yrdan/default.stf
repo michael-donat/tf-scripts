@@ -1,0 +1,52 @@
+; ## Linie dodane automagicznie   : tf_ver=1.0.2
+; ## 
+; ## Wersja pliku                 : 1.0.2
+; ## Ostatnia zmiana pliku        : 2005-01-23 00:52:42
+; ## Plik pobrany                 : 2005-01-23 00:53:16
+; ## 
+; ##
+; Plik schematu kolorystycznego dla tf-a
+; Autor: Ingwar
+; Data: dzis :)
+warn_rozpada=r
+warn_peka=r
+warn_atakujecie=BCgreen
+
+; Lokalne informacje jakim kolorkiem maja byc wyswietlane
+info_local=Cgreen
+info_blocal=BCgreen
+
+info_zaplata=B
+info_golab=bBCmagenta
+info_tell=bBCmagenta
+
+; smocze ogry (duze i bardzo duze)
+info_sogr=Cyellow
+info_psogr=BCyellow
+
+; duze repty
+info_rept=BCyellow
+
+; poziomy graczy
+info_poziom=B
+
+; braki do nastepnych poziomow (medytacja)
+info_gbrak=B
+
+; stan oraz czas przetrwania sprzetu
+info_stansprzetu=B
+info_czassprzetu=B
+
+; sprzet na sobie, przy sobie oraz w dloni
+info_nasobie=BCgreen
+info_przysobie=Cgreen
+info_wrekach=BCmagenta
+info_naplecach=Cmagenta
+
+; Komunikacja
+mowa_mowi=BCred
+mowa_krzyczy=BCyellow
+mowa_pyta=BCyellow
+mowa_szepce=BCyellow
+mowa_inne=Cwhite
+

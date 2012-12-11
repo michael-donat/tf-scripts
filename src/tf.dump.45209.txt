@@ -1,0 +1,81 @@
+# TinyFugue debugging information
+
+> TinyFugue version 5.0 beta 8
+> Darwin Darwin Kernel Version 12.2.0: Sat Aug 25 00:48:52 PDT 2012; root:xnu-2050.18.24~1/RELEASE_X86_64 12.2.0
+> +256colors -core +float +ftime +history -IPv6 +locale +MCCPv1 +MCCPv2 +process -SOCKS +ssl +subsecond +TZ
+> virtscreen=1, visual=1, expnonvis=0, emulation=3, lp=1, sub=0
+> TERM="xterm"
+> cmd="(NULL)"
+> Internal error:  macro.c, line 1101
+> dSfree: links==-1
+
+Reading symbols for shared libraries ....... done
+/Users/thornag/Development/projects/TF/src/45209: No such file or directory
+Attaching to program: `/usr/local/bin/tf', process 45209.
+Reading symbols for shared libraries + done
+Reading symbols for shared libraries +++++++.............................. done
+Reading symbols for shared libraries + done
+0x00007fff87e45698 in __wait4 ()
+$1 = "xsock:"
+$2 = 0x7fe090ca05b0 "arkadia"
+$3 = 0x7fe090ca05c0 "arkadia.rpg.pl"
+$4 = 0x7fe090ca05d0 "23"
+$5 = "fsock:"
+$6 = 0x7fe090ca05b0 "arkadia"
+$7 = 0x7fe090ca05c0 "arkadia.rpg.pl"
+$8 = 0x7fe090ca05d0 "23"
+#0  0x00007fff87e45698 in __wait4 ()
+No symbol table info available.
+#1  0x00000001025229a2 in debugger_dump () at signals.c:536
+	status = 0
+	child_pid = 33554439
+	tf_pid = 45209
+	exename = 0x7fff5d707cf8 "tf"
+#2  0x0000000102522b60 in crash (internal=1952915616, fmt=0x10253b6d0 "dSfree: links==%d", file=0x10253ce99 "macro.c", line=1101, n=140734761040544) at signals.c:401
+	dumpfile = (FILE *) 0x2000007
+#3  0x00000001024fcf24 in dSfree (str=0xb0fc, file=0x10253ce99 "macro.c", line=1101) at dstring.c:191
+No locals.
+#4  0x000000010251217c in nuke_macro (m=0xb0fc) at macro.c:1101
+No locals.
+#5  0x00000001025122b0 in nuke_dead_macros () at macro.c:1075
+No locals.
+#6  0x000000010252a8a9 in main_loop () at socket.c:895
+	tv = {
+  tv_sec = 1, 
+  tv_usec = 539644
+}
+	refresh_tv = {
+  tv_sec = 0, 
+  tv_usec = 0
+}
+	depth = 1
+	now = {
+  tv_sec = 1355097838, 
+  tv_usec = 460356
+}
+	low_memory_msg = {{
+    data = 0x10253f6f8 "% WARNING: memory is low.  Try reducing history sizes.", 
+    len = 54, 
+    size = 55, 
+    links = 1, 
+    static_struct = 1, 
+    dynamic_struct = 0, 
+    dynamic_data = 0, 
+    resizable = 0, 
+    attrs = 0, 
+    charattrs = 0x0, 
+    time = {
+      tv_sec = -1, 
+      tv_usec = -1
+    }, 
+    file = 0x10253edd7 "socket.c", 
+    line = 658
+  }}
+	earliest = {
+  tv_sec = 1355097840, 
+  tv_usec = 0
+}
+	count = 0
+#7  0x0000000102515345 in main (argc=-1866352320, argv=0x7fff5d707be0) at main.c:218
+	argv0 = 0x7fff5d707cf8 "tf"
+	scratch = (String *) 0x2000007

@@ -1,0 +1,273 @@
+; ## Linie dodane automagicznie   : tf_ver=1.5.6
+; ## 
+; ## Wersja pliku                 : 1.5.6
+; ## Ostatnia zmiana pliku        : 2009-01-06 21:07:40
+; ## Plik pobrany                 : 2009-01-06 21:07:49
+; ## Wersja Tfupdate              : 2.0.1
+; ##
+; ##
+# 2002:05:14
+|- Powstala wersja testowa changeloga.. zobaczymy jak pojdzie..
+|  jest godzina 3:07 w nocy wiec moze mi dzis za duzo nie wyjsc.
+|- Changelog dziala.. nowa wersja skryptow w takim razie @{B}3.0.0@{n}
+|  Komu sie to bedzia chcialo czytac wszystko...
+|- Dodalem komende @{B}/top@{n} proponuje tego nie uzywac bo moze zezrec wiecej
+|  procka i pamieci niz caly tf razem wziety... ale do zabawy moze byc.
+# 2002:05:15
+|- Poprawilem triggera do pustych butelek dziala teraz tak jak powinien.
+|- Dodalem komende @{B}/zaznacz@{n} ktora jest odpowiednikiem @{B}/wrogowie@{n}.
+# 2002:06:01
+|- Pare poprawek ogolnych.. i nowa wersja @{B}3.0.1@{n}.
+# 2002:06:03
+|- Dodalem zabawke dla gladsow.. w pliku gladsi.tf.
+# 2002:07:16
+|- Ogolne poprawki i przejscie na wersje @{B}3.0.2@{n}.
+# 2002:08:02
+|- Dodalem komende @{B}/statystyka@{n} update do wersji @{B}3.0.3@{n}.
+# 2002:08:26
+|- Poprawki ogolne w zapamietywaniu i komendzie @{B}/testuj@{n},
+|  wersja @{B}3.0.4@{n}.
+|- Poprawienie otwierania bramy Mahakamu.
+# 2002:12:18
+|- Cos moze wymysle.. wersja @{B}3.0.5@{n}.
+# 2003:02:26
+|- Duzo malutkich poprawek. 
+|- Wersja @{B}3.1.0@{n} - stwierdzilem ze to bedzie wersja stabilna.
+|- Nowa komenda @{B}/bilans@{n} zrobina specjalnie na zamowienie Mola.
+|- Bindy @{B}F1-F12@{n} sa teraz zapisywane w pliku gracza i zostaja po 
+|  przelogowaniu.
+|- I plik dla mutantow :)
+# 2003:05:05
+|- Poprawka zapamietywania bo lagi byly straszne.. Wersja @{B}3.1.1@{n}
+# 2003:06:05
+|- Przesiadka na tf-a 5.0 Nie jest zle prawie wszystko dziala.
+|- Wersja @{B}4.0.0@{n} dzialajaca tylko z tf-em 5.0
+|- Duzo zmian w zapamietywanu, przepisany bilans, zmiany w specach broni :)
+|- zmiany w siadaniu na barki/tratwy teraz trzeba wklepac @{B}/statek@{n}
+# 2003:06:23
+|- Nowa komenda @{B}/rping@{n} - ping lecacy po mudzie
+|  (podaje rzeczywistego laga)
+|- Zmiany w komendzie @{B}/idz@{n} dodatkowa opcja -s"str" gdzie str wykonywany 
+|  co lokacje, zmiana ustawiania czasu z -x na x
+# 2003:07:26
+|- Drobne zmiany w zapamietywaniu. bedzie mniej bledow :P Chyba :)
+# 2003:08:08
+|- Wersja @{B}4.0.1@{n}
+|- Poprawki w zapamietywaniu osob.. 
+|- Dodanie diffa do czyszczenia imion.. wypas tylko kolorki gryza
+|- Dodanie komendy @{B}/opcje@{n} wyswietlajacej ladnie ustawienia postaci
+# 2003:09:18
+|- Wersja @{B}4.0.2@{n}
+|- Dodanie losowych opoznien przy trigerach..
+|- Dodanie dodatkowej opcji @{B}/kiershow@{n} ktora pokazuje gdzie sie idzie..
+|- Zmiana opoznien z intow na floaty, teraz bedzie jeszcze bardziej zakreconie:)
+|- @{B}/opoznienie@{n} ustawia teraz opoznienie globalne a nie tylko do 
+|  wspierania
+|- @{B}/bdaj@{n} nowa komenda do bilansu
+# 2003:10:03
+|- Wersja @{B}4.0.3@{n} dostosowana do nowego tf-a 5.0 alpha 13
+# 2003:11:19
+|- Wersja @{B}4.0.4@{n} dostosowana do nowego tf-a 5.0 alpha 14
+# 2003:12:01
+|- Wersja @{B}4.0.7@{n} taki maly przeskok wyszedl..
+|- Dodanie Strazy kupieckiej do zapamietywania
+# 2003:12:31
+|- Wersja @{B}4.0.8@{n} 
+|- Ukompatybilnienie trigow do zmian globa w nowych wersjach tf-a
+|- Wpisanie pod + na numeryczniej pierwszego dziwnego wyjscia z lokacji
+# 2004:01:23
+|- Wersja @{B}4.1.1@{n}
+|- Dodanie liczenia osob w druzynie dla prowadzacego komenda @{B}/liczenie@{n}
+|- Dla zapominalskich automagiczne wyciaganie sprzetu z plecaka 
+|  i sakiewki przed zakonczeniem
+|- Nowa calkiem ciekawa opcja.. udziwniony podglad skrzyn. Wlaczany i
+|  wylaczany komenda @{B}/skrzynia@{n}. I dodatkowo komenda @{B}/i@{n}
+|- Dorobka zaznaczania do @{B}/skrzynia@{n} jako argument wystarczy podac ciag 
+|  znakow dzielonych znakiem | np. @{B}/skrzynia topor|wielki miecz@{n}
+# 2004:02:23
+|- Wersja @{B}4.1.2@{n}
+|- Pierwsza wersja zaslaniania.. dziala kijowo ale cos tam mozna zaslonic..
+|  @{B}/zas [kogo]@{n}
+|- Zapelnienie drugiego paska stanu atakowanymi osobami z druzyny
+|- Komenda @{B}/eq@{n} dodana do skrzynia.tf
+|- Powyzej szerokosci 90 znakow komenda @{B}/um@{n} podaje cyferkowo liczby
+|- Nowa komenda do zaslon @{B}/zaso <kogo>@{n} zaslania kogokolwiek po 
+|  obejrzejrzeniu go (nie pewne bo nie zawsze sie walczy z tym kto nas leje)
+|- Sortowanie w @{B}/zabici@{n} i @{B}/zabici2@{n} uruchamiane opcja @{B}-s
+|- Nowa wersja autopogoni.. dla odmiany z opcjami bindowania i autoustawiania
+|  wrogow.
+# 2004:05:27
+|- Wersja @{B}4.2.1@{n}
+|- Komenda @{B}/autolog@{n} odpowiadajaca za automagiczne logowanie przy 
+|  starcie tf-a
+|- Zmiana nazw niektorych komend ktore byly bindowane pod F-y 
+|  jesli ktos ma text typu % No such comand or macro to nalelezy 
+|  podbindowac go od nowa z nazwa zaczynajaca sie od _ np.
+|  @{B}/f10 /_kierswitch@{n} itp..
+# 2004:07:23
+|- Poprawki skrzyni.. nie pokazuje pustych kategorii
+# 2004:07:28
+|- Dostosowanie do wersji @{B}5.0 beta 5@{n}
+|- dodanie komendy @{B}/savehist@{n} zapisujacej historie tf-a
+# 2004:08:15
+|- Nowa komedna @{B}/rodmien@{n} ktora nalezy odmieniac imiona osob ktore 
+|  odmieniaja sie nieregularnie
+# 2005:01:04
+|- Dostosowanie do wersji @{B}5.0 beta 6@{n}
+|- Nowa komenda do systeu zaslaniania @{B}/zaslona -lx (on|off)@{n}, 
+|  po jej wlaczeniu po kazdym sprawdzeniu kondycji zostanie zasloniona 
+|  najbardziej pocieta osoba z druzyny (o ile roznica miedzy twoja i jej
+|  kondycja wynosi x - standartowo 2)
+|- Komenda @{B}/cyferki@{n} ktora wlacza sie system podpowiedzi cyferkowych 
+|  do wiekszosci poziomow
+# 2005:01:06
+|- System anty_flood-owy nabiera realnych ksztaltow. Komenda @{B}/anty_flood@{n}
+|  sluzy do ustawiania levelu gagowania..
+# 2005:01:23
+|- Komenda @{B}/stat@{n} i @{B}/staty@{n} dziaja juz w pelni tf-owo, bez
+|  uzycia plikow zewnetrznych.
+|- Zmiana pliku mutanci.tf, teraz sluzy od do podswietlania mutantow.
+# 2005:02:06
+|- Dodany bind - na numerycznej powoduje przejscie chodzikiem jedna lokacje
+|  traktu w rozpoczetym przez nas kierunku marszu.
+|- Autochodzik dziala teraz zgodzie ze stanem przemykania, czyli jesli jest
+|  wlaczone przemykanie druzynowe to bedzie przemykal z druzyna.
+# 2005:04:18
+|- Dostosowanie do wersji @{B}5.0 beta 7@{n}
+# 2005:09:25
+|- Poprawki w pomocy do imion
+|- Drobna poprawka w umiejetnosciach
+|- Dodane rozpoznawanie WKS-ow
+|- Dodany do svn-a plik zapamietywanie.tf, nie wiem jak sie przecisna
+|  przy dodawaniu
+|- Dodane troche fjuczerkow :>
+|- Dodane wylaczanie atakow przy podazaniu za szefem
+|- Poprawki w wyswietlaniu nowej kondycji
+|- Dodany nowy sposob pokazywania kondycji
+|- dodany plik z nowa wersja zielnika
+|- dodany plik gildie.tf obslugujacy wrogow z wielu gildii
+|- Dodane podswietlanie amuletu z nekrosa
+|- Dodane kilka miejsc do picia, kilka bram i kilka przejsc za szefem
+|- Quotnieka wiekszosc . w podazaniu za szefem
+|- Dodany koszt zaslaniania do umiejetnosci
+|- Poprawka bledu z dolaczaniem do druzyny (zepsulem to ostatnio)
+|- Przerobione kolorowanie logow.. teraz wyglada o wiele lepiej i ma
+|  wiecej funkcji
+|- Drobne poprawki w wychwytywaniu zmian w druzynie
+|- Dodany jeden wodopoj i jedno miejsce do podazania za szefem
+|- Dodane podozanie za szefem w gorach szarych na pajaki
+|- Wlaczone zabezpieczenie przed wysylaniem komend do listow
+|- Wylaczone zabezpieczeni.. bo sie listow nie da pisac :-(
+|- Dodana stara wersja statow @{B}/staty_old@{n}
+|- Dodane zabezpieczeniem przed wklejaniem smieci do listow
+|- Dodana lista nieodmiennych wyrazow (jesli kts jakieb bedzie mial
+|  brakujace niech przysyla to sie doda)
+|- Dodane @{B}/cyferki 2@{n} skrocajace opisy specow
+|- Usunieta rasa demoz z pliku mutanci.tf oraz wrogowie.tf
+|- Dodany jatagan do broni
+|- Poprawka w trigu wylapujacym przekazywanie druzyny
+|- Dodane sprawdzanie druzyny przy komendzie przekaz
+|- Dodane/poprawione dodawanie wpisow do changeloga
+# 2005:09:26
+|- Zmieniony standartowy sposob pokazywania kondycji
+|  Jesli komus sie on nie podoba moze wlaczyc stary wyglad poprzez
+|  jednorazowe wpisanie komendy @{B}/set ogolne_kondycja_old=1@{n}
+|- Poprawienie generacji wpisow do changeloga
+# 2005:09:28
+|- Dodane podswietlenie nieudanej proby przebicia obrony
+|- Do autologowania dodana mozliwosc wlaczenia opcji ansi_log @{B}/autolog -a@{n}
+|- Przepisane uzupelnianie sciezek na mudach LP
+# 2005:09:29
+|- Dodana mozliwosc ustawienia nowej formy paska statusu
+|  ustawienie @{B}/set ogolne_status_new=1@{n} - docelowo to bedzie podstawa
+|- Dodane podnoszenie umiejetnosci zaslanianie przy trenowaniu
+# 2005:09:30
+|- Dodana komenda @{B}/sledzenie@{n} jako alias do @{B}/follow@{n}
+# 2005:10:02
+|- Dodana komenda @{B}/gildie@{n} podswietlajaca odpowiednie gildie
+|- Poprawki w wyswietlaniu nowej wersji statusu
+# 2005:10:03
+|- Ustawiona standartowa nowa wersja statusu mozna wlaczyc stara wersje
+|  poprzez @{B}/set ogolne_status_old=1@{n}
+|- Dodane przepisywanie wrogow przy wycofywaniu sie
+# 2005:10:10
+|- Dodane pare przejsc w ruinach w ishtar
+|- Poprawiony blad z liczeniem wyjsc w druzynie
+# 2006:01:02
+|- Dodatkowe opisy skrzyn i sprzetu
+|- Pokazywania wyjscia w tunelach nie wiedziec gdzie
+# 2006:01:26
+|- Poprawa w wykrywaniu nadudzkich cech
+|- Przestawienie czasu kompresji logow z 5 na 1 dzien
+# 2006:01:28
+|- Dodane podswietlanie ciosow Opala napisane przez Sproxa
+# 2006:01:30
+|- Poprawka wielkosci liter przy bindowaniu przelamywania oslony 
+|  (zgloszone przez Sproxa)
+|- Zapisywanie zsiadania/niezsiadania ze statkow
+|- Dodane ostrzezenie o walce bez broni
+|- Dodana testowo odmiana mianownika na celownik
+|- Dodana komenda pozwalajaca wykonac wszystko dla kazdego czlonka 
+|  druzyny @{B}/_druzyna_powtorz@{n}
+# 2006:02:27
+|- Dodana niedzialajaca odmiana miejscownika 
+|- Poprawka w @{B}/_druzyna_powtorz@{n}
+# 2006:07:19
+|- Przepisanie struktury skrzyni
+|- Poprawki sprawdzania typu sprzetu
+# 2006:07:20
+|- Poprawki w antyfloodzie..
+|- Dodana nowa komenda @{B}/auto_trig@{n}
+# 2006:07:25
+|- Dodane nowe umiejetnosci
+# 2006:07:28
+|- Dodano kilka nowych opisow [By Yargren]
+# 2006:07:30
+|- Poprawki w zaslonach
+|- Poprawka bledu z debugiem
+# 2006:11:23
+|- Dodana komenda @{B}/um_cost@{n}
+# 2006:12:18
+|- Poprawki umiejetnosci
+# 2008:06:04
+|- Oddaje skrypty pod opieke Grridowi.. zobaczymy co wyjdzie
+# 2008:07:07
+|- Pierwsza i zakladam nie ostatnia czesc poprawek Grrida
+|  (o dalsze zmiany nalezy meczyc jego)
+|- Poprawione i usystematyzowane pokazywanie, skracanie specow
+|- Usystematyzowany antyflood, dodana pomoc @{B}/pomoc antyflood@{n}
+|- Poprawione wyswietlanie gildii (uzupelniona baza)
+|- Duzo drobnych kosmetycznych ulatwien
+# 2008:11:07
+|- Poprawiona obsluga druzyny
+|- Dodane pokazywanie kto cie bije jesli nie jest sie w druzynie
+|- Duze poprawki podswietlania/skracania opisow specow
+|- Poprawki podswietlen
+|- Poprawiony @{B}/anty_flood@{n}
+|- Dodana komenda @{B}/mtr@{n}
+|- Poprawki obslugi lamp/pochodni
+|- Uwaga!! Bardzo wazna komenda @{B}/auto_trig@{n} wlaczajaca/wylaczajaca
+|  wiekszosc automatycznych trigerow
+|- Poprawione rozpoznawanie przeroznych stowazyszen/gildii
+|- Poprawki w rozpoznawaniu umiejetnosci
+|- Zmieniona komenda @{B}/um_cos@{n}
+# 2008:11:24
+|- Dodany mapper. Proponuje sprawdzic komende @{B}/pomoc mapper@{n}
+|- Poprawione podswietlanie zaslon/blokow/przelaman
+|- Dodane statystyki postepow
+|- Poprawki podswietlania specy
+|- Poprawione obliczanie cech
+# 2009:01:06
+|- Dodana komenda @{B}/zawod@{n} - zalacza spece z 1 osoby 
+|  (nadal brakuje sporo gildi i opisow)
+|- Trochu poprawek w followie
+|- Dodana komenda @{B}/strzalki@{n}
+|- Dodane spece legionisty
+|- Poprawki w gotowych juz opisach
+|- Dodane kolorki na jasniaka/misternego/bulawe (niekompletne nadal)
+|- Dodana komenda @{B}/kto@{n} (bedzie rozudowywana)
+|- Poprawione bindowanie i dodana mozliwosc recznej aktywacji bindowania
+|  (bez tego po minucie sie aktywuje)
+|- Licznik poprawiony po raz kolejny
+|- Poprawione automagiczne zaslanianie (juz nie sprawdza kondycji poza walka)
+|- Dodany stosunek wagi do ceny (podaje cene w miedzi za kilogram)

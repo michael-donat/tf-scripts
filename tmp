@@ -1,0 +1,55 @@
+;------------------------------------------------------------------------
+;			    ZBROJA/BRON
+;------------------------------------------------------------------------
+
+/def -F -ar -t'* rozpada sie!*' _combat_broken_item_1
+/def -F -ar -t'* peka!*' 		_combat_broken_item_2
+
+;------------------------------------------------------------------------
+;			    JA -> PRZECIWNIK
+;------------------------------------------------------------------------
+
+/def init_combat_outgoing = \
+    /quote -S /unset `/listvar -s _combat_outgoing_*%;\
+    /set _combat_outgoing_list=Ledwo muskasz|Lekko ranisz|Ranisz|Powaznie ranisz|Bardzo ciezko ranisz|Masakrujesz|%;\
+    /set _combat_outgoing_list_pointer=$[strstr({_combat_outgoing_list},"|")] %;\
+    /set _combat_outgoing_i=0%;\
+    \
+    /while ({_combat_outgoing_list_pointer}!=-1) \
+        /set _combat_outgoing_i=$[%{_combat_outgoing_i}+1]%;\
+        /set _combat_outgoing_list_item=$[substr({_combat_outgoing_list},0,{_combat_outgoing_list_pointer})]%;\
+        /set _combat_outgoing_list=$[substr({_combat_outgoing_list},{_combat_outgoing_list_pointer}+1)]%;\
+        /set _combat_outgoing_list_pointer=$[strstr({_combat_outgoing_list}, "|")]%;\
+        /def -P0hCgreen -Fp15 -t'%{_combat_outgoing_list_item} ' _combat_outgoing_trigger_%{_combat_outgoing_i} = /test _combat_outgoing_process(%{_combat_outgoing_i},6,"%%{*}")%;\
+     /done
+/init_combat_outgoing
+
+/def _combat_outgoing_process = \
+    /substitute -p @{Cgreen}[ $[strrep("#", %{1})]$[strrep(" ", %{2}-%{1})] ] - %{3}
+
+/def init_combat_incoming = \
+    /quote -S /unset `/listvar -s _combat_incoming_*%;\
+    /set _combat_incoming_list=ledwo muska cie|lekko rani cie|rani cie|powaznie rani cie|bardzo ciezko rani cie|masakruje cie|%;\
+    /set _combat_incoming_list_pointer=$[strstr({_combat_incoming_list},"|")] %;\
+    /set _combat_incoming_i=0%;\
+    \
+    /while ({_combat_incoming_list_pointer}!=-1) \
+        /set _combat_incoming_i=$[%{_combat_incoming_i}+1]%;\
+        /set _combat_incoming_list_item=$[substr({_combat_incoming_list},0,{_combat_incoming_list_pointer})]%;\
+        /set _combat_incoming_list=$[substr({_combat_incoming_list},{_combat_incoming_list_pointer}+1)]%;\
+        /set _combat_incoming_list_pointer=$[strstr({_combat_incoming_list}, "|")]%;\
+        /def -P0hCgreen -Fp15 -t'%{_combat_incoming_list_item} ' _combat_incoming_trigger_%{_combat_incoming_i} = /test _combat_incoming_process(%{_combat_incoming_i},6,"%%{*}")%;\
+     /done
+/init_combat_incoming
+
+/def _combat_incoming_process = \
+    /substitute -p @{Cred}[ $[strrep("#", %{1})]$[strrep(" ", %{2}-%{1})] ] - %{3}
+
+/def -P0hCgreen -t'zostaje wyparowany' -p15 _combat_incoming_trigger_parry_1 = \
+    /substitute -p @{Cred}[  PARRY ] - %{*}
+
+/def -P0hCgreen -t'lecz tobie udaje sie uniknac' -p15 _combat_incoming_trigger_dodge_1 = \
+    /substitute -p @{Cred}[  DODGE ] - %{*}
+
+/def -P0hCgreen -t'lecz tobie udaje sie oslonic' -p15 _combat_incoming_trigger_cover_1 = \
+    /substitute -p @{Cred}[  COVER ] - %{*}
