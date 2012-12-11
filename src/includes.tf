@@ -1,5 +1,6 @@
 ; tools
 /load library.tf
+/load test.tf
 
 ; combar
 /load combat/colors.tf

@@ -6,31 +6,6 @@
 ;-----------------------------------------------
 ;           MAC NUM PAD
 ;-----------------------------------------------
-
-/def showme = /test $[fake_recv({*})]
-/def testit = \
-    /showme Agresywny goblin ledwo muska cie w noge.%;\
-    /showme Agresywny goblin lekko rani cie w noge.%;\
-    /showme Agresywny goblin rani cie w noge.%;\
-    /showme Agresywny goblin powaznie rani cie w noge.%;\
-    /showme Agresywny goblin bardzo ciezko rani cie w noge.%;\
-    /showme Agresywny goblin masakruje cie w noge.%;\
-    \
-    /showme Varriz ledwo muska cie w noge.%;\
-    /showme Varriz lekko rani cie w noge.%;\
-    /showme Varriz rani cie w noge.%;\
-    /showme Varriz powaznie rani cie w noge.%;\
-    /showme Varriz bardzo ciezko rani cie w noge.%;\
-    /showme Varriz masakruje cie w noge.%;\
-    \
-    /showme Agresywny tlusty goblin ledwo muska cie w noge.%;\
-    /showme Agresywny tlusty goblin lekko rani cie w noge.%;\
-    /showme Agresywny tlusty goblin rani cie w noge.%;\
-    /showme Agresywny tlusty goblin powaznie rani cie w noge.%;\
-    /showme Agresywny tlusty goblin bardzo ciezko rani cie w noge.%;\
-    /showme Agresywny tlusty goblin masakruje cie w noge.
-    
-
 /def key_nkp0 = /_bind_kb_key_nkp0
 /def key_nkp. = /_bind_kb_key_nkpDot
 /def key_nkpEnt = /_bind_kb_key_nkpEnt
