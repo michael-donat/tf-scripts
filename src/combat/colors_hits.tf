@@ -18,8 +18,8 @@
         /set tmp_color=Crgb520%;\
     /endif%;\
     /set tmp_text=[ $[strrep("#", %{1})]$[strrep(" ", 6-%{1})] ] - %{2}%;\
-    /set tmp_test=$[decode_attr({tmp_text},{tmp_color})]%;\
-    /substitute %{tmp_test}
+    /set tmp_text=$[decode_attr({tmp_text},{tmp_color})]%;\
+    /substitute %{tmp_text}
 
 /def -t'* zostaje wyparowany *' -p15 _combat_incoming_trigger_parry_1 = \
     /substitute -p @{Crgb025}[  PARRY ] - %{*}

@@ -1,7 +1,21 @@
 /addworld -T'lp' arkadia arkadia.rpg.pl 23
-/isize 2
 
 /cd src
+
+/set TERM=vt100
+/isize 1
+
+/require alias.tf
+/require spedwalk.tf
+/require kbbind.tf
+/require map.tf
+/require textutil.tf
+/require lisp.tf
+/require complete.tf
+/require relog.tf
+/require kbstack.tf
+/require at.tf
+
 
 ;-----------------------------------------------
 ;           MAC NUM PAD
