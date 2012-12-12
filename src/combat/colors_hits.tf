@@ -53,6 +53,9 @@
 /def -t'Nie udaje ci sie trafic *' -p15 _combat_outgoing_trigger_miss_1 = \
     /substitute -p @{Crgb152}[  MISS  ] - %{*}
 
+;Probujesz trafic okrutnego goblina ciezkim krotkim toporem, lecz ten unika twojego ciosu.
+;Wykonujesz zamaszyste ciecie ciezkim krotkim toporem mierzac w agresywnego goblina, lecz ten zbija je z lini ataku
+
 ;------------------------------------------------------------------------
 ;			    I HIT ENEMY - GP SPEC
 ;------------------------------------------------------------------------

@@ -33,5 +33,5 @@
 
 /def reload = /purge * %; /cd .. %; /load init.tf
 
-
+;-------- TEMP
 /def _bind_kb_key_nkpDivide = k wszystkich

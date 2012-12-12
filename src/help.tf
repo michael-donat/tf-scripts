@@ -1,0 +1,2 @@
+; /druzyna
+; /kk - kondycja wszystkuch

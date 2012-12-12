@@ -3,6 +3,7 @@
 /load test.tf
 
 ; combar
+/load combat/team.tf
 /load combat/colors.tf
 /load combat/dashboard.tf
 
