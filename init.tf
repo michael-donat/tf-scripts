@@ -1,8 +1,8 @@
+;/addworld -T'lp' local localhost 1234
 /addworld -T'lp' arkadia arkadia.rpg.pl 23
 
 /cd src
 
-/set TERM=vt100
 /isize 1
 
 /require alias.tf
@@ -37,15 +37,16 @@
 /def key_nkp8 = /_bind_kb_key_nkp8
 /def key_nkp9 = /_bind_kb_key_nkp9
 
-/def key_nkp= = /_bind_kb_key_nkpEquals
 /def key_nkp/ = /_bind_kb_key_nkpDivide
 
-/def key_nkp* = /_bind_kb_key_nkpMinus
+/def key_nkp* = /_bind_kb_key_nkpTimes
+
+/~keyseq nkpEq		^[OX
+
+/def key_nkpEq = /_bind_kb_key_nkpEquals
+
 ;above caters for small + key
 
 /load includes.tf
 
 /def reload = /purge * %; /cd .. %; /load init.tf
-
-;-------- TEMP
-/def _bind_kb_key_nkpDivide = k wszystkich

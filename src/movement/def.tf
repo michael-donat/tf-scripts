@@ -9,13 +9,13 @@
 /def _movement_go_ne    = /_movement_go_exec ne
 /def _movement_go_down  = /_movement_go_exec d
 /def _movement_go_up    = /_movement_go_exec u
-/def _movement_go_exit  = /_movement_go_exec exit
+/def _movement_go_exit  = /_movement_go_exec wyjscie
 
 /def _movement_go_exec =    \
 \
     %{1}
 
 
-/def -mregexp -t'(Sa|Jest) tutaj [a-z]+ widocz[a-z]+ wyjsc[a-z]+: ([^.]+)\.' = \
+/def -mregexp -t'(Sa|Jest) tutaj [a-z]+ widocz[a-z]+ wyjsc[a-z]*: ([^.]+)\.' = \
     /set tmp_text=$[replace(" i ", ", ", {P2})]%;\
     /substitute -p @{BCyellow} ==  @{BCgreen}%{tmp_text}

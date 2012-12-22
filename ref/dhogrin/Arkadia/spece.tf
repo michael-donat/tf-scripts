@@ -1,4 +1,4 @@
-/set hitlocs=(cialo|ogonek|prawe ramie|lewe ramie|pokryty twarda skora tulow|twarda glowe|kosmaty tulow|luskowate cialo|szponiaste rece|kosciane nogi|oslizgle cialo|lewa reke|prawa reke|lewa noge|prawa noge|glowe|korpus|nogi|tulow|leb|kudlate cialo|kamienna reke|jedna z lian|okolice korzeni|tors|lepek|kudlate cielsko|prawa lape|lewa lape|metalowy korpus|pobruzdzona glowe|cienki szczekoczulek|kamienny korpus|plamiasta glowe|umiesnione prawe ramie|umiesnione lewe ramie|pysk|widmowe nogi|kudlate cialo)
+    /set hitlocs=(cialo|ogonek|prawe ramie|lewe ramie|pokryty twarda skora tulow|twarda glowe|kosmaty tulow|luskowate cialo|szponiaste rece|kosciane nogi|oslizgle cialo|lewa reke|prawa reke|lewa noge|prawa noge|glowe|korpus|nogi|tulow|leb|kudlate cialo|kamienna reke|jedna z lian|okolice korzeni|tors|lepek|kudlate cielsko|prawa lape|lewa lape|metalowy korpus|pobruzdzona glowe|cienki szczekoczulek|kamienny korpus|plamiasta glowe|umiesnione prawe ramie|umiesnione lewe ramie|pysk|widmowe nogi|kudlate cialo)
 
 /def _psnr = \
 /return substitute(strcat(decode_attr(strcat("@{BCgreen}>> ", {1}, {2}, " @{BCgreen}SPEC@{BCwhite} ", {3}, " @{BCgreen}<< ")), {PL}, {P0}, {PR}))

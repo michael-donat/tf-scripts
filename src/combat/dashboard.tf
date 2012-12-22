@@ -22,7 +22,7 @@
 
 /def _combat_health_to_color = \
     /if ({1} == "1") \
-        /let tmp_return=rCrgb500%;\
+        /let tmp_return=Cbgred%;\
     /elseif ({1} =="2") \
         /let tmp_return=Crgb500%;\
     /elseif ({1} =="3") \
@@ -34,20 +34,27 @@
     /elseif ({1} =="6") \
         /let tmp_return=Crgb350%;\
     /elseif ({1} =="7") \
-        /let tmp_return=Crgb153%;\
+        /let tmp_return=Crgb040%;\
     /endif%;\
     /return {tmp_return}
 
 /def _combat_health_add = \
     /set _combat_health_hp=$[_combat_health_to_int({2})]%;\
     /set _combat_health_hp_color=$[_combat_health_to_color({_combat_health_hp})]%;\
+    /set _combat_health_who=%{1}%;\
     /if ({1} =~ "0") \
         /test echo("")%;\
         /test echo("---------------------------------------------------")%;\
-        /set tmp_text=$[pad("K O N D Y C J A",10)]     [ $[strrep("#", {_combat_health_hp})]$[strrep(" ", 7-{_combat_health_hp})] ] - %{2}%;\
-    /elseif (strstr({_combat_health_who}, " ") == -1) \
+        /set tmp_text=$[pad(strcat("K O N D Y C J A     ----    ",{3}),-55)] [ $[strrep("#", {_combat_health_hp})]$[strrep(" ", 7-{_combat_health_hp})] ]%;\
+        /set _combat_health_is_team_member=-1%;\
+    /elseif (strstr({_team_members_list_separated}, strcat("|",{_combat_health_who},"|")) != -1) \
+        /set _combat_health_is_team_member=1%;\
         /set tmp_text=$[pad({3},-55)] [ $[strrep("#", {_combat_health_hp})]$[strrep(" ", 7-{_combat_health_hp})] ]%;\
     /else \
+        /if ({_combat_health_is_team_member}==1) \
+            /test echo("------------")%;\
+        /endif%;\
+        /set _combat_health_is_team_member=-1%;\
         /set tmp_text=$[pad({3},-55)] [ $[strrep("#", {_combat_health_hp})]$[strrep(" ", 7-{_combat_health_hp})] ]%;\
     /endif%;\
     /set tmp_text=$[decode_attr({tmp_text},{_combat_health_hp_color})]%;\
