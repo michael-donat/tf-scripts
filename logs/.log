@@ -1,0 +1,50 @@
+% Current directory is /Users/thornag/Development/projects/TF/src
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% init.tf, line 51: DEF: Redefined binding ^[OX
+% init.tf, line 51: DEF: Redefined binding ^[^[OX
+% Loading commands from includes.tf.
+% Loading commands from library.tf.
+% Loading commands from test.tf.
+% Loading commands from combat/team.tf.
+% Loading commands from combat/colors.tf.
+% Loading commands from combat/colors_events.tf.
+% Loading commands from combat/colors_hits.tf.
+% Loading commands from combat/colors_weapons.tf.
+% Loading commands from combat/dashboard.tf.
+% Loading commands from movement/kb.tf.
+% Loading commands from movement/def.tf.
+% Loading commands from info/levels.tf.
+% Loading commands from info/events.tf.
+% Loading commands from info/equipment.tf.
+% Loading commands from def/misc.tf.
+% Loading commands from def/cechy.tf.
+% Loading commands from help.tf.
+% Trying to connect to arkadia: 188.165.23.180 23.
+% Connected to arkadia.
+% You have mail in /var/mail/thornag
+                        Witaj w swiecie Arkadii
+
+         Zapraszamy na strone Arkadii: http://www.arkadia.rpg.pl/
+
+Aby zalogowac sie na swoje konto lub jesli jeszcze go nie masz - podaj adres
+email.
+
+Aby zalogowac sie na istniejaca postac - podaj jej imie.
+
+
+Straciles kontakt z Arkadia na mniej niz dziesiec minut ...
+... przywracam polaczenie ...
+
+Podziemna komnata.
+ ==  poludnie

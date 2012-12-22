@@ -1,6 +1,13 @@
 ;/addworld -T'lp' local localhost 1234
 /addworld -T'lp' arkadia arkadia.rpg.pl 23
 
+/cd %{HOME}
+
+/quote -S /set log_file !date +%Y%m%d
+/eval /set log_file=$[strcat("logs/",%{log_file},".log")]
+
+/eval /log %{log_file}
+
 /cd src
 
 /isize 1

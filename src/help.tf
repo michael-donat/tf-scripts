@@ -93,3 +93,5 @@
 
 /def exp_team = \
     /def _bind_kb_key_nkpEquals = /send ws
+
+/def key_f17 = /send nap

@@ -135,7 +135,7 @@
 			/if ( {auto} =~ "on" )\
 				/repeat -%{delay} 1 /testujwyjscia%;\
 			/else \
-				/def key_nkp5 = /testujwyjscia%;\
+				/def key_nkp10 = /testujwyjscia%;\
 			/endif%;\
 		/else \
 			/set lwgo=0%;\

@@ -20,6 +20,10 @@
 /load def/misc.tf
 /load def/cechy.tf
 
+;statuis bar
+/load statusbar.tf
+
 ;TEMP
 
 /load help.tf
+

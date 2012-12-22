@@ -11,4 +11,5 @@
 /load start.tf
 
 ; ścieżka do katalogu z logami:
-/set logpath=/jakis/katalog
+;/set logpath=/jakis/katalog
+
