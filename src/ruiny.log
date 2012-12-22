@@ -11813,3 +11813,189 @@ Masz przy sobie butelke oleju, wiele zlotych monet, wiele srebrnych monet, miedz
 [ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w korpus.
 [  PARRY ] - Agresywny goblin trafia cie ciezka okuta pala w korpus, lecz caly impet uderzenia zostaje wyparowany przez szmaragdowosrebrny ornamentowany kirys.
 [ #      ] - Agresywny goblin ledwo muska cie krzemienna ciezka maczuga, trafiajac cie w nogi.
+[  DODGE ] - Paskudny goblin probuje cie trafic drewniana kolczasta maczuga, lecz tobie udaje sie uniknac tego ciosu.
+[  PARRY ] - Agresywny goblin trafia cie ciezka okuta pala w nogi, lecz caly impet uderzenia zostaje wyparowany przez plytowa ciemna pare nagolennikow.
+[ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w glowe.
+[ ###    ] - Ranisz paskudnego goblina dluga ornamentowana halabarda, trafiajac go w korpus.
+[  PARRY ] - Agresywny goblin trafia cie krzemienna ciezka maczuga w glowe, lecz caly impet uderzenia zostaje wyparowany przez wytrzymaly srebrzysty helm.
+[  DODGE ] - Paskudny goblin probuje cie trafic drewniana kolczasta maczuga, lecz tobie udaje sie uniknac tego ciosu.
+[ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w prawe ramie.
+[ #      ] - Agresywny goblin ledwo muska cie ciezka okuta pala, trafiajac cie w korpus.
+[ ##     ] - Lekko ranisz paskudnego goblina dluga ornamentowana halabarda, trafiajac go w korpus.
+[  DODGE ] - Agresywny goblin probuje cie trafic krzemienna ciezka maczuga, lecz tobie udaje sie uniknac tego ciosu.
+[  MISS  ] - Paskudnemu goblinowi nie udaje sie trafic ciebie drewniana kolczasta maczuga.
+[  PARRY ] - Agresywny goblin trafia cie ciezka okuta pala w glowe, lecz caly impet uderzenia zostaje wyparowany przez wytrzymaly srebrzysty helm.
+[ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w korpus.
+[ ####   ] - Powaznie ranisz paskudnego goblina dluga ornamentowana halabarda, trafiajac go w korpus.
+[  PARRY ] - Agresywny goblin trafia cie krzemienna ciezka maczuga w glowe, lecz caly impet uderzenia zostaje wyparowany przez wytrzymaly srebrzysty helm.
+[ #      ] - Paskudny goblin ledwo muska cie drewniana kolczasta maczuga, trafiajac cie w glowe.
+
+---------------------------------------------------
+K O N D Y C J A     ----    Jestes w swietnej kondycji. [ ####### ]
+----------------------
+Jestes w swietnej kondycji.
+Glupawy goblin jest w swietnej kondycji.                [ ####### ]
+Glupawy goblin jest w swietnej kondycji.
+Agresywny goblin jest w swietnej kondycji.              [ ####### ]
+Agresywny goblin jest w swietnej kondycji.
+Paskudny goblin jest ranny.                             [ ####    ]
+Paskudny goblin jest ranny.
+Agresywny goblin jest w swietnej kondycji.              [ ####### ]
+Agresywny goblin jest w swietnej kondycji.
+[  PARRY ] - Glupawy goblin trafia cie ciezka okuta pala w glowe, lecz caly impet uderzenia zostaje wyparowany przez wytrzymaly srebrzysty helm.
+[ #      ] - Agresywny goblin ledwo muska cie ciezka okuta pala, trafiajac cie w korpus.
+[ ####   ] - Powaznie ranisz paskudnego goblina dluga ornamentowana halabarda, trafiajac go w korpus.
+[ #      ] - Agresywny goblin ledwo muska cie krzemienna ciezka maczuga, trafiajac cie w korpus.
+[ #      ] - Paskudny goblin ledwo muska cie drewniana kolczasta maczuga, trafiajac cie w nogi.
+[ #      ] - Agresywny goblin ledwo muska cie ciezka okuta pala, trafiajac cie w nogi.
+[ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w prawe ramie.
+[ ####   ] - Powaznie ranisz paskudnego goblina dluga ornamentowana halabarda, trafiajac go w korpus.
+[  DODGE ] - Agresywny goblin probuje cie trafic krzemienna ciezka maczuga, lecz tobie udaje sie uniknac tego ciosu.
+[  DODGE ] - Paskudny goblin probuje cie trafic drewniana kolczasta maczuga, lecz tobie udaje sie uniknac tego ciosu.
+[  DODGE ] - Glupawy goblin probuje cie trafic ciezka okuta pala, lecz tobie udaje sie uniknac tego ciosu.
+[ #      ] - Agresywny goblin ledwo muska cie ciezka okuta pala, trafiajac cie w korpus.
+[ ####   ] - Powaznie ranisz paskudnego goblina dluga ornamentowana halabarda, trafiajac go w nogi.
+[  PARRY ] - Agresywny goblin trafia cie krzemienna ciezka maczuga w glowe, lecz caly impet uderzenia zostaje wyparowany przez wytrzymaly srebrzysty helm.
+[  DODGE ] - Paskudny goblin probuje cie trafic drewniana kolczasta maczuga, lecz tobie udaje sie uniknac tego ciosu.
+[ #      ] - Agresywny goblin ledwo muska cie ciezka okuta pala, trafiajac cie w glowe.
+[ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w nogi.
+
+---------------------------------------------------
+K O N D Y C J A     ----    Jestes w dobrym stanie.     [ ######  ]
+----------------------
+Jestes w dobrym stanie.
+Glupawy goblin jest w swietnej kondycji.                [ ####### ]
+Glupawy goblin jest w swietnej kondycji.
+Agresywny goblin jest w swietnej kondycji.              [ ####### ]
+Agresywny goblin jest w swietnej kondycji.
+Paskudny goblin jest ciezko ranny.                      [ ##      ]
+Paskudny goblin jest ciezko ranny.
+Agresywny goblin jest w swietnej kondycji.              [ ####### ]
+Agresywny goblin jest w swietnej kondycji.
+[ ####   ] - Powaznie ranisz paskudnego goblina dluga ornamentowana halabarda, trafiajac go w korpus.
+[  PARRY ] - Agresywny goblin trafia cie krzemienna ciezka maczuga w korpus, lecz caly impet uderzenia zostaje wyparowany przez szmaragdowosrebrny ornamentowany kirys.
+[  DODGE ] - Paskudny goblin probuje cie trafic drewniana kolczasta maczuga, lecz tobie udaje sie uniknac tego ciosu.
+[ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w prawe ramie.
+[ #      ] - Agresywny goblin ledwo muska cie ciezka okuta pala, trafiajac cie w prawe ramie.
+[  MISS  ] - Probujesz trafic paskudnego goblina dluga ornamentowana halabarda, lecz ten unika twojego ciosu.
+[  PARRY ] - Agresywny goblin trafia cie krzemienna ciezka maczuga w glowe, lecz caly impet uderzenia zostaje wyparowany przez wytrzymaly srebrzysty helm.
+[ #      ] - Paskudny goblin ledwo muska cie drewniana kolczasta maczuga, trafiajac cie w prawe ramie.
+[  PARRY ] - Agresywny goblin trafia cie ciezka okuta pala w nogi, lecz caly impet uderzenia zostaje wyparowany przez plytowa ciemna pare nagolennikow.
+[ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w nogi.
+[ ####   ] - Powaznie ranisz paskudnego goblina dluga ornamentowana halabarda, trafiajac go w prawe ramie.
+[  PARRY ] - Agresywny goblin trafia cie krzemienna ciezka maczuga w nogi, lecz caly impet uderzenia zostaje wyparowany przez plytowa ciemna pare nagolennikow.
+[  PARRY ] - Paskudny goblin wykonuje zamach drewniana kolczasta maczuga mierzac w ciebie, lecz tobie udaje sie go sparowac dluga ornamentowana halabarda.
+[  PARRY ] - Glupawy goblin trafia cie ciezka okuta pala w glowe, lecz caly impet uderzenia zostaje wyparowany przez wytrzymaly srebrzysty helm.
+[  PARRY ] - Agresywny goblin trafia cie ciezka okuta pala w korpus, lecz caly impet uderzenia zostaje wyparowany przez szmaragdowosrebrny ornamentowany kirys.
+[  PARRY ] [ WKS SPEC ] - Wyprowadzasz szybkie pchniecie dluga ornamentowana halabarda w paskudnego goblina, lecz ten zbija je z linii ataku drewniana kolczasta maczuga.
+[ #      ] - Paskudny goblin ledwo muska cie drewniana kolczasta maczuga, trafiajac cie w korpus.
+[ #      ] - Agresywny goblin ledwo muska cie krzemienna ciezka maczuga, trafiajac cie w nogi.
+[ #      ] - Agresywny goblin ledwo muska cie ciezka okuta pala, trafiajac cie w korpus.
+[ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w korpus.
+[  PARRY ] - Wykonujesz zamaszyste ciecie dluga ornamentowana halabarda mierzac w paskudnego goblina, lecz ten zbija je z linii ataku drewniana kolczasta maczuga.
+[ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w lewe ramie.
+[ #      ] - Agresywny goblin ledwo muska cie ciezka okuta pala, trafiajac cie w glowe.
+[ #      ] - Paskudny goblin ledwo muska cie drewniana kolczasta maczuga, trafiajac cie w korpus.
+[  PARRY ] - Agresywny goblin trafia cie krzemienna ciezka maczuga w korpus, lecz caly impet uderzenia zostaje wyparowany przez szmaragdowosrebrny ornamentowany kirys.
+[ #####  ] - Bardzo ciezko ranisz paskudnego goblina dluga ornamentowana halabarda, trafiajac go w korpus.
+[ #      ] - Agresywny goblin ledwo muska cie ciezka okuta pala, trafiajac cie w glowe.
+[ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w korpus.
+[  PARRY ] - Paskudny goblin trafia cie drewniana kolczasta maczuga w prawe ramie, lecz caly impet uderzenia zostaje wyparowany przez srebrzysty prawy naramiennik.
+[ #      ] - Agresywny goblin ledwo muska cie krzemienna ciezka maczuga, trafiajac cie w korpus.
+[ ###### ] - Masakrujesz paskudnego goblina dluga ornamentowana halabarda, trafiajac go w nogi.
+ ======       Paskudny goblin umarl.      ======
+ ======  [ I KILLED ] - Zabiles paskudnego goblina.
+Uspokajasz sie.
+Koncentrujesz sie na walce z glupawym goblinem.
+[ #      ] - Ledwo muskasz glupawego goblina dluga ornamentowana halabarda, trafiajac go w prawe ramie.
+
+---------------------------------------------------
+K O N D Y C J A     ----    Jestes lekko ranny.         [ #####   ]
+----------------------
+Jestes lekko ranny.
+Glupawy goblin jest w swietnej kondycji.                [ ####### ]
+Glupawy goblin jest w swietnej kondycji.
+Agresywny goblin jest w swietnej kondycji.              [ ####### ]
+Agresywny goblin jest w swietnej kondycji.
+Agresywny goblin jest w swietnej kondycji.              [ ####### ]
+Agresywny goblin jest w swietnej kondycji.
+[ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w korpus.
+[ #      ] - Agresywny goblin ledwo muska cie ciezka okuta pala, trafiajac cie w korpus.
+Dopelniasz zapalona olejna lampe z butelki oleju.
+Dopelniasz zapalona olejna lampe z butelki oleju.
+
+---------------------------------------------------
+K O N D Y C J A     ----    Jestes lekko ranny.         [ #####   ]
+----------------------
+Jestes lekko ranny.
+Glupawy goblin jest w swietnej kondycji.                [ ####### ]
+Glupawy goblin jest w swietnej kondycji.
+Agresywny goblin jest w swietnej kondycji.              [ ####### ]
+Agresywny goblin jest w swietnej kondycji.
+Agresywny goblin jest w swietnej kondycji.              [ ####### ]
+Agresywny goblin jest w swietnej kondycji.
+[ #      ] - Agresywny goblin ledwo muska cie krzemienna ciezka maczuga, trafiajac cie w korpus.
+[ ##     ] - Lekko ranisz glupawego goblina dluga ornamentowana halabarda, trafiajac go w lewe ramie.
+[ #      ] - Agresywny goblin ledwo muska cie ciezka okuta pala, trafiajac cie w glowe.
+[  PARRY ] - Glupawy goblin wykonuje zamach ciezka okuta pala mierzac w ciebie, lecz tobie udaje sie go sparowac dluga ornamentowana halabarda.
+Agresywny goblin mowi: Ciebie tu nie ma!!
+[ #      ] - Agresywny goblin ledwo muska cie krzemienna ciezka maczuga, trafiajac cie w prawe ramie.
+[ ##     ] - Lekko ranisz glupawego goblina dluga ornamentowana halabarda, trafiajac go w prawe ramie.
+[  PARRY ] - Glupawy goblin wykonuje zamach ciezka okuta pala mierzac w ciebie, lecz tobie udaje sie go sparowac dluga ornamentowana halabarda.
+[  PARRY ] - Agresywny goblin trafia cie ciezka okuta pala w korpus, lecz caly impet uderzenia zostaje wyparowany przez szmaragdowosrebrny ornamentowany kirys.
+[  PARRY ] - Agresywny goblin trafia cie krzemienna ciezka maczuga w prawe ramie, lecz caly impet uderzenia zostaje wyparowany przez srebrzysty prawy naramiennik.
+[ ##     ] - Lekko ranisz glupawego goblina dluga ornamentowana halabarda, trafiajac go w korpus.
+[ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w korpus.
+[  DODGE ] - Agresywny goblin probuje cie trafic ciezka okuta pala, lecz tobie udaje sie uniknac tego ciosu.
+[ #      ] - Agresywny goblin ledwo muska cie krzemienna ciezka maczuga, trafiajac cie w nogi.
+[ #      ] - Ledwo muskasz glupawego goblina dluga ornamentowana halabarda, trafiajac go w korpus.
+[ #      ] - Agresywny goblin ledwo muska cie ciezka okuta pala, trafiajac cie w nogi.
+[ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w nogi.
+[  PARRY ] - Agresywny goblin trafia cie krzemienna ciezka maczuga w korpus, lecz caly impet uderzenia zostaje wyparowany przez szmaragdowosrebrny ornamentowany kirys.
+[ ##     ] - Lekko ranisz glupawego goblina dluga ornamentowana halabarda, trafiajac go w prawe ramie.
+[  PARRY ] - Glupawy goblin trafia cie ciezka okuta pala w korpus, lecz caly impet uderzenia zostaje wyparowany przez szmaragdowosrebrny ornamentowany kirys.
+[  PARRY ] - Agresywny goblin trafia cie ciezka okuta pala w korpus, lecz caly impet uderzenia zostaje wyparowany przez szmaragdowosrebrny ornamentowany kirys.
+[ #      ] - Agresywny goblin ledwo muska cie krzemienna ciezka maczuga, trafiajac cie w nogi.
+[ #      ] - Ledwo muskasz glupawego goblina dluga ornamentowana halabarda, trafiajac go w prawe ramie.
+[ #      ] - Agresywny goblin ledwo muska cie ciezka okuta pala, trafiajac cie w nogi.
+[  DODGE ] - Glupawy goblin probuje cie trafic ciezka okuta pala, lecz tobie udaje sie uniknac tego ciosu.
+[ #      ] - Agresywny goblin ledwo muska cie krzemienna ciezka maczuga, trafiajac cie w nogi.
+[ ###    ] - Ranisz glupawego goblina dluga ornamentowana halabarda, trafiajac go w korpus.
+[  PARRY ] - Glupawy goblin wykonuje zamach ciezka okuta pala mierzac w ciebie, lecz tobie udaje sie go sparowac dluga ornamentowana halabarda.
+[ #      ] - Agresywny goblin ledwo muska cie ciezka okuta pala, trafiajac cie w korpus.
+[ #      ] - Agresywny goblin ledwo muska cie krzemienna ciezka maczuga, trafiajac cie w korpus.
+[ ##     ] - Lekko ranisz glupawego goblina dluga ornamentowana halabarda, trafiajac go w korpus.
+[  PARRY ] - Agresywny goblin trafia cie ciezka okuta pala w prawe ramie, lecz caly impet uderzenia zostaje wyparowany przez srebrzysty prawy naramiennik.
+[  DODGE ] - Glupawy goblin probuje cie trafic ciezka okuta pala, lecz tobie udaje sie uniknac tego ciosu.
+Agresywny goblin mowi: Ciebie tu nie ma!!
+[ #      ] - Agresywny goblin ledwo muska cie krzemienna ciezka maczuga, trafiajac cie w korpus.
+[ ##     ] - Lekko ranisz glupawego goblina dluga ornamentowana halabarda, trafiajac go w prawe ramie.
+[  PARRY ] - Glupawy goblin wykonuje zamach ciezka okuta pala mierzac w ciebie, lecz tobie udaje sie go sparowac dluga ornamentowana halabarda.
+[  PARRY ] - Agresywny goblin trafia cie ciezka okuta pala w korpus, lecz caly impet uderzenia zostaje wyparowany przez szmaragdowosrebrny ornamentowany kirys.
+[ #      ] - Agresywny goblin ledwo muska cie krzemienna ciezka maczuga, trafiajac cie w nogi.
+[  MISS  ] - Probujesz trafic glupawego goblina dluga ornamentowana halabarda, lecz ten unika twojego ciosu.
+
+---------------------------------------------------
+K O N D Y C J A     ----    Jestes lekko ranny.         [ #####   ]
+----------------------
+Jestes lekko ranny.
+Glupawy goblin jest ranny.                              [ ####    ]
+Glupawy goblin jest ranny.
+Agresywny goblin jest w swietnej kondycji.              [ ####### ]
+Agresywny goblin jest w swietnej kondycji.
+Agresywny goblin jest w swietnej kondycji.              [ ####### ]
+Agresywny goblin jest w swietnej kondycji.
+[ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w glowe.
+[  PARRY ] - Agresywny goblin trafia cie ciezka okuta pala w prawe ramie, lecz caly impet uderzenia zostaje wyparowany przez srebrzysty prawy naramiennik.
+[ ###    ] - Ranisz glupawego goblina dluga ornamentowana halabarda, trafiajac go w prawe ramie.
+[  PARRY ] - Agresywny goblin trafia cie ciezka okuta pala w korpus, lecz caly impet uderzenia zostaje wyparowany przez szmaragdowosrebrny ornamentowany kirys.
+[  PARRY ] - Glupawy goblin trafia cie ciezka okuta pala w nogi, lecz caly impet uderzenia zostaje wyparowany przez plytowa ciemna pare nagolennikow.
+[ #      ] - Agresywny goblin ledwo muska cie krzemienna ciezka maczuga, trafiajac cie w prawe ramie.
+[ ###    ] - Ranisz glupawego goblina dluga ornamentowana halabarda, trafiajac go w prawe ramie.
+[  PARRY ] - Glupawy goblin wykonuje zamach ciezka okuta pala mierzac w ciebie, lecz tobie udaje sie go sparowac dluga ornamentowana halabarda.
+[  DODGE ] - Agresywny goblin probuje cie trafic ciezka okuta pala, lecz tobie udaje sie uniknac tego ciosu.
+[  PARRY ] - Agresywny goblin trafia cie krzemienna ciezka maczuga w nogi, lecz caly impet uderzenia zostaje wyparowany przez plytowa ciemna pare nagolennikow.
+[ ###    ] - Ranisz glupawego goblina dluga ornamentowana halabarda, trafiajac go w glowe.
+[  PARRY ] - Agresywny goblin wykonuje zamach ciezka okuta pala mierzac w ciebie, lecz tobie udaje sie go sparowac dluga ornamentowana halabarda.
+[ #      ] - Glupawy goblin ledwo muska cie ciezka okuta pala, trafiajac cie w prawe ramie.
+[ #      ] - Agresywny goblin ledwo muska cie krzemienna ciezka maczuga, trafiajac cie w glowe.
