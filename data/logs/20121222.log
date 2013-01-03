@@ -1,0 +1,565 @@
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% lib/init.tf, line 16: LOAD: init/includes.tf: No such file or directory
+% key_nkp5: _bind_kb_key_nkp5: no such command or macro
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% lib/init.tf, line 16: LOAD: init/includes.tf: No such file or directory
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% Loading commands from init/includes.tf.
+% Loading commands from movement.tf.
+% key_nkp5: _bind_kb_key_nkp5: no such command or macro
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+ ==  polnoc, polnocny-zachod, wschod
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+ ==  poludnie, zachod
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% Loading commands from init/includes.tf.
+% Loading commands from movement.tf.
+% movement.tf: line 18: Warning: possibly missing trailing \
+% movement.tf, line 19: _movement_exists: no such command or macro
+% key_nkp5: _bind_kb_key_nkp5: no such command or macro
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+% _movement_match_exists: _movement_compass: no such command or macro
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% Loading commands from init/includes.tf.
+% Loading commands from movement.tf.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT polnoc,
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT poludnie
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT polnoc,
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Centralny pokoj stowarzyszenia Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT polnoc,
+Sa tutaj cztery widoczne wyjscia: polnoc, poludniowy-wschod, poludniowy-zachod i poludnie.
+Tablica ogloszeniowa i ogromny wiklinowy kosz.
+Trzy biale golebie.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT polnoc,
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% Loading commands from init/includes.tf.
+% Loading commands from movement.tf.
+% key_nkp5: _bind_kb_key_nkp5: no such command or macro
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT poludnie i zachod.
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT polnoc, polnocny-zachod i wschod.
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT poludnie i zachod.
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% Loading commands from init/includes.tf.
+% Loading commands from movement.tf.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT polnoc polnocny-zachod wschod.
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT poludnie zachod.
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT polnoc polnocny-zachod wschod.
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% Loading commands from init/includes.tf.
+% Loading commands from movement.tf.
+% key_nkp5: _bind_kb_key_nkp5: no such command or macro
+Nie widzisz zadnego wyjscia prowadzacego na zachod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+Monumentalna zbrojownia.
+Sa tutaj dwa widoczne wyjscia: dol i polnoc.
+Otwarta debowa okuta skrzynia.
+Przyciemniona komora.
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% Loading commands from init/includes.tf.
+% Loading commands from movement.tf.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT polnoc polnocny-zachod wschod.
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% Loading commands from init/includes.tf.
+% Loading commands from movement.tf.
+Nie widzisz zadnego wyjscia prowadzacego na zachod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT poludnie zachod
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT polnoc polnocny-zachod wschod
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT poludnie zachod
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT polnoc polnocny-zachod wschod
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT poludnie zachod
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% Loading commands from init/includes.tf.
+% Loading commands from movement.tf.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT polnoc polnocny-zachod wschod
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+% _movement_match_exists: _movement_compass: no such command or macro
+GOT poludnie zachod
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% Loading commands from init/includes.tf.
+% Loading commands from movement.tf.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+ ==  polnoc polnocny-zachod wschod
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+% _movement_match_exists: _movement_compass: no such command or macro
+ ==  poludnie zachod
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% Loading commands from init/includes.tf.
+% Loading commands from movement.tf.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+ ==  polnoc, polnocny-zachod, wschod
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+% _movement_match_exists: _movement_compass: no such command or macro
+ ==  poludnie, zachod
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+ ==  polnoc, polnocny-zachod, wschod
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Nie widzisz zadnego wyjscia prowadzacego na zachod.
+Centralny pokoj stowarzyszenia Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+ ==  polnoc, poludniowy-wschod, poludniowy-zachod, poludnie
+Sa tutaj cztery widoczne wyjscia: polnoc, poludniowy-wschod, poludniowy-zachod i poludnie.
+Tablica ogloszeniowa i ogromny wiklinowy kosz.
+Trzy biale golebie.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+ ==  polnoc, polnocny-zachod, wschod
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+% _movement_match_exists: _movement_compass: no such command or macro
+ ==  poludnie, zachod
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+Nie widzisz zadnego wyjscia prowadzacego na wschod.
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% Loading commands from init/includes.tf.
+% Loading commands from movement.tf.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+ [==]  polnoc, polnocny-zachod, wschod
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+% _movement_match_exists: _movement_compass: no such command or macro
+ [==]  poludnie, zachod
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% Loading commands from init/includes.tf.
+% Loading commands from movement.tf.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+ ==  polnoc, polnocny-zachod, wschod
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+% _movement_match_exists: _movement_compass: no such command or macro
+ ==  poludnie, zachod
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+% _movement_match_exists: _movement_compass: no such command or macro
+ ==  polnoc, polnocny-zachod, wschod
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+% _movement_match_exists: _movement_compass: no such command or macro
+ ==  poludnie, zachod
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.
+% Loading commands from lib/init/kbmac.tf.
+% Loading commands from lib/init/settings.tf.
+% Loading commands from /usr/local/share/tf-lib/alias.tf.
+% Loading commands from /usr/local/share/tf-lib/spedwalk.tf.
+% Loading commands from /usr/local/share/tf-lib/kbbind.tf.
+% Loading commands from /usr/local/share/tf-lib/map.tf.
+% Loading commands from /usr/local/share/tf-lib/textutil.tf.
+% Loading commands from /usr/local/share/tf-lib/lisp.tf.
+% Loading commands from /usr/local/share/tf-lib/complete.tf.
+% Loading commands from /usr/local/share/tf-lib/relog.tf.
+% Loading commands from /usr/local/share/tf-lib/kbstack.tf.
+% Loading commands from /usr/local/share/tf-lib/at.tf.
+% Current directory is /Users/thornag/Development/projects/TF/lib
+% Loading commands from init/includes.tf.
+% Loading commands from movement.tf.
+Pokoj medytacji w gildii Krasnoludow Mahakamu.
+ ==  polnoc, polnocny-zachod, wschod
+Sa tutaj trzy widoczne wyjscia: polnoc, polnocny-zachod i wschod.
+Bokiem przeciskasz sie przez szczeline.
+Przyciemniona komora.
+ ==  poludnie, zachod
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedzi Than.
+Debowy szeroki stojak.
+Grodo przybywa z zachodu.
+Grodo podaza na zachod.
+Grodo przybywa z zachodu.
+Grodo z szelmowskim usmiechem na ustach rozsiada sie za szeroka lawa.
+Grodo namysla sie.
+% key_nkp5: _bind_kb_key_nkp5: no such command or macro
+W zachodnim koncu przytulnej, przyciemnionej komory stoja dwa solidne drewniane stoly wraz z szerokimi lawami. Na kazdym z nich dogasa zakurzona lampa olejowa, rzucajaca nikly blask na ciemnoszare sciany. W samym koncu lawy siedzi podpity krasnolud nucac pod nosem jakas piesn, przerywajac ja co chwila, aby pociagnac  kolejny lyk zyciodajnego plynu.
+ ==  poludnie, zachod
+Sa tutaj dwa widoczne wyjscia: poludnie i zachod.
+Za szeroka lawa siedza Grodo i Than.
+Debowy szeroki stojak.
+% key_nkp/: _bind_kb_key_nkpDivide: no such command or macro
+Berial przybywa z zachodu.
+Berial z uroczystym okrzykiem unosi rece w powitalnym gescie w twoim kierunku.
+Berial podaza na poludnie.
+Grodo z ogromnym zalem wstaje od szerokiej lawy.
+Grodo podaza na zachod.
+Grodo przybywa z zachodu.
+Grodo podaza na poludnie.
+Grodo przybywa z poludnia.
+Grodo z szelmowskim usmiechem na ustach rozsiada sie za szeroka lawa.
+% Current directory is /Users/thornag/Development/projects/TF
+% Loading commands from lib/init.tf.
+% Loading commands from lib/init/worlds.tf.
+% lib/init/worlds.tf, line 1: addworld: Redefined world arkadia
+% Loading commands from lib/init/log.tf.

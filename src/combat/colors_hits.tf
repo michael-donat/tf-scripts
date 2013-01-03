@@ -27,6 +27,9 @@
 /def -t'* lecz tobie udaje sie go sparowac *' -p15 _combat_incoming_trigger_parry_2 = \
     /substitute -p @{Crgb025}[  PARRY ] - %{*}
 
+/def -t'* lecz tobie udaje sie zbic je *' -p15 _combat_incoming_trigger_parry_3 = \
+    /substitute -p @{Crgb025}[  PARRY ] - %{*}
+
 /def -t'* lecz tobie udaje sie uniknac *' -p15 _combat_incoming_trigger_dodge_1 = \
     /substitute -p @{Crgb025}[  DODGE ] - %{*}
 
@@ -35,6 +38,8 @@
 
 /def -t'* nie udaje sie trafic ciebie *' -p15 _combat_incoming_trigger_miss_1 = \
     /substitute -p @{Crgb025}[  MISS  ] - %{*}
+
+
 
 ;------------------------------------------55------------------------------
 ;			    I HIT ENEMY - BASIC
@@ -113,6 +118,11 @@
 
 /def -t'Wyprowadzasz szybkie pchniecie * zbija je z linii ataku *' -p15 _combat_outgoing_spec_wks_parry_1 = \
     /substitute -p @{Crgb152}[  PARRY ] [ WKS SPEC ] - %{*}
+
+/def -t'Wykorzystujac brak broni u przeciwnika, blyskawicznie wyprowadzasz cios *. Nieznacznie tracisz rownowage, gdy twoja bron ze swistem przecina powietrze *'  -p15 _combat_outgoing_spec_wks_miss_1 = \
+    /substitute -p @{Crgb152}[  MISS  ] [ WKS SPEC ] - %{*}n
+
+
 
 
 ;Wykorzystujac brak broni u przeciwnika, w mgnieniu oka wyprowadzasz cios runiczna dluga halabarda mierzac w potwornego wysokiego goblina. Nieznacznie tracisz rownowage, gdy twoja bron ze swistem przecina powietrze po jego udanym uniku.

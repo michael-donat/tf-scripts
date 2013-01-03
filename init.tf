@@ -52,6 +52,10 @@
 
 /def key_nkpEq = /_bind_kb_key_nkpEquals
 
+/def -i key_meta_f13	= /key_esc_f13
+/def -i key_meta_f14	= /key_esc_f14
+/def -i key_meta_f15	= /key_esc_f15
+
 ;above caters for small + key
 
 /load includes.tf

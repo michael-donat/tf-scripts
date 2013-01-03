@@ -19,10 +19,14 @@
 /load /Users/thornag/Development/projects/TF/ref/dhogrin/Arkadia/FastBind.tf
 /load /Users/thornag/Development/projects/TF/ref/dhogrin/Arkadia/timer.tf
 /load /Users/thornag/Development/projects/TF/ref/dhogrin/Arkadia/MC.tf
-/load /Users/thornag/Development/projects/TF/ref/dhogrin/Arkadia/OK.tf
+;/load /Users/thornag/Development/projects/TF/ref/dhogrin/Arkadia/OK.tf
 /load /Users/thornag/Development/projects/TF/ref/dhogrin/Arkadia/Magiki.tf
 /load /Users/thornag/Development/projects/TF/ref/dhogrin/Arkadia/okazyjne.tf
 
 /load /Users/thornag/Development/projects/TF/ref/dhogrin/Arkadia/statystyka.tf
 
 /load /Users/thornag/Development/projects/TF/ref/dhogrin/Arkadia/MojaOdmiana.tf
+
+/def lo = \
+    /load /Users/thornag/Development/projects/TF/ref/dhogrin/moje/over.tf
+

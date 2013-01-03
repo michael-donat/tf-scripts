@@ -12,13 +12,13 @@
 /def -p15 -t'* zrecznie zaslania Cie przed ciosami *' _combat_event_guard_2 = \
     /substitute -p @{Cbgblue} [ ZASLONA ] [CIEBIE] [OK] - %{*}
 
-/def -p10 -t'* zrecznie zaslania * przed ciosami *' _combat_event_guard_1 = \
+/def -F -p10 -t'* zrecznie zaslania * przed ciosami *' _combat_event_guard_1 = \
     /substitute -p @{Cbgblue} [ ZASLONA ] [OK] - %{*}
 
-/def -p10 -t'Zrecznie zaslaniasz *' _combat_event_guard_3 = \
+/def -F -p10 -t'Zrecznie zaslaniasz *' _combat_event_guard_3 = \
     /substitute -p @{Cbggreen}@{Cblue} [ ZASLANIASZ ] [OK] - %{*}
 
-/def -p10 -t'Probujesz zaslonic *' _combat_event_guard_4 = \
+/def -F -p10 -t'Probujesz zaslonic *' _combat_event_guard_4 = \
     /substitute -p @{Cred} [ ZASLANIASZ ] [FAIL] - %{*}
 
 /def -p10 -t'Nie jestes jeszcze gotow do wykonania kolejnego manewru.' _combat_event_guard_5 = \
