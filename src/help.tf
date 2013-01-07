@@ -24,6 +24,8 @@
 /alias wk wez monety z ciala
 /alias koks napij sie z buklaka%;stan
 
+/alias wkk /send wez monety z ciala%;/send wez monety z drugiego ciala%;/send wez monety z trzeciego ciala%;/send wez monety z czwartego ciala%;/send wez monety z piatego ciala%;/send wez monety z szostego ciala
+
 /alias ' jpowiedz %{*}
 /alias '' powiedz %{*}
 
@@ -279,3 +281,13 @@
     wez monety ze skrzynki%; \
     wloz kluczyk do skrzynki%; \
     wloz kluczyk do skrzyni
+
+/def clear_mail = /set poczta_show
+
+
+/def key_esc_nkp1 = /send zaslon pierwszego czlonka druzyny
+/def key_esc_nkp2 = /send zaslon drugiego czlonka druzyny
+/def key_esc_nkp3 = /send zaslon trzeciego czlonka druzyny
+/def key_esc_nkp4 = /send zaslon czwartego czlonka druzyny
+/def key_esc_nkp5 = /send zaslon piatego czlonka druzyny
+/def key_esc_nkp6 = /send zaslon szostego czlonka druzyny

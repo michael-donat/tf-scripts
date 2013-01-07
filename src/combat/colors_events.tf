@@ -10,7 +10,7 @@
     /substitute -p @{rCbgred} ======       %{*}      ======
 
 /def -p15 -t'* zrecznie zaslania Cie przed ciosami *' _combat_event_guard_2 = \
-    /substitute -p @{Cbgblue} [ ZASLONA ] [CIEBIE] [OK] - %{*}
+    /substitute -p @{Cbggreen} @{Cblue} [ ZASLONA ] [CIEBIE] [OK] - %{*}
 
 /def -F -p10 -t'* zrecznie zaslania * przed ciosami *' _combat_event_guard_1 = \
     /substitute -p @{Cbgblue} [ ZASLONA ] [OK] - %{*}

@@ -30,6 +30,9 @@
 /def -t'* lecz tobie udaje sie zbic je *' -p15 _combat_incoming_trigger_parry_3 = \
     /substitute -p @{Crgb025}[  PARRY ] - %{*}
 
+/def -t'* lecz tobie udaje sie je zbic *' -p15 _combat_incoming_trigger_parry_4 = \
+    /substitute -p @{Crgb025}[  PARRY ] - %{*}
+
 /def -t'* lecz tobie udaje sie uniknac *' -p15 _combat_incoming_trigger_dodge_1 = \
     /substitute -p @{Crgb025}[  DODGE ] - %{*}
 
@@ -67,7 +70,10 @@
 /def -t'Wykonujesz zamaszyste * zbija je*' -p15 _combat_outgoing_trigger_parry_1 = \
     /substitute -p @{Crgb152}[  PARRY ] - %{*}
 
-/def -T'Wykonujesz zamaszyste ciecie * oslania sie *' _combat_outgoing_trigger_parry_2 = \
+/def -t'Wyprowadzasz szybkie pchniecie * oslania sie*' -p15 _combat_outgoing_trigger_parry_2 = \
+    /substitute -p @{Crgb152}[ SHIELD ] - %{*}
+
+/def -T'Wykonujesz zamaszyste ciecie * oslania sie *' _combat_outgoing_trigger_parry_3 = \
     /substitute -p @{Crgb152}[ SHIELD ] - %{*}
 
 
@@ -122,7 +128,8 @@
 /def -t'Wykorzystujac brak broni u przeciwnika, blyskawicznie wyprowadzasz cios *. Nieznacznie tracisz rownowage, gdy twoja bron ze swistem przecina powietrze *'  -p15 _combat_outgoing_spec_wks_miss_1 = \
     /substitute -p @{Crgb152}[  MISS  ] [ WKS SPEC ] - %{*}n
 
-
+/def -t'Wykorzystujac brak broni u przeciwnika, z wyuczona wprawa wyprowadzasz cios *. Nieznacznie tracisz rownowage, gdy twoja bron ze swistem przecina powietrze *'  -p15 _combat_outgoing_spec_wks_miss_2 = \
+    /substitute -p @{Crgb152}[  DODGE ] [ WKS SPEC ] - %{*}n
 
 
 ;Wykorzystujac brak broni u przeciwnika, w mgnieniu oka wyprowadzasz cios runiczna dluga halabarda mierzac w potwornego wysokiego goblina. Nieznacznie tracisz rownowage, gdy twoja bron ze swistem przecina powietrze po jego udanym uniku.

@@ -27,3 +27,6 @@
 
 /load help.tf
 
+/load subs/MC.tf
+/load subs/OK.tf
+

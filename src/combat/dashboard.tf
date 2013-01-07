@@ -43,13 +43,15 @@
     /set _combat_health_hp_color=$[_combat_health_to_color({_combat_health_hp})]%;\
     /set _combat_health_who=%{1}%;\
     /if ({1} =~ "0") \
+        /set _team_member_number=0%;\
         /test echo("")%;\
         /test echo("---------------------------------------------------")%;\
         /set tmp_text=$[pad(strcat("K O N D Y C J A     ----    ",{3}),-55)] [ $[strrep("#", {_combat_health_hp})]$[strrep(" ", 7-{_combat_health_hp})] ]%;\
         /set _combat_health_is_team_member=-1%;\
     /elseif (strstr({_team_members_list_separated}, strcat("|",{_combat_health_who},"|")) != -1) \
         /set _combat_health_is_team_member=1%;\
-        /set tmp_text=$[pad({3},-55)] [ $[strrep("#", {_combat_health_hp})]$[strrep(" ", 7-{_combat_health_hp})] ]%;\
+        /set _team_member_number=$[{_team_member_number}+1]%;\
+        /set tmp_text=$[pad(strcat(" [", {_team_member_number}, "] ", {3}),-55)] [ $[strrep("#", {_combat_health_hp})]$[strrep(" ", 7-{_combat_health_hp})] ]%;\
     /else \
         /if ({_combat_health_is_team_member}==1) \
             /test echo("------------")%;\
