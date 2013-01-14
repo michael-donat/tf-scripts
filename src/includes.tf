@@ -30,3 +30,6 @@
 /load subs/MC.tf
 /load subs/OK.tf
 
+;/load color_log.tf
+
+/load map.tf

@@ -54,7 +54,17 @@
     /list [0-9]
 
 /def redcapy = \
-    /def 1 = /attack pierwszego redcapa
+    /def 1 = /attack pierwszego redcapa%;\
+    /def 2 = /attack drugiego redcapa%;\
+    /def 3 = /attack trzeciego redcapa%;\
+    /def 4 = /attack czwartego redcapa%;\
+    /def 5 = /attack piatego redcapa
+
+/def zboje = \
+    /def 1 = /attack pierwszego zboja%;\
+    /def 2 = /attack drugiego zboja%;\
+    /def 3 = /attack trzeciego zboja%;\
+    /set target2=pierwszego zboja
 
 /def mahak = \
     /def 1 = /attack oficera%;\
@@ -62,13 +72,13 @@
     /def 3 = /attack goblina%;\
     /def 4 = /attack pukacza%;\
     /def 5 = /attack barbegazi%;\
-    /def 6 = /attack echinopsa%\
+    /def 6 = /attack echinopsa%;\
     /def 7 = /attack trolla
 
 /def kurhan = \
-    /def 1 = /attack kosciotrupa%;\
-    /def 2 = /attack zombi%;\
-    /def 3 = /attack ozywienca
+    /def 1 = /attack kosciotrupa%%;/set target2=kosciotrupa%;\
+    /def 2 = /attack zombiego%%;/set target2=zombiego%;\
+    /def 3 = /attack ozywienca%%;/set target2=ozywienca
 
 /def zas = \
     /def key_f13 = z %{1}%;\
@@ -282,7 +292,7 @@
     wloz kluczyk do skrzynki%; \
     wloz kluczyk do skrzyni
 
-/def clear_mail = /set poczta_show
+/def clear_mail = /set poczta_show=
 
 
 /def key_esc_nkp1 = /send zaslon pierwszego czlonka druzyny
@@ -291,3 +301,71 @@
 /def key_esc_nkp4 = /send zaslon czwartego czlonka druzyny
 /def key_esc_nkp5 = /send zaslon piatego czlonka druzyny
 /def key_esc_nkp6 = /send zaslon szostego czlonka druzyny
+/def key_esc_nkp7 = /send zaslon siodmego czlonka druzyny
+/def key_esc_nkp8 = /send zaslon osmego czlonka druzyny
+/def key_esc_nkp9 = /send zaslon dziewiatego czlonka druzyny
+
+
+/def key_esc_pgdn = /send dbb
+/def key_esc_pgup = /send ddb
+
+/def key_f3 = /send kill %{target2}
+/def key_esc_f3 = /send przelam obrone %{target2}
+
+/def skora = \
+    /send powsun bron do uprzezy%;\
+    /send wez noz z plecaka%;\
+    /send dobadz noza%;\
+    /send wytnij skore z ciala %{*}%;\
+    /send wloz skore do plecaka%;\
+    /send wloz noz do plecaka%;\
+    /send ddb
+
+/def ocen = \
+    /set ocen_count=0%;\
+    /send ocen %{*}
+
+ /def -p1 -aBCmagenta -mglob -t'Oceniasz starannie *' ocena_hook = \
+    /set ocen_count=$[{ocen_count}+1]%;\
+    /substitute %{ocen_count} %{*}
+
+/alias ocen /ocen %{*}
+
+/def klaus = \
+    /send wez monety z plecaka%;\
+    /send zaplac za leczenie%;\
+    /send zdejmij wszystko%;\
+    /send dbb%;\
+    /send usiadz na kozetce
+
+/def klauss = \
+    /send zaloz fartuch%;\
+    /send zaloz pas%;\
+    /send zaloz wszystko%;\
+    /send ddb%;\
+    /send zepnij plaszcz spinka%;\
+    /send wloz monety do plecaka
+
+/def -p5 -F -aCred -t'* nie nadaje sie do naprawy.' _naprawa_nogood
+
+/def -t'Solidny kamien.' bacalla_warn = \
+    /echo -p @{Cred}........................%;\
+    /echo -p @{Cred}BRON BRON BRON BRON BRON%;\
+    /echo -p @{Cred}........................
+
+/def zmienworeczek = \
+    /send otworz woreczek%;\
+    /send otworz drugi woreczek%;\
+    /send wez ziola z przytroczonego woreczka%;\
+    /send odtrocz przytroczony woreczek%;\
+    /send wloz go do plecaka%;\
+    /send wloz ziola do woreczka%;\
+    /send przytrocz woreczek%;\
+    /send zamknij woreczek
+
+/def chowajziola = \
+    /send otworz woreczek%;\
+    /send wloz ziola do niego%;\
+    /send zamknij woreczek
+
+/alias zp /send zalson przed %{*}
