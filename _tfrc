@@ -1,4 +1,4 @@
 /cd ~/tf
 
-;/load init.tf
-/load lib/init.tf
+/load init.tf
+;/load lib/init.tf

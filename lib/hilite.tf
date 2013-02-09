@@ -13,7 +13,9 @@
 ; Kolorowanie przybywa podaza
 ;--------------------------------------------------------------
 
-/def -aCrgb355 -mregexp -t'(.*) (przybywa|podaza)(ja|) (z|na) (.*)' _info_events_location_change_1 = /test substitute(strcat("= ", "%{P0}"))
+/def -aCgray11 -mregexp -t'(.*) (przybywa|podaza)(ja|) (z|na) (.*)' _info_events_location_change_1 = /test substitute(strcat("= ", "%{P0}"))
+
+/def -aCgray11 -mregexp -t'Wraz z .* podazasz za .* (na|do) *.' _info_events_location_change_2 = /test substitute(strcat("= ", "%{*}"))
 
 ;------------------------------------------------------------------------
 ; Sprzet
@@ -29,3 +31,9 @@
       /def -p25 -1 -mregexp -F -aCgreen -t"\\\\.$$" _masz_przy_sobie_2b=/purge _masz_przy_sobie_2a %;\
     /endif
 /def -p10 -F -aBCmagenta -mregexp -t'Trzyma(|sz) ' _masz_przy_sobie_4
+
+;------------------------------------------------------------------------
+; Inne fajne
+;------------------------------------------------------------------------
+
+/def -Fp50 -aCrgb455 -mregexp -t'((Jest|Jestes) .*, (znanym|znana) jako:|Jest to [^ ]+ [^ ]+ (elf|elfka|krasnolud|krasnoludka|gnom|gnomka|ogr|ogrzyca|niziolek|niziolka|polelf|polelfka|mezczyzna|kobieta|halfling|halflina|mutant|mutantka)\.)' _rozdzielenie_opisow_postaci = /echo%; /echo +---------------------------------------------------------------------------------+%; /echo

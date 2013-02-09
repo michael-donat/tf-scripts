@@ -2,10 +2,12 @@
 /load levels/stamina.tf
 /load levels/misc.tf
 
-; loads combatr related stuff
+; loads combat related stuff
 /load combat/hp.tf
 /load combat/team.tf
 /load combat/events.tf
+/load combat/system.tf
+/load combat/defs.tf
 
 ; status bar
 /load statusbar/init.tf
@@ -39,3 +41,7 @@
 ; load databases
 /eval /load %{db_odmiana}
 
+; temp
+/load ../src/combat/colors_events.tf
+/load ../src/combat/colors_hits.tf
+/load ../src/combat/colors_weapons.tf

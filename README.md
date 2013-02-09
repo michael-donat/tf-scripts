@@ -21,6 +21,7 @@ CHAGELOG
 ==========
 
 0.0.2 - Dodalem rozne handy defy do picia, ziolek etc
+
 0.0.1 - Jako tako ogarniety mechanizm zaslon, brak wykorzystania w walce
 
 

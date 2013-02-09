@@ -18,7 +18,7 @@
 /def ingw=/load ~/tf/Arkadia/Ingwar/ingw.tf
 ; Lokacje git: 1, 2, 3, 4, 6, 7, 8, 10, 11, 12
 
-/def -Fp50 -mregexp -t'(Jest .*, (znanym|znana) jako:|Jest to [^ ]+ [^ ]+ (elf|elfka|krasnolud|krasnoludka|gnom|gnomka|ogr|ogrzyca|niziolek|niziolka|polelf|polelfka|mezczyzna|kobieta|halfling|halflina|mutant|mutantka)\.)' _rozdzielenie_opisow_postaci = /echo%; /echo +---------------------------------------------------------------------------------+%; /echo
+/def -Fp50 -aH -mregexp -t'(Jest .*, (znanym|znana) jako:|Jest to [^ ]+ [^ ]+ (elf|elfka|krasnolud|krasnoludka|gnom|gnomka|ogr|ogrzyca|niziolek|niziolka|polelf|polelfka|mezczyzna|kobieta|halfling|halflina|mutant|mutantka)\.)' _rozdzielenie_opisow_postaci = /echo%; /echo +---------------------------------------------------------------------------------+%; /echo
 
 /def symbol = /if ({*}=~'on') /set symbol=1%; /set sl1=1%; /set sl2=1%; /set sl3=1%; /set sl4=1%; /set sl5=1%; /set sl6=1%; /set sl7=1%; /set sl8=1%; /set sl9=1%; /set sl10=1%; /set sl11=1%; /set sl12=1%; /set sl13=1%; /set sl14=1%; /set sl15=1%; /else /set symbol=0%; /endif
 /def -p200 -mregexp -t'Schody prowadzace na zewnatrz wygladaja na dluzsze, niz sie to wydawalo. Gdyby zaszla koniecznosc ucieczki do bedziesz miec do przebycia dluga droge, zanim wydostaniesz sie na otwarta przestrzen. Sciany tego pomieszczenia pokryte sa pajeczynami, zas po zakurzonej podlodze walaja sie resztki jakichs kosci. Na jednej ze scian zauwazasz tez uchwyt, w ktorym zatknieto pochodnie - w tej chwili pozostal po niej tylko marny zweglony kikut.' _symbol_lok_1 = /if ({symbol}==1 & {sl1}==1) /set sl1=0%; /echo -p @{BCGreen} # Lokacja 1 # %; ob sciany%; ob pajeczyny%; ob kosci%; ob uchwyt%; ob kikut%; /endif
