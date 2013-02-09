@@ -1,4 +1,4 @@
-; ## Linie dodane automagicznie   : tf_ver=1.1.0
+    ; ## Linie dodane automagicznie   : tf_ver=1.1.0
 ; ## 
 ; ## Wersja pliku                 : 1.1.0
 ; ## Ostatnia zmiana pliku        : 2005-07-22 10:21:37

@@ -19,13 +19,14 @@
     
 /def odmien_M_D = \
 	/let imie=$[tolower({L})]%;\
-        /if ({-L}=~NULL) \
-        	/let hmmnicnierob=0%;\
+    /if ({-L}=~NULL) \
+        /let hmmnicnierob=0%;\
     /elseif ({_sprawdzac_} == 0) \
-	/let AMOZEBUIDYN=123%;\
-        /else \
-        	/_odmien_M_D %{-L}%;\
-        /endif %;\
+	    /let AMOZEBUIDYN=123%;\
+    /else \
+        /_odmien_M_D %{-L}%;\
+    /endif %;\
+    \
 	/if ({imie}=~"druzyna" | {imie}=~"leader") \
 	    /let nicnierob=asdasd%; \
 	/else \
@@ -144,19 +145,18 @@
 	        
 /def sprawdz_D = \
     /if ({_sprawdzac_} == 0) \
-	/let nic_nie=123%;\
+	    /let nic_nie=123%;\
     /else \
-	/if ($(/listvar _odmiana_%{1}*)=/"") \
-	    /if ($(/list _odmiana_%{1})=/"") \
-        	/dodaj_odmiane %{*}%; \
-;               /echo -p Nie mam tej odmiany @{B}%{*}@{n} wiec ja dodaje%; \
-	    /else \
-		/_odmiana_%{*}%; \
-	        /eval /echo %%_odmiana_%{1}_dopelniacz%; \
-	    /endif %; \
+	    /if ($(/listvar _odmiana_%{1}*)=/"") \
+	        /if ($(/list _odmiana_%{1})=/"") \
+        	    /dodaj_odmiane %{*}%; \
+	        /else \
+		        /_odmiana_%{*}%; \
+	            /eval /echo %%_odmiana_%{1}_dopelniacz%; \
+	        /endif %; \
         /else \
-        	/_odmiana_%{*}%;\
-		/eval /echo %%_odmiana_%{1}_dopelniacz%; \
+            /_odmiana_%{*}%;\
+		    /eval /echo %%_odmiana_%{1}_dopelniacz%; \
         /endif %;\
     /endif
 
