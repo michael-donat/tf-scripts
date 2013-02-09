@@ -33,3 +33,9 @@
 ;/load color_log.tf
 
 /load map.tf
+
+/load combat/expy.tf
+
+/load skrzynia.tf
+
+/load zielnik.tf

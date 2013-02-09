@@ -19,3 +19,7 @@
     /def -mregexp -p5 -t'^Druzyne prowadzi (.*)\, zas ty jestes jej jedynym czlonkiem\.\$' _team_members_trigger_team_2 = /test _team_members_set("%%{P1}")%%;/set _team_leader %%{P1}%;\
     /def -mregexp -p5 -t'^Przewodzisz druzynie, w ktorej oprocz ciebie (jest jeszcze|sa(| w niej) jeszcze:) (.*)\.\$' _team_members_trigger_team_3 = /test _team_members_set("%%{P3}")%;\
     /send druzyna
+
+;/def -t'* przekazuje prowadzenie druzyny *' _team_change_trigger = /druzyna
+
+/def -t'Dolaczasz do druzyny *' _team_change_trigger_1 = /druzyna

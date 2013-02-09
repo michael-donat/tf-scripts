@@ -6,7 +6,7 @@
 /def ob = \
  ob %*%;\
  /def -n1 -ag -p5 -t'*' tm_skrzynia_ob_t1 %;\
- /def -n1 -F -ag -mregexp -p0 -t'(zawiera )' tm_skrzynia_ob_t2 = \
+ /def -n1 -F -ag -mregexp -p0 -t'(zawiera |przy nim )' tm_skrzynia_ob_t2 = \
    /skrzynia %%PR %%; /pokaz_wszystko
 
 /def lok =\

@@ -15,6 +15,10 @@
 /alias z /zaslon %{*}
 /alias zz /send przestan zaslaniac
 /alias zzz /send przestan kryc sie za zaslona
+/alias zp /send zaslon przed %{*}
+/alias zs /send rozkaz druzynie zaslonic ciebie%; /send popatrz opiekunczo na siebie
+/alias zr /send rozkaz druzynie zaslonic %{*}%; /send popatrz opiekunczo na %{*}
+/def po = /send popatrz opiekunczo na %{*}
 
 /alias kk k wszystkich
 /alias ll zerknij
@@ -23,11 +27,18 @@
 /alias mmm wloz monety do plecaka
 /alias wk wez monety z ciala
 /alias koks napij sie z buklaka%;stan
+/alias koksik kup zabojce trolli do buklaka
+/alias mmk otworz sakiewke%;wez kamienie z sakiewki%; wez mithrylowe monety z sakiewki%;zamknij sakiewke
+/alias mmmk otworz sakiewke%;wloz kamienie do sakiewki%; wloz mithrylowe monety do sakiewki%;zamknij sakiewke
 
+/alias wk wez monety z ciala%;wez kamienie z ciala
 /alias wkk /send wez monety z ciala%;/send wez monety z drugiego ciala%;/send wez monety z trzeciego ciala%;/send wez monety z czwartego ciala%;/send wez monety z piatego ciala%;/send wez monety z szostego ciala
 
 /alias ' jpowiedz %{*}
 /alias '' powiedz %{*}
+
+/def wspolny = /alias ' powiedz %%{*}
+/def mowa = /alias ' jpowiedz %%{*}
 
 /def naprawa = \
     /send zaloz wszystkie zbroje%;\
@@ -93,7 +104,7 @@
 /def dell = \
   przestan walczyc%; \
   opusc bron%; \
-  otworz pierwszy przytroczony woreczek%; \
+  otworz drugi przytroczony woreczek%; \
   wez zolty jasny kwiat z niego%; \
   zjedz zolty jasny kwiat%; \
   wloz kwiat do niego%;\
@@ -103,12 +114,16 @@
 /def dziur = \
   przestan walczyc%; \
   opusc bron%; \
-  otworz przytroczony woreczek%; \
+  otworz pierwszy przytroczony woreczek%; \
   wez cztery czterokanciaste rozgalezione lodygi z niego%; \
   rozgryz czterokanciaste rozgalezione lodygi%; \
   wloz lodygi do niego%;\
   dobadz broni%; \
   zamknij otwarte woreczki
+
+/def ziolka = \
+    zajrzyj do pierwszego przytroczonego woreczka%;\
+    zajrzyj do drugiego przytroczonego woreczka
 
 /def topor = \
     /send wez tarcze z plecaka%;\
@@ -354,18 +369,84 @@
     /echo -p @{Cred}........................
 
 /def zmienworeczek = \
-    /send otworz woreczek%;\
-    /send otworz drugi woreczek%;\
-    /send wez ziola z przytroczonego woreczka%;\
     /send odtrocz przytroczony woreczek%;\
-    /send wloz go do plecaka%;\
-    /send wloz ziola do woreczka%;\
-    /send przytrocz woreczek%;\
-    /send zamknij woreczek
+    /send otworz go%;\
+    /send wez ziola z niego%;\
+    /send odloz go%;\
+    /send wez woreczek z plecaka%;\
+    /send otworz go%;\
+    /send wloz ziola do niego%;\
+    /send zamknij go
+
+
 
 /def chowajziola = \
     /send otworz woreczek%;\
     /send wloz ziola do niego%;\
     /send zamknij woreczek
 
-/alias zp /send zalson przed %{*}
+
+/def -mregexp -F -t'.*nosi piekna (zlota|srebrna|miedziana) obrecz( wysadzana (krwawymi rubinami|kosztownymi kamieniami)|)' _wyroznik_stowarzyszenia_OK = /echo -p @{Cbgblue}@{BCwhite}...:: OGR Z OGRZEJ KOMPANII ::...@{n}
+/def -mglob -F -t'*szyi, na skorzanym rzemieniu wisi*' _wyroznik_stowarzyszenia_LE = /echo -p @{Cbgblue}@{BCwhite}...:: LESNY ELF ::...@{n}
+/def -mregexp -F -t'Nosi (.*) kubraczek, tradycyjny stroj Elfow z Gor Sinych.' _wyroznik_stowarzyszenia_SE = /echo -p @{Cbgblue}@{BCwhite}...:: SINY ELF ::...@{n}
+/def -mglob -F -t'*Wzor i kolor kiltu swiadcza o przynaleznosci do Krasnoludow z Gor Kranca Swiata*' _wyroznik_stowarzyszenia_KGKS = /echo -p @{Cbgblue}@{BCwhite}...:: KRASNOLUD GKS ::...@{n}
+/def -mglob -F -t'*welniany krasnoludzki kilt*' _wyroznik_stowarzyszenia_KGKS2 = /echo -p @{Cbgblue}@{BCwhite}...:: KRASNOLUD GKS (Bezdomny) ::...@{n}
+/def -mregexp -F -t'Klamre (jego|jej) pasa zdobi herb klanu.*' _wyroznik_stowarzyszenia_KM = /echo -p @{Cbgblue}@{BCwhite}...:: KRASNOLUD MAHAKAMU ::...@{n}
+/def -mglob -F -t'*oznaka przynaleznosci do Cechu Kupcow Novigradzkich*' _wyroznik_stowarzyszenia_CKN = /echo -p @{Cbgblue}@{BCwhite}...:: KUPIEC NOVIGRADZKI ::...@{n}
+/def -mglob -F -t'*jest oznaka przynaleznosci do grona pracownikow najemnych Cechu Kupcow Novigradzkich.' _wyroznik_stowarzyszenia_PHCKN = /echo -p @{Cbgblue}@{BCwhite}...:: PARTNER HANDLOWY CKN ::...@{n}
+/def -mglob -F -t'*zamek ze znakiem Stowarzyszenia Gnomich Wynalazcow*' _wyroznik_stowarzyszenia_SGW = /echo -p @{Cbgblue}@{BCwhite}...:: GNOM Z SGW ::...@{n}
+/def -mglob -F -t'*ryngraf, na ktorym wyryto*Skorpion*' _wyroznik_stowarzyszenia_WKS = /echo -p @{Cbgblue}@{BCwhite}...:: KOMPANIA SKORPION ::...@{n}
+/def -mregexp -F -t'.* skory oznaczajaca (jego|jej) przynaleznosc do osadnikow.*' _wyroznik_stowarzyszenia_Osadnicy = /echo -p @{Cbgblue}@{BCwhite}...:: OSADNIK ::...@{n}
+/def -mregexp -F -t'Nosi wiewiorczy ogon (.*) swiadczacy (.*)' _wyroznik_stowarzyszenia_SC = /echo -p @{Cbgblue}@{BCwhite}...:: WIEWIORA ::...@{n}
+/def -mglob -F -t'*Przez srodek jego glowy przebiega czub*' _wyroznik_stowarzyszenia_ZT = /echo -p @{Cbgblue}@{BCwhite}...:: ZABOJCA TROLLI ::...@{n}
+/def -mglob -F -t'*charakterystyczna dla Stowarzyszenia Polelfow*' _wyroznik_stowarzyszenia_Polelfy = /echo -p @{Cbgblue}@{BCwhite}...::  POLELF/KA ::...@{n}
+/def -mregexp -F -t'Przy pasie nosi.*zacieznej piechoty z Ochotniczego Hufca Mahakamu\.' _wyroznik_stowarzyszenia_OHM = /echo -p @{Cbgblue,BCwhite}...:: OHM ::...@{n}
+/def -mregexp -F -t'zawiazana .* ze znakiem czarnego gryfa.' _wyroznik_stowarzyszenia_KG = /echo -p @{Cbgblue,BCwhite}...:: NAJEMNIK KG::...
+/def -F -mregexp -t'(^Twarz [^ ]+ pocieta jest .* wojownik)' _wyroznik_stowarzyszenia_GL = /echo -p @{Cbgblue,BCwhite}...:: GLADIATOR ::...
+/def -F -mregexp -t'(^Jest (kadetem|uczniem|pomocnikiem|mistrzem|gladiatorem) ((|z(|e) )Szkoly [wW]alki von Raugen|(|z )Nulnijskiej Szkoly Gladiatorow))' _wyroznik_stowarzyszenia_GL2 = /echo -p @{Cbgblue,BCwhite}...:: GLADIATOR ::...
+/def -F -mregexp -t'nieustepliwe niczym skelliganskie sztormy spojrzenie i twarz wysmagana lodowatymi wichrami swiadcza o tym, ze masz przed soba' _wyroznik_stowarzyszenia_Korsarze = /echo -p @{Cbgblue,BCwhite}...:: KORSARZ ::...
+
+
+;------------------------------------------------------------------------
+;				EKWIPUNEK				|
+;------------------------------------------------------------------------
+/def -p10 -mregexp -F -aBCgreen -t'Ma(|sz) na sobie .*(.)$' _masz_przy_sobie_1 =\
+    /if ({P2}!~".") \
+      /def -p10 -F -aBCgreen -t"*" _masz_przy_sobie_1a %;\
+      /def -p15 -1 -mregexp -F -aBCgreen -t"\\\\.$$" _masz_przy_sobie_1b=/purge _masz_przy_sobie_1a %;\
+    /endif
+/def -p20 -mregexp -F -aCgreen -t'Masz przy sobie .*([^\\.]|\\.)$' _masz_przy_sobie_2 =\
+    /if ({P1}!~".") \
+      /def -p20 -F -aCgreen -t"*" _masz_przy_sobie_2a %;\
+      /def -p25 -1 -mregexp -F -aCgreen -t"\\\\.$$" _masz_przy_sobie_2b=/purge _masz_przy_sobie_2a %;\
+    /endif
+/def -p10 -F -aBCmagenta -mregexp -t'Trzyma(|sz) ' _masz_przy_sobie_4
+
+;------------------------------------------------------------------------
+;			POZIOMY DOSWIADCZENIA				|
+;------------------------------------------------------------------------
+;/def -p4 -mregexp -F -t'((Wyglada na|Wygladasz na) (kompletnego zoltodzioba.))'		_poziomy_graczy1 = /substitute -p %{P2} @{BxCwhite}%{P3}[1/13] @{n}%{P5}%{PR}
+;/def -p4 -mregexp -F -t'((Wyglada na kogos, kto|Wygladasz na kogos, kto) (stawia pierwsze kroki.))'		_poziomy_graczy2 = /substitute -p %{P2} @{BxCwhite}%{P3}[2/13] @{n}%{P5}%{PR}
+;/def -p4 -mregexp -F -t'((Wyglada na kogos, kto|Wygladasz na kogos, kto) (jeszcze niewiele widzial.))'		_poziomy_graczy3 = /substitute -p %{P2} @{BxCwhite}%{P3}[3/13] @{n}%{P5}%{PR}
+;/def -p4 -mregexp -F -t'((Wyglada na kogos, kto|Wygladasz na kogos, kto) (niewiele wie o swiecie.))' 		_poziomy_graczy4 = /substitute -p %{P2} @{BxCwhite}%{P3}[4/13] @{n}%{P5}%{PR}
+/def -p4 -mregexp -F -t'((Wyglada na kogos|Wygladasz na kogos) (niedoswiadczonego.))' 		_poziomy_graczy5 = /substitute -p %{P2} @{BxCwhite}%{P3} [1/13] @{n}%{P5}%{PR}
+/def -p4 -mregexp -F -t'((Wyglada na kogos, kto|Wygladasz na kogos, kto) (widzial juz to i owo.))' 		_poziomy_graczy6 = /substitute -p %{P2} @{BxCwhite}%{P3} [2/13] @{n}%{P5}%{PR}
+/def -p4 -mregexp -F -t'((Wyglada na kogos, kto|Wygladasz na kogos, kto) (pewnie stapa po swiecie.))'		_poziomy_graczy7 = /substitute -p %{P2} @{BxCwhite}%{P3} [3/13] @{n}%{P5}%{PR}
+/def -p4 -mregexp -F -t'((Wyglada na kogos, kto|Wygladasz na kogos, kto) (niejedno widzial.))'			_poziomy_graczy8 = /substitute -p %{P2} @{BxCwhite}%{P3} [4/13] @{n}%{P5}%{PR}
+/def -p4 -mregexp -F -t'((Wyglada na kogos, kto|Wygladasz na kogos, kto) (swoje przezyl.))' 			_poziomy_graczy9 = /substitute -p %{P2} @{BxCwhite}%{P3} [5/13] @{n}%{P5}%{PR}
+/def -p4 -mregexp -F -t'((Wyglada na|Wygladasz na) (kogos doswiadczonego.))'		 	_poziomy_graczy10 = /substitute -p %{P2} @{BxCwhite}%{P3} [6/13] @{n}%{P5}%{PR}
+/def -p4 -mregexp -F -t'((Wyglada na kogos, kto|Wygladasz na kogos, kto) (wiele przeszedl.))' 			_poziomy_graczy11 = /substitute -p %{P2} @{BxCwhite}%{P3} [7/13] @{n}%{P5}%{PR}
+/def -p4 -mregexp -F -t'((Wyglada na kogos, kto|Wygladasz na kogos, kto) (widzial kawal swiata.))'		_poziomy_graczy12 = /substitute -p %{P2} @{BxCwhite}%{P3} [8/13] @{n}%{P5}%{PR}
+/def -p4 -mregexp -F -t'((Wyglada na kogos|Wygladasz na kogos) (bardzo doswiadczonego.))' 		_poziomy_graczy13 = /substitute -p %{P2} @{BxCwhite}%{P3} [9/13] @{n}%{P5}%{PR}
+/def -p4 -mregexp -F -t'((Wyglada na kogos, kto|Wygladasz na kogos, kto) (zwiedzil caly swiat.))' 		_poziomy_graczy14 = /substitute -p %{P2} @{BxCwhite}%{P3} [10/13] @{n}%{P5}%{PR}
+/def -p4 -mregexp -F -t'((Wyglada na kogos|Wygladasz na kogos) (wielce doswiadczonego.))' 		_poziomy_graczy15 = /substitute -p %{P2} @{BxCwhite}%{P3} [11/13] @{n}%{P5}%{PR}
+/def -p4 -mregexp -F -t'((Wyglada na kogos, kto|Wygladasz na kogos, kto) (widzial i doswiadczyl wszystkiego.))'	_poziomy_graczy16 = /substitute -p %{P2} @{BxCwhite}%{P3} [12/13] @{n}%{P5}%{PR}
+/def -p4 -mregexp -F -t'((Wyglada na|Wygladasz na) (osobe owiana legenda.))' 		_poziomy_graczy17 = /substitute -p %{P2} @{BxCwhite}%{P3} [13/13] @{n}%{P5}%{PR}
+
+/def dbz = \
+    wez bron drzewcowa z plecaka%;\
+    wez bron z uprzezy%;\
+    wloz ja do plecaka%;\
+    dbb
+
+/alias dbz /dbz

@@ -8,7 +8,7 @@
     /repeat -00:00:04.60 1 /set _statusbar_var_block_me=[  $$[strcat(decode_attr("0", "BCred"))]  ]
 
 /def -Fp2 -t'* zajmuje pozycje umozliwiajaca odciecie ci drogi ucieczki.' _statusbar_trigger_block_me_done = \
-    /set _statusbar_var_block_me=[$[strcat(decode_attr("BLOCK", "BCred"))]]
+    /set _statusbar_var_block_me=[$[strcat(decode_attr(decode_attr("BLOCK", "BCyellow"), "Cbgred"))]]
 
 /def -Fp2 -t'Udaje ci sie ominac *' _statusbar_trigger_block_me_end_1 = \
     /set _statusbar_var_block_me=[     ]
@@ -23,7 +23,7 @@
     /repeat -00:00:04.60 1 /set _statusbar_var_block_i=[  $$[strcat(decode_attr("5", "BCgreen"))]  ]
 
 /def -Fp2 -t'Zajmujesz pozycje umozliwiajaca odciecie *' _statusbar_trigger_block_i_done = \
-    /set _statusbar_var_block_i=[$[strcat(decode_attr("BLOCK", "BCgreen"))]]
+    /set _statusbar_var_block_i=[$[strcat(decode_attr(decode_attr("BLOCK", "Cbggreen"), "Crgb550"))]]
 
 /def -Fp2 -t'Przestajesz odcinac droge ucieczki *' _statusbar_trigger_block_i_end_1 = \
     /set _statusbar_var_block_i=[     ]

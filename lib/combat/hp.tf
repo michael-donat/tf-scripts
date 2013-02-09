@@ -61,3 +61,16 @@
     /let _combat_health_hp_color=$[_combat_health_to_color({_combat_health_hp})]%;\
     /let _combat_health_hp_bgcolor=$[_combat_health_to_bgcolor({_combat_health_hp})]%;\
     /test _statusbar_update_hp("%{_combat_health_hp}", "%{_combat_health_hp_color}", "%{_combat_health_hp_bgcolor}")
+
+/def -ag -Fp150 -mregexp -t'^([A-z]+|[A-z]+ [a-z]+|[A-z]+ [a-z]+ [a-z]+) jest (?:[w] |)(swietnej kondycji|dobrym stanie|lekko rann[a-z]|rann[a-z]|zlej kondycji|ciezko rann[a-z]|ledwo zyw[a-z])\.$' _combat_health_trigger_2= \
+    /let _combat_health_hp=$[_combat_health_to_int({P2})]%;\
+    /let _combat_health_hp_color=$[_combat_health_to_color({_combat_health_hp})]%;\
+    /let bar=$[decode_attr(strcat(strrep(" ", 14-{_combat_health_hp}*2),strrep("#", {_combat_health_hp}*2)), {_combat_health_hp_color})]%;\
+    /let is_member=$[_team_is_member({P1})]%;\
+    /if ({is_member}==0) \
+        /let number=$[strrep(" ", 2)]%;\
+    /else \
+        /let number=$(/_team_get_number_by_name %{P1})%;\
+        /let number=$[pad({number}, -2)]%;\
+    /endif%;\
+    /eval /echo [%{_combat_health_hp}/7][%{bar}][ %{number}] %{P1}

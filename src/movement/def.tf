@@ -27,6 +27,10 @@
 
 /def _movement_go_exec =    \
 \
+    /if (_movement_map_blind == 1) \
+            /map_blind_go $[map_translate({1})] %;\
+            /return 0 %;\
+        /endif%;\
     /if (_movement_map_track == 1) \
         /map_go $[map_translate({1})] %;\
     /endif%;\

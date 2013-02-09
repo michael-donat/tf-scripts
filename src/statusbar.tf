@@ -284,11 +284,12 @@
 	/repeat -00:00:04.58 1 /set nxt_zaslona=$$[strcat(decode_attr("rdy", "BCgreen"))]
 
 /def _odliczaj_rozkaz = \
-	/set nxt_order=$[strcat(decode_attr("4", "BCred"))]%;\
-	/repeat -00:00:01 1 /set nxt_order=$$[strcat(decode_attr("3", "BCred"))]%;\
-	/repeat -00:00:02.40 1 /set nxt_order=$$[strcat(decode_attr("2", "BCyellow"))]%;\
-	/repeat -00:00:03.50 1 /set nxt_order=$$[strcat(decode_attr("1", "BCred"))]%;\
-	/repeat -00:00:04.60 1 /set nxt_order=$$[strcat(decode_attr("rdy", "BCgreen"))]
+	/set nxt_order=$[strcat(decode_attr("5", "BCred"))]%;\
+	/repeat -00:00:3 1 /set nxt_order=$$[strcat(decode_attr("4", "BCred"))]%;\
+	/repeat -00:00:6 1 /set nxt_order=$$[strcat(decode_attr("3", "BCred"))]%;\
+	/repeat -00:00:8 1 /set nxt_order=$$[strcat(decode_attr("2", "BCyellow"))]%;\
+	/repeat -00:00:11 1 /set nxt_order=$$[strcat(decode_attr("1", "BCred"))]%;\
+	/repeat -00:00:14.50 1 /set nxt_order=$$[strcat(decode_attr("rdy", "BCgreen"))]
 
 /def _odliczaj_blok = \
 	/set blokowanko=$[strcat("[", decode_attr("                     ", "Cbgred"), "] ")]%;\

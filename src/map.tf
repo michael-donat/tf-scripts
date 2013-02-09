@@ -4,8 +4,10 @@
 /set map_io=../maps/io.stream
 
 /def map_command = \
+    /let command=$[strcat({1},": ",{2})]%;\
+    /eval /echo %{command}%;\
     /set map_handler=$[tfopen(%{map_io}, "w")]%;\
-    /test $[tfwrite(map_handler, strcat({1},": ",{2}))]%;\
+    /test $[tfwrite(map_handler, {command})]%;\
     /test $[tfclose(map_handler)]
 
 /def map_translate = \
@@ -37,6 +39,9 @@
 
 /def map_add_room = \
     /test map_command("ADD", {*})
+
+/def map_blind_go = \
+    /test map_command("BLINDGO", {*})
 
 /def map_remove_exit = \
     /test map_command("RMEXIT", {*})

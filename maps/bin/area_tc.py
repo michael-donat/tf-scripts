@@ -5,7 +5,7 @@
 # License: GNU GPL v 3.0 or later
 # http://www.gnu.org/licenses/gpl.txt
 
-path_to_maps = '../db/'
+path_to_maps = '../../data/maps/'
 
 from re import split
 

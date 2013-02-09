@@ -13,7 +13,8 @@
 /_create_trigger
 
 /def -p0 _info_level_process = \
-    /substitute -p %{P1} @{Crgb055}%{P2} %{1}/16@{n} %{P3}
+    /set lvl=$[{1}-1]%;\
+    /substitute -p %{P1} @{Crgb055}%{P2} %{lvl}/15@{n} %{P3}
 
 ;------------------------------------------------------------------------
 ;			    OCENA WARTOSCI
@@ -26,15 +27,3 @@
 ;------------------------------------------------------------------------
 ;			    OCENA ZBROI I BRONI
 ;------------------------------------------------------------------------
-
-/set _create_trigger_list=minimalne|nieznaczne|bardzo male|male|nieduze|zadowalajace|spore|dosc duze|znaczne|duze|bardzo duze|ogromne|imponujace|wspaniale|gigantyczne|niebotyczne|
-/set _create_trigger_trigger_prefix=_info_level_trigger
-/set _create_trigger_trigger_name=_info_level_process
-/set _create_trigger_match_prefix=^(Poczynil[a-z]s)\s(
-/set _create_trigger_match_suffix=)\s(.*)
-;above will autogenerate basic triggers
-
-/_create_trigger
-
-/def -p0 _info_level_process = \
-    /substitute -p %{P1} @{Crgb055}%{P2} %{1}/16@{n} %{P3}

@@ -1,6 +1,6 @@
 
 ; load and connect
-/load lib/init/worlds.tf
+/load data/worlds/thornag.tf
 
 ; init logging
 /load lib/init/log.tf

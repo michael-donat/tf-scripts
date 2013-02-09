@@ -1,0 +1,1 @@
+/addworld -T'lp' arkadia thornag 4rk4d14 arkadia.rpg.pl 23

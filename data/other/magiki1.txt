@@ -1,0 +1,837 @@
+   ( MAGICZNE BRONIE )
+
+ >> Masywny wyszczerbiony tasak <<
+ *Cechy*
+   Dobrze wywazony, fantastycznie skuteczny miecz przystosowany do chwytania
+   w prawej rece, ktory zadaje obrazenia ciete. Jego magia wysysa sily
+   z ofiary, jednak kosztem mentalnej energii walczacego tasakiem.
+ *Szczegolowy opis*
+   Niezbyt dluga, lecz szeroka i ciezka jednosieczna klinga tego
+   zolnierskiego miecza jest, co dosc nietypowe, nieco wygieta. Liczne
+   szczerby, przypominajace bardziej zeby, w wiekszosci zostaly wyciete,
+   by szarpac cialo przeciwnika. Brazowawe plamy pokrywajace metal moglyby
+   uchodzic za patyne czy tez rdze, lecz sa troche zbyt regularne, a przy
+   tym, co dostrzegasz dopiero po chwili, ukladaja sie w pewne skomplikowane
+   wzory. Rowniez na szerokim jelcu plytko wygrawerowane sa elementy tych
+   ornamentow, inkrustowane ledwo lsniacym zielonkawym stopem. Pozbawiona
+   glowicy rekojesc owinieta jest szorstka skora, aby orez nie wysliznal sie
+   z reki wojownika przy szczegolnie szerokim i ciezkim zamachu, do jakich
+   wykonywania zacheca ciezar broni.
+ *Gdzie sie znajduje*
+   Wlada nim Edalbert, krol bandytow z gor Irrana.
+ *Jak zdobyc*
+   W gorach Irrana trzeba sie przecisnac miedzy drzewami do jaskin. Uwazajac
+   na pulapki i bandytow trzeba zejsc na trzeci poziom napierw kominem,
+   a potem po drabince. W mozaikowej komnacie na drodze stoi skomplikowana
+   pulapka, ktora kazdy z czlonkow druzyny musi przejsc pojedynczo stapajac
+   po plytkach wlasciwego koloru. Na koniec na drodze do zabicia Edalberta
+   beda stac tylko ochraniajacy go zboje. Ma on ponadto przy sobie klucz do
+   skrzyni ze zrabowanymi skarbami.
+
+ >> Smukly demoniczny miecz <<
+ *Cechy*
+   Dosc dobrze wywazony, bardzo skuteczny miecz przystosowany do chwytania
+   w prawej rece, ktory zadaje obrazenia klute i ciete. Dopiero dobyty
+   ujawnia swa magiczna moc oraz powoli obdarza dobywajacego go wojownika
+   darami chaosu.
+ *Szczegolowy opis*
+   Dlugie na trzy stopy miecza w calej rozciaglosci pokrywaja runy.
+   Obosieczny brzeszczot o czarnej barwie przechodzi gladko, bez zadnych
+   widocznych scalen w jelec, ktory po bokach posiada dwie glowy demonow.
+   Wydaje sie one byc zywe, gdyz ciagle cos miedzy soba szepcza. Rekojesc,
+   rowniez czarna, przypomina ozor zwierzecia. Miecz w dotyku jest sliski
+   i nieprzyjemny, ale gdy juz chwyci sie trzonu, reka zatapia sie w nim i
+   przykleja mocno. Od glowicy broni dobiegaja cie nieustajace, glosne wizgi
+   i niezrozumiale slowa. Przeplataja sie one z krzykami, ktore moglby
+   wydawac z siebie czlowiek rozdzierany najstraszliwszymi torturami.
+ *Gdzie sie znajduje*
+   Wlada nim arlekin na Wypalonych Pustkowiach.
+ *Jak zdobyc*
+   Zabic arlekina.
+
+ >> Kruczoczarny misterny miecz <<
+ *Cechy*
+   Perfekcyjnie wywazony, calkiem skuteczny miecz przystosowany do chwytania
+   w lewej rece, ktory zadaje obrazenia klute i ciete. Po rozpaleniu potrafi
+   mowic oraz wysysac zdrowie z przeciwnika przekazujac je wlasciwielowi,
+   jednak kosztem sil mentalnych.
+ *Szczegolowy opis*
+   Powoli przesuwasz wzrokiem po tym juz na pierwszy rzut oka niezwyklym
+   mieczu. Na jego trzonie, przywolujacym na mysl masywne, pokryte luskami
+   gadzie cielsko osadzono przepiekna, misternie wykonana glowice
+   przedstawiajaca szeroko rozwarta paszcze smoka. W miejsce jego oczodolow
+   wprawiono klejnoty od ktorych bije intensywny, purpurowoczerwony blask.
+   Po przeciwnej stronie delikatnie rozszerzajacy sie trzon przechodzi
+   w jelec przyjmujacy ksztalt rozpostartych do lotu, bloniastych skrzydel.
+   Niczym pazur wylania sie spod nich smukle ostrze wykute z
+   najprzedniejszej, czarnej jak morska odmety noca, nieustannie lsniacej
+   stali. Wzdluz dlugiego, plytkiego zbrocza ciagna sie nieregularne,
+   intensywnie czerwone zylki przypominajace struzki ociekajacej powoli
+   krwi.
+ *Gdzie sie znajduje*
+   Przy przywodcy kultystow Slaanesha w swiatyni ukrytej w kanalach pod
+   Quenelles.
+ *Jak zdobyc*
+   Najpierw znalezc klucz do drzwi w kanalach pod Quenelles i zabic strzegaca
+   przejscia dwuglowa amfisbene, ktora truje oslabiajacym jadem. Nastepnie
+   trzeba zabijac grupy kultystow Slaanesha i przeszukiwac ich plaszcze,
+   az znajdzie sie karteczke. Trzeba jednak uwazac na klebowiska trujacej
+   plesni. Mozna je neutralizowac podpalajac plonaca pochodnia. Z karteczka
+   isc do wlasciwej osoby na ulicach miasta i ta szepnie haslo do swiatyni.
+   Tam nalezy zabic przywodce kultu wraz z obstawa i demonica Slaanesha.
+
+ >> Smukly zmiennoksztaltny miecz <<
+ *Cechy*
+   Dosc dobrze wywazony, bardzo skuteczny miecz przystosowany do chwytania
+   w prawej rece, ktory zadaje obrazenia klute i ciete. Rowniez dopiero
+   po dobyciu mozna zauwazyc jego magiczne wlasciwości i rowniez wywoluje
+   mutacje, podobnie, jak miecz demoniczny, z ktorym tworzy pare.
+ *Szczegolowy opis*
+   Miecza tego nie da sie okreslic praktycznie zadnymi slowami, gdyz ksztalt
+   i barwy broni nieustannie sie zmieniaja. Gdy juz na chwile orez przestaje
+   wibrowac i przybiera jakas forme, mozna dostrzec, ze zostal on wykonany
+   z dziwnego rodzaju szkla. Jedynym niezmiennym elementem miecza jest jego
+   rekojesc. Jest ona powykrecana i niezwykle, zas przy dotyku jej macki
+   oplataja dlon wlasciciela tworzac kolorowy kosz, chroniacy dlon.
+ *Gdzie sie znajduje*
+   Wlada nim arlekin na Wypalonych Pustkowiach.
+ *Jak zdobyc*
+   Zabic arlekina.
+
+ >> Polyskliwy smukly espadon <<
+ *Cechy*
+   Dobrze wywazony, fantastycznie skuteczny miecz przystosowany do chwytania
+   oburacz, ktory zadaje obrazenia klute i ciete. Magiczne wlasciwosci miecza
+   ujawniaja sie dopiero po jego dobyciu.
+ *Szczegolowy opis*
+   Widzisz niezwykly, dwureczny miecz, zwany espadonem. Jego smukle ostrze
+   zdaje sie swiecic swym wewnetrznym, tajemniczym blaskiem, przywodzac
+   ci na mysl swiezo oszlifowany diament. Piekna w swej prostocie glownia
+   posiada wystepy, ulatwiajace parowanie. Zdumiewa cie niezwykla lekkosc,
+   z jaka mozna wladac ta smiercionosna bronia, niezwykla, biorac pod uwage
+   wage miecza. Na rekojesci zauwazasz dziwne znaki, wytrawione w stali.
+ *Gdzie sie znajduje*
+   Dobywa go najpotezniejszy z ozywiencow w polnocnej krypcie na bagnach
+   blisko Przeleczy Czarnego Ognia.
+ *Jak zdobyc*
+   By wejsc do kurhanu trzeba pozbyc sie zamykajacego go glifu albo
+   rozbijajac, co jest ryzykowne dla zdrowia, albo wypowiadajac odpowiednie
+   haslo, ktore wyjawia wydrujacy po Averlandzie kaplan Morra. W krypcie, by
+   ominac pulapke, przeczolgac sie pod nia i dalej zabic golema blokujacego
+   przejscie, a potem ozywienca i kosciotrupy. Ozywieniec rani na raz kilka
+   osob i sciga uciekajacego.
+
+ >> Antyczny zdobiony sztylet <<
+ *Cechy*
+   Perfekcyjnie wywazony, wyjatkowo skuteczny sztylet przystosowany
+   do chwytania w prawej rece, ktory zadaje obrazenia klute i ciete.
+   Dzgniety nim przeciwnik dlugo nie jest w stanie regenerowac ran.
+ *Szczegolowy opis*
+   Ciezka, zakrzywiona klinge tego sztyletu pokrywaja liczne, na wpol
+   zatartymi przez czas, zdobienia i napisy. Wiekowe ostrze jest jednak
+   w dalszym ciagu niespotykanie ostre, a starannie dobrana rekojesc zapewnia
+   wprost idealne wywazenie broni. Gdy patrzysz na sztylet katem oka wydaje
+   sie on nieznacznie swiecic, jednak w chwili gdy kierujesz wzrok dokladnie
+   na bron, dziwny efekt znika. Na jelcu po obu stronach widnieje
+   wygrawerowana para ciemnoczerwonych skorpionow.
+   Na brazowym jelcu sztyletu uwily sobie gniazdo dwa wygrawerowane skorpiony,
+   z ktorych ogonow zdaje sie bez przerwy kapac krew. Wizerunek jest tak
+   realistyczny, ze z obawa czekasz na chwile, gdy zdecyduja sie spelznac
+   z rekojesci i zatopic swe zadla w twojej skorze. Orientujesz sie, ze te
+   smiercionosne stworzenia symbolizuja Krwaworekiego Khaine, elfiego boga
+   wojny.
+ *Gdzie sie znajduje*
+   Wiedzmy w obozie druchii w Bretonii.
+ *Jak zdobyc*
+   Zabic wiedzmy, badz przyniesc dla nich przedmiot, ktorego zazadaja.
+   Wybierajac te druga opcje trzeba rozumiec drukh-eltharin. Mozna w tym
+   calu zaopatrzyc sie w szkarlatny ciernisty pierscien. By dotrzec
+   do obozu, nalezy najpierw przeplynac jezioro obok Cixous, a potem rzeke,
+   kryjac sie za pniem, konarem lub cialem przed ostrzalem z czarnych lodzi.
+   W obozie po spotkaniu patrolu trzeba poslusznie opuscic bron, a straznicy
+   powloka wtedy do namiotu wiedzm.
+
+ >> Lodowy lsniacy sztylet <<
+ *Cechy*
+   Bardzo dobrze wywazony, fantastycznie skuteczny sztylet przystosowany
+   do chwytania w prawej rece, ktory zadaje obrazenia klute i ciete.
+ *Szczegolowy opis*
+   Wodzisz wzrokiem po oszronionej powierzchni niezwyklego sztyletu. Jego
+   smukla rekojesc do zludzenia przypomina skrzacy sie delikatnym swiatlem
+   sopel lodu, zabezpieczona jest takze dosc szeroka garda krzyzujaca sie
+   ze smuklym ostrzem. Klinga, ktora tworzy material rowniez ludzaco podobny
+   do mroznego krysztalu wyglada na niezwykle ostra i zabojcza.
+ *Gdzie sie znajduje*
+   Zamczysko Drachenfels, skrzynia na szczycie baszty szalenstwa.
+ *Jak zdobyc*
+   Najpierw znalezc wlasciwa baszte, bo rozmieszczenie baszt zmienia sie
+   co przejazd Jezdzca. Zabic rycerza Tzeencha i jego mutantow na trzecim
+   pietrze, by zdobyc klucz i wejsc na szczyt baszty, gdzie jest skrzynia
+   z jednym z dziewieciu artefaktow. Aura w baszcie powoduje, ze ogarnieci
+   szalenstwem atakujemy czlonkow wlasnej druzyny. Ponadto rycerzi mutanci
+   dosyc dobrze walcza w szyku.
+
+ >> Zdobiony dlugi lewak <<
+ *Cechy*
+   Genialnie wywazony, niezbyt skuteczny sztylet przystosowany do chwytania
+   w lewej rece, ktory zadaje obrazenia klute i ciete. Wysmienicie paruje
+   ciosy wrogow i wytraca ich orez.
+ *Szczegolowy opis*
+   Wodzisz wzrokiem po lsniacej, pelnej misternych zdobien powierzchni dosc
+   dlugiego sztyletu. Jego wykonana z chropowatej, bolesnie zimnej w dotyku
+   stali rekojesc zaopatrzono w nadzwyczaj szeroki jelec, ktory zapewnia
+   doskonala ochrone przed ciosami przeciwnikow i pozwala takze na wybijanie
+   broni wroga. Samo ostrze, obosieczne i dlugie jest niezwykle ostre, co
+   sprawia, ze lewak ten moze byc niezwykle skuteczna bronia. Dyskretne,
+   aczkolwiek budzace podziw zdobienia w ksztalcie drobnych galazek
+   ostrokrzewu owijaja sie wzdluz rekojesci, suna po nasadzie, by dotrzec az
+   do glowni broni.
+ *Gdzie sie znajduje*
+   Wlada nim ogr na wozie, przywodca zmutowanych banitow w Wissenlandzie.
+ *Jak zdobyc*
+   Zabic ogra bronionego przez trzech do pieciu banitow, ktorzy dobrze radza
+   sobie z walka w szyku bojowym.
+
+ >> Misterny obosieczny topor <<
+ *Cechy*
+   Niezle wywazony, fantastycznie skuteczny topor przystosowany do chwytania
+   w prawej rece, ktory zadaje obrazenia klute i ciete. Dobycie tego oreza
+   uwalnia magiczna poswiate w kolorze zalezynym od duszy wlasciciela,
+   a przekrecenie styliska wysuwa dwa dlugie szpikulce zadajace w boju
+   dodatkowe rany przeciwnikowi.
+ *Szczegolowy opis*
+   Niezwykla bron na ktora patrzysz to pelne gracji, smiercionosne narzedzie.
+   Wspaniale, umiejscowione na solidnym trzystopowym drzewcu ostre niczym
+   brzytwa podwojne ostrze jest ozdobione zawilymi, najwyrazniej wytrawionymi
+   w kwasie spiralnymi znakami. Wyciete z rdzenia starego debu, specjalnie
+   utwardzone w ogniu i wzmocnione stala stylisko wydaje sie byc nie do
+   zlamania, niczym zelazny pret. Nietypowy stop z jakiego wykonano zelezce
+   sprawia, iz okaz ten jest ciezszy niz na to z pozoru wyglada. Calosc
+   tworzy obraz topora z wlasna indywidualnoscia, ktorego egzotyczne
+   zdobienia i ksztalty nie przywodza na mysl zadnej z imperialnych kuzni.
+   Wytrawione na masywnym ostrzu misterne spirale wydaja sie emitowac
+   szmaragdowo-zielona poswiate.
+   Ze szczytu styliska i dna rekojesci wysunely sie dwa siedmiocalowe, ostre
+   jak igla trojgraniaste kolce.
+ *Gdzie sie znajduje*
+   Dobywa go najwiekszy golem na szczycie wiezy kolo Uberseik.
+ *Jak zdobyc*
+   Przesunac pien, by dostac sie z traktu do wiezy, a potem przedrzec sie
+   przez grupy po cztery golemy do warsztatu produkcyjnego na trzecim
+   pietrze i zabic ogromnego golema.
+
+ >> Opalizujacy runiczny topor obosieczny <<
+ *Cechy*
+   Dobrze wywazony, fantastycznie skuteczny topor przystosowany do chwytania
+   oburacz, ktory zadaje obrazenia klute i ciete.
+ *Szczegolowy opis*
+   Olbrzymi topor o obosiecznym ostrzu osadzonym na dlugim solidnym trzonie,
+   ktory obwiazany jest poplamionym wytartym rzemieniem. Spod trzona wienczy
+   bryla z nieznanego pochodzeniem metalu, na ktorej widnieje gleboko
+   wygrawerowany znak krasnoludzkiego mistrza. Niespotykanej srednicy ostrze
+   wykonane jest ze stopow stali o bardzo ciemnym opalizujacym odcieniu, jego
+   brzegi sa symetryczne i lsniace, zdaja sie emanowac swa wlasna energia
+   i delikatnie swiecic tak, jakby kowal tchnal w nie zycie. Na calej
+   powierzchni topora widnieja wygrawerowane znaki. Sposrod kilku
+   pomniejszych symboli twoja uwage przyciaga jeden z nich, umieszczony
+   dokladnie posrodku - jest to symbol jakiegos gada. Oczy, nozdrza i kazda
+   jego luska stworzone sa z wielka precyzja. Obok widnieje drobny napis,
+   skladajacy sie z dziwnych symboli, swiecacych blekitnym swiatlem. Topor
+   mimo swej wagi jest dobrze wywazony.
+ *Gdzie sie znajduje*
+   W posiadaniu jednego z kamiennych trolli w jaskiniach w Gorach Czarnych
+   na zachod od Mrocznego Lasu.
+ *Jak zdobyc*
+   Trzeba zabic te wyjatkowo silne, nawet jak na swoja rase, trolle.
+
+ >> Niebieskawa zdobiona bulawa <<
+ *Cechy*
+   Perfekcyjnie wywazona, niezwykle skuteczna maczuga przystosowana
+   do chwytania w prawej rece, ktora zadaje obrazenia obuchowe. Strzela
+   piorunami w przeciwnika. Swa moc czerpie jednak z sil mentalnych
+   dzierzacego ja wojownika.
+ *Szczegolowy opis*
+   Bulawa jest wykonana z blekitnej stali i bogato zdobiona, z pewnoscia
+   nalezala do jakiegos oficera, nim trafila w rece swojego aktualnego
+   wlasciciela. Bron ma gruszkowata glowice ozdobiona wypolerowanymi,
+   srebrzystymi cwiekami, noszaca kunsztowne rzezbienia konczace sie dopiero
+   na rekojesci.
+ *Gdzie sie znajduje*
+   Wlada nia smoczy ogr w ruinach Wezendorfu.
+ *Jak zdobyc*
+   Zabic smoczego ogra w obstawie hobgoblinow. Smokoogr oglusza.
+
+ >> Czarnoblekitny pulsujacy morgenstern <<
+ *Cechy*
+   Dosc dobrze wywazona, fantastycznie skuteczna maczuga przystosowana
+   do chwytania oburacz, ktora zadaje obrazenia klute i obuchowe. Przy
+   trafieniu moze zniszczyc pancerz przeciwnika. Tej broni nalezy jednak
+   uzywac niezwykle ostroznie, gdyz bez konca czerpie sily mentalne
+   dobywajacego i moze go zabic.
+ *Szczegolowy opis*
+   Bron ta wyglada bardzo interesujaco i zarazem tajemniczo. Skonstruowana
+   z dwoch calkiem roznych, niespotykanych stopow plynnie laczacych sie
+   ze soba, wydaje sie zyc wlasnym zyciem. Solidny trzonek wykonany jest
+   z blekitnego, cieplego w dotyku metalu, a jakby w jego wnetrzu dostrzegasz
+   symetryczny wzor caly czas zmieniajacy swoj ksztalt. Uchwyt ten zweza sie
+   ku gorze, gdzie przechodzi plynnie w czarna, blyszczaca glowice. Ta
+   najezona kolcami kula o srednicy kilku cali, jest bardzo niebezpieczna
+   i smiertelna czescia morgensterna. Na calej powierzchni pokryta drobnymi
+   runami, caly czas zmieniajacymi swa barwe - poczawszy od jaskrawej bieli,
+   konczac na ostrym blekicie. Bez przerwy wyczuwasz delikatne wibracje tej
+   broni, oraz bijace od niej niezwykle cieplo. Jest nad wyraz dobrze
+   wywazona i walka nia nie sprawia najmniejszych problemow.
+ *Gdzie sie znajduje*
+   Ukryty w skrytce za komnata przywodcy reptilionow w opuszczonych
+   kopalniach pod Karak Varn.
+ *Jak zdobyc*
+   Do kopaln przeplynac zalanym korytarzem. Po zabiciu przywodcy reptilionow
+   nalezy ulozyc ukladanke z plytek, a otworzy sie skrytka z morgensternem.
+
+ >> Dlugi runiczny korbacz <<
+ *Cechy*
+   Dosc dobrze wywazona, fantastycznie skuteczna maczuga przystosowana
+   do chwytania oburacz, ktora zadaje obrazenia klute i obuchowe. Rozpalony
+   jarzy sie czerwona poswiata i razi przeciwnikow ogniem.
+ *Szczegolowy opis*
+   Dlugi, drewniany trzonek tej broni przystosowano do uchwycenia oburacz.
+   Aby zwiekszyc tarcie i uniemozliwic wyslizgniecie sie, a jednoczesnie
+   poprawic komfort dobywajacego stylisko obito brazowa skora. Do jednego
+   z koncow drwa przymocowano gruby lancuch, ktorego drugi kraniec wienczy
+   sporej wielkosci, najezona parocentymetrowymi kolcami glowica. Cala
+   powierzchnie korbacza pokrywa gesta siec krasnoludzkich run. Jedynym
+   elementem broni, na ktorym ich nie umieszczono, jest wtopiona w stylisko
+   zlota plytka, na ktorej widnieje niewyrazny napis .Runy umieszczone
+   na broni promieniuja intensywna, czerwona poswiata.
+ *Gdzie sie znajduje*
+   Wlada nim Helkor von Graff, Inkwizytor, ktorego mozna spotkac w jednej
+   z karczm Starego Swiata.
+ *Jak zdobyc*
+   Inkwizytor podrozuje w obstawie dwoch lowcow czarownic. To dobrze zgrane
+   i trudne do pokonania trio.
+
+ >> Upiorny ciemny mlot bojowy <<
+ *Cechy*
+   Dobrze wywazony, fantastycznie skuteczny mlot przystosowany do chwytania
+   w prawej rece, ktory zadaje obrazenia klute i obuchowe. Mlot wyje upiornie
+   podcza zadawania ciosow.
+ *Szczegolowy opis*
+   Emanujacy zlowroga aura mlot na ktory spogladasz to jedyny w swoim
+   rodzaju orez, ktorego mroczny, niczym barwa najczarniejszej rozpaczy
+   koloryt sprawia ze patrzacy nan z trudem oderwac moze od niego wzrok.
+   Nieludzki, w kazdym calu swych runicznym zdobien hebanowy trzon broni
+   zdaje sie sam ukladac w dloni ogladajacego, jak gdyby mlot sam szukal
+   chetnego do zmierzenia sie z zakleta wen furia. Najdziwniejszy
+   i najbardziej przerazajacy jednak jest groteskowy obuch, przybierajacy
+   forme demonicznej, koscianej glowy, wykrzywionej w paroksyzmie nienawisci
+   i szyderstwa, z wystajacym zen rzedem dlugich zebisk.
+ *Gdzie sie znajduje*
+   Fort Czarny Ogien w Bogenhafen.
+ *Jak zdobyc*
+   Klucz do podziemi zdobyc zabijajac Zeliga, kaplana Myrmidii. Potem zabic
+   ozywience i licza, ktory jest odporny na niemagiczne bronie i rzuca
+   blyskawice razace cala druzyne. Przekazac odebrane liczowi naczynie
+   i mlot Kassowi von Krugenheim.
+
+ >> Zdobiony jasniejacy mlot bojowy <<
+ *Cechy*
+   Bardzo dobrze wywazony, fantastycznie skuteczny mlot przystosowany
+   do chwytania w prawej rece, ktory zadaje obrazenia klute i obuchowe.
+ *Szczegolowy opis*
+   Kunsztowny w kazdym swoim szczegole wykonania mlot na ktory spogladasz to
+   niespotykane polaczenie smiercionosnego narzedzia i zadziwiajacego swym
+   wdziekiem dziela, ktorego niemalze nieludzkie piekno jest w stanie
+   na dlugo przykuc wzrok ogladajacych je oczu. Nieskazitelnie bialy trzon
+   mlota zdaje sie sam ukladac w dloni ogladajacego, jak gdyby ten sam
+   szukal dosc dzielnego smialka, godnego dzierzenia go. Zadziwiajaco
+   masywna, a jednoczesnie zwodniczo lekka glowica wykonana jest z jasnego
+   stopu, zas pokrywajace ja runiczne zdobienia zdaja sie odbijac
+   najmniejszy bodaj promien padajace nan swiatla.
+ *Gdzie sie znajduje*
+   Fort Czarny Ogien w Bogenhafen.
+ *Jak zdobyc*
+   Najpierw trzeba zdobyc zaufanie Zeliga, kaplana Myrmidii zdobywajac
+   dla niego trofea wycinane ofiarnym nozem ze wskazanych ofiar. Potem
+   poprosic go o klucz, zabic ozywience i licza, ktory jest odporny
+   na niemagiczne bronie i rzuca blyskawice razace cala druzyne.
+   Przekazac odebrane liczowi naczynie i mlot Zeligowi.
+
+ >> Dwureczny adamantytowy mlot bojowy <<
+ *Cechy*
+   Dosc dobrze wywazony, fantastycznie skuteczny mlot przystosowany
+   do chwytania oburacz, ktory zadaje obrazenia klute i obuchowe.
+ *Szczegolowy opis*
+   Masz przed soba wspanialy, dwureczny mlot bojowy, dzielo najwyzszej
+   klasy. Glowice wykonane z najtwardszego znanego metalu - adamantytu,
+   zostaly dodatkowo pokryte cienka warstwa mithrylu, w ktorym wyryto
+   delikatne znaki runiczne. Rekojesc jest dluga i smukla, idealnie
+   dopasowana do reki wprawnego wojownika.
+ *Gdzie sie znajduje*
+   Dzierzy go siwy, najpotezniejszy z trolli zamieszkujacych jaskinie
+   w Masywie Orcal.
+ *Jak zdobyc*
+   Zabic trolle.
+
+ >> Kosciany kilof <<
+ *Cechy*
+   Bardzo dobrze wywazony, calkiem skuteczny mlot przystosowany do chwytania
+   oburacz, ktory zadaje obrazenia klute i obuchowe. Przy dobywaniu
+   dotkliwie parzy wlasciciela.
+ *Szczegolowy opis*
+   Olbrzymi kilof w zamierzeniu tworcy musial byc przeznaczony dla kogos
+   o olbrzymiej posturze i sile. Jednoczesnie wyglada, jak dzielo osoby
+   opetanej smiercia. Trzonek zrobiono z grubej kosci nawet nie troszczac
+   sie zbytnio o jej obrobienie. Dodana na koncu sredniej wielkosci glowica
+   ma ksztalt czaszki jakiegos nieznanego ci stworzenia, zas samo zelezce to
+   dwa osadzone w niej dlugie rogi. Nieco niepokoi cie dziwne drzenie tego
+   narzedzia, kiedy dotykasz go rekami. Wydaje ci sie, ze probuje odrzucic
+   twoja obecnosc.
+ *Gdzie sie znajduje*
+   Dobywa go gargantuiczny ozywieniec w kopalniach przy Ubersreik.
+ *Jak zdobyc*
+   Zabic ozywienca w obstawie czterech slabszych. Jest w stanie dokonac tego
+   silny wojownik w pojedynke.
+
+ >> Srebrzysta kosa bojowa <<
+ *Cechy*
+   Doskonale wywazona, fantastycznie skuteczna bron drzewcowa przystosowana
+   do chwytania oburacz, ktora zadaje obrazenia ciete.
+ *Szczegolowy opis*
+   Widzisz niesamowita bron, srebrzysta kose bojowa, tak ostra, ze moglaby
+   ona przeciac w locie motyla. Azurowe ostrze wykonane jest ze stali
+   o srebrzystej barwie, polyskujacej wlasna, magiczna poswiata. Jest ono
+   osadzone na dlugim drzewcu, dodatkowo wzmocnionym stalowymi okuciami.
+   Zaraz ponizej ostrza, na drzewcu, widnieja dziwne znaki,
+   najprawdopodobniej runy. Bron ta nieodparcie przywodzi ci na mysl smierc.
+ *Gdzie sie znajduje*
+   Walczy nia demon Khaine'a zamkniety w skrzyni w ruinach Wezendorfu.
+ *Jak zdobyc*
+   Otworzyc skrzynie i zabic demona, ktory z niej wychodzi. Demon potrafi
+   calkowicie odbierac sily, dusi i sciga uciekajacego.
+
+
+   ( ZAKLETE ZBROJE )
+
+ >> Krasnoludzka dluga bajdana <<
+ *Cechy*
+   Srednia zbroja chroniaca korpus i ramiona przyzwoicie przed obrazeniami
+   klutymi, doskonale przed cietymi i dosc dobrze przed obuchowymi. Zapewnia
+   szczegolna ochrone przed ciosami zadanymi magicznym orezem.
+ *Szczegolowy opis*
+   Solidnie wykonana kolcza zbroja, sporzadzona ze splecionych ze soba
+   zelaznych pierscieni o srednicy imperialnej monety. Na zbroi doskonale
+   rysuja sie kolory owych pierscieni: mithrylowy, zloty i srebrny, ktore
+   przez kowali zostaly splecione przemiennie tworzac zygzakowate wzory.
+   Zbroja ta, stworzona z olbrzymiej ilosci pierscieni, jest bardzo dluga
+   i mimo iz wydaje sie byc przez swa solidnosc ciezka wcale taka nie jest.
+   Czesc oslaniajaca ramiona zrobiona jest z drobnych oczek, ktore zdaja
+   sie doskonale oslaniac ramiona walczacego nie krepujac jednoczesnie
+   jego ruchow. Piersiowa strone zdobi tajemniczy znak. Jakosc i wyglad
+   zbroi swiadcza niezbicie o kunszcie kowala ktory ja wykonal.
+ *Gdzie sie znajduje*
+   Posiada ja krasnolud Ghanin wieziony w kazamatach Twierdzy Slaanesha
+   na Wypalonych Pustkowiach.
+ *Jak zdobyc*
+   Odebrac klucz do kajdan Sauglowi, rycerzowi Slaanesha i uwolnic Ghanina,
+   ktory z wdziecznosci oddaje wor z bajdana. Chodza jednak sluchy, iz jej
+   zdobycie przestalo byc mozliwe.
+
+ >> Kunsztowny lekki pancerz <<
+ *Cechy*
+   Lekka zbroja chroniaca perfekcyjnie korpus, nogi i ramiona.
+ *Szczegolowy opis*
+   Blask mithrylu, ktorym niezwykle szczodrze obdarowano te zbroje uderza
+   cie w oczy gdy wodzisz wzrokiem po wykonanych z mistrzostwem plytkach
+   pancerza. Umocowano je rzedami w ten sposob, ze zachodza one na siebie
+   stanowiac wysmienita ochrone przed kazdym rodzajem broni. Ciesza twoj
+   wzrok kunsztowne zdobienia, na kazdej plytce naniesiono bowiem zloty,
+   zylkowany wzor - zaden nie jest podobny do sasiedniego, a wszystkie razem
+   ukladaja sie w mieniacy sie feeria swiatla motyw orla o rozlozonych
+   do lotu skrzydlach. Rekawy oraz fartuch oslaniajacy nogi zrobiono
+   z drobniutkich koleczek, w ktore wpleciono drobinki czerwonego zlota,
+   co sprawia, ze calosc wyglada jak spowita plomieniami. Pancerz jest
+   niespotykanie lekki, lecz nie wiesz czy to zasluga materialu, z jakiego
+   go wykonano czy tez magii, ktorej delikatne mrowienie czujesz nawet, gdy
+   tylko nan spogladasz.
+ *Gdzie sie znajduje*
+   Zamczysko Drachenfels, skrzynia na szczycie baszty szalenstwa.
+ *Jak zdobyc*
+   Tak samo, jak lodowy lsniacy sztylet.
+
+ >> Snieznobiala luskowa kolczuga <<
+ *Cechy*
+   Srednia zbroja chroniaca korpus, nogi i ramiona bardzo dobrze przed
+   obrazeniami cietymi oraz niezle przed klutymi i obuchowymi. Jej magia
+   pochlania calkowicie co ktorys cios.
+ *Szczegolowy opis*
+   Material, z ktorego wykonano kolczuge posiada niespotykana, snieznobiala
+   barwe. Drobne luski wymodelowano i umocowano tak, ze kazda warstwa
+   zachodzi na nastepna tworzac wysmienita ochrone dla ciala noszacego ja
+   wojownika. Na lewym boku zbroi czesc lusek ma odmienna, poczynajac od
+   zlotej po ognista czerwien barwe, a wszystkie one ukladaja sie na ksztalt
+   smoczej glowy, ktora zieje jezorami palacego ognia ogarniajac nimi
+   zarowno plecy jak i rekawy kolczugi. Zbroje ozdabiaja takze misterne
+   wykonczenia w postaci srebrzystych run widocznych na oslaniajacym nogi
+   fartuchu.
+ *Gdzie sie znajduje*
+   Zamczysko Drachenfels, skrzynia na szczycie baszty szalenstwa.
+ *Jak zdobyc*
+   Tak samo, jak lodowy lsniacy sztylet.
+
+ >> Zbroja Gwardii Feniksa <<
+ >> Stary matowy pancerz <<
+ *Cechy*
+   Lekka zbroja perfekcyjnie chroniaca korpus, nogi i ramiona. Przemienia
+   sie w snieznobialy lsniacy pancerz, ktorego nie mozna zdjac.
+ *Szczegolowy opis*
+   Dziwaczna, waska zbroja poznaczona roznymi rzezbieniami, wykonana
+   z ciezkiego metalu, zasniedziala i zmatowiala od lat nieuzywania. Zbroja
+   wydaje sie byc antyczna i zapewne widziala juz wiele walk.
+ *Po przemianie:
+   Swietlista zbroja nalezaca do czlonka Gwardii Feniksa z legendarnego
+   Ulthuanu promienieje ukryta energia nadajac twoim ruchom niezwyklej
+   gracji i precyzji. Czujesz, jak plonie w tobie dumny plomien Feniksa,
+   chroniacy cie przed zguba i spopielajacy twoich wrogow. Poswieciwszy
+   wszystkie swe mysli i uczynki Asuryanowi zyskalas Jego blogoslawienstwo,
+   ktore bedzie napelniac cie sila az do kranca twoich dni. Starozytne,
+   srebrne ornamenty zdobiace twoja zbroje opowiadaja historie wszystkich
+   twoich poprzednikow, a ich doswiadczenie, madrosc i sila wciaz w niej
+   zyja i sa gotowe, bys z nich czerpala wedle swego zyczenia. Magiczny
+   material, z ktorego wykonano kirys i kolczuge, jest niezwykle lekki
+   i lsni nieskazitelna biela piany fal pieszczacych piaski brzegow
+   Ulthuanu. Spod szerokich naramiennikow zdobionych motywem pior wyplywa
+   snieznobialy plaszcz, powiewajacy nieznacznie, poruszany wiatrem nie
+   z tego swiata, ozdobiony krwistoczerwonymi i zlotymi plomieniami
+   Ognistego Ptaka, straznika Ulthuanu. Mozesz teraz otulic sie plaszczem
+   Straznika i wsluchac sie w glosy swych poprzednikow.
+ >> Strzelisty zasniedzialy helm <<
+ *Cechy*
+   Lekka zbroja perfekcyjnie chroniaca glowe. Przemienia sie w strzelisty
+   zlocisty helm, ktorego nie da sie zdjac i ktory uniemozliwia mowienie.
+ *Szczegolowy opis*
+   Wysoki, stozkowaty helm, zasniedzialy i nadgryziony zebem czasu. Po obu
+   stronach wizjera widnieja ornamenty w ksztalcie slonecznych promieni
+   i plomieni ognia. Helm jest wyjatkowo nieporeczny i ciezki.
+ *Po przemianie:
+   Wysoki, stozkowaty helm straznika Gwardii Feniksa lsni sie zlotym
+   blaskiem, kolorem plomieni plonacych w tajemnej Komnacie Dnia, miejscu
+   narodzin Krola Feniksa i najswietszym sanktuarium Asuryana. Po obu
+   stronach wizjera znajduja sie wykonane ze szczerego zlota skrzydla
+   Ognistego Ptaka wzniesione do lotu, zas stozek helmu jest zwienczony
+   zlocistym pioropuszem. Helm stal sie czescia twojego ciala, razem
+   ze snieznobiala zbroja chroni cie przed zguba i pozwala wypelniac Wole,
+   ktora jest trescia twojej duszy
+ *Gdzie sie znajduja*
+   Wieza skavenow kolo Urbimo.
+ *Jak je zdobyc*
+   Haslo do wrot wiezy jest zapisane na karteczce ukrytej w helmie jednego
+   ze skavenow w lasku pod wieza. Po dostaniu sie do wiezy piac sie na jej
+   szczyt zabijajac po drodze skaveny. Najtrudniejsze do pokonania sa trzy
+   szczuroogry. Po ich zabiciu minac pulapki i uratowac ducha elfa
+   na szczycie wiezy.
+
+ >> Lsniaca plomienista tarcza <<
+ *Cechy*
+   Wyjatkowo skuteczna tarcza bardzo dobrze chroniaca jedno z ramion.
+   Strzela kulami ognia we wrogow.
+ *Szczegolowy opis*
+   Lekko wypukla powierzchnia trojkatnej tarczy jest idealnie gladka,
+   odbijajac liczne refleksy padajacego nan swiatla. Gdy pierwsze olsnie nie
+   mija, zdajesz sobie sprawe ze na samym jej srodku widnieje zloty symbol
+   dloni, wokol ktorej tancza inkrustowane w srebrzystej tafli plomienie.
+   Przez chwile wydaje sie jednak, ze swieca one swym wlasnym, pelnym zywego
+   ognia blaskiem poruszajac sie w rytm bicia twojego serca... Brzegi tarczy
+   otacza kunsztowny rabek zdobien wytloczonych w najczystszym mithrylu,
+   ktore w gornej jej czesci ukladaja sie w runiczny, pelen poteznych mocy
+   napis.
+ *Gdzie sie znajduje*
+   Zamczysko Drachenfels, skrzynia na szczycie baszty szalenstwa.
+ *Jak zdobyc*
+   Tak samo, jak lodowy lsniacy sztylet.
+
+
+   ( INNE ARTEFAKTY )
+
+ >> Dluga czarna szata <<
+ *Cechy*
+   Po zalozeniu kaptura nie da sie rozpoznac wygladu noszacego.
+ *Szczegolowy opis*
+   Jest to szata, zrobiona z dziwnego, miekkiego materialu, przywodzacego
+   na mysl kobiece wlosy. Uklada sie on idealnie, scisle przylegajac
+   do figury. Niesamowite wzory, pokrywajace szate rozmywaja sie, gdy na nie
+   spogladasz. Bogato zdobiony kaptur swobodnie opada na tyl szaty.
+ *Gdzie sie znajduje*
+   W posiadaniu Saugla, rycerza Slaanesha w twierdzy na Wypalonych
+   Pustkowiach.
+ *Jak zdobyc*
+   Zabic Saugla i jego humanoidow.
+
+ >> Szmaragdowozielony misterny plaszcz <<
+ *Cechy*
+   Po spieciu plaszcza mithrylowa brosza leczy on wlasciciela co jakis czas.
+ *Szczegolowy opis*
+   Ogladasz ten wyjatkowy plaszcz nie mogac powstrzymac sie od szczerego
+   zachwytu. Cieszy twe oczy starannie wykonanie, kunsztowne hafty, mieniace
+   sie w promieniach padajacego nan swiatla klejnoty, a przede wszystkim
+   wykonana z mithrylowych zylek brosza. Ten drogocenny metal doskonale
+   komponuje sie z obszytym zlotymi nicmi kolnierzem, spod ktorego splywaja
+   obfite, delikatne faldy szmaragdowozielonego materialu. Spostrzegasz,
+   ze uszyto go z drobnych skrawkow, z ktorych kazdy do zludzenia przypomina
+   zywy lisc debu pokryty srebrnymi kropelkami rosy. Faldy plaszcza muskaja
+   i pieszcza twoje cialo przynoszac spokoj i ukojenie.
+ *Gdzie sie znajduje*
+   Zamczysko Drachenfels, skrzynia na szczycie baszty szalenstwa.
+ *Jak zdobyc*
+   Tak samo, jak lodowy lsniacy sztylet.
+
+ >> Zielony luskowaty plaszcz <<
+ *Cechy*
+   Zatrzumuje co ktorys cios dosiegajacy noszacego plaszcz i w zamian rani
+   wroga, ktory ten cios zadal.
+ *Szczegolowy opis*
+   Masz przed soba niewatpliwie jedno z legendarnych dziel krasnoludzkich
+   mistrzow. Plaszcz ten jest wykonany z bardzo nietypowego materialu
+   przypominajacego skore pokryta zielonymi luskami. Na jego powierzchni
+   dostrzegasz runy umieszczone z niezwykla precyzja i zaskakujaca harmonia,
+   a jego brzegi obszyte sa zlota tasma wylozona drogimi kamieniami. Calosc
+   posiada zapiecie w postaci dwoch grubych mithrylowych lancuchow,
+   polaczonych ze soba za pomoca zdobionej klamry, w ktorej centrum znajduje
+   sie bardzo skomplikowana runa.
+ *Gdzie sie znajduje*
+   Nosi go Ungrim Zelazna Piesc, Wladca Karak Kadrin.
+ *Jak zdobyc*
+   Zabicie Ungrima jest zadaniem bardzo trudnym i wymagajacym licznej
+   druzyny. Krol zabojcow trolli zamyka krate po zaatakowaniu go i nie da
+   sie juz wyjsc poki zyje.
+
+ >> Azurowy koscistobialy amulet <<
+ *Cechy*
+   Leczy rany kosztem sil mentalnych. Nie mozna go zdjac, gdy nie jest sie
+   calkowicie wypoczetym mentalnie.
+ *Szczegolowy opis*
+   Niewielki amulet jest wykonany z czaszki dziwnego, malego drapieznika
+   o ostrych, drobnych zabkach i dobrze wyksztalconych klach. Miedzy
+   szczekami stworzenia znajduje sie niewielka, mleczna perla, zas w puste
+   oczodoly tworca amuletu wprawil starannie przyciete, zmatowiale krwawniki.
+   Przez kosci przewleczono dlugi srebrny lancuszek.
+ *Gdzie sie znajduje*
+   Nosi go nekromanta z kurchanu w Tilei.
+ *Jak zdobyc*
+   Zlozyc klucz do drzwi z fragmentow zabijajac najsilniejsza zjawe w kazdym
+   z trzech kurhanow. Wybic wszystkie szkielety, ktore doskonale blokuja
+   ucieczke. Zabijajac szkielet nalezy zbierac ich kosci, by nie powstawaly
+   na nowo. Pokonac nekromante wczesniej zabijajac jego ozywience.
+
+ >> Ciezki krwisty amulet <<
+ *Cechy*
+   Noszac ten amulet ma sie lepsze rozeznanie w zielarstwie.
+ *Szczegolowy opis*
+   Prosty, pelen surowego piekna amulet. Grubym szpagatem ciasno omotano dwa
+   krysztaly zostawiajac przy tym na tyle duzo sznurka, by bez problemu
+   udalo sie zawiesic amulet na szyi. Wiekszy z kamieni to chyba monacyt,
+   charakteryzujacy sie intensywnym czerwonym kolorem i licznymi
+   ciemniejszymi przebarwieniami. Mniejszy z nich o podluznym ksztalcie jest
+   intensywnie czarny i przypomina hematyt. Uklad kamieni mial
+   prawdopodobnie wyobrazac oko, ale w przypadku prowizorycznych amuletow
+   nie mozna byc pewnym czegokolwiek.
+ *Gdzie sie znajduje*
+   Posiada go upior z mauzoleum na cmentarzu w Bretonii.
+ *Jak zdobyc*
+   Wejsc w zachodnia sciane wewnatrz grobowca na poludniowo-wschodnim krancu
+   cmentarza bretonskiego. Zabic upiora, ktory sciga po calym cmentarzu.
+   Silny wojownik z magicznym orezem jest w stanie tego dokonac w pojedynke.
+
+>> Czarnozielony masywny naszyjnik <<
+ *Cechy*
+   Wystarczy nosic go przy sobie, nie trzeba zakladac, a wprawiony
+   w naszyjnik wielki spaczen wywoluje bardzo szybkie mutacje, czemu
+   towarzysza niemile niemile sensacje mrowienia i zawrotu glowy. Nawet
+   jeden egzemplarz tego artefaktu wystarczy, by zmutowac calkowicie.
+ *Szczegolowy opis*
+   Dosc niedbale wykonany, lecz masywnie wygladajacy ze wzgledu na gruby,
+   zelazny lancuch naszyjnik przykuwa uwage ogladajacego swoja wielkoscia,
+   jak i intrygujacym, sporych rozmiarow czarnozielonym klejnotem. Podobnego
+   kolorytu jest rowniez cala jego oprawa, dzieki czemu owa ozdoba jawic sie
+   moze jako oryginalna, lecz niezbyt cenna.
+ *Gdzie sie znajduje*
+   Taki naszyjnik nosi kazdy zmutowany troll z obozu banitow w Wissenlandzie.
+ *Jak zdobyc*
+   Zabic jednego z trolli.
+
+ >> Lsniacy krysztalowy wisior <<
+ *Cechy*
+   Rozswietla ciemnosc noszony przez dobra postac.
+ *Szczegolowy opis*
+   Na srebrzystym, cienkim niczym pajecza siec lancuszku zawieszono
+   nienaturalnie wrecz duzy wisiorek o ksztalcie do zludzenia
+   przypominajacym delikatnie oszroniony sopel lodu. Wpatrujac sie wen
+   uwazniej mozna dostrzec, iz jego powierzchnie pokrywaja drobniutkie rysy
+   i pekniecia, zbyt regularne jednak by powstanie ich bylo dzielem
+   przypadku lub uplywu czasu. Lacza sie one w misterna siec przeplatajacych
+   sie linii, ktore zdaja sie emanowac delikatnym, bladoblekitnym swiatlem
+   wydobywajacym sie z samego serca tego krysztalu. Misterna plecionke
+   lancuszka laczy z wisiorem wykonany z polyskujacego srebrzyscie metalu
+   zaczep, ktory wyglada niczym przytrzymijaca ow krysztal dlon.
+   Zauwazasz na nim takze niewielki znaczek w ksztalcie latarni, symbol
+   Alluminasa, Pana Swiatla.
+ *Gdzie sie znajduje*
+   Zamczysko Drachenfels, skrzynia na szczycie baszty szalenstwa.
+ *Jak zdobyc*
+   Tak samo, jak lodowy lsniacy sztylet.
+
+ >> Niepozorny barwny pierscien <<
+ *Cechy*
+   Poprawia spostrzegawczosc noszacego.
+ *Szczegolowy opis*
+   Niepozorny barwny pierscien, na ktorego spogladasz, to niezbyt imponujaco
+   prezentujacy sie fragment bizuterii. Wygladajacy na posledniej jakosci
+   metal, z ktorego zostal wykonany, nie jawi sie jako szczegolnie cenny,
+   wywierajac na pierwszy rzut oka dosc niekorzystne wrazenie. Jedyne,
+   co wydawac ci sie moze dosc niezwykle, to niemalze teczowa barwa samego
+   pierscienia - lecz nawet ona nie przydaje mu wiele ozdoby.
+ *Gdzie sie znajduje*
+   Ptakopodobny mag w jaskini w obozie zmutowanych banitow.
+ *Jak zdobyc*
+   Zabic maga.
+
+ >> Niewielki zmatowialy pierscien <<
+ *Cechy*
+   Czyni noszacego madrzejszym i lepiej poslugujacym sie jezykami odbierajac
+   mu jednak szybkosc ruchow.
+ *Szczegolowy opis*
+   Niewielki pierscien zostal wykonany dawno temu, co mozna latwo poznac
+   po zmatowieniu srebrnej powierzchni. W jednym miejscu ma male wglebienie,
+   jakby kiedys tam byl osadzony kamien. Oprocz tego po wewnetrznej
+   powierzchni przebiegaja jakies dziwne znaki.
+ *Gdzie sie znajduje*
+   Ukryty kolo gargantuicznego ozywienca w kopalni kolo Ubersreik.
+ *Jak zdobyc*
+   Zabic ozywience i przeszukac szmaty.
+
+ >> Szkarlatny ciernisty pierscien <<
+ *Cechy*
+   Obdarza pelnym rozumieniem drukh-eltharin i powoli uczy tego jezyka.
+ *Szczegolowy opis*
+   Starannie wykonany pierscien w ksztalcie splecionych cierni lsni sie
+   ciemnym szkarlatem. Precyzja wykonania i zimne piekno tego przedmiotu
+   nie przywodza na mysl zadnego ludzkiego ani krasnoludzkiego jubilera.
+ *Gdzie sie znajduje*
+   Przy zwlokach elfiego zwiadowcy na trakcie miedzy Salignac a Marguilles.
+ *Jak zdobyc*
+   Odnalezione zwloki trzeba przeszukac i zabrac pierscien z ciala.
+
+ >> Zdobiony zloty pierscien <<
+ *Cechy*
+   Poprawia znajomosc jezykow noszacego.
+ *Szczegolowy opis*
+   Spogladasz na zdobiony zloty pierscien uwaznie wpatrujac sie
+   w pokrywajace jego powierzchnie setki niewiarygodnie wrecz cieniutkich
+   linii. Im dluzej wodzisz po nich wzrokiem, tym bardziej pozbawiony sensu
+   wydaje ci sie ich uklad, wygladajacy jedynie jak wyjatkowo staranna praca
+   jubilera, do ktorej reke jednak przylozyl jakis mag. Linie zdaja zyc
+   wlasnym zyciem, pulsujac krwista czerwienia, wijac sie przed twoimi
+   oczami, zmieniajac co chwile ksztalt na nowy. Wprawiony w obraczke
+   pierscienia rubin wyglada blado i nieciekawie wsrod pokrywajacych to
+   dzielo zdobien.
+   Linie wydaja sie wirowac przed twymi oczami, nieustannie zmieniac swoj
+   ksztalt i polozenie. Po chwili dostrzegasz, ze sa drobne znaki
+   przypominajace elfie oraz krasnoludzkie pismo.
+ *Gdzie sie znajduje*
+   Zamczysko Drachenfels, skrzynia na szczycie baszty szalenstwa.
+ *Jak zdobyc*
+   Tak samo, jak lodowy lsniacy sztylet.
+
+ >> Masywny oksydowany pas <<
+ *Cechy*
+   Po zacisnieciu klamry w noszacego wstepuje dodatkowa sila.
+ *Szczegolowy opis*
+   Reka mistrza polaczyla setki idealnie okraglych, wykutych z przypominajacego
+   oksydowane srebro metalu pierscieni w szeroki na niemal pol lokcia pas.
+   By zabezpieczyc misterna konstrukcje tego dziela, przymocowano ja niewielkimi
+   cwiekami do nieco szerszego kawalka starannie wyprawionej skory jakiegos
+   zwierzecia. Jej powierzchnie zdobia malenkie, przypominajace gadzie,
+   zielonkawe luski. Calosc wienczy masywna, stylizowana na smocza glowe klamra,
+   wykonana z najczystszego, dodatkowo wypolerowanego srebra. W miejscu, gdzie
+   znajduja sie gadzie slepia, wprawiono niewielkie, zdajace sie spogladac
+   z lekka kpina szmaragdy. Mozesz zacisnac klamre, by pas lepiej sie trzymal.
+ *Gdzie sie znajduje*
+   Zamczysko Drachenfels, skrzynia na szczycie baszty szalenstwa.
+ *Jak zdobyc*
+   Tak samo, jak lodowy lsniacy sztylet.
+
+ >> Zdobiony ciezki pas <<
+ *Cechy*
+   Po zaintonowaniu inskrypcji zamienia sie w ogromnego czerwonookiego weza
+   wspierajacego w walce i trujacego przeciwnika jadem. Tej przemiany nie da
+   sie dokonywac zbyt czesto.
+ *Szczegolowy opis*
+   Jest to ciezki pas, wykonany z dobrej jakosciowo skory. Klamra ma ksztalt
+   glowy weza, ktorego oczy wykonano z pieknych, czerwonych rubinow. Masz
+   wrazenie jakby w oczach tych cos sie poruszalo, jakby zasnuwala je
+   niewyrazna, drgajaca mgielka. Caly pas jest bogato inkrustowany
+   i pokryty inskrypcjami w dziwnym jezyku.
+   Sprzeczka pasa ma ksztalt glowy jadowitego weza. Jego oczy wykonano
+   z wielkich rubinow.
+   Wielkie rubiny zdaja sie pulsowac. Wewnatrz dostrzegasz cos, jakby mgle.
+   Inskrypcje zdaja sie ukladac w napis:
+   SZAK HAZAD
+ *Po przemianie:
+   Ten ogromny waz wyglada na niezwykle grozne stworzenie. Efekt ten
+   poglebia niecodzienny, cetkowany ogon oraz jasnoczerwone oczy. Zwinne,
+   szybkie ruchy sugeruja, ze moze byc niezwykle groznym przeciwnikiem
+   zwlaszcza, ze zeby skryte w paszczy maja bardzo niesympatyczny,
+   wywolujacy dreszcze strachu wyglad.
+ *Gdzie sie znajduje*
+   Nosi go nekromanta z lasu kolo Kreutzhofen.
+ *Jak zdobyc*
+   Przejsc przez krzaki i usunac glaz blokujacy wejscie do grobowca. Przy
+   uzyciu lopaty przekopac sie na polnoc i siedem razy zapukac do drzwi
+   usuwajac w tej sposob pieczecie. Zabic nekromante i wzywana przez niego
+   mumie.
+   Usunac krzaki utrudniajace wejscie na szczyt wzgorza, a na nim odsunac
+   glaz zaslaniajacy wejscie do kurhanu. W grobowcu dwukrotnie przy uzyciu
+   lopaty przekopywac sie na polnoc przez zawalony korytarz. Siedmiokrotne
+   uderzenie w drzwi zrywa pieczeci i uwalnia nekromante, ktory wkrotce
+   przyzywa niezwykle wytrzymala i odporna na ciosy niemagiczna bronia
+   mumie, ktora do tego blokuje ucieczke.
+
+ >> Ciemna owalna maska <<
+ *Cechy*
+   Po zalozeniu zmienia twarz noszacego nie do poznania, ale doszczetnie
+   przy tym wyczerpujac mentalnie.
+ *Szczegolowy opis*
+   Wodzisz wzrokiem po wypuklej, nieco chropowatej powierzchni tej owalnej
+   maski. Material z ktorego ja wykonano jest twardy, bardzo spoisty,
+   a jednoczesnie niezwykle elastyczny, jakby dopasowywujacy sie do ksztaltu
+   kazdej twarzy... Maske wykonano z ogromnym kunsztem, jednakze nie
+   przesadzajac z iloscia zdobien. Stonowane kolory otaczajace obwodki
+   otworow na oczy, gleboka czerwien wydatnych ust - wszystko to zostalo
+   skomponowane tak, ze tworzy razem nieco zdeformowana, szyderczo
+   wykrzywiona twarz. Na wysokosci czola, od wewnetrznej strony maski,
+   zauwazasz jakis napis. Przy odrobinie starania, moze uda sie go odczytac?
+ *Gdzie sie znajduje*
+   W posiadaniu maga Konstanta Drachenfelsa.
+ *Jak zdobyc*
+   Dotarcie do Drachenfelsa, by go zabic, jest dosyc zmudne. Trzeba kolejno
+   pokonac duchy elfow, dwie demonice Slaanesha zatruwajace jadem, Thadeusa
+   Schnellinga - lowce czarownic, Maximiliana von Steinhoff - wampira oraz
+   demonicznego kurka ze szczytu centralnej baszty. Drzwi do samej siedziby
+   czarnoksieznika otwiera sie dyskiem zlozonym z szesciu teczowych
+   fragmentow, ktore posiadaja potezni przeciwnicy rozsiani po calym
+   zamczysku. Sama walka z Drachenfelsem takze nie jest latwa, gdyz korzysta
+   on z rozmaitych czarow. Oprocz maski posiada przy sobie klucz do skrzyni
+   ze skarbami i trzema artefaktami: dwoma sposrod dziewieciu mozliwych
+   do wylosowania w baszcie szalenstwa oraz jednego przekletego.
+
+ >> Ozdobny skorzany plecak <<
+ *Cechy*
+   Przedmioty noszone w plecaku prawie nic nie waza.
+ *Szczegolowy opis*
+   Wykonany ze skory jakiegos wielkiego gada plecak, pokryty jest roznego
+   rodzaju zdobieniami i haftami. Nie masz pewnosci, jednak wydaje ci sie,
+   ze co jakis czas po pokrywajacych skore plecaka luskach przebiega
+   delikatne drzenie.
+ *Gdzie sie znajduje*
+   Zamczysko Drachenfels, skrzynia na szczycie baszty szalenstwa.
+ *Jak zdobyc*
+   Tak samo, jak lodowy lsniacy sztylet.

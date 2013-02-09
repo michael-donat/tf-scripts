@@ -10,3 +10,6 @@
 /require relog.tf
 /require kbstack.tf
 /require at.tf
+
+
+/set db_odmiana=../data/db/odmiana.db

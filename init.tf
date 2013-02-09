@@ -1,5 +1,4 @@
 ;/addworld -T'lp' local localhost 1234
-/addworld -T'lp' arkadia arkadia.rpg.pl 23
 
 /cd %{HOME}
 
@@ -9,6 +8,8 @@
 /eval /log %{log_file}
 
 /cd src
+
+/load words/arkadia.tf
 
 /isize 1
 
@@ -31,7 +32,7 @@
 /def key_nkp. = /_bind_kb_key_nkpDot
 /def key_nkpEnt = /_bind_kb_key_nkpEnt
 /def key_nkp+ = /_bind_kb_key_nkpPlus
-/def key_nkp- = /_bind_kb_key_nkpMinus
+/def key_nkp- = /_bind_kb_key_nkpMinus/
 
 /def key_nkp1 = /_bind_kb_key_nkp1
 /def key_nkp2 = /_bind_kb_key_nkp2
