@@ -10,7 +10,7 @@
 /def get_money = /send wez %{*} monety z %{container_money_C}
 /def pack_money = /send wloz %{*} monety do %{container_money_C}
 /def get_valuables = /send otworz %{container_valuables_B}%;/send wez mithrylowe monety z %{container_valuables_C}%;/send wez kamienie z %{container_valuables_C}%;/send zamknij %{container_valuables_B}
-/def pack_valuables = /send otworz %{container_valuables_B}%;/send wloz mithrylowe monety do %{container_valuables_C}%;/send wloz kamienie do %{container_valuables_C}/send zamknij %{container_valuables_B}
+/def pack_valuables = /send otworz %{container_valuables_B}%;/send wloz mithrylowe monety do %{container_valuables_C}%;/send wloz kamienie do %{container_valuables_C}%;/send zamknij %{container_valuables_B}
 /alias mm /get_money
 /alias mmm /pack_money
 /alias mmk /get_valuables

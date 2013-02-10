@@ -1,11 +1,15 @@
 /def key_f2 = \
-    /zabij $(/odmien_M_B %{_combat_attack_target})
+    /if ({_combat_attack_target}!/"") \
+        /zabij $(/odmien_M_B %{_combat_attack_target}) %;\
+    /endif
 
 /def key_esc_f2 = \
-    /send przestan kryc sie za zaslona%;\
-    /send przelam obrone $(/odmien_M_D %{_combat_attack_target})%;\
-    /zabij $(/odmien_M_B %{_combat_attack_target})%;\
-    /send kmodpocznij
+    /if ({_combat_attack_target}!/"") \
+        /send przestan kryc sie za zaslona%;\
+        /send przelam obrone $(/odmien_M_D %{_combat_attack_target})%;\
+        /zabij $(/odmien_M_B %{_combat_attack_target})%;\
+        /send kmodpocznij%;\
+    /endif
 
 /def zabij = \
     /let target=%{*}%;\
@@ -28,16 +32,20 @@
     /endif
 
 /def key_f3 = \
-    /send zaslon $(/odmien_M_B %{_combat_defence_target})
+    /if ({_combat_defence_target}!/"") \
+        /send zaslon $(/odmien_M_B %{_combat_defence_target})%;\
+    /endif
 
 /def key_esc_f3 = /order_defence
 
 /def order_defence = \
-    /let target=$(/odmien_M_B %{_combat_defence_target})%;\
-    /send popatrz opiekunczo na %{target}%;\
-    /if ({_team_leader}=~"-") \
-        /if ({_combat_orders_enabled}==1) \
-            /send rozkaz druzynie zaslonic %{target}%;\
+    /if ({_combat_defence_target}!/"") \
+        /let target=$(/odmien_M_B %{_combat_defence_target})%;\
+        /send popatrz opiekunczo na %{target}%;\
+        /if ({_team_leader}=~"-") \
+            /if ({_combat_orders_enabled}==1) \
+                /send rozkaz druzynie zaslonic %{target}%;\
+            /endif%;\
         /endif%;\
     /endif
 
@@ -55,3 +63,25 @@
     /def z%{_combat_defence_write_for_team_member_pointer} = /send zaslon $$(/odmien_M_B %%{%{*}})%;\
     /def zg%{_combat_defence_write_for_team_member_pointer} = /send zaslon $$(/odmien_M_B %%{%{*}}) przed grupa%;\
     /def zr%{_combat_defence_write_for_team_member_pointer} = /defend $$(/odmien_M_B %%{%{*}})%%;/oder_defence
+
+/def _combat_prompt_attack = \
+    /echo%;\
+    /test echo(decode_attr(strcat("             ","F2      - ZABIJ    -   ", {*}), "Cred"))%;\
+    /test echo(decode_attr(strcat("             ","META_F2 - PRZELAM  -   ", {*}), "Cred"))%;\
+    /echo
+
+/def _combat_prompt_guard_break = \
+    /echo%;\
+    /test echo(decode_attr(strcat("             ","META_F2 - PRZELAM  -   ", {*}), "Cred"))%;\
+    /echo
+
+/def _combat_prompt_defence = \
+    /echo%;\
+    /test echo(decode_attr(strcat("             ","F3      - ZASLON  -   ", {*}), "Cgreen"))%;\
+    /echo
+
+/def _combat_prompt_defence_with_order = \
+    /echo%;\
+    /test echo(decode_attr(strcat("             ","F3      - ZASLON         -   ", {*}), "Cgreen"))%;\
+    /test echo(decode_attr(strcat("             ","META_F3 - ROZKAZ/POPROS  -   ", {*}), "Cgreen"))%;\
+    /echo

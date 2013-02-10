@@ -20,6 +20,11 @@
     wloz ziola do piatego przytroczonego woreczka%; \
     zamknij woreczki
 
+/def ziola_chowaj = \
+    otworz %{*} woreczek%;\
+    wloz ziola do niego%;\
+    zamknij go
+
 /def ziola_woreczki = \
     otworz plecak%; \
     otworz zamkniety przytroczony woreczek%; \

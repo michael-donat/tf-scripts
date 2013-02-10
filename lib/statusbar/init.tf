@@ -25,6 +25,7 @@
 /eval /status_add -r2 "DT: ":: _combat_defence_target::Cgreen
 
 /eval /status_add -c -r3 "[ ":: _movement_compass_exit_sw:1 " ":1 _movement_compass_exit_s:1 " ":1 _movement_compass_exit_se:2 _movement_compass_exit_ot:1 "] "::
+/eval /status_add -r3 "WB: [":: _fast_bind_label:21 "]"
 ;/eval /status_add -r3 "R: [ ":: rozkaz_ataku:46:BC%kolor_alarm
 ;/eval /status_add -r3 "]  Bind: ":: bindings:35:BC%kolor_info
 ;/eval /status_add -r3 spacebreak::

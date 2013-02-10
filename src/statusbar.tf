@@ -257,13 +257,13 @@
 	/set warningstat=$[strcat("[", decode_attr("                    ", "Cgreen"), "] ")]
 
 /def -mregexp -Fp2 -t'.* wytraca ci (.*) z (rak|reki)' _wytracenie = \
-	/set warningstat=$[strcat("[", decode_attr(" --* WYTRACENIE *-- ", "BCbgred"), "] ")]
+/set warningstat=$[strcat("[", decode_attr(" --* WYTRACENIE *-- ", "BCbgred"), "] ")]
 
 /def -mregexp -Fp2 -t'Uderzenie jest tak silne, ze bezwiednie puszczasz' _wytracenie_parowanie = \
-	/set warningstat=$[strcat("[", decode_attr(" --* WYTRACENIE *-- ", "BCbgred"), "] ")]
+/set warningstat=$[strcat("[", decode_attr(" --* WYTRACENIE *-- ", "BCbgred"), "] ")]
 
 /def -mregexp -Fp2 -t'zakleszczajac lewakiem twoj .* Czujesz potezne szarpniecie' _wytracenie_lewak = \
-	/set warningstat=$[strcat("[", decode_attr(" --* WYTRACENIE *-- ", "BCbgred"), "] ")]
+/set warningstat=$[strcat("[", decode_attr(" --* WYTRACENIE *-- ", "BCbgred"), "] ")]
 
 /def -mregexp -p2 -t'lecac lagodnym lukiem, laduje na ziemi obok ciebie' _wytracenie_ozywek = \
 	/set warningstat=$[strcat("[", decode_attr(" DOBADZ BRONI -- F2 ", "BCbgblue"), "] ")] %;\

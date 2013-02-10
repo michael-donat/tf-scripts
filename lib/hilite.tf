@@ -5,7 +5,7 @@
 
 /set _info_events_speech_type_list=(mowi|nuci|szepcze zlowieszczo|syczy|bulgocze)
 /eval /def -mregexp -t'.* %{_info_events_speech_type_list} do ciebie:? (.*)' -aB -Fp5 _info_events_speech_1
-/eval /def -mregexp -t'(.* %{_info_events_speech_type_list}.*: )(.*)' -aCrgb552 -Fp10 _info_events_speech_2 = /test  substitute(strcat("- ", "%%{P1}", decode_attr("%%{P3}", "Crgb550")))
+/eval /def -mregexp -t'(.* %{_info_events_speech_type_list}.*: )(.*)' -aCrgb552 -Fp10 _info_events_speech_2 = /test  substitute(strcat("- ", "%%{P1}", decode_attr("%%{P3}", "Crgb551")))
 /def -mregexp -t'Mowisz:? .*' -aCrgb315 -p15 _info_events_speech_3
 
 

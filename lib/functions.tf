@@ -32,3 +32,15 @@
      /unset _create_trigger_match_prefix%;\
      /unset _create_trigger_match_suffix%;\
      /set _create_trigger_list_separator=|
+
+
+
+ /def ucfirst = \
+    /echo $[strcat(toupper(substr({1}, 0, 1)), substr({1}, 1))]
+
+/def ucfirstname = \
+    /if (strchr({*}, " ")) \
+        /echo %{*}%;\
+    /else \
+        /usfirst %{*}%;\
+    /endif

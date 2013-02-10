@@ -27,6 +27,7 @@
 /load defs/smith.tf
 /load defs/odmiana.tf
 /load defs/herbs.tf
+/load defs/fastbind.tf
 
 ; basic hilights
 /load hilite.tf
@@ -42,6 +43,8 @@
 /eval /load %{db_odmiana}
 
 ; temp
-/load ../src/combat/colors_events.tf
+;/load ../src/combat/colors_events.tf
 /load ../src/combat/colors_hits.tf
 /load ../src/combat/colors_weapons.tf
+/load ../src/subs/OK.tf
+/load ../src/subs/MC.tf

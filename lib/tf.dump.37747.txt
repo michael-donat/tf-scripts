@@ -1,0 +1,81 @@
+# TinyFugue debugging information
+
+> TinyFugue version 5.0 beta 8
+> Darwin Darwin Kernel Version 12.2.0: Sat Aug 25 00:48:52 PDT 2012; root:xnu-2050.18.24~1/RELEASE_X86_64 12.2.0
+> +256colors -core +float +ftime +history -IPv6 +locale +MCCPv1 +MCCPv2 +process -SOCKS +ssl +subsecond +TZ
+> virtscreen=1, visual=1, expnonvis=0, emulation=3, lp=1, sub=0
+> TERM="xterm"
+> cmd="(NULL)"
+> Internal error:  macro.c, line 1101
+> dSfree: links==-1
+
+Reading symbols for shared libraries ....... done
+/Users/thornag/Development/projects/TF/lib/37747: No such file or directory
+Attaching to program: `/usr/local/bin/tf', process 37747.
+Reading symbols for shared libraries + done
+Reading symbols for shared libraries +++++++.............................. done
+Reading symbols for shared libraries + done
+0x00007fff93702698 in __wait4 ()
+$1 = "xsock:"
+$2 = 0x7fdbbb4a0ff0 "arkadia"
+$3 = 0x7fdbbb4a1020 "arkadia.rpg.pl"
+$4 = 0x7fdbbb4a1030 "23"
+$5 = "fsock:"
+$6 = 0x7fdbbb4a0ff0 "arkadia"
+$7 = 0x7fdbbb4a1020 "arkadia.rpg.pl"
+$8 = 0x7fdbbb4a1030 "23"
+#0  0x00007fff93702698 in __wait4 ()
+No symbol table info available.
+#1  0x000000010500a6b2 in debugger_dump () at signals.c:536
+	status = 0
+	child_pid = 33554439
+	tf_pid = 37747
+	exename = 0x7fff5ac20cf8 "tf"
+#2  0x000000010500a870 in crash (internal=2041594016, fmt=0x1050236a0 "dSfree: links==%d", file=0x105024e69 "macro.c", line=1101, n=140734716054176) at signals.c:401
+	dumpfile = (FILE *) 0x2000007
+#3  0x0000000104fe4af4 in dSfree (str=0x9386, file=0x105024e69 "macro.c", line=1101) at dstring.c:191
+No locals.
+#4  0x0000000104ff9e8c in nuke_macro (m=0x9386) at macro.c:1101
+No locals.
+#5  0x0000000104ff9fc0 in nuke_dead_macros () at macro.c:1075
+No locals.
+#6  0x00000001050125b9 in main_loop () at socket.c:895
+	tv = {
+  tv_sec = 21, 
+  tv_usec = 345237
+}
+	refresh_tv = {
+  tv_sec = 0, 
+  tv_usec = 0
+}
+	depth = 1
+	now = {
+  tv_sec = 1360447000, 
+  tv_usec = 538647
+}
+	low_memory_msg = {{
+    data = 0x1050276c8 "% WARNING: memory is low.  Try reducing history sizes.", 
+    len = 54, 
+    size = 55, 
+    links = 1, 
+    static_struct = 1, 
+    dynamic_struct = 0, 
+    dynamic_data = 0, 
+    resizable = 0, 
+    attrs = 0, 
+    charattrs = 0x0, 
+    time = {
+      tv_sec = -1, 
+      tv_usec = -1
+    }, 
+    file = 0x105026da7 "socket.c", 
+    line = 658
+  }}
+	earliest = {
+  tv_sec = 1360447021, 
+  tv_usec = 883884
+}
+	count = 0
+#7  0x0000000104ffd055 in main (argc=-1153320048, argv=0x7fff5ac20be0) at main.c:218
+	argv0 = 0x7fff5ac20cf8 "tf"
+	scratch = (String *) 0x2000007
