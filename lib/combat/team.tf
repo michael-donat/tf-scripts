@@ -42,14 +42,15 @@
      /_combat_defence_generate_form_team_members
 
 /def _team_get_number_by_name = \
-    /eval /echo %%_team_member_number_%{1}
+    /let search=$[tolower({1})]%;\
+    /eval /echo %%_team_member_number_%{search}
 
 /def _team_get_number_by_number = \
     /eval /echo %%_team_member_name_%{1}
 
 /def _team_color_write_from_team_members = \
     /let member_M=$[tolower({1})]%;/let member_B=$(/odmien_M_B %{1})%;/let member_N=$(/odmien_M_N %{1})%;/let member_D=$(/odmien_M_D %{1})%;\
-    /def -FPCrgb140 -mregexp -t'(%{member_M}|%{member_B}|%{member_N}|%{member_D})' _team_member_color_%{2}
+    /def -FPCrgb140 -mregexp -t'(%{member_B}|%{member_N}|%{member_D})|%{member_M}' _team_member_color_%{2}
 
 /def _team_get_name_color = \
     /if (_team_is_member({*})) \

@@ -1,3 +1,9 @@
+/def orders = \
+    /set _combat_orders_enabled=0%;\
+    /if ({1}=~"+") \
+        /set _combat_orders_enabled=1%;\
+    /endif
+
 /def key_f2 = \
     /if ({_combat_attack_target}!/"") \
         /zabij $(/odmien_M_B %{_combat_attack_target}) %;\
@@ -13,30 +19,43 @@
 
 /def zabij = \
     /let target=%{*}%;\
-    /let target_M=$(/odmien_B_M %{*})%;\
-    /test _combat_set_attack_target({target_M}, {target})%;\
-    /if ({_team_leader}=~"-") \
-        /send popatrz morderczo na %{target}%;\
-        /if ({_combat_orders_enabled}==1) \
+    /if ({target}!/"") \
+        /let target_M=$(/odmien_B_M %{*})%;\
+        /test _combat_set_attack_target({target_M}, {target})%;\
+        /if ({_team_leader}=~"-") \
+            /send popatrz morderczo na %{target}%;\
+        /endif%;\
+        /send zabij %{target}%;\
+    /endif
+
+/def key_f3 =
+
+/def key_esc_f3 = \
+    /if ({_combat_attack_target}!/"") \
+        /if ({_team_leader}=~"-") \
+            /let target=$(/odmien_M_B %{_combat_attack_target})%;\
+            /send popatrz morderczo na %{target}%;\
             /send rozkaz druzynie zabic %{target}%;\
         /endif%;\
-    /endif%;\
-    /send zabij %{target}
+    /endif
 
 /def _combat_set_attack_target = \
     /set _combat_attack_target %{1}%;\
-    /let target_B={2}%;\
+    /let target_B=%{2}%;\
     /if ({_team_leader}=~"-") \
         /if ({2}=/"") /let target_B=$(/odmien_M_B %{1})%; /endif%;\
         /send wskaz %{target_B} jako cel ataku%;\
     /endif
 
-/def key_f3 = \
+/def key_f4 = \
     /if ({_combat_defence_target}!/"") \
         /send zaslon $(/odmien_M_B %{_combat_defence_target})%;\
     /endif
 
-/def key_esc_f3 = /order_defence
+/def key_esc_f4 = \
+    /if ({_combat_defence_target}!/"") \
+        /send zaslon $(/odmien_M_B %{_combat_defence_target}) przed grupa%;\
+    /endif
 
 /def order_defence = \
     /if ({_combat_defence_target}!/"") \
@@ -49,8 +68,18 @@
         /endif%;\
     /endif
 
+/def key_esc_f5 = \
+    /set _combat_orders_enabled=1%;\
+    /order_defence%;\
+    /set _combat_orders_enabled=0
+
+/def key_f5 = \
+    /set _combat_orders_enabled=0%;\
+    /order_defence
+
 /def defend = \
     /set _combat_defence_target=$(/odmien_B_M %{*})%;\
+    /send wskaz %{*} jako cel obrony%;\
     /order_defence
 
 /def _combat_defence_generate_form_team_members = \
@@ -77,11 +106,12 @@
 
 /def _combat_prompt_defence = \
     /echo%;\
-    /test echo(decode_attr(strcat("             ","F3      - ZASLON  -   ", {*}), "Cgreen"))%;\
+    /test echo(decode_attr(strcat("             ","F4      - ZASLON  -   ", {*}), "Cgreen"))%;\
+    /test echo(decode_attr(strcat("             ","META_F4 - GRUPOWA -   ", {*}), "Cgreen"))%;\
     /echo
 
 /def _combat_prompt_defence_with_order = \
     /echo%;\
-    /test echo(decode_attr(strcat("             ","F3      - ZASLON         -   ", {*}), "Cgreen"))%;\
-    /test echo(decode_attr(strcat("             ","META_F3 - ROZKAZ/POPROS  -   ", {*}), "Cgreen"))%;\
+    /test echo(decode_attr(strcat("             ","F3      - POPROS         -   ", {*}), "Cgreen"))%;\
+    /test echo(decode_attr(strcat("             ","META_F3 - ROZKAZ         -   ", {*}), "Cgreen"))%;\
     /echo

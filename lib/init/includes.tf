@@ -8,6 +8,7 @@
 /load combat/events.tf
 /load combat/system.tf
 /load combat/defs.tf
+/load combat/exp.tf
 
 ; status bar
 /load statusbar/init.tf

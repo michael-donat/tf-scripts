@@ -97,3 +97,10 @@
     dbb
 
 /alias dbz /dbz
+
+/def skrotin=przecisnij sie przez otwor%; przecisnij sie na zachod%; przecisnij sie na poludniowy-zachod%; przecisnij sie na poludniowy-wschod
+/def skrotout=przecisnij sie przez otwor%; przecisnij sie na polnocny-wschod%; przecisnij sie na wschod%; przecisnij sie na poludniowy-zachod
+
+/def krolken = wk%;wez klucz z ciala%;otworz skrzynie kluczem%;otworz skrzynie%;wez monety z skrzyni%;odloz klucz
+
+/def gnis = /zabij poteznego dostojnego goblina

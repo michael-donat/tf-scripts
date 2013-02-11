@@ -39,8 +39,15 @@
     /echo $[strcat(toupper(substr({1}, 0, 1)), substr({1}, 1))]
 
 /def ucfirstname = \
-    /if (strchr({*}, " ")) \
+    /if (strchr({*}, " ")!=-1) \
         /echo %{*}%;\
     /else \
-        /usfirst %{*}%;\
+        /ucfirst %{*}%;\
     /endif
+
+/eval /set ___lineTruScreen=$[strrep("-", columns()-10)]%;\
+
+/def printline = \
+;    /eval /set ___lineTruScreen=$[strrep("-", columns()-10)]%;\
+;    /test echo({___lineTruScreen})
+    /echo

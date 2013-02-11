@@ -1715,3 +1715,4 @@
 /def _odmiana_perias = /set _odmiana_perias_dopelniacz=periasa%;/set _odmiana_perias_biernik=periasa%;/set _odmiana_perias_narzednik=periasem
 /def _odmiana_oja = /set _odmiana_oja_dopelniacz=oji%;/set _odmiana_oja_biernik=oje%;/set _odmiana_oja_narzednik=oja
 /def _odmiana_novigradu = /set _odmiana_novigradu_dopelniacz=novigradu%;/set _odmiana_novigradu_biernik=novigradu%;/set _odmiana_novigradu_narzednik=novigradu
+/def _odmiana_barvar = /set _odmiana_barvar_dopelniacz=barvara%;/set _odmiana_barvar_biernik=barvara%;/set _odmiana_barvar_narzednik=barvarem
