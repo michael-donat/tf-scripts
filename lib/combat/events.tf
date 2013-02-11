@@ -189,4 +189,7 @@
 /showme Borubar jest w dobrym stanie. Atakuje go lysy obrzydliwy redcap.%;\
 /showme Pomarszczony ogromny redcap jest lekko ranny. Atakujesz go ty i Borubar.%;\
 /showme Lysy obrzydliwy redcap jest w swietnej kondycji.%;\
-/showme Krzywonogi ogromny redcap jest w swietnej kondycji.
+/showme Krzywonogi ogromny redcap jest w swietnej kondycji.%;\
+/showme Grozny goblin probuje zaatakowac Varriza, ale zagradzasz mu droge!%;\
+/showme Probujesz zaslonic Varriza przed ciosami okrutnego kobolda, jednak nie jestes w stanie tego uczynic.
+

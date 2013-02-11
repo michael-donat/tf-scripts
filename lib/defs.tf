@@ -104,3 +104,6 @@
 /def krolken = wk%;wez klucz z ciala%;otworz skrzynie kluczem%;otworz skrzynie%;wez monety z skrzyni%;odloz klucz
 
 /def gnis = /zabij poteznego dostojnego goblina
+
+/def szczelina = przecisnij sie przez szczeline%;wejdz w szczeline
+/def krata = podnies krate
