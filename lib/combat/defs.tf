@@ -1,3 +1,5 @@
+/def zr0 = rozkaz druzynie zaslonic ciebie%;popatrz opiekunczo na siebie%;wskaz siebie jako cel obrony
+/def z0 = popatrz opiekunczo na siebie%;\wskaz siebie jako cel obrony
 
 /def zaslon = \
     /if ({2} =~ "") \

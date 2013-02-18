@@ -18,6 +18,14 @@
     /list [0-9]%;\
     /echo
 
-/def -p9999 -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = \
+/def mahak = \
     /_exp_set oficera kobolda goblina pukacza trolla echinopsa barbegazi%;\
     /_exp_prompt MAHAKAM
+
+/def -p9999 -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = \
+    /mahak
+
+/def exp_redcapy = \
+    /test _exp_set("pierwszego redcapa", "drugiego redcapa", "trzeciego redcapa", "czwartego redcapa")%;\
+    /_exp_prompt REDCAPY
+

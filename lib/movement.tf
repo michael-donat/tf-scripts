@@ -12,11 +12,22 @@
 
 /def _bind_kb_key_nkp5      = /send zerknij
 
+/def move = \
+    /if ({1}=~"-") \
+        /set _movement_disabled=1%;\
+        /set _movement_disabled_label=$[decode_attr("[MV]", "Cbgred")]%;\
+    /else \
+        /set _movement_disabled=0%;\
+        /set _movement_disabled_label=$[decode_attr("[MV]", "Cbgred")]%;\
+    /endif
+
 /def _movement_go_exec =    \
 \
-    /send %{1}
+    /if (_movement_disabled!=1) \
+        /send %{1}%;\
+    /endif
 
-/def -ag -mregexp -t'((Jest|Sa) tutaj ([^ ]*) (widoczne|widocznych) (wyjsc|wyjscia|wyjscie): |Trakt wiedzie na |W mroku nocy dostrzegasz .* widoczn(e|ych) wyjsc(|ia|ie): |Trakt rozgalezia sie na |W gestych ciemnosciach dostrzegasz trakt wiodacy na |W gestych ciemnosciach dostrzegasz, ze trakt rozgalezia sie na |Sciezka prowadzi tutaj w .* (kierunkach|kierunku): |Szlak.* tutaj w .* kierunk.*: |Wyjsc.* prowadz.* tutaj w .* (kierunkach|kierunku): |Tunel.* ciagn.* na |Wedrowke przez rozlegle laki mozesz kontynuowac udajac sie na )' _movement_match_exists = \
+/def -ag -mregexp -t'((Jest|Sa) tutaj ([^ ]*) (widoczne|widocznych) (wyjsc|wyjscia|wyjscie): |Rozpadlina ciagnie sie na |Trakt wiedzie na |W mroku nocy dostrzegasz .* widoczn(e|ych) wyjsc(|ia|ie): |Trakt rozgalezia sie na |W gestych ciemnosciach dostrzegasz trakt wiodacy na |W gestych ciemnosciach dostrzegasz, ze trakt rozgalezia sie na |Sciezka prowadzi tutaj w .* (kierunkach|kierunku): |Szlak.* tutaj w .* kierunk.*: |Wyjsc.* prowadz.* tutaj w .* (kierunkach|kierunku): |Tunel.* ciagn.* na |Wedrowke przez rozlegle laki mozesz kontynuowac udajac sie na )' _movement_match_exists = \
     /let _movement_exists=$[replace(".", "", replace(" i ", ", ", {PR}))]%;\
     /_movement_exists %{_movement_exists}%;\
     /let _movement_exists=$[replace(", ", " ", {_movement_exists})]%;\

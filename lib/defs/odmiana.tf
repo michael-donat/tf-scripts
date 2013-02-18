@@ -35,8 +35,19 @@
         /echo Entry already exists%;\
     /endif%;\
 
+/def odmiana_wyjatki = \
+    /if ({*}=/"* ze skrzynia *") \
+        /let subject=%{1} %{2} %{3}%;\
+    /else \
+        /let subject=%;\
+    /endif%;\
+    /echo %{subject}
+
 /def odmien = \
-    /if ($(/list _odmiana_%{L})=/"") \
+    /let exception=$(/odmiana_wyjatki %{*})%;\
+    /if ({exception}!~NULL) \
+        /odmien %{exception}%;\
+    /elseif ($(/list _odmiana_%{L})=/"") \
         /dodaj_odmiane %{L}%;\
         /repeat -1 1 /odmien_process %{*}%;\
     /else \
@@ -76,7 +87,7 @@
 	    /let dpEE=$[substr({1}, -2, 2)] %;\
 		/if (dpEE=~"ka") \
             /let op_B1=$[strcat(substr({1}, 0, -1), 'iej')]%;\
-        /elseif (dpE=~"y") \
+        /elseif (dpE=~"y" | dpE=~"e") \
             /let op_B1=$[strcat(substr({1}, 0, -1), 'ego')]%;\
         /elseif (dpE=~"i") \
             /let op_B1=$[strcat(substr({1}, 0, -1), 'iego')]%;\
@@ -121,6 +132,8 @@
 	    /let dpEEE=$[substr({1}, -3, 3)] %;\
 		/if (dpE=~"y") \
 		    /let op_B1=$[strcat(substr({1},0,-1),'ego')]%;\
+        /elseif (dpE=~"e") \
+            /let op_B1=%{1}%;\
 		/elseif (dpE=~"i") \
 		    /let op_B1=$[strcat(substr({1},0,-1),'iego')]%;\
 		/elseif (dpE=~"a") \
@@ -159,7 +172,9 @@
 	    /let dpE=$[substr({1}, -1, 1)] %;\
 	    /let dpEE=$[substr({1}, -2, 2)] %;\
 	    /let dpEEE=$[substr({1}, -3, 3)] %;\
-		/if (dpE=~"y" | dpE=~"e") \
+	    /if (dpEE=~"ie") \
+	        /let op_B1=$[strcat(substr({1}, 0, -1), 'm')] %;\
+		/elseif (dpE=~"y" | dpE=~"e") \
 		    /let op_B1=$[strcat(substr({1}, 0, -1), 'ym')] %;\
 		/elseif (dpE=~"i") \
 		    /let op_B1=$[strcat(substr({1}, 0, -1), 'im')] %;\
@@ -196,6 +211,8 @@
 		    /let op_B1=$[strcat(substr({1},0,-4),'i')]%;\
 		/elseif (dpEEE=~"ego") \
 		    /let op_B1=$[strcat(substr({1},0,-3),'y')]%;\
+        /elseif (dpE=~"e") \
+            /let op_B1=%{1} %;\
 		/elseif (dpE=~"a") \
 		    /let op_B1=%{1} %;\
 		/else \

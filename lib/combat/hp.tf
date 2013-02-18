@@ -67,7 +67,7 @@
         /set _combat_system_who_attacks_whom_pointer=1%;\
     /endif
 
-/def -ag -Fp150 -mregexp -t'^([A-z]+|[A-z]+ [a-z]+|[A-z]+ [a-z]+ [a-z]+) jest (?:[w] |)(swietnej kondycji|dobrym stanie|lekko rann[a-z]|rann[a-z]|zlej kondycji|ciezko rann[a-z]|ledwo zyw[a-z])\.' _combat_health_trigger_2= \
+/def -ag -Fp150 -mregexp -t'^(.*) jest (?:[w] |)(swietnej kondycji|dobrym stanie|lekko rann[a-z]|rann[a-z]|zlej kondycji|ciezko rann[a-z]|ledwo zyw[a-z])\.' _combat_health_trigger_2= \
     /test _combat_health_dosplay_line({P1}, {P2})
 
 /set _combat_hp_previous_was_mob=0
@@ -107,3 +107,5 @@
     /echo
 
 /def key_f19 = /_combat_show_who_attacks_whom
+
+

@@ -1,7 +1,46 @@
+
+;---------------------------------------------------------------------------------
+; CEL ATAKU
+;-----------------------------
+
+/def _combat_clear_attack_target = \
+    /set _combat_attack_target=
+
+/def _combat_set_attack_target = \
+    /set _combat_attack_target %{1}%;\
+    /let target_B=%{2}%;\
+    /if ({_team_leader}=~"-") \
+        /if ({2}=/"") /let target_B=$(/odmien_M_B %{1})%; /endif%;\
+        /send wskaz %{target_B} jako cel ataku%;\
+    /endif
+
+;---------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------------
+; CEL OBRONY
+;-----------------------------
+
+/def _combat_clear_defence_target = \
+    /set _combat_defence_target=
+
+;---------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------
+
+/def key_f16 = \
+    /if ({_combat_orders_enabled}==1) \
+        /orders -%;\
+    /else \
+        /orders +%;\
+    /endif
+
 /def orders = \
-    /set _combat_orders_enabled=0%;\
     /if ({1}=~"+") \
         /set _combat_orders_enabled=1%;\
+        /set _combat_orders_enabled_label=$[decode_attr("[OR]", "Cbggreen")]%;\
+    /else \
+        /set _combat_orders_enabled=0%;\
+        /set _combat_orders_enabled_label=$[decode_attr("[OR]", "Cbgred")]%;\
     /endif
 
 /def key_f2 = \
@@ -21,11 +60,14 @@
     /let target=%{*}%;\
     /if ({target}!/"") \
         /let target_M=$(/odmien_B_M %{*})%;\
+        /send zabij %{target}%;\
         /test _combat_set_attack_target({target_M}, {target})%;\
         /if ({_team_leader}=~"-") \
             /send popatrz morderczo na %{target}%;\
+            /if ({_combat_orders_enabled}==1) \
+                /send rozkaz druzynie zabic %{target}%;\
+            /endif%;\
         /endif%;\
-        /send zabij %{target}%;\
     /endif
 
 /def key_f3 =
@@ -39,13 +81,7 @@
         /endif%;\
     /endif
 
-/def _combat_set_attack_target = \
-    /set _combat_attack_target %{1}%;\
-    /let target_B=%{2}%;\
-    /if ({_team_leader}=~"-") \
-        /if ({2}=/"") /let target_B=$(/odmien_M_B %{1})%; /endif%;\
-        /send wskaz %{target_B} jako cel ataku%;\
-    /endif
+
 
 /def key_f4 = \
     /if ({_combat_defence_target}!/"") \
@@ -62,9 +98,7 @@
         /let target=$(/odmien_M_B %{_combat_defence_target})%;\
         /send popatrz opiekunczo na %{target}%;\
         /if ({_team_leader}=~"-") \
-            /if ({_combat_orders_enabled}==1) \
-                /send rozkaz druzynie zaslonic %{target}%;\
-            /endif%;\
+            /send rozkaz druzynie zaslonic %{target}%;\
         /endif%;\
     /endif
 
@@ -91,7 +125,7 @@
     /set _combat_defence_write_for_team_member_pointer=$[{_combat_defence_write_for_team_member_pointer}+1]%;\
     /def z%{_combat_defence_write_for_team_member_pointer} = /send zaslon $$(/odmien_M_B %%{%{*}})%;\
     /def zg%{_combat_defence_write_for_team_member_pointer} = /send zaslon $$(/odmien_M_B %%{%{*}}) przed grupa%;\
-    /def zr%{_combat_defence_write_for_team_member_pointer} = /defend $$(/odmien_M_B %%{%{*}})%%;/oder_defence
+    /def zr%{_combat_defence_write_for_team_member_pointer} = /defend $$(/odmien_M_B %%{%{*}})%%;/order_defence
 
 /def _combat_prompt_attack = \
     /echo%;\

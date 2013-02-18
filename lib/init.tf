@@ -11,8 +11,9 @@
 ; load settings
 /load lib/init/settings.tf
 
-; load and init libraries
 /cd lib
+
+; load and init libraries
 /load functions.tf
 /load init/includes.tf
 

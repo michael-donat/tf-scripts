@@ -1,5 +1,5 @@
 /def _bind_kb_key_nkpDivide = \
-    /def -t'Slucham?' -n1 = /substitute%;\
+    /def -t'Slucham?' -n1 _show_st_ = /substitute%;\
     /send k wszystkich%;\
     /send dummy
 

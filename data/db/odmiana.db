@@ -1716,3 +1716,7 @@
 /def _odmiana_oja = /set _odmiana_oja_dopelniacz=oji%;/set _odmiana_oja_biernik=oje%;/set _odmiana_oja_narzednik=oja
 /def _odmiana_novigradu = /set _odmiana_novigradu_dopelniacz=novigradu%;/set _odmiana_novigradu_biernik=novigradu%;/set _odmiana_novigradu_narzednik=novigradu
 /def _odmiana_barvar = /set _odmiana_barvar_dopelniacz=barvara%;/set _odmiana_barvar_biernik=barvara%;/set _odmiana_barvar_narzednik=barvarem
+/def _odmiana_redaan = /set _odmiana_redaan_dopelniacz=redaana%;/set _odmiana_redaan_biernik=redaana%;/set _odmiana_redaan_narzednik=redaanem
+/def _odmiana_moira = /set _odmiana_moira_dopelniacz=moiry%;/set _odmiana_moira_biernik=moire%;/set _odmiana_moira_narzednik=moira
+/def _odmiana_husard = /set _odmiana_husard_dopelniacz=husarda%;/set _odmiana_husard_biernik=husarda%;/set _odmiana_husard_narzednik=husardem
+/def _odmiana_cannis = /set _odmiana_cannis_dopelniacz=cannisa%;/set _odmiana_cannis_biernik=cannisa%;/set _odmiana_cannis_narzednik=cannisem
