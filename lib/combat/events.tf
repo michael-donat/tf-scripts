@@ -4,7 +4,7 @@
 /def -mregexp -t'.* wskazuje (.*) jako cel ataku.' _combat_event_set_attack_target = \
     /let target=%{P1}%;\
     /set _combat_attack_target=$(/odmien_B_M %{P1})%;\
-    /test _combat_prompt_attack({target})5
+    /test _combat_prompt_attack({target})
 
 /def -mregexp -t'.* wskazuje (.*).' _combat_event_set_attack_target_from_pointing = \
     /if ({P1}=~{_team_leader}) \
