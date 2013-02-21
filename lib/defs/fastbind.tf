@@ -1,18 +1,20 @@
+/set fastbindkey=_bind_kb_key_nkpTimes
+
 /def _fast_bind_set = \
     /set _fast_bind_label=%{1}%;\
     /if ({3}==1) \
-        /def _bind_kb_key_nkpTimes = %{2}%%;/_fast_bind_clear%;\
+        /def %{fastbindkey} = %{2}%%;/_fast_bind_clear%;\
     /else \
-        /def _bind_kb_key_nkpTimes = %{2}%;\
+        /def %{fastbindkey} = %{2}%;\
     /endif
 
 /def _fast_bind_clear = \
     /set _fast_bind_label=%;\
-    /def _bind_kb_key_nkpTimes=
+    /def %{fastbindkey}=
 
 /def key_esc_nkp* = /_fast_bind_clear
 
-/def _bind_kb_key_nkpTimes=
+/def %{fastbindkey}=
 
 ; ------------------------------------------------------------------------------
 ; fastbind triggers
