@@ -2,6 +2,10 @@
 /def key_f14 = /2
 /def key_f15 = /3
 
+/def key_esc_f13 = /1%;rozkaz druzynie zabic cel ataku
+/def key_esc_f14 = /2%;rozkaz druzynie zabic cel ataku
+/def key_esc_f15 = /3%;rozkaz druzynie zabic cel ataku
+
 /def _exp_set = \
     /purge [0-9]%;\
     /let i=0%; \
