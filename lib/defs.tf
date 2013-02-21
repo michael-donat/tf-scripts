@@ -107,3 +107,6 @@
 
 /def szczelina = przecisnij sie przez szczeline%;wejdz w szczeline
 /def krata = podnies krate
+
+/def rozpakuj = wez worek%;wez wszystko z niego%;wloz go do plecaka%;wloz wszystkie bronie do kosza%;wloz
+    wszystkie zbroje do kosza
