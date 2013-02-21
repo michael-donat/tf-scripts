@@ -1,3 +1,5 @@
+/set fastbindkey=key_f5
+
 /def _bind_kb_key_nkpTimes = k wszystkich
 /def _bind_kb_key_nkpPlus = ws
 /def _bind_kb_key_nkpDivide = stan

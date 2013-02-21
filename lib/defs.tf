@@ -107,3 +107,28 @@
 
 /def szczelina = przecisnij sie przez szczeline%;wejdz w szczeline
 /def krata = podnies krate
+
+/def srebro = \
+    wez kluczyk z ciala%; \
+    otworz kufer kluczem%; \
+    otworz kufer kluczykiem%; \
+    otworz kufer%; \
+    wez monety z kufra%; \
+    wloz kluczyk do kufra%;\
+    otworz szkatulke kluczem%; \
+    otworz szkatulke kluczykiem%; \
+    otworz szkatulke%; \
+    wez monety ze szkatulki%; \
+    wloz kluczyk do szkatulki%;\
+    otworz szrzynie kluczem%; \
+    otworz skrzynie kluczykiem%; \
+    otworz skrzynie%; \
+    wez monety ze skrzyni%; \
+    otworz szrzynke kluczem%; \
+    otworz skrzynke kluczykiem%; \
+    otworz skrzynke%; \
+    wez monety ze skrzynki%; \
+    wloz kluczyk do skrzynki%; \
+    wloz kluczyk do skrzyni
+
+/def rozpakuj = wez worek%;wez wszystko z niego%;wloz go do plecaka%;wloz wszystkie bronie do kosza%;wloz wszystkie zbroje do kosza

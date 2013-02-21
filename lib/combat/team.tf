@@ -10,14 +10,28 @@
     /_team_members_purge%;\
     /_team_members_generate_goodies
 
+/def _team_set_fast_bind = \
+    /let label=$[strcat(decode_attr(" -- -- DRUZYNA -- -- ", "BCbgblue"), "  ")]%;\
+    /test _fast_bind_set({label}, "/druzyna", 1)
+
 /def druzyna = \
-    /def -t'Nie jestes w zadnej druzynie.' _team_members_trigger_no_team = /_team_members_purge%;/unset _team_members_list_separated%;\
+    /def -t'Nie jestes w zadnej druzynie.' _team_members_trigger_no_team = /_team_members_purge%;/unset _team_members_list_separated%;/quote -S /unset `/listvar -s \_team\_member\_*%;\
     /def -mregexp -p5 -t'^Druzyne prowadzi (.*)( i|, w ktorej) oprocz ciebie (jest|sa) w niej jeszcze(|:) (.*)\.\$' _team_members_trigger_team_1 = /test _team_members_set("%%{P1}", "%%{P5}")%%;/set _team_leader %%{P1}%;\
     /def -mregexp -p5 -t'^Druzyne prowadzi (.*)\, zas ty jestes jej jedynym czlonkiem\.\$' _team_members_trigger_team_2 = /test _team_members_set("%%{P1}")%%;/set _team_leader %%{P1}%;\
     /def -mregexp -p5 -t'^Przewodzisz druzynie, w ktorej oprocz ciebie (jest jeszcze|sa(| w niej) jeszcze:) (.*)\.\$' _team_members_trigger_team_3 = /test _team_members_set("%%{P3}")%%;/set _team_leader=-%;\
     /send druzyna
 
-;/def -mregexp -p20 -t'Od teraz jej sklad stanowicie (.*)\.' _team_members_trigger_team_4 = /test _team_members_set("%{P1}")
+/def -mregexp -p20 -t'Od teraz jej sklad stanowicie (.*)\.' _team_changed_trigger_1 = /_team_set_fast_bind
+/def -mregexp -p20 -t'Porzucasz (swoja |)druzyne' _team_changed_trigger_2 = /_team_set_fast_bind
+/def  -p20 -t'* rozwiazuje druzyne.' _team_changed_trigger_3 = /_team_set_fast_bind
+/def  -p20 -t'Przekazujesz prowadzenie druzyny *' _team_changed_trigger_4 = /_team_set_fast_bind
+/def  -p20 -t'* przekazuje ci prowadzenie druzyny.' _team_changed_trigger_5 = /_team_set_fast_bind
+/def  -p20 -t'* przekazuje prowadzenie druzyny *' _team_changed_trigger_6 = /_team_set_fast_bind
+
+/def -mregexp -p20 -t' zaprasza cie do swojej druzyny\.$$' _team_changed_trigger_4 = \
+    /let who=$(/odmien_M_D %{PL})%;\
+    /let label=$[strcat(decode_attr(" -- --  DOLACZ -- -- ", "BCbgblue"), "  ")]%;\
+    /test _fast_bind_set({label}, "porzuc druzyne%%;dolacz do %{who}", 1)
 
 /def _team_members_generate_goodies = \
     /quote -S /unset `/listvar -s \_team\_member\_*%;\
@@ -35,11 +49,12 @@
         \
         /set _team_member_name_%{_team_members_list_i}=%{_team_members_list_item}%;\
         /set _team_member_number_%{_team_members_list_item}=%{_team_members_list_i}%;\
+;        /set _team_member_name_%{_team_members_list_i}_number=%{_team_members_list_i}%;\
         \
         /_team_color_write_from_team_members %{_team_members_list_item} %{_team_members_list_i}%;\
         \
      /done%;\
-     /_combat_defence_generate_form_team_members
+     /purge z[0-9]+%; /purge zr[0-9]+%; /purge zg[0-9]+
 
 /def _team_get_number_by_name = \
     /let search=$[tolower({1})]%;\

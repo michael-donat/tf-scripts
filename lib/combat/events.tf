@@ -1,12 +1,12 @@
 /load ../src/combat/colors_hits.tf
 /def tests = /reload%;/test_combat_events
 
-/def -mregexp -t'.* wskazuje (.*) jako cel ataku.' _combat_event_set_attack_target = \
+/def -p50 -mregexp -t'.* wskazuje (.*) jako cel ataku.' _combat_event_set_attack_target = \
     /let target=%{P1}%;\
     /set _combat_attack_target=$(/odmien_B_M %{P1})%;\
     /test _combat_prompt_attack({target})
 
-/def -mregexp -t'.* wskazuje (.*).' _combat_event_set_attack_target_from_pointing = \
+/def -p49 -mregexp -t'(.*) wskazuje (.*)\.$$' _combat_event_set_attack_target_from_pointing = \
     /if ({P1}=~{_team_leader}) \
         /let target=%{P2}%;\
         /set _combat_attack_target=$(/odmien_B_M %{P2})%;\
@@ -25,10 +25,14 @@
         /test _combat_prompt_attack({target})%;\
     /endif
 
-/def -mregexp -t'.* wskazuje (.*) jako cel obrony.' _combat_event_set_defence_target = \
+/def -p50 -mregexp -t' wskazuje (.*) jako cel obrony.' _combat_event_set_defence_target = \
     /let target=%{P1}%;\
     /if ({P1}=~"ciebie") \
         /set _combat_defence_target=TY%;\
+    /elseif ({P1}=~"siebie") \
+        /set _combat_defence_target=%{PL}%;\
+        /let promptlabel=$(/odmien_M_B %{PL})%;\
+        /test _combat_prompt_defence({promptlabel})%;\
     /else \
         /set _combat_defence_target=$(/odmien_B_M %{P1})%;\
         /test _combat_prompt_defence({target})%;\

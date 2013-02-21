@@ -104,9 +104,6 @@
 ; MIANOWNIK -> DOPELNIACZ
 ; -----------------------------
 
-/def z1 = zaslon $(/odmien_M_D %{_team_member_name_1})
-/def z2 = zaslon $(/odmien_M_D %{_team_member_name_2})
-
 ; -----------------------------
 ; MIANOWNIK -> BIERNIK
 
