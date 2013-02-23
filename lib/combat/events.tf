@@ -70,19 +70,40 @@
 
 /def -mregexp -Fp2 -t'(.* wytraca ci (.*) z (rak|reki)|Uderzenie jest tak silne, ze bezwiednie puszczasz|zakleszczajac lewakiem twoj .* Czujesz potezne szarpniecie)' _combat_event_disarm = \
     /let label=$[strcat(decode_attr(" --*  WYTRACENIE *-- ", "BCbgred"), "  ")]%;\
+    /set im_disarmed=1%;\
     /test _fast_bind_set({label},"")
 
-/def -mregexp -p2 -t'((probujesz|muskasz|ranisz|masakrujesz) .* (noga|stopa|lokciem|piescia|kolanem)|Bol .* staje sie mniej odczuwalny.|lecac lagodnym lukiem, laduje na ziemi obok ciebie)' _combat_event_no_weapon = \
-    /let label=$[strcat(decode_attr(" DOBADZ BRONI -- F1  ", "BCbgblue"), "  ")]%;\
+/def -Fp2 -t'Bol * staje sie mniej odczuwalny.' _combat_event_can_wield = \
+    /let label=$[strcat(decode_attr(" -- DOBADZ BRONI --  ", "BCbgblue"), "  ")]%;\
+    /set im_disarmed=0%;\
+    /test _fast_bind_set({label}, "db", 1)
+
+/def -mregexp -p2 -t'((probujesz|muskasz|ranisz|masakrujesz) .* (noga|stopa|lokciem|piescia|kolanem)|lecac lagodnym lukiem, laduje na ziemi obok ciebie)' _combat_event_no_weapon = \
+    /if ({im_disarmed}==1} /return%; /endif%;\
+    /let label=$[strcat(decode_attr(" -- DOBADZ BRONI --  ", "BCbgblue"), "  ")]%;\
     /test _fast_bind_set({label}, "db", 1)
 
 
 ;
 ;##############################      ZASLONY ZASLONY      ###########################
 ;
-
-/def -aLg -p20 -mregexp -t' unosi swoja .* i szybko przesuwa sie za (.*), kryjac sie przed atakami (.*)\.$$' _combat_event_retreat_ok = \
+/def -aLg -Fp20 -mregexp -t' unosi swoja .* i szybko przesuwa sie za (.*), kryjac sie przed twoimi atakami\.$$' _combat_event_retreat_from_you_ok = \
     /let who=%{PL}%;\
+    /if (tolower({who})=~{_combat_attack_target}) \
+        /_combat_prompt_guard_break_for_oneself %{who}%;\
+    /endif%;\
+    /let whom_B=%{P1}%;\
+    /let whom=$(/odmien_B_M %{whom_B})%;\
+    /let whom=$[decode_attr({whom_B}, $(/_team_get_name_color %{whom}))]%;\
+    /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
+    \
+    /echo -p >   %{who} @{Crgb150}CHOWA SIE ZA@{n} %{whom} @{Cgray13}przed @{Crgb150}-- TWOIMI --@{Cgray13} atakami
+
+/def -aLg -Fp20 -mregexp -t' unosi swoja .* i szybko przesuwa sie za (.*), kryjac sie przed atakami (.*)\.$$' _combat_event_retreat_ok = \
+    /let who=%{PL}%;\
+    /if (tolower({who})=~{_combat_attack_target}) \
+        /_combat_prompt_guard_break_for_someone %{whom_B}%;\
+    /endif%;\
     /let whom_B=%{P1}%;\
     /let from=%{P2}%;\
     /if ({whom_B}=~"ciebie") \
@@ -121,6 +142,9 @@
         /let whom=$[decode_attr("-- CIEBIE -- ", "Crgb150")]%;\
     /else \
         /let whom=$(/odmien_B_M %{whom_B})%;\
+        /if ({whom}=~{_combat_attack_target}) \
+            /_combat_prompt_guard_break_for_someone %{whom_B}%;\
+        /endif%;\
         /let whom=$[decode_attr({whom_B}, $(/_team_get_name_color %{whom}))]%;\
     /endif%;\
     /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
@@ -136,6 +160,9 @@
         /let whom=$[decode_attr("-- CIEBIE -- ", "Crgb150")]%;\
     /else \
         /let whom=$(/odmien_B_M %{whom_B})%;\
+        /if ({whom}=~{_combat_attack_target}) \
+            /_combat_prompt_guard_break_for_someone %{whom_B}%;\
+        /endif%;\
         /let whom=$[decode_attr({whom_B}, $(/_team_get_name_color %{whom}))]%;\
     /endif%;\
     /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
@@ -146,6 +173,9 @@
     /let who=%{PL}%;\
     /let whom_B=%{P1}%;\
     /let whom=$(/odmien_B_M %{whom_B})%;\
+    /if ({whom}=~{_combat_attack_target}) \
+        /_combat_prompt_guard_break_for_oneself %{whom_B}%;\
+    /endif%;\
     /let whom=$[decode_attr({whom_B}, $(/_team_get_name_color %{whom}))]%;\
     /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
     \
@@ -352,10 +382,14 @@
     /let who=%{PL}%;\
     /let whom_B=%{P1}%;\
     /let whom=$(/odmien_B_M %{P1})%;\
+    /if ({whom}=~{_combat_attack_target}) \
+        /_combat_prompt_attack_after_break %{whom_B}%;\
+    /endif%;\
     /let whom_D=$(/odmien_M_D %{whom})%;\
     /let whom=$[decode_attr($(/ucfirstname %{whom_D}), $(/_team_get_name_color %{whom}))]%;\
     /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
     /echo -p >   %{who} @{Crgb145}PRZEBIL OCHRONE@{n} %{whom}
+
 
 ;######################## INNE INNE INNE ###############################
 

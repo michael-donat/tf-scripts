@@ -33,6 +33,7 @@
 
 ; basic hilights
 /load hilite.tf
+/load warn.tf
 
 
 ; load external bits

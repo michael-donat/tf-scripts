@@ -4,6 +4,7 @@
 
 /def _team_members_purge = \
     /purge _team_members_trigger*%;\
+    /purge _team_member_color_*
 
 /def _team_members_set = \
     /set _team_members_list_separated=$[tolower(strcat("|", replace(" ", "|", replace(", ", "|", replace(" i ", ", ", replace("ty, ", "", %{*})))), "|"))]%;\
@@ -70,7 +71,7 @@
 
 /def _team_color_write_from_team_members = \
     /let member_M=$[tolower({1})]%;/let member_B=$(/odmien_M_B %{1})%;/let member_N=$(/odmien_M_N %{1})%;/let member_D=$(/odmien_M_D %{1})%;\
-;    /def -FPCrgb140 -mregexp -t'(%{member_B}|%{member_N}|%{member_D})|%{member_M}' _team_member_color_%{2}
+    /def -FPCrgb035 -mregexp -t'(%{member_B}|%{member_N}|%{member_D})|%{member_M}' _team_member_color_%{2}
 
 /def _team_get_name_color = \
     /if (_team_is_member({*})) \
