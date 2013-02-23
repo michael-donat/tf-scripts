@@ -35,6 +35,9 @@
     /let label=$[strcat(decode_attr(" -- --  DOLACZ -- -- ", "BCbgblue"), "  ")]%;\
     /test _fast_bind_set({label}, "porzuc druzyne%%;dolacz do %{who}%%;/druzyna", 1)
 
+/def -p20 -t'Zmuszasz * do opuszczenia druzyny.' _team_changed_trigger_8 = /_team_set_fast_bind
+
+
 /def _team_members_generate_goodies = \
     /quote -S /unset `/listvar -s \_team\_member\_*%;\
     /purge _team_member_color_*%;\

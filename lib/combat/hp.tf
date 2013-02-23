@@ -3,19 +3,19 @@
 ;------------------------------------------------------------------------
 
 /def -Fp150 -mregexp -t'(?:Jestes| jest) (w swietnej kondycji)\.( Atakuj[^ ]+ [^ \.]+(.*)|)$' _condition_swietna = \
-  /test _combat_health_display_line("Crgb040", 7, {PL-Ty}, {P1}, {P3})
+  /test _combat_health_display_line("Crgb040", 7, {PL-Ty}, {P1}, {P3}, "Cbgrgb040")
 /def -Fp150 -mregexp -t'(?:Jestes| jest) (w dobrym stanie)\.( Atakuj[^ ]+ [^ \.]+(.*)|)$' _condition_dobra = \
-  /test _combat_health_display_line("Crgb350", 6, {PL-Ty}, {P1}, {P2})
+  /test _combat_health_display_line("Crgb350", 6, {PL-Ty}, {P1}, {P2}, "Cbgrgb350")
 /def -Fp150 -mregexp -t'(?:Jestes| jest) (lekko rann[yae])\.( Atakuj[^ ]+ [^ \.]+(.*)|)$' _condition_lekko = \
-  /test _combat_health_display_line("Crgb550", 5, {PL-Ty}, {P1}, {P2})
+  /test _combat_health_display_line("Crgb550", 5, {PL-Ty}, {P1}, {P2}, "Cbgrgb550")
 /def -Fp150 -mregexp -t'(?:Jestes| jest) (rann[yae])\.( Atakuj[^ ]+ [^ \.]+(.*)|)$' _condition_ranny = \
-  /test _combat_health_display_line("Crgb530", 4, {PL-Ty}, {P1}, {P2})
+  /test _combat_health_display_line("Crgb530", 4, {PL-Ty}, {P1}, {P2}, "Cbgrgb530")
 /def -Fp150 -mregexp -t'(?:Jestes| jest) (w zlej kondycji)\.( Atakuj[^ ]+ [^ \.]+(.*)|)$' _condition_zla = \
-  /test _combat_health_display_line("Crgb510", 3, {PL-Ty}, {P1}, {P2})
+  /test _combat_health_display_line("Crgb510", 3, {PL-Ty}, {P1}, {P2}, "Cbgrgb510")
 /def -Fp150 -mregexp -t'(?:Jestes| jest) (ciezko rann[yae])\.( Atakuj[^ ]+ [^ \.]+(.*)|)$' _condition_ciezko = \
-  /test _combat_health_display_line("Crgb500", 2, {PL-Ty}, {P1}, {P2})
+  /test _combat_health_display_line("Crgb500", 2, {PL-Ty}, {P1}, {P2}, "Cbgrgb500")
 /def -Fp150 -mregexp -t'(?:Jestes| jest) (ledwo zyw[yae])\.( Atakuj[^ ]+ [^ \.]+(.*)|)$' _condition_ledwo = \
-  /test _combat_health_display_line("Cbgred", 1, {PL-Ty}, {P1}, {P2})
+  /test _combat_health_display_line("Cbgred", 1, {PL-Ty}, {P1}, {P2}, "Cbgred")
 
 /def _combat_health_display_line = \
     \
@@ -34,6 +34,7 @@
         /quote -S /unset `/listvar -s _combat_system_who_attacks_whom_*%;\
         /set _combat_system_who_attacks_whom_pointer=0%;\
         /let who_whom_indicator=1%;\
+        /test _statusbar_update_hp({_combat_health_hp}, {_combat_health_hp_color}, {6})%;\
     /elseif ({is_member}==0) \
         /let number=$[strrep(" ", 2)]%;\
         /let who_whom_indicator=3%;\
