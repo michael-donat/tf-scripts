@@ -1,4 +1,4 @@
-/def -ag -h'Redef' hide_redef
+/def -ag -h'Redef' +/hide_redef
 /def -ag -h'Load' hide_load
 /def -ag -h'Log' hide_log
 /def key_tab = /complete

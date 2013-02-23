@@ -46,3 +46,5 @@
 
 /def key_f4 = /prompt_defence
 /def key_esc_f4 = /order_defence
+
+/def key_f19 = /_combat_show_who_attacks_whom

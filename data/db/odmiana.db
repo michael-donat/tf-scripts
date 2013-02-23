@@ -1063,7 +1063,6 @@
 /def _odmiana_eudora = /set _odmiana_eudora_dopelniacz=eudory%;/set _odmiana_eudora_biernik=eudore%;/set _odmiana_eudora_narzednik=eudora
 /def _odmiana_vorrac = /set _odmiana_vorrac_dopelniacz=vorraca%;/set _odmiana_vorrac_biernik=vorraca%;/set _odmiana_vorrac_narzednik=vorrackiem
 /def _odmiana_zorrid = /set _odmiana_zorrid_dopelniacz=zorrida%;/set _odmiana_zorrid_biernik=zorrida%;/set _odmiana_zorrid_narzednik=zorridem
-/def _odmiana_dab = /set _odmiana_dab_dopelniacz=daba%;/set _odmiana_dab_biernik=daba%;/set _odmiana_dab_narzednik=dabem
 /def _odmiana_than = /set _odmiana_than_dopelniacz=thana%;/set _odmiana_than_biernik=thana%;/set _odmiana_than_narzednik=thanem
 /def _odmiana_ora = /set _odmiana_ora_dopelniacz=ory%;/set _odmiana_ora_biernik=ore%;/set _odmiana_ora_narzednik=ora
 /def _odmiana_zyzor = /set _odmiana_zyzor_dopelniacz=zyzora%;/set _odmiana_zyzor_biernik=zyzora%;/set _odmiana_zyzor_narzednik=zyzorem
@@ -1720,6 +1719,4 @@
 /def _odmiana_moira = /set _odmiana_moira_dopelniacz=moiry%;/set _odmiana_moira_biernik=moire%;/set _odmiana_moira_narzednik=moira
 /def _odmiana_husard = /set _odmiana_husard_dopelniacz=husarda%;/set _odmiana_husard_biernik=husarda%;/set _odmiana_husard_narzednik=husardem
 /def _odmiana_cannis = /set _odmiana_cannis_dopelniacz=cannisa%;/set _odmiana_cannis_biernik=cannisa%;/set _odmiana_cannis_narzednik=cannisem
-/def _odmiana_xion = /set _odmiana_xion_dopelniacz=xiona%;/set _odmiana_xion_biernik=xiona%;/set _odmiana_xion_narzednik=xionem
-/def _odmiana_ahtar = /set _odmiana_ahtar_dopelniacz=ahtara%;/set _odmiana_ahtar_biernik=ahtara%;/set _odmiana_ahtar_narzednik=ahtarem
-/def _odmiana_gormir = /set _odmiana_gormir_dopelniacz=gormira%;/set _odmiana_gormir_biernik=gormira%;/set _odmiana_gormir_narzednik=gormirem
+/def _odmiana_dab = /set _odmiana_dab_dopelniacz=daba%;/set _odmiana_dab_biernik=daba%;/set _odmiana_dab_narzednik=dabem

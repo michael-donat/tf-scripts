@@ -1,63 +1,65 @@
 /load ../src/combat/colors_hits.tf
 /def tests = /reload%;/test_combat_events
 
-/def -p50 -mregexp -t'.* wskazuje (.*) jako cel ataku.' _combat_event_set_attack_target = \
-    /let target=%{P1}%;\
-    /set _combat_attack_target=$(/odmien_B_M %{P1})%;\
-    /test _combat_prompt_attack({target})
-
-/def -p49 -mregexp -t'(.*) wskazuje (.*)\.$$' _combat_event_set_attack_target_from_pointing = \
-    /if ({P1}=~{_team_leader}) \
-        /let target=%{P2}%;\
-        /set _combat_attack_target=$(/odmien_B_M %{P2})%;\
+/def _set_targetting_mode_set_target = \
+    /def -p50 -mregexp -t' wskazuje (.*) jako cel ataku\.$$' _combat_event_set_attack_target = \
+        /let target=%%{P1}%%;\
+        /set _combat_attack_target=$$(/odmien_B_M %%{P1})%%;\
         /test _combat_prompt_attack({target})%;\
-    /endif
+    \
+    /def -p50 -mregexp -t' wskazuje (.*) jako cel obrony\.$$' _combat_event_set_defence_target = \
+        /let target=%%{P1}%%;\
+        /if ({P1}=~"ciebie") \
+            /set _combat_defence_target=TY%%;\
+        /elseif ({P1}=~"siebie") \
+            /set _combat_defence_target=%%{PL}%%;\
+            /let promptlabel=$$(/odmien_M_B %%{PL})%%;\
+            /test _combat_prompt_defence({promptlabel})%%;\
+        /else \
+            /set _combat_defence_target=$$(/odmien_B_M %%{P1})%%;\
+            /test _combat_prompt_defence({target})%%;\
+        /endif
+
+/def _set_targetting_mode_point_at = \
+    /def -p49 -mregexp -t' wskazuje (.*)\.$$' _combat_event_set_attack_target = \
+        /if ({PL}=~{_team_leader}) \
+            /let target=%%{P1}%%;\
+            /set _combat_attack_target=$$(/odmien_B_M %%{P1})%%;\
+            /test _combat_prompt_attack({target})%%;\
+        /endif
+
+/def _set_targetting_mode_look_at_target = \
+    /def -mregexp -t' spoglada morderczo na (.*)\.$$' _combat_event_set_attack_target = \
+        /if ({PL}=~{_team_leader}) \
+            /let target=%%{P1}%%;\
+            /set _combat_attack_target=$$(/odmien_B_M %%{P1})%%;\
+            /test _combat_prompt_attack({target})%%;\
+        /endif%;\
+    \
+    /def -mregexp -t' spoglada opiekunczo na (.*)\.$$' _combat_event_set_defence_target = \
+        /if ({PL}=~{_team_leader}) \
+            /let target=%%{P1}%%;\
+            /if ({target}=~"ciebie") \
+                /set _combat_defence_target=TY%%;\
+            /else \
+                /set _combat_defence_target=$$(/odmien_B_M %%{target})%%;\
+                /test _combat_prompt_defence({target})%%;\
+            /endif%%;\
+        /endif%;\
+    \
+    /def -mregexp -t' spoglada na siebie opiekunczo\.$$' _combat_event_set_defence_target_on_self = \
+        /if ({PL}=~{_team_leader}) \
+            /let target=%%{PL}%%;\
+            /set _combat_defence_target=%%{target}%%;\
+            /let target_B=$$(/odmien_M_B %%{target})%%;\
+            /let target_B=$$(/ucfirstname %%{target_B})%%;\
+            /test _combat_prompt_defence({target_B})%%;\
+        /endif
 
 /def -mregexp -t'.* wydaje ci rozkaz ataku na (.*).' _combat_event_set_attack_target_from_order = \
     /let target=%{P1}%;\
     /set _combat_attack_target=$(/odmien_B_M %{P1})%;\
     /test _combat_prompt_attack({target})
-
-/def -mregexp -t'(.*) spoglada morderczo na (.*).' _combat_event_set_attack_target_by_killer_look = \
-    /if ({P1}=~{_team_leader}) \
-        /let target=%{P2}%;\
-        /set _combat_attack_target=$(/odmien_B_M %{P2})%;\
-        /test _combat_prompt_attack({target})%;\
-    /endif
-
-/def -p50 -mregexp -t' wskazuje (.*) jako cel obrony.' _combat_event_set_defence_target = \
-    /let target=%{P1}%;\
-    /if ({P1}=~"ciebie") \
-        /set _combat_defence_target=TY%;\
-    /elseif ({P1}=~"siebie") \
-        /set _combat_defence_target=%{PL}%;\
-        /let promptlabel=$(/odmien_M_B %{PL})%;\
-        /test _combat_prompt_defence({promptlabel})%;\
-    /else \
-        /set _combat_defence_target=$(/odmien_B_M %{P1})%;\
-        /test _combat_prompt_defence({target})%;\
-    /endif
-
-/def -mregexp -t'(.*) spoglada opiekunczo na (.*).' _combat_event_set_defence_target_by_killer_look = \
-    /if ({P1}=~{_team_leader}) \
-        /let target=%{P2}%;\
-        /if ({target}=~"ciebie") \
-            /set _combat_defence_target=TY%;\
-        /else \
-            /set _combat_defence_target=$(/odmien_B_M %{target})%;\
-            /test _combat_prompt_defence({target})%;\
-        /endif%;\
-    /endif
-
-/def -mregexp -t'(.*) spoglada na siebie opiekunczo.' _combat_event_set_defence_target_by_caring_look = \
-    /if ({P1}=~{_team_leader}) \
-        /let target=%{P1}%;\
-        /set _combat_defence_target=%{target}%;\
-        /let target_B=$(/odmien_M_B %{target})%;\
-        /let target_B=$(/ucfirstname %{target_B})%;\
-        /test _combat_prompt_defence({target_B})%;\
-    /endif
-
 
 /def -mregexp -Fp2 -t'(Powoli osuwasz sie na ziemie|Potem robi sie ciemno|Sila uderzania zamroczyla cie|czujesz, ze tracisz przytomnosc|Nagle czujesz jak na glowe spada ci ciezki sznur|Nagle czujesz, ze tracisz kontrole nad swym cialem| wali cie na odlew)' _combat_event_stun = \
 	/let label=$[strcat(decode_attr(" --*  OGLUSZENIE *-- ", "BCbgblue"), "  ")]%;\
@@ -78,6 +80,38 @@
 ;
 ;##############################      ZASLONY ZASLONY      ###########################
 ;
+
+/def -aLg -p20 -mregexp -t' unosi swoja .* i szybko przesuwa sie za (.*), kryjac sie przed atakami (.*)\.$$' _combat_event_retreat_ok = \
+    /let who=%{PL}%;\
+    /let whom_B=%{P1}%;\
+    /let from=%{P2}%;\
+    /if ({whom_B}=~"ciebie") \
+        /let whom=$[decode_attr("-- TOBA -- ", "Crgb150")]%;\
+    /else \
+        /let whom=$(/odmien_B_M %{whom_B})%;\
+        /let whom=$[decode_attr({whom_B}, $(/_team_get_name_color %{whom}))]%;\
+    /endif%;\
+    /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
+    \
+    /echo -p >   %{who} @{Crgb150}CHOWA SIE ZA@{n} %{whom} @{Cgray13}przed ciosami@{Crgb530} %{from}
+
+/def -aLg -p20 -mregexp -t' unosi swoja .* i szybko przesuwa sie w strone (.*), bezskutecznie probujac skryc sie za (?:nim|nia) przed atakami (.*)\.$$' _combat_event_retreat_fail = \
+    /let who=%{PL}%;\
+    /let whom_B=%{P1}%;\
+    /let from=%{P2}%;\
+    /let whom=$(/odmien_B_M %{whom_B})%;\
+    /let whom=$[decode_attr({whom_B}, $(/_team_get_name_color %{whom}))]%;\
+    /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
+    \
+    /echo -p >   %{who} @{Crgb020}probuje schowac sie za@{n} %{whom} @{Cgray13}przed ciosami@{Crgb530} %{from}
+
+/def -aLg -p20 -mregexp -t' unosi swoja .* i szybko przesuwa sie w twoja strone, bezskutecznie probujac skryc sie za toba przed atakami (.*)\.$$' _combat_event_retreat_behind_me_fail = \
+    /let who=%{PL}%;\
+    /let from=%{P1}%;\
+    /let whom=$[decode_attr("-- TOBA -- ", "Crgb150")]%;\
+    /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
+    \
+    /echo -p >   %{who} @{Crgb020}probuje schowac sie za@{n} %{whom} @{Cgray13}przed ciosami@{Crgb530} %{from}
 
 /def -aLg -p20 -mregexp -t' zrecznie zaslania (.*) przed ciosami (.*)\.$$' _combat_event_cover = \
     /let who=%{PL}%;\

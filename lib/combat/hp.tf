@@ -1,114 +1,97 @@
+;------------------------------------------------------------------------
+;			   ... KONDYCJA ... 				  |
+;------------------------------------------------------------------------
 
+/def -Fp150 -mregexp -t'(?:Jestes| jest) (w swietnej kondycji)\.( Atakuj[^ ]+ [^ \.]+(.*)|)$' _condition_swietna = \
+  /test _combat_health_display_line("Crgb040", 7, {PL-Ty}, {P1}, {P3})
+/def -Fp150 -mregexp -t'(?:Jestes| jest) (w dobrym stanie)\.( Atakuj[^ ]+ [^ \.]+(.*)|)$' _condition_dobra = \
+  /test _combat_health_display_line("Crgb350", 6, {PL-Ty}, {P1}, {P2})
+/def -Fp150 -mregexp -t'(?:Jestes| jest) (lekko rann[yae])\.( Atakuj[^ ]+ [^ \.]+(.*)|)$' _condition_lekko = \
+  /test _combat_health_display_line("Crgb550", 5, {PL-Ty}, {P1}, {P2})
+/def -Fp150 -mregexp -t'(?:Jestes| jest) (rann[yae])\.( Atakuj[^ ]+ [^ \.]+(.*)|)$' _condition_ranny = \
+  /test _combat_health_display_line("Crgb530", 4, {PL-Ty}, {P1}, {P2})
+/def -Fp150 -mregexp -t'(?:Jestes| jest) (w zlej kondycji)\.( Atakuj[^ ]+ [^ \.]+(.*)|)$' _condition_zla = \
+  /test _combat_health_display_line("Crgb510", 3, {PL-Ty}, {P1}, {P2})
+/def -Fp150 -mregexp -t'(?:Jestes| jest) (ciezko rann[yae])\.( Atakuj[^ ]+ [^ \.]+(.*)|)$' _condition_ciezko = \
+  /test _combat_health_display_line("Crgb500", 2, {PL-Ty}, {P1}, {P2})
+/def -Fp150 -mregexp -t'(?:Jestes| jest) (ledwo zyw[yae])\.( Atakuj[^ ]+ [^ \.]+(.*)|)$' _condition_ledwo = \
+  /test _combat_health_display_line("Cbgred", 1, {PL-Ty}, {P1}, {P2})
 
-
-;-------------------------------------------------------
-;       HEALTH - _combat_health_
-;-------------------------------------------------------
-
-/def _combat_health_to_int = \
-    /if (strstr({1}, "swietnej") != -1) \
-        /let tmp_return=7%;\
-    /elseif (strstr({1}, "dobrym") != -1) \
-        /let tmp_return=6%;\
-    /elseif (strstr({1}, "lekko") != -1) \
-        /let tmp_return=5%;\
-    /elseif (strstr({1}, "ciezko") != -1) \
-        /let tmp_return=2%;\
-    /elseif (strstr({1}, "rann") != -1) \
-        /let tmp_return=4%;\
-    /elseif (strstr({1}, "zlej") != -1) \
-        /let tmp_return=3%;\
-    /elseif (strstr({1}, "ledwo") != -1) \
-        /let tmp_return=1%;\
+/def _combat_health_display_line = \
+    \
+    /let _combat_health_hp=%{2}%;\
+    /let _combat_health_hp_color=%{1}%;\
+    /let who=%{3}%;\
+    /let hplabel=%{4}%;\
+    \
+    /let bar=$[decode_attr(strcat(strrep(" ", 14-{_combat_health_hp}*2),strrep("#", {_combat_health_hp}*2)), {_combat_health_hp_color})]%;\
+    \
+    /let is_member=$[_team_is_member({who})]%;\
+    /if ({who}=~"Ty") \
+        /echo%;\
+        /let number=$[pad("TY", -2)]%;\
+        /let line_color=Crgb550%;\
+        /quote -S /unset `/listvar -s _combat_system_who_attacks_whom_*%;\
+        /set _combat_system_who_attacks_whom_pointer=0%;\
+        /let who_whom_indicator=1%;\
+    /elseif ({is_member}==0) \
+        /let number=$[strrep(" ", 2)]%;\
+        /let who_whom_indicator=3%;\
+    /else \
+        /let number=$(/_team_get_number_by_name %{who})%;\
+        /let number=$[pad({number}, 2)]%;\
+        /let line_color=Crgb035%;\
+        /let who_whom_indicator=2%;\
     /endif%;\
-    /return {tmp_return}
+    \
+    /let enemy_count=$[strrep(" ", 2)]%;\
+    /if ({5}!~"") \
+        /let enemy_count=$[_combat_health_count_enemy({5})]%;\
+        /let enemy_count=$[pad(enemy_count, 2)]%;\
+        /test _combat_system_who_attacks_whom_mark({3}, {5}, {who_whom_indicator})%;\
+    /endif%; \
+    \
+    /let line=$[decode_attr(strcat("[",{_combat_health_hp},"/7][",{enemy_count},"][",{bar},"][",{number},"] ", decode_attr({who}, {_combat_health_hp_color}), " - ",  decode_attr({hplabel}, {_combat_health_hp_color})), {line_color})]%;\
+    /substitute %{line}
 
-/def _combat_health_to_color = \
-    /if ({1} == "1") \
-        /let tmp_return=Cbgred%;\
-    /elseif ({1} =="2") \
-        /let tmp_return=Crgb500%;\
-    /elseif ({1} =="3") \
-        /let tmp_return=Crgb510%;\
-    /elseif ({1} =="4") \
-        /let tmp_return=Crgb530%;\
-    /elseif ({1} =="5") \
-        /let tmp_return=Crgb550%;\
-    /elseif ({1} =="6") \
-        /let tmp_return=Crgb350%;\
-    /elseif ({1} =="7") \
-        /let tmp_return=Crgb040%;\
-    /endif%;\
-    /return {tmp_return}
+/def _combat_health_count_enemy = \
+    /let input=$[replace(".", "|", replace(", ", "|", replace(" i ", "|", {1})))]%; \
+    /let return=0%; \
+        /while ({input}!~"") \
+            /let pointer=$[strstr({input}, "|")]%; \
+            /let part=$[substr({input},0,{pointer})]%; \
+            /if (regmatch("(cztery|czworo) ", {part})) \
+                /let return=$[{return}+4]%; \
+            /elseif (regmatch("(trzy|trzech|troje) ", {part})) \
+                /let return=$[{return}+3]%; \
+            /elseif (regmatch("(dwa|dwie|dwoch|dwoje) ", {part})) \
+                /let return=$[{return}+2]%; \
+            /else \
+                /let return=$[{return}+1]%; \
+            /endif%; \
+            /let input=$[substr({input},{pointer}+1)]%; \
+        /done%; \
+    /return %{return}
 
-/def _combat_health_to_bgcolor = \
-    /if ({1} == "1") \
-        /let tmp_return=Cbgred%;\
-    /elseif ({1} =="2") \
-        /let tmp_return=Cbgrgb500%;\
-    /elseif ({1} =="3") \
-        /let tmp_return=Cbgrgb510%;\
-    /elseif ({1} =="4") \
-        /let tmp_return=Cbgrgb530%;\
-    /elseif ({1} =="5") \
-        /let tmp_return=Cbgrgb550%;\
-    /elseif ({1} =="6") \
-        /let tmp_return=Cbgrgb350%;\
-    /elseif ({1} =="7") \
-        /let tmp_return=Cbgrgb040%;\
-    /endif%;\
-    /return {tmp_return}
-
-/def -ag -Fp150 -mregexp -t'^Jestes (?:[w] |)(swietnej kondycji|dobrym stanie|lekko rann[a-z]|rann[a-z]|zlej kondycji|ciezko rann[a-z]|ledwo zyw[a-z])\.' _combat_health_trigger_1= \
-    /let _combat_health_hp=$[_combat_health_to_int({P1})]%;\
-    /let _combat_health_hp_color=$[_combat_health_to_color({_combat_health_hp})]%;\
-    /let _combat_health_hp_bgcolor=$[_combat_health_to_bgcolor({_combat_health_hp})]%;\
-    /test _statusbar_update_hp("%{_combat_health_hp}", "%{_combat_health_hp_color}", "%{_combat_health_hp_bgcolor}")%;\
-    /quote -S /unset `/listvar -s _combat_system_who_attacks_whom_*%;\
-    /test _combat_health_dosplay_line("", {P1})%;\
-    /if ({PR}!/"") \
-        /set _combat_system_who_attacks_whom_pointer=1%;\
+/def _combat_system_who_attacks_whom_mark = \
+    /set _combat_system_who_attacks_whom_pointer=$[{_combat_system_who_attacks_whom_pointer}+1]%;\
+    /let pointer=%{3}%;\
+    /let input=%{2}%;/if ({input}=~".") /let input=TY%; /endif%;\
+    /let who=%{1}%;\
+    /if ({pointer}==1) \
+        /set _combat_system_who_attacks_whom_var_me=%{input}%;\
+    /elseif ({pointer}==2) \
+        /eval /set _combat_system_who_attacks_whom_var_team_%{_combat_system_who_attacks_whom_pointer}=%{who} <==> %{input}%;\
+    /elseif ({pointer}==3) \
+        /eval /set _combat_system_who_attacks_whom_var_mob_%{_combat_system_who_attacks_whom_pointer}=%{who} <==> %{input}%;\
     /endif
 
-/def -ag -Fp150 -mregexp -t'^(.*) jest (?:[w] |)(swietnej kondycji|dobrym stanie|lekko rann[a-z]|rann[a-z]|zlej kondycji|ciezko rann[a-z]|ledwo zyw[a-z])\.' _combat_health_trigger_2= \
-    /test _combat_health_dosplay_line({P1}, {P2})
-
-/set _combat_hp_previous_was_mob=0
-
-/def _combat_health_dosplay_line = \
-    /let _combat_health_hp=$[_combat_health_to_int({2})]%;\
-    /let _combat_health_hp_color=$[_combat_health_to_color({_combat_health_hp})]%;\
-    /let bar=$[decode_attr(strcat(strrep(" ", 14-{_combat_health_hp}*2),strrep("#", {_combat_health_hp}*2)), {_combat_health_hp_color})]%;\
-    /let is_member=$[_team_is_member({1})]%;\
-    /if ({1}=~"") \
-        /printline%;\
-        /set _combat_hp_previous_was_mob=0%;\
-        /let number=$[pad("T", -2)]%;\
-        /let line_color=Crgb040%;\
-        /if ({PR}!/"") /set _combat_system_who_attacks_whom_var_me=CIEBIE -> %{PR}%;/endif%;\
-    /elseif ({is_member}==0) \
-;        /if ({_combat_hp_previous_was_mob}==0) \
-;            /set _combat_hp_previous_was_mob=1%;\
-;            /test echo(strrep("-", columns()/3))%;\
-;        /endif%;\
-        /if ({PR}!/"") /eval /set _combat_system_who_attacks_whom_var_team_%{_combat_system_who_attacks_whom_pointer}=%{P1} -> %{PR}%;/set _combat_system_who_attacks_whom_pointer=$[{_combat_system_who_attacks_whom_pointer}+1]%;/endif%;\
-        /let number=$[strrep(" ", 2)]%;\
-    /else \
-        /let number=$(/_team_get_number_by_name %{P1})%;\
-        /let number=$[pad({number}, -2)]%;\
-        /let line_color=Crgb345%;\
-        /if ({PR}!/"") /eval /set _combat_system_who_attacks_whom_var_team_%{_combat_system_who_attacks_whom_pointer}=%{P1} -> %{PR}%;/set _combat_system_who_attacks_whom_pointer=$[{_combat_system_who_attacks_whom_pointer}+1]%;/endif%;\
-    /endif%;\
-    /let line=$[decode_attr(strcat("[",{_combat_health_hp},"/7] [ ",{bar}," ] [ ",{number},"]  ", decode_attr({P0}, {_combat_health_hp_color})), {line_color})]%;\
-    /echo %{line}
-
 /def _combat_show_who_attacks_whom = \
-    /echo%;\
+    /test echo("============== CIEBIE ===============")%;\
     /listvar -v _combat_system_who_attacks_whom_var_me%;\
+    /test echo("============== DRUZYNA ==============")%;\
     /listvar -v _combat_system_who_attacks_whom_var_team_*%;\
+    /test echo("============== INNE =================")%;\
     /listvar -v _combat_system_who_attacks_whom_var_mob_*%;\
+    /test echo("============== ==== =================")%;\
     /echo
-
-/def key_f19 = /_combat_show_who_attacks_whom
-
-

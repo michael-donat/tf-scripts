@@ -28,10 +28,12 @@
 /def  -p20 -t'* przekazuje ci prowadzenie druzyny.' _team_changed_trigger_5 = /_team_set_fast_bind
 /def  -p20 -t'* przekazuje prowadzenie druzyny *' _team_changed_trigger_6 = /_team_set_fast_bind
 
-/def -mregexp -p20 -t' zaprasza cie do swojej druzyny\.$$' _team_changed_trigger_4 = \
+/def -mregexp -p20 -t' zaprasza cie do swojej druzyny\.$$' _team_changed_trigger_7 = \
+    /def -mregexp -p9999 -n1 -t'Od teraz jej sklad stanowicie (.*)\.' _team_changed_trigger_1_kill%;\
+    /def -p9999 -n1 -t'Nie jestes w zadnej druzynie.' _team_members_trigger_no_team_kill%;\
     /let who=$(/odmien_M_D %{PL})%;\
     /let label=$[strcat(decode_attr(" -- --  DOLACZ -- -- ", "BCbgblue"), "  ")]%;\
-    /test _fast_bind_set({label}, "porzuc druzyne%%;dolacz do %{who}", 1)
+    /test _fast_bind_set({label}, "porzuc druzyne%%;dolacz do %{who}%%;/druzyna", 1)
 
 /def _team_members_generate_goodies = \
     /quote -S /unset `/listvar -s \_team\_member\_*%;\

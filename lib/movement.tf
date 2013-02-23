@@ -18,7 +18,7 @@
         /set _movement_disabled_label=$[decode_attr("[MV]", "Cbgred")]%;\
     /else \
         /set _movement_disabled=0%;\
-        /set _movement_disabled_label=$[decode_attr("[MV]", "Cbgred")]%;\
+        /set _movement_disabled_label=$[decode_attr("[MV]", "Cbggreen")]%;\
     /endif
 
 /def _movement_go_exec =    \
