@@ -131,4 +131,7 @@
     wloz kluczyk do skrzynki%; \
     wloz kluczyk do skrzyni
 
-/def rozpakuj = wez worek%;wez wszystko z niego%;wloz go do plecaka%;wloz wszystkie bronie do kosza%;wloz wszystkie zbroje do kosza
+/def por = \
+    porownaj sile z %{*}%;\
+    porownaj zrecznosc z %{*}%;\
+    porownaj wytrzymalosc z %{*}

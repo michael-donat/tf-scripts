@@ -1720,3 +1720,5 @@
 /def _odmiana_husard = /set _odmiana_husard_dopelniacz=husarda%;/set _odmiana_husard_biernik=husarda%;/set _odmiana_husard_narzednik=husardem
 /def _odmiana_cannis = /set _odmiana_cannis_dopelniacz=cannisa%;/set _odmiana_cannis_biernik=cannisa%;/set _odmiana_cannis_narzednik=cannisem
 /def _odmiana_dab = /set _odmiana_dab_dopelniacz=daba%;/set _odmiana_dab_biernik=daba%;/set _odmiana_dab_narzednik=dabem
+/def _odmiana_gnshin = /set _odmiana_gnshin_dopelniacz=gnshina%;/set _odmiana_gnshin_biernik=gnshina%;/set _odmiana_gnshin_narzednik=gnshinem/def _odmiana_ahtar = /set _odmiana_ahtar_dopelniacz=ahtara%;/set _odmiana_ahtar_biernik=ahtara%;/set _odmiana_ahtar_narzednik=ahtarem
+/def _odmiana_janis = /set _odmiana_janis_dopelniacz=janisa%;/set _odmiana_janis_biernik=janisa%;/set _odmiana_janis_narzednik=janisem

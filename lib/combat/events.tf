@@ -78,8 +78,8 @@
     /set im_disarmed=0%;\
     /test _fast_bind_set({label}, "db", 1)
 
-/def -mregexp -p2 -t'((probujesz|muskasz|ranisz|masakrujesz) .* (noga|stopa|lokciem|piescia|kolanem)|lecac lagodnym lukiem, laduje na ziemi obok ciebie)' _combat_event_no_weapon = \
-    /if ({im_disarmed}==1} /return%; /endif%;\
+/def -mregexp -p2 -t'((Nie udaje ci sie trafic|probujesz|muskasz|ranisz|masakrujesz) .* (noga|stopa|lokciem|piescia|kolanem)|lecac lagodnym lukiem, laduje na ziemi obok ciebie)' _combat_event_no_weapon = \
+    /if ({im_disarmed}==1) /return%; /endif%;\
     /let label=$[strcat(decode_attr(" -- DOBADZ BRONI --  ", "BCbgblue"), "  ")]%;\
     /test _fast_bind_set({label}, "db", 1)
 
