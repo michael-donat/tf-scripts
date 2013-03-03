@@ -254,6 +254,7 @@
     /let whom_B=%{P2}%;\
     /if ({whom_B}=~"cie") \
         /let whom=$[decode_attr("-- CIEBIE! --", "Crgb150")]%;\
+        /beep%;\
     /else \
         /let whom=$(/odmien_B_M %{whom_B})%;\
         /let whom=$[decode_attr({whom_B}, $(/_team_get_name_color %{whom}))]%;\

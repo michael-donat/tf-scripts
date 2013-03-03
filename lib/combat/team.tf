@@ -4,7 +4,8 @@
 
 /def _team_members_purge = \
     /purge _team_members_trigger*%;\
-    /purge _team_member_color_*
+    /purge _team_member_color_*%;\
+    /set _team_leader=
 
 /def _team_members_set = \
     /set _team_members_list_separated=$[tolower(strcat("|", replace(" ", "|", replace(", ", "|", replace(" i ", ", ", replace("ty, ", "", %{*})))), "|"))]%;\

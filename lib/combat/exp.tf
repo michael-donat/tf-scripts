@@ -23,7 +23,7 @@
     /echo
 
 /def mahak = \
-    /test _exp_set("oficera", "kobolda", "goblina", "pukacza", "trolla", "echinopsa", "barbegazi", "poteznego dostojnego goblina")%;\
+    /test _exp_set("oficera", "kobolda", "goblina", "pukacza", "trolla", "echinopsa", "barbegazi", "poteznego dostojnego goblina", "siodmego goblina")%;\
     /alias szcz wejdz w szczeline%;\
     /_exp_prompt MAHAKAM
 
@@ -42,3 +42,20 @@
     /def glaz = zeskocz na glaz%%;wskocz do wody%%;zanurkuj pod wode%;\
     /def wespnij = wespnij sie do gory%%;wespnij sie na gore%;\
     /def rzezba = obroc rzezbe
+
+/def lorenzo = \
+    /test _exp_set("pierwszego karla", "pierwszego zboja", "lorenza")%;\
+    /_exp_prompt LORENZO
+
+
+; borowik
+;/test _exp_set("mocarnego grzyboczleka", "silnego grzyboczleka", "krzepkiego grzyboczleka", "grzyboczleka", "borowika")%;\
+;/s plyn
+;/n plyn
+
+
+;orson
+;/test _exp_set("pierwszego straznika", "pierwszego kaplana", "charyzmatycznego mezczyzne")%;\
+
+
+;/n ktos tam ktos tsm umarl, fastbind na bierz wsioz  cialka

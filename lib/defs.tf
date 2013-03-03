@@ -55,13 +55,13 @@
 /alias zzs /send zejdz ze statku
 
 /def skora = \
-    /send powsun bron do uprzezy%;\
-    /send wez noz z plecaka%;\
-    /send dobadz noza%;\
+    /send powsun dobyta bron do uprzezy%;\
+    /send podobadz broni z pochwy%;\
     /send wytnij skore z ciala %{*}%;\
     /send wloz skore do plecaka%;\
-    /send wloz noz do plecaka%;\
-    /send ddb
+    /send poschowaj dobyta bron do pochwy%;\
+    /send powyjmij bron z uprzezy%;\
+    /send dobadz jej
 
 /def ocen = \
     /set ocen_count=0%;\
@@ -135,3 +135,11 @@
     porownaj sile z %{*}%;\
     porownaj zrecznosc z %{*}%;\
     porownaj wytrzymalosc z %{*}
+
+/def poczta = \
+    /if ({1}=~"+") \
+        /set _statusbar_mail=$[decode_attr("[MAIL]", "Cbggreen")]%;\
+    /else \
+        /set _statusbar_mail=[MAIL]%;\
+    /endif
+

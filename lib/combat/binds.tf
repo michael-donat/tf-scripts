@@ -30,7 +30,7 @@
 /def key_ctrl_nkp9=/zr 9
 
 /def _bind_kb_key_nkpPlus = ws
-/def _bind_kb_key_nkpEquals = stan
+/def _bind_kb_key_nkpEquals = zmeczenie
 /def key_esc_nkp/ = /_combat_show_who_attacks_whom
 
 /def key_f16 = /toggle_orders
@@ -38,11 +38,11 @@
 /def key_f1 = /attack_target
 /def key_esc_f1 = /break_target
 
-/def key_f2 = /prompt_attack
-/def key_esc_f2 = /order_attack
+/def key_f2 = /cover_target
+/def key_esc_f2 = /group_cover_target
 
-/def key_f3 = /cover_target
-/def key_esc_f3 = /group_cover_target
+/def key_f3 = /prompt_attack
+/def key_esc_f3 = /order_attack
 
 /def key_f4 = /prompt_defence
 /def key_esc_f4 = /order_defence

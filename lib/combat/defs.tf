@@ -36,3 +36,22 @@
         /test echo("      2   -   by looking")%;\
         /test echo("      3   -   by pointing")%;\
     /endif
+
+/def pointing = \
+    /set _combat_point_at_target_by_set=0%;\
+    /set _combat_point_at_target_by_look=0%;\
+    /set _combat_point_at_target_by_point=0%;\
+    /let sett=@{Cred}-%;/let lookt=@{Cred}-%;/let pointt=@{Cred}-%;\
+    /if ({1}=~"+") /set _combat_point_at_target_by_set=1 %; /let sett=@{Cgreen}+%; /else /set _combat_point_at_target_by_set=0 %; /endif%;\
+    /if ({2}=~"+") /set _combat_point_at_target_by_look=1 %; /let lookt=@{Cgreen}+%; /else /set _combat_point_at_target_by_look=0 %; /endif%;\
+    /if ({3}=~"+") /set _combat_point_at_target_by_point=1 %; /let pointt=@{Cgreen}+%; /else /set _combat_point_at_target_by_point=0 %; /endif%;\
+    /set _setting_target_mode=$(/echo -p $[strcat("[",{sett},{lookt},{pointt},"@{n}]")])
+
+/def debug = \
+    /if ({1}=~"+") \
+        /set secho=1%;\
+        /set sprefix=$[decode_attr(" > ")]%;\
+        /set secho_attr=Crgb055%;\
+    /else \
+        /set secho=0%;\
+    /endif

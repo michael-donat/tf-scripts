@@ -1,3 +1,14 @@
+/def zabij = \
+    /let target=%{*}%;\
+    /if ({target}!/"") \
+        /let target_M=$(/odmien_B_M %{*})%;\
+        /send zabij %{target}%;\
+        /test _combat_set_attack_target({target_M}, {target})%;\
+        /prompt_attack%;\
+;        /if ({_combat_orders_enabled}==1) \
+;            /order_attack%;\
+;        /endif%;\
+    /endif
 
 ;---------------------------------------------------------------------------------
 ; CEL ATAKU
@@ -8,11 +19,6 @@
 
 /def _combat_set_attack_target = \
     /set _combat_attack_target %{1}%;\
-    /let target_B=%{2}%;\
-    /if ({_team_leader}=~"-") \
-        /if ({2}=/"") /let target_B=$(/odmien_M_B %{1})%; /endif%;\
-        /send wskaz %{target_B} jako cel ataku%;\
-    /endif
 
 ;---------------------------------------------------------------------------------
 ;---------------------------------------------------------------------------------
@@ -45,43 +51,33 @@
 
 /def attack_target = \
     /if ({_combat_attack_target}!/"") \
-        /zabij $(/odmien_M_B %{_combat_attack_target}) %;\
+        /send zabij $(/odmien_M_B %{_combat_attack_target}) %;\
     /endif
 
 /def break_target = \
     /if ({_combat_attack_target}!/"") \
         /send przestan kryc sie za zaslona%;\
         /send przelam obrone $(/odmien_M_D %{_combat_attack_target})%;\
-        /zabij $(/odmien_M_B %{_combat_attack_target})%;\
-        /send stan%;\
-    /endif
-
-/def zabij = \
-    /let target=%{*}%;\
-    /if ({target}!/"") \
-        /let target_M=$(/odmien_B_M %{*})%;\
-        /send zabij %{target}%;\
-        /test _combat_set_attack_target({target_M}, {target})%;\
-        /if ({_team_leader}=~"-") \
-            /send popatrz morderczo na %{target}%;\
-            /if ({_combat_orders_enabled}==1) \
-                /send rozkaz druzynie zabic %{target}%;\
-            /endif%;\
-        /endif%;\
+        /send zabij $(/odmien_M_B %{_combat_attack_target})%;\
+        /send zmeczenie%;\
+        /prompt_attack%;\
     /endif
 
 /def prompt_attack = \
     /if ({_team_leader}=~"-") \
         /let target=$(/odmien_M_B %{_combat_attack_target})%;\
-        /send popatrz morderczo na %{target}%;\
+        /if ({_combat_point_at_target_by_set}=1) /send wskaz %{target} jako cel ataku%;/endif%;\
+        /if ({_combat_point_at_target_by_look}=1) /send popatrz morderczo na %{target} %;/endif%;\
+        /if ({_combat_point_at_target_by_point}=1) /send wskaz %{target} %;/endif%;\
     /endif
 
 /def order_attack = \
     /if ({_combat_attack_target}!/"") \
         /if ({_team_leader}=~"-") \
             /let target=$(/odmien_M_B %{_combat_attack_target})%;\
-            /send popatrz morderczo na %{target}%;\
             /send rozkaz druzynie zabic %{target}%;\
+        /else \
+            /echo -p @{Crgb055} Nie mozesz rozkazywac kiedy nie dowodzisz%;\
         /endif%;\
     /endif
 
@@ -101,17 +97,20 @@
 
 /def prompt_defence = \
     /if ({_combat_defence_target}!/"") \
-        /if ({_combat_defence_target}=~"TY") /let target=siebie %; /else /let target=$(/odmien_M_B %{_combat_defence_target}) %; /endif%;\
-        /send popatrz opiekunczo na %{target}%;\
-        /defend siebie%;\
+        /if ({_team_leader}=~"-") \
+            /if ({_combat_defence_target}=~"TY") /let target=siebie %; /else /let target=$(/odmien_M_B %{_combat_defence_target}) %; /endif%;\
+            /if ({_combat_point_at_target_by_set}=1) /send wskaz %{target} jako cel obrony %;/endif%;\
+            /if ({_combat_point_at_target_by_look}=1) /send popatrz opiekunczo na %{target} %;/endif%;\
+        /endif%;\
     /endif
 
 /def order_defence = \
     /if ({_combat_defence_target}!/"") \
         /if ({_combat_defence_target}=~"TY") /let target=ciebie %; /else /let target=$(/odmien_M_B %{_combat_defence_target}) %; /endif%;\
-        /prompt_defence%;\
         /if ({_team_leader}=~"-") \
             /send rozkaz druzynie zaslonic %{target}%;\
+        /else \
+            /echo -p @{Crgb055} Nie mozesz rozkazywac kiedy nie dowodzisz%;\
         /endif%;\
     /endif
 
@@ -121,9 +120,9 @@
         /let target=siebie%;\
     /else \
         /set _combat_defence_target=$(/odmien_B_M %{*})%;\
-        /let target=%{_combat_defence_target}%;\
+        /let target=%{*}%;\
     /endif%;\
-    /send wskaz %{target} jako cel obrony%;\
+    /prompt_defence
 
 /def d = \
     /let name=$(/eval /echo %%{_team_member_name_%{1}})%;\
@@ -152,7 +151,7 @@
 /def zr = \
     /let name=$(/eval /echo %%{_team_member_name_%{1}})%;\
     /if ({name}!/"") \
-        /eval /defend $$(/odmien_M_B %%{_team_member_name_%{1}})%%;/order_defence%;\
+        /eval /defend $$(/odmien_M_B %%{_team_member_name_%{1}})%;\
     /endif
 
 

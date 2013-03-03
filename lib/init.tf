@@ -26,3 +26,5 @@
 /targetting 1
 /move +
 /orders -
+
+/pointing + - -

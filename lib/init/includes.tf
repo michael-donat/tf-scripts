@@ -41,6 +41,7 @@
 /load vendor/ingwar/zielnik.tf
 /load vendor/dhogrin/ocena.tf
 /load vendor/dhogrin/skrzynia.tf
+/load vendor/dhogrin/postepy.tf
 
 ; load databases
 /eval /load %{db_odmiana}

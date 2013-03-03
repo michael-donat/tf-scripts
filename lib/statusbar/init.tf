@@ -6,6 +6,8 @@
 /eval /set _combat_orders_enabled_label=$[decode_attr("[OR]", "Cbgred")]
 /eval /set _movement_disabled_label=$[decode_attr("[MV]", "Cbggreen")]
 /eval /set _targetting_mode=[   ]
+/eval /set _setting_target_mode=[---]
+/eval /set _statusbar_mail=[MAIL]
 
 /eval /status_add -c -r0 status_line::
 
@@ -32,7 +34,9 @@
 /eval /status_add -r3 "WB: [":: _fast_bind_label:21 "]"
 /eval /status_add -r3 " ":: _combat_orders_enabled_label:4
 /eval /status_add -r3 _movement_disabled_label:4
-/eval /status_add -r3 _targetting_mode
+/eval /status_add -r3 _statusbar_mail:6
+/eval /status_add -r3 _targetting_mode:5
+/eval /status_add -r3 _setting_target_mode:5
 ;/eval /status_add -r3 "R: [ ":: rozkaz_ataku:46:BC%kolor_alarm
 ;/eval /status_add -r3 "]  Bind: ":: bindings:35:BC%kolor_info
 ;/eval /status_add -r3 spacebreak::
