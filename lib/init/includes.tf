@@ -35,6 +35,7 @@
 /load hilite.tf
 /load warn.tf
 
+/load map.tf
 
 ; load external bits
 /load vendor/ingwar/cechy.tf
@@ -52,3 +53,5 @@
 ;/load ../src/combat/colors_weapons.tf
 /load ../src/subs/OK.tf
 /load ../src/subs/MC.tf
+
+

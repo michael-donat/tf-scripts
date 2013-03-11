@@ -173,8 +173,8 @@
 
 /def _combat_prompt_defence = \
     /echo%;\
-    /test echo(decode_attr(strcat("             ","F3      - ZASLON  -   ", {*}), "Cgreen"))%;\
-    /test echo(decode_attr(strcat("             ","META_F3 - GRUPOWA -   ", {*}), "Cgreen"))%;\
+    /test echo(decode_attr(strcat("             ","F2      - ZASLON  -   ", {*}), "Cgreen"))%;\
+    /test echo(decode_attr(strcat("             ","META_F2 - GRUPOWA -   ", {*}), "Cgreen"))%;\
     /echo
 
 /def _combat_prompt_defence_with_order = \

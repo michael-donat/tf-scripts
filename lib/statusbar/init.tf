@@ -8,6 +8,7 @@
 /eval /set _targetting_mode=[   ]
 /eval /set _setting_target_mode=[---]
 /eval /set _statusbar_mail=[MAIL]
+/eval /set _map_tracking_enabled_label=$[decode_attr("[MAP]", "Cbgred")]
 
 /eval /status_add -c -r0 status_line::
 
@@ -37,6 +38,7 @@
 /eval /status_add -r3 _statusbar_mail:6
 /eval /status_add -r3 _targetting_mode:5
 /eval /status_add -r3 _setting_target_mode:5
+/eval /status_add -r3 _map_tracking_enabled_label:5
 ;/eval /status_add -r3 "R: [ ":: rozkaz_ataku:46:BC%kolor_alarm
 ;/eval /status_add -r3 "]  Bind: ":: bindings:35:BC%kolor_info
 ;/eval /status_add -r3 spacebreak::
