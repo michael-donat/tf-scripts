@@ -244,6 +244,8 @@
     \
     /echo -p >   @{Crgb020} -- TY -- probujesz zaslonic@{n} %{whom} @{Cgray13}przed ciosami@{Crgb530} %{from} -@{Crgb025} rozkaz %{order}
 
+
+
 ;##############################      ATAKI  ATAKI      ###########################
 
 /def -aLg -mregexp -t'^Na rozkaz (.*) rzuca sie do ataku na ciebie!' _combat_event_attacks_me_on_order = \
@@ -294,6 +296,19 @@
     /endif%;\
     /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
     /echo -p >   %{who} @{Crgb500}ATAKUJE@{n} %{whom}@{Crgb025} -> via mczabij
+
+/def -aLg -p1 -mregexp -t'Glosno wyjac z pochylonym nisko lbem, (.*) rzuca sie na (.*), niczym wyglodnialy wilk polujacy na swa ofiare\.$$' _combat_event_attacks_okzabij = \
+    /let who=%{P1}%;\
+    /let whom_B=%{P2}%;\
+    /if ({whom_B}=~"ciebie") \
+        /let whom=$[decode_attr("-- CIEBIE! --", "Crgb150")]%;\
+    /else \
+        /let whom=$(/odmien_B_M %{whom_B})%;\
+        /let whom=$[decode_attr({whom_B}, $(/_team_get_name_color %{whom}))]%;\
+    /endif%;\
+    /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
+    /echo -p >   %{who} @{Crgb500}ATAKUJE@{n} %{whom}@{Crgb025} -> via okzabij
+
 
 /def -aLg -mregexp -t' probuje zaatakowac (.*), lecz (.*) zagradza (?:mu|jej) droge\.$$' _combat_event_unable_to_attack = \
     /let who=%{PL}%;\
@@ -453,6 +468,8 @@
 /showme Z typowym krasnoludzkim zacietrzewieniem Borubar rzuca sie na ciebie nie baczac na to, ze moze niebawem przyjdzie mu dolaczyc do swych Przodkow.%;\
 /showme Thrangorn mruzac oczy w oczekiwaniu plynacej z walki rozkoszy rzuca sie na ciebie!%;\
 /showme Thrangorn mruzac oczy w oczekiwaniu plynacej z walki rozkoszy rzuca sie na Borubara!%;\
+/showme Glosno wyjac z pochylonym nisko lbem, Gromgol rzuca sie na ciebie, niczym wyglodnialy wilk polujacy na swa ofiare.%;\
+/showme Glosno wyjac z pochylonym nisko lbem, Gromgol rzuca sie na Varriza, niczym wyglodnialy wilk polujacy na swa ofiare.%;\
 /showme Varriz probuje zaatakowac tegiego butnego mezczyzne, lecz dlugoreki czarnowlosy mezczyzna zagradza mu droge.%;\
 /showme Ravena probuje wesprzec Hunverta w walce z klekoczacym strasznym kosciotrupem, lecz gnijacy martwy mezczyzna zagradza jej droge.%;\
 /showme Heimo probuje zaatakowac Groda, lecz zagradzasz mu droge.%;\

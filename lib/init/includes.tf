@@ -46,12 +46,13 @@
 
 ; load databases
 /eval /load %{db_odmiana}
+/eval /load init/subs.tf
 
 ; temp
 ;/load ../src/combat/colors_events.tf
 ;/load ../src/combat/colors_hits.tf
 ;/load ../src/combat/colors_weapons.tf
-/load ../src/subs/OK.tf
-/load ../src/subs/MC.tf
+;/load ../src/subs/OK.tf
+;/load ../src/subs/MC.tf
 
 

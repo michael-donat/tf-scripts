@@ -27,10 +27,7 @@
     /alias szcz wejdz w szczeline%;\
     /_exp_prompt MAHAKAM
 
-/def -p9999 -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = \
-    /mahak
-
-/def exp_redcapy = \
+/def redcapy = \
     /test _exp_set("pierwszego redcapa", "drugiego redcapa", "trzeciego redcapa", "czwartego redcapa")%;\
     /_exp_prompt REDCAPY
 
@@ -42,20 +39,34 @@
     /def glaz = zeskocz na glaz%%;wskocz do wody%%;zanurkuj pod wode%;\
     /def wespnij = wespnij sie do gory%%;wespnij sie na gore%;\
     /def rzezba = obroc rzezbe
+    /test _exp_set("kosciotrupa", "zombiego", "wichta", "demona", "szalenca", "szczurolaka")%;\
+    /_exp_prompt RUINY
 
 /def lorenzo = \
     /test _exp_set("pierwszego karla", "pierwszego zboja", "lorenza")%;\
     /_exp_prompt LORENZO
 
+/def orson = \
+    /test _exp_set("pierwszego straznika", "pierwszego kaplana", "charyzmatycznego mezczyzne")%;\
+    /_exp_prompt ORSON
 
-; borowik
-;/test _exp_set("mocarnego grzyboczleka", "silnego grzyboczleka", "krzepkiego grzyboczleka", "grzyboczleka", "borowika")%;\
-;/s plyn
-;/n plyn
+/def grzyby = \
+    /test _exp_set("mocarnego grzyboczleka", "silnego grzyboczleka", "krzepkiego grzyboczleka", "grzyboczleka", "borowika")%;\
+    /def nn = przeplyn na polnoc
+    /def ss = przeplyn na poludnie
+    /_exp_prompt GRZYBY
 
+/def kurhan = \
+    /test _exp_set("kosciotrupa", "zombiego", "ozywienca")%;\
+    /_exp_prompt KURHAN
 
-;orson
-;/test _exp_set("pierwszego straznika", "pierwszego kaplana", "charyzmatycznego mezczyzne")%;\
+/def mustafa = \
+    /test _exp_set("pierwszego zboja", "mustafe")%;\
+    /_exp_prompt MUSTAFA
 
+/def karawana = \
+    /test _exp_set("pierwszego nomada", "wielblada")%;\
+    /_exp_prompt KARAWANA
 
-;/n ktos tam ktos tsm umarl, fastbind na bierz wsioz  cialka
+/def -p9999 -t'*Mustafa Ali IV*' = _exp_location_mustafa = /mustafa
+/def -p9999 -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = /mahak
