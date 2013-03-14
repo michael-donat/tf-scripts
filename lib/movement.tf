@@ -18,13 +18,27 @@
         /set _movement_disabled_label=$[decode_attr("[MV]", "Cbgred")]%;\
     /else \
         /set _movement_disabled=0%;\
-        /set _movement_disabled_label=$[decode_attr("[MV]", "Cbgred")]%;\
+        /set _movement_disabled_label=$[decode_attr("[MV]", "Cbggreen")]%;\
+    /endif
+
+/def map = \
+    /if ({1}=~"+") \
+        /set _movement_map_track=1%;\
+        /set _map_tracking_enabled_label=$[decode_attr("[MAP]", "Cbggreen")]%;\
+        /mapa on%;\
+    /else \
+        /set _movement_map_track=0%;\
+        /set _map_tracking_enabled_label=$[decode_attr("[MAP]", "Cbgred")]%;\
+        /mapa off%;\
     /endif
 
 /def _movement_go_exec =    \
 \
     /if (_movement_disabled!=1) \
         /send %{1}%;\
+        /if ({_movement_map_track}==1) \
+            /_map_go %{1}%;\
+        /endif%;\
     /endif
 
 /def -ag -mregexp -t'((Jest|Sa) tutaj ([^ ]*) (widoczne|widocznych) (wyjsc|wyjscia|wyjscie): |Rozpadlina ciagnie sie na |Trakt wiedzie na |W mroku nocy dostrzegasz .* widoczn(e|ych) wyjsc(|ia|ie): |Trakt rozgalezia sie na |W gestych ciemnosciach dostrzegasz trakt wiodacy na |W gestych ciemnosciach dostrzegasz, ze trakt rozgalezia sie na |Sciezka prowadzi tutaj w .* (kierunkach|kierunku): |Szlak.* tutaj w .* kierunk.*: |Wyjsc.* prowadz.* tutaj w .* (kierunkach|kierunku): |Tunel.* ciagn.* na |Wedrowke przez rozlegle laki mozesz kontynuowac udajac sie na )' _movement_match_exists = \

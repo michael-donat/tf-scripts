@@ -55,13 +55,13 @@
 /alias zzs /send zejdz ze statku
 
 /def skora = \
-    /send powsun bron do uprzezy%;\
-    /send wez noz z plecaka%;\
-    /send dobadz noza%;\
+    /send powsun dobyta bron do uprzezy%;\
+    /send podobadz broni z pochwy%;\
     /send wytnij skore z ciala %{*}%;\
     /send wloz skore do plecaka%;\
-    /send wloz noz do plecaka%;\
-    /send ddb
+    /send poschowaj dobyta bron do pochwy%;\
+    /send powyjmij bron z uprzezy%;\
+    /send dobadz jej
 
 /def ocen = \
     /set ocen_count=0%;\
@@ -131,4 +131,28 @@
     wloz kluczyk do skrzynki%; \
     wloz kluczyk do skrzyni
 
-/def rozpakuj = wez worek%;wez wszystko z niego%;wloz go do plecaka%;wloz wszystkie bronie do kosza%;wloz wszystkie zbroje do kosza
+/def por = \
+    porownaj sile z %{*}%;\
+    porownaj zrecznosc z %{*}%;\
+    porownaj wytrzymalosc z %{*}
+
+/def poczta = \
+    /if ({1}=~"+") \
+        /set _statusbar_mail=$[decode_attr("[MAIL]", "Cbggreen")]%;\
+    /else \
+        /set _statusbar_mail=[MAIL]%;\
+    /endif
+
+/def -arCrgb035 -t'*glaz*' glaz1
+/def onload = wez glazy%;wloz glazy do plecaka
+/def offload = wez glazy z plecaka%;odloz glazy
+/def -mregexp -t'exit:([A-Z]+):(.*)' exit_rebind = \
+    /echo _-------- PODPIETO --->   /%{P1}   =   %{P2}%;\
+    /def %{P1} = /send %{P2}%%;/_map_go custom:%{P2}
+
+/def -mregexp -t'exit:custom:(.*)' exit_rebind_custom = \
+    /echo _-------- PODPIETO --->   /x   =   %{P1}%;\
+    /def x = /send %{P1}%%;/_map_go custom:%{P1}
+
+
+

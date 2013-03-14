@@ -20,3 +20,13 @@
 ; reload def
 /def reload = /purge * %; /cd .. %; /load lib/init.tf
 /def showme = /test $[fake_recv({*})]
+
+/def -ag -h'Redef' hide_redef
+
+/targetting 1
+/move +
+/orders -
+
+/pointing + - -
+
+/map -

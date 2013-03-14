@@ -1,3 +1,7 @@
+/def fast_bind_odmien = \
+    /let label=$[strcat(decode_attr(" -- -- ODMIANA -- -- ", "BCbggreen"), "  ")]%;\
+    /test _fast_bind_set({label}, "/dodaj_odmiane %{*}%%;/_team_set_fast_bind")
+
 /def dodaj_odmiane = \
 	/purge _save_odmiana_*%; \
 	/send odmien %{*}%;\
@@ -48,8 +52,8 @@
     /if ({exception}!~NULL) \
         /odmien %{exception}%;\
     /elseif ($(/list _odmiana_%{L})=/"") \
-        /dodaj_odmiane %{L}%;\
-        /repeat -1 1 /odmien_process %{*}%;\
+        /fast_bind_odmien %{L}%;\
+;        /repeat -1 1 /odmien_process %{*}%;\
     /else \
         /odmien_process %{*}%;\
     /endif%;\
@@ -74,7 +78,7 @@
 
 /def retrieve_D = \
     /if ($(/list _odmiana_%{1})=/"") \
-        /dodaj_odmiane %{*}%; \
+        /fast_bind_odmien %{*}%; \
     /else \
         /_odmiana_%{*}%; \
         /eval /echo %%_odmiana_%{1}_dopelniacz%; \
@@ -116,7 +120,7 @@
 
 /def retrieve_B = \
     /if ($(/list _odmiana_%{1})=/"") \
-        /dodaj_odmiane %{*}%; \
+        /fast_bind_odmien %{*}%; \
     /else \
         /_odmiana_%{*}%; \
         /eval /echo %%_odmiana_%{1}_biernik%; \
@@ -158,7 +162,7 @@
 
 /def retrieve_N = \
     /if ($(/list _odmiana_%{1})=/"") \
-        /dodaj_odmiane %{*}%; \
+        /fast_bind_odmien %{*}%; \
     /else \
         /_odmiana_%{*}%; \
         /eval /echo %%_odmiana_%{1}_narzednik%; \

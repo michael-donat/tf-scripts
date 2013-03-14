@@ -23,7 +23,8 @@
     /echo
 
 /def mahak = \
-    /_exp_set oficera kobolda goblina pukacza trolla echinopsa barbegazi%;\
+    /test _exp_set("oficera", "kobolda", "goblina", "pukacza", "trolla", "echinopsa", "barbegazi", "poteznego dostojnego goblina", "siodmego goblina")%;\
+    /alias szcz wejdz w szczeline%;\
     /_exp_prompt MAHAKAM
 
 /def -p9999 -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = \
@@ -33,3 +34,28 @@
     /test _exp_set("pierwszego redcapa", "drugiego redcapa", "trzeciego redcapa", "czwartego redcapa")%;\
     /_exp_prompt REDCAPY
 
+/def ruiny = \
+    /def studia = wejdz do studni%%;przecisnij sie przez otwor%;\
+    /def podest = wejdz na podest%%;wejdz do grobowca%;\
+    /def otwor = przecisnij sie przez otwor%;\
+    /def sciana = wejdz w sciane%;\
+    /def glaz = zeskocz na glaz%%;wskocz do wody%%;zanurkuj pod wode%;\
+    /def wespnij = wespnij sie do gory%%;wespnij sie na gore%;\
+    /def rzezba = obroc rzezbe
+
+/def lorenzo = \
+    /test _exp_set("pierwszego karla", "pierwszego zboja", "lorenza")%;\
+    /_exp_prompt LORENZO
+
+
+; borowik
+;/test _exp_set("mocarnego grzyboczleka", "silnego grzyboczleka", "krzepkiego grzyboczleka", "grzyboczleka", "borowika")%;\
+;/s plyn
+;/n plyn
+
+
+;orson
+;/test _exp_set("pierwszego straznika", "pierwszego kaplana", "charyzmatycznego mezczyzne")%;\
+
+
+;/n ktos tam ktos tsm umarl, fastbind na bierz wsioz  cialka

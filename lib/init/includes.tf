@@ -33,13 +33,16 @@
 
 ; basic hilights
 /load hilite.tf
+/load warn.tf
 
+/load map.tf
 
 ; load external bits
 /load vendor/ingwar/cechy.tf
 /load vendor/ingwar/zielnik.tf
 /load vendor/dhogrin/ocena.tf
 /load vendor/dhogrin/skrzynia.tf
+/load vendor/dhogrin/postepy.tf
 
 ; load databases
 /eval /load %{db_odmiana}
@@ -50,3 +53,5 @@
 ;/load ../src/combat/colors_weapons.tf
 /load ../src/subs/OK.tf
 /load ../src/subs/MC.tf
+
+
