@@ -146,13 +146,7 @@
 /def -arCrgb035 -t'*glaz*' glaz1
 /def onload = wez glazy%;wloz glazy do plecaka
 /def offload = wez glazy z plecaka%;odloz glazy
-/def -mregexp -t'exit:([A-Z]+):(.*)' exit_rebind = \
-    /echo _-------- PODPIETO --->   /%{P1}   =   %{P2}%;\
-    /def %{P1} = /send %{P2}%%;/_map_go custom:%{P2}
 
-/def -mregexp -t'exit:custom:(.*)' exit_rebind_custom = \
-    /echo _-------- PODPIETO --->   /x   =   %{P1}%;\
-    /def x = /send %{P1}%%;/_map_go custom:%{P1}
 
 
 

@@ -1723,3 +1723,4 @@
 /def _odmiana_gnshin = /set _odmiana_gnshin_dopelniacz=gnshina%;/set _odmiana_gnshin_biernik=gnshina%;/set _odmiana_gnshin_narzednik=gnshinem/def _odmiana_ahtar = /set _odmiana_ahtar_dopelniacz=ahtara%;/set _odmiana_ahtar_biernik=ahtara%;/set _odmiana_ahtar_narzednik=ahtarem
 /def _odmiana_janis = /set _odmiana_janis_dopelniacz=janisa%;/set _odmiana_janis_biernik=janisa%;/set _odmiana_janis_narzednik=janisem
 /def _odmiana_tyndal = /set _odmiana_tyndal_dopelniacz=tyndala%;/set _odmiana_tyndal_biernik=tyndala%;/set _odmiana_tyndal_narzednik=tyndalem
+/def _odmiana_korsarz = /set _odmiana_tyndal_dopelniacz=korsarza%;/set _odmiana_tyndal_biernik=korsarza%;/set _odmiana_tyndal_narzednik=korsarzem

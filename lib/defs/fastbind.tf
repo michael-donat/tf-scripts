@@ -34,4 +34,13 @@
 
 /def -ab -t'* schodzi z * na brzeg.' _fast_bind_trigger_4 = \
     /let label=$[strcat(decode_attr("  --   ZEJDZ    --   ", "BCbgblue"), "  ")]%;\
-        /test _fast_bind_set({label}, "mm%%;zzs", 1)
+    /test _fast_bind_set({label}, "mm%%;zzs", 1)
+
+/def -ab -t'Rany! Wali sie wszystko powoli!' _fast_bind_trigger_5 = \
+    /let label=$[strcat(decode_attr("  -- SZKATULKA  --   ", "BCbgblue"), "  ")]%;\
+    /test _fast_bind_set({label}, "zajrzyj do szkatulki", 0)
+
+/def -ab -t'W szkatulce znajdujesz *, ktore szybko zabierasz.' _fast_bind_trigger_6 = \
+    /_fast_bind_clear
+
+

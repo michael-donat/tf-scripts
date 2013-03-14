@@ -201,7 +201,7 @@
         /_odmien_B_M %{-L}%;\
     /endif %;\
     /odmien_find_M_from_B %{imie}
-
+;Dhogrin wskazuje wytrzymalego spokojnego wielblada ze skrzynia na grzbiecie jako cel ataku.
 /def _odmien_B_M = \
     /while ({#}) \
 	    /let dpE=$[substr({1}, -1, 1)] %;\

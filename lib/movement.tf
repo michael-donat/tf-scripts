@@ -25,20 +25,19 @@
     /if ({1}=~"+") \
         /set _movement_map_track=1%;\
         /set _map_tracking_enabled_label=$[decode_attr("[MAP]", "Cbggreen")]%;\
+        /def _bind_kb_key_nkpMinus  = /x%;\
         /mapa on%;\
     /else \
         /set _movement_map_track=0%;\
         /set _map_tracking_enabled_label=$[decode_attr("[MAP]", "Cbgred")]%;\
+        /def _bind_kb_key_nkpMinus  = /_movement_go_exec wyjscie%;\
         /mapa off%;\
     /endif
 
 /def _movement_go_exec =    \
 \
     /if (_movement_disabled!=1) \
-        /send %{1}%;\
-        /if ({_movement_map_track}==1) \
-            /_map_go %{1}%;\
-        /endif%;\
+        /send -h %{1}%;\
     /endif
 
 /def -ag -mregexp -t'((Jest|Sa) tutaj ([^ ]*) (widoczne|widocznych) (wyjsc|wyjscia|wyjscie): |Rozpadlina ciagnie sie na |Trakt wiedzie na |W mroku nocy dostrzegasz .* widoczn(e|ych) wyjsc(|ia|ie): |Trakt rozgalezia sie na |W gestych ciemnosciach dostrzegasz trakt wiodacy na |W gestych ciemnosciach dostrzegasz, ze trakt rozgalezia sie na |Sciezka prowadzi tutaj w .* (kierunkach|kierunku): |Szlak.* tutaj w .* kierunk.*: |Wyjsc.* prowadz.* tutaj w .* (kierunkach|kierunku): |Tunel.* ciagn.* na |Wedrowke przez rozlegle laki mozesz kontynuowac udajac sie na )' _movement_match_exists = \
@@ -50,3 +49,16 @@
 
 /def _movement_exists = \
     /echo -p @{BCyellow} ==  @{BCgreen}%{*}
+
+
+/def -p500 -aL -mregexp -t'exit:([A-Z]+):(.*)' _map_exit_rebind_mine = \
+  /echo -p @{Cblue}         /%{P1} -> {P2}%;\
+  /def %{P1} = /send -h %{P2}
+
+/def -p500 -aL -mregexp -t'exit:custom:(.*)' _map_exit_rebind_custom_mine = \
+  /set _map_bound_exit=%{P1}%;\
+  /def x = /send -h %{P1}
+
+/def -p500 -aL -mregexp -t'exit:reset' _map_exit_reset_nolog_mine = \
+  /set _map_bound_exit=%;\
+  /purge x%; /purge n%; /purge ne%; /purge r%; /purge se%; /purge s%; /purge sw%; /purge w%; /purge nw%; /purge up%; /purge dn%;

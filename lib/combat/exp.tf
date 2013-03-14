@@ -32,7 +32,7 @@
     /_exp_prompt REDCAPY
 
 /def ruiny = \
-    /def studia = wejdz do studni%%;przecisnij sie przez otwor%;\
+    /def studnia = wejdz do studni%%;przecisnij sie przez otwor%;\
     /def podest = wejdz na podest%%;wejdz do grobowca%;\
     /def otwor = przecisnij sie przez otwor%;\
     /def sciana = wejdz w sciane%;\
