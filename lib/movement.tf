@@ -22,7 +22,9 @@
     /endif
 
 /def map = \
-    /if ({1}=~"+") \
+    /if ({1}=~"run") \
+        /echo runnin %;\
+    /elseif ({1}=~"+") \
         /set _movement_map_track=1%;\
         /set _map_tracking_enabled_label=$[decode_attr("[MAP]", "Cbggreen")]%;\
         /def _bind_kb_key_nkpMinus  = /x%;\
