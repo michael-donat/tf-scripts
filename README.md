@@ -100,3 +100,11 @@ Setting atack mode
 ###Fastbind###
 
 W niektorych sytuacjach pojawi sie opcja z fastbindem, wtedy wystarczy wdusic F5 zeby sie wykonal, zostanie to zakomunikowane w status barze.
+
+###Inne pomocnicze####
+
+/koksik - kupno zabojcy w browarze
+/koks - jeden lyk z buklaka
+/pij - napicie sie do syta
+mm - wez monety z plecaka
+mmm - schowaj monety do plecaka
