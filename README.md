@@ -1,28 +1,102 @@
-INSTALACJA
+INSTRUKCJA
 ==========
 
-Sciezki sa relatywne, wiec mozna zainstalowac gdziekolwiek
+**Uwaga: Config jest pisany pod straznika!**
 
-Klonujemy repo `git clone https://github.com/thornag/tf-scripts.git ~/NAZWATWOJEGOFOLDERU` i dodajemy smlinka dla latwego ladowania `ln -s ~/NAZWATWOJEGOFOLDERU/_tfrc .tf`
+###Exp###
 
-Trzeba tez zbudowac baze subow `perl ~/NAZWATWOJEGOFOLDERU/bin/subs.pl`
+Wszelkie aliasy pomocnicze umieszcozne sa w pliku combat/exp.tf i uaktywnia sie je albo triggeren na lokacji albo poprzez nastepujace defy
 
-MODYFIKACJE
-==========
-Wiekszosc personalnych aliasow siedzi w `lib/defs.tf` albo w ktoryms z plikow `lib/defs`, tam mozna sobie do woli grzebac i wymieniac.
+```
+/mahak
+/redcapy
+/ruiny 
+/lorenzo
+/orson
+/grzyby
+/kurhan
+/mustafa
+/karawana
+```
 
-UWAGA
-==========
+Ustawienia te podpinaja nazwy przeciwnikow  wkolejnosci do bicia pod sekwencje /1, /2, /3 etc
 
-Katalog src to katalog na legacy i nie powinien byc uzywany, wszystko siedzi w lib
+pozniej przykladowe wywolanie /mahak
 
+```
+ustawiono expowisko na MAHAKAM
+% 3500: /def 1 = /zabij oficera
+% 3501: /def 2 = /zabij kobolda
+% 3502: /def 3 = /zabij goblina
+% 3503: /def 4 = /zabij pukacza
+% 3504: /def 5 = /zabij trolla
+% 3505: /def 6 = /zabij echinopsa
+% 3506: /def 7 = /zabij barbegazi
+% 3507: /def 8 = /zabij poteznego dostojnego goblina
+% 3508: /def 9 = /zabij siodmego goblina
+```
 
-CHAGELOG
-==========
+**Pierwsze 4 opcje podbindowane sa rowniez na F9-F12**
 
-0.0.2 - Dodalem rozne handy defy do picia, ziolek etc
+###Walka i dowodzenie###
 
-0.0.1 - Jako tako ogarniety mechanizm zaslon, brak wykorzystania w walce
+Podstawowe komendy to
 
+- /druzyna - zlapie imiona czlonkow druzyny zeby wszystko ustawic
+ 
+- /z [0-9] - wykonuje zaslon czlonka druzyny numer [0-9]
+- z [imie] - wykonuje zaslon [imie]
+- z [imie] [wrogiem] - wykonuje zaslon [imie] przed wrogiem
+- z [imie] grupa - wykonuje zaslon [imie] przed grupa
+- /zg [0-9] - wykonuje zaslon czlonka druzyny numer [0-9] przed grupa
+- /zr [o-0] - wykonuje rozkaz druzynie zaslonic czlonka druzyny przed grupa
+- zz - przestan zaslaniac
+- zzz - wyjdz zza zaslony
 
+- /zabij [kogo] - atakuje [kogo], jesli jestes liderem to takze wskaze cel/popatrzy
 
+- /d [0-9] - ustawia czlonka druzyny jako cel obrony
+
+Klawiszologia do walki
+
+Tutaj wazne jest, zeby pamietac ze esc_key to sekwencja najpierw ESC pozniej klawisz.
+
+- F1 - zabij cel ataku
+- ESC_F1 - przelamanie celu ataku
+- F2 - zaslona celu obrony
+- ESC_F2 - zaslona grupowa celu obrony
+- F3 - ponowne wskazanie celu dla druzyny
+- ESC_F3 - rozkaz zabicia celu
+- F4 - weskazanie celu obrony dla druzyny
+- ESC_F4 - rozkaz zasloniecia celu obrony
+
+Zaslony z numeryka
+
+Kombinacja ESC + numpad
+
+ESC_NUM1 -> zaslon pierwszego czlonka druzyny
+
+Reszta analogicznie
+
+Dodatkowo
+
+ESC+NUM0 -> wskazanie siebie jako celu obrony
+
+Ustawianie lapania/wskazywania
+
+/targetting [1,2,3] - ustawia tryb lapania dowodcy
+
+```
+Setting atack mode
+      1   -   by setting target
+      2   -   by looking
+      3   -   by pointing
+```
+
+/pointing [+/-,+/-,+/-] - ustawia jak ty wskazujesz jako dowodca, opcje to (jako cel, popatrz morderczo/opiekunczo, wskaz)
+
+/move [+/-] - wylacza poruszanie sie na numeryku
+
+###Fastbind###
+
+W niektorych sytuacjach pojawi sie opcja z fastbindem, wtedy wystarczy wdusic F5 zeby sie wykonal, zostanie to zakomunikowane w status barze.
