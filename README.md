@@ -103,8 +103,8 @@ W niektorych sytuacjach pojawi sie opcja z fastbindem, wtedy wystarczy wdusic F5
 
 ###Inne pomocnicze####
 
-/koksik - kupno zabojcy w browarze
-/koks - jeden lyk z buklaka
-/pij - napicie sie do syta
-mm - wez monety z plecaka
-mmm - schowaj monety do plecaka
+- /koksik - kupno zabojcy w browarze
+- /koks - jeden lyk z buklaka
+- /pij - napicie sie do syta
+- mm - wez monety z plecaka
+- mmm - schowaj monety do plecaka
