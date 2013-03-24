@@ -30,6 +30,7 @@
 /load defs/odmiana.tf
 /load defs/herbs.tf
 /load defs/fastbind.tf
+/load defs/light.tf
 
 ; basic hilights
 /load hilite.tf
@@ -38,11 +39,13 @@
 /load map.tf
 
 ; load external bits
+/load vendor/compatibility.tf
 /load vendor/ingwar/cechy.tf
 /load vendor/ingwar/zielnik.tf
 /load vendor/dhogrin/ocena.tf
 /load vendor/dhogrin/skrzynia.tf
 /load vendor/dhogrin/postepy.tf
+/load vendor/werbat/calendar.tf
 
 ; load databases
 /eval /load %{db_odmiana}

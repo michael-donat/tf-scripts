@@ -76,6 +76,7 @@
         /if ({_team_leader}=~"-") \
             /let target=$(/odmien_M_B %{_combat_attack_target})%;\
             /send rozkaz druzynie zabic %{target}%;\
+            /send zabij %{target}%;\
         /else \
             /echo -p @{Crgb055} Nie mozesz rozkazywac kiedy nie dowodzisz%;\
         /endif%;\

@@ -2,10 +2,10 @@
 /def kto_stowarzyszenie = /send zapytaj ore o krasnoludy
 /alias kkto /kto_stowarzyszenie
 
-/set container_money_B=plecak
-/set container_money_C=plecaka
-/set container_valuables_B=sakiewke
-/set container_valuables_C=sakiewki
+/set container_money_B=swoj plecak
+/set container_money_C=swojego plecaka
+/set container_valuables_B=swoja sakiewke
+/set container_valuables_C=swojej sakiewki
 
 /def get_money = /send wez %{*} monety z %{container_money_C}
 /def pack_money = /send wloz %{*} monety do %{container_money_C}
