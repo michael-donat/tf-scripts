@@ -23,7 +23,7 @@
 /require relog.tf
 /require kbstack.tf
 /require at.tf
-
+/require tick.tf
 
 ;-----------------------------------------------
 ;           MAC NUM PAD
