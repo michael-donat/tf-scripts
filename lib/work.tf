@@ -14,3 +14,4 @@
 /def key_esc_f12 = /4%;rozkaz druzynie zabic cel ataku
 
 /def key_esc_nkp* = /_combat_show_who_attacks_whom
+

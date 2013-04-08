@@ -1726,3 +1726,5 @@
 /def _odmiana_korsarz = /set _odmiana_tyndal_dopelniacz=korsarza%;/set _odmiana_tyndal_biernik=korsarza%;/set _odmiana_tyndal_narzednik=korsarzem
 /def _odmiana_gormir = /set _odmiana_gormir_dopelniacz=gormira%;/set _odmiana_gormir_biernik=gormira%;/set _odmiana_gormir_narzednik=gormirem
 /def _odmiana_erod = /set _odmiana_erod_dopelniacz=eroda%;/set _odmiana_erod_biernik=eroda%;/set _odmiana_erod_narzednik=erodem
+/def _odmiana_illudil = /set _odmiana_illudil_dopelniacz=illudila%;/set _odmiana_illudil_biernik=illudila%;/set _odmiana_illudil_narzednik=illudilem
+/def _odmiana_seleni = /set _odmiana_seleni_dopelniacz=seleni%;/set _odmiana_seleni_biernik=seleni%;/set _odmiana_seleni_narzednik=seleni

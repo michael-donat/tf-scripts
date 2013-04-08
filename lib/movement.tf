@@ -54,7 +54,7 @@
 
 
 /def -p500 -aL -mregexp -t'exit:([A-Z]+):(.*)' _map_exit_rebind_mine = \
-  /echo -p @{Cblue}         /%{P1} -> {P2}%;\
+  /echo -p @{Cblue}         /%{P1} -> %{P2}%;\
   /def %{P1} = /send -h %{P2}
 
 /def -p500 -aL -mregexp -t'exit:custom:(.*)' _map_exit_rebind_custom_mine = \
@@ -63,4 +63,5 @@
 
 /def -p500 -aL -mregexp -t'exit:reset' _map_exit_reset_nolog_mine = \
   /set _map_bound_exit=%;\
+  /purge _map_location_*%;\
   /purge x%; /purge n%; /purge ne%; /purge r%; /purge se%; /purge s%; /purge sw%; /purge w%; /purge nw%; /purge up%; /purge dn%;

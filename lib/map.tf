@@ -63,8 +63,10 @@
 /def -aL -mregexp -t'exit:custom:(.*)' _map_exit_rebind_custom = \
   /echo _-------- PODPIETO ---> /x = %{P1}%;\
   /def x = /send -h %{P1}
+
+/def -aL -mregexp -t'exit:reset' _map_exit_reset_nolog = \
+  /purge _map_location_*
   
-/def -aL -mregexp -t'exit:reset' _map_exit_reset_nolog
 
 ;------------------------------------------------------------------------
 ;			   ... PORUSZANIE SIE ... 			  |
@@ -73,10 +75,10 @@
 /def -q -mregexp -h'SEND ^(?:|przemknij (?:sie |)(?:z druzyna |))(polnoc|n|poludnie|s|wschod|e|zachod|w|polnocny-wschod|ne|polnocny-zachod|nw|poludniowy-wschod|se|poludniowy-zachod|sw|gora|dol|u|d)$' _map_hooks_ide = \
   /_map_go exit:%{P1}
 
-/def -q -mregexp -h'SEND ^(alkierz|altana|dom|barak|barka|brama|brod|chata|chatka|domek|drabina|drzwi|furtka|gabinet|ganek|golebnik|jaskinia|jaskinie|kamienica|kaplica|karczma|klapa|korytarz|kuchnia|kurhan|kurnik|magazyn|mlyn|most|namiot|ogrod|otwor|palac|pawilon|pieczara|pokoik|pomost|sala|schody|sklep|spizarnia|stajnia|stodola|straznica|stryszek|swiatynia|szczelina|taras|ulica|wejscie|wieza|wyjscie|zagroda|zajazd|zanurkuj|zielarnia)$' _map_hooks_customy = \
+/def -q -mregexp -h'SEND ^(alkierz|altana|dom|barak|barka|brama|brod|chata|chatka|domek|drabina|drzwi|furtka|gabinet|ganek|golebnik|jaskinia|jaskinie|kamienica|kaplica|karczma|klapa|korytarz|kuchnia|kurhan|kurnik|magazyn|mlyn|most|namiot|ogrod|otwor|palac|pawilon|pieczara|pokoik|pomost|sala|schodki|schody|sklep|spizarnia|stajnia|stodola|straznica|stryszek|swiatynia|szczelina|taras|ulica|wejscie|wieza|wyrwa|wyjscie|zagroda|zajazd|zanurkuj|zielarnia)$' _map_hooks_customy = \
   /_map_go custom:%{P1}
 
-/def -q -mregexp -h'SEND ^((obroc|otworz|podnies|przecisnij|przejdz|przeplyn|przesun|rozsun|wejdz|wespnij|wslizgnij|wyjdz|wynurz|zejdz|zsun|zeskocz)( .*|))$' _map_hooks_customy_2 = \
+/def -q -mregexp -h'SEND ^((obroc|otworz|pchnij|podnies|przecisnij|przedrzyj|przejdz|przeplyn|przeskocz|przesun|rozsun|skocz|wdrap|wejdz|wespnij|wslizgnij|wyjdz|wynurz|zejdz|zsun|zeskocz)( .*|))$' _map_hooks_customy_2 = \
   /_map_go custom:%{P1}
   
 ;------------------------------------------------------------------------
@@ -84,7 +86,7 @@
 ;------------------------------------------------------------------------
 
 /set _map_standard_exits=n|s|e|w|polnoc|poludnie|wschod|zachod|ne|se|nw|sw|polnocny-wschod|poludniowy-wschod|polnocny-zachod|poludniowy-zachod|u|d|gora|dol
-/set _map_follows_list=do wyjscia|na wyjscie|do karczmy|za palisade|do namiotu|przez furtke w palisadzie do wioski|przez klape na dol|po drabinie na gore|brodzac w wodzie na druga strone rzeki|na most|w glab ciemnosci|schodami na dol|schodami do gory|do wnetrza straznicy|na zewnatrz straznicy|przez most na drugi brzeg rzeki|brodem przez strumien|w gore traktem|w dol traktem|traktem w gore|traktem w dol|droga w dol|do otworu|w kierunku otworu|na zewnatrz karczmy|na pomost|sciezka w kierunku ruin|na schody|do srodka kurhanu
+/set _map_follows_list=do wyjscia|na wyjscie|do karczmy|za palisade|do namiotu|przez furtke w palisadzie do wioski|przez klape na dol|po drabinie na gore|brodzac w wodzie na druga strone rzeki|na most|w glab ciemnosci|schodami na dol|schodami do gory|do wnetrza straznicy|na zewnatrz straznicy|przez most na drugi brzeg rzeki|brodem przez strumien|w gore traktem|w dol traktem|traktem w gore|traktem w dol|droga w dol|do otworu|w kierunku otworu|na zewnatrz karczmy|na pomost|sciezka w kierunku ruin|na schody|do srodka kurhanu|do wnetrza wyrwy|schodzisz na dol|na otwor|przez otwor na gore|opuszczajac podwoje warowni|znikajac w podwojach warowni
 
 /eval /def -mregexp -Fp500 -t'(Wraz z (.*) podazasz|Podazasz) za (.*) (%{_map_follows_list})\.' _map_podazam_za_kims_rozne = /_map_go follow:%%{P4}
 /def -mregexp -Fp500 -t'(Wraz z (.*) podazasz|Podazasz) za (.*) na gore\.' _map_podazam_za_kims_gora = /_map_go exit:gora
@@ -100,13 +102,13 @@
   /def -n1 -mregexp -p500 -t'Ruszasz (niespiesznie|marszem|truchtem|biegiem|szybkim biegiem) na gore\\.' _map_idz_move_trigger_gora = /_map_go exit:gora%%;  /purge _map_idz_move_trigger*%; \
   /def -n1 -mregexp -p500 -t'Ruszasz (niespiesznie|marszem|truchtem|biegiem|szybkim biegiem) na (dol|polnoc|poludnie|wschod|zachod|polnocny-wschod|polnocny-zachod|poludniowy-wschod|poludniowy-zachod)\\.' _map_idz_move_trigger_standard = /_map_go exit:%%{P2}%%; /purge _map_idz_move_trigger*%; \
 
-/def -mregexp -t'Wykonuje komende \'idz' _map_idz_trigger = \
+/def -mregexp -Fp500 -t'Wykonuje komende \'idz' _map_idz_trigger = \
   /_map_idz_catch  
   
 /def -q -mregexp -h'SEND ^idz$' = \
   /_map_idz_catch
 
-/def -mregexp -t'Nie wiesz, w ktorym kierunku masz ruszyc...' _map_idz_wiele_kierunkow = \
+/def -mregexp -Fp500 -t'Nie wiesz, w ktorym kierunku masz ruszyc...' _map_idz_wiele_kierunkow = \
   /purge _map_idz_move_trigger*
   
 ;------------------------------------------------------------------------
@@ -125,10 +127,6 @@
 /set _map_room_oxenfurt_2=71eb300e-8c3f-11e2-a460-9c4e368dac0c
 /set _map_room_oxenfurt_4=6fdaef32-8b79-11e2-af6b-9c4e368dac0c
 /set _map_room_oxenfurt_5=6e896d88-8b7a-11e2-af6b-9c4e368dac0c
-/set _map_room_prom_novi=f4420b80-8c40-11e2-a460-9c4e368dac0c
-/set _map_room_prom_nadrzecze=2b3f7e2e-8c41-11e2-a460-9c4e368dac0c
-/set _map_room_prom_temeria=bbf8f2f0-8cb5-11e2-a793-9c4e368dac0c
-/set _map_room_prom_piana=ae9dcc48-8cb5-11e2-a793-9c4e368dac0c
 /set _map_room_novigrad_port=5786a2cc-8c38-11e2-9ba5-9c4e368dac0c
 /set _map_room_novigrad_1=d7029a3e-8c46-11e2-aad8-9c4e368dac0c
 /set _map_room_novigrad_2=0559ff9a-8c46-11e2-aad8-9c4e368dac0c
@@ -136,43 +134,81 @@
 /set _map_room_osadamysliwska=0e3bb60c-88ff-11e2-80d0-9c4e368dac0c
 /set _map_room_mahakam_scianka=fa1d6212-88c0-11e2-8d6c-9c4e368dac0c
 /set _map_room_ruiny_poziom_3_4=12caa034-8e7c-11e2-bfe6-9c4e368dac0c
+/set _map_room_rinde_1=55e6a31a-89bb-11e2-878b-2af7728612b4
+/set _map_room_rinde_2=66ea6750-89bb-11e2-878b-2af7728612b4
+/set _map_room_rinde_3=5e111296-89bb-11e2-878b-2af7728612b4
+/set _map_room_rinde_4=b83bf6ce-91a8-11e2-9cc7-9c4e368dac0c
+/set _map_room_baccala=5f7c0884-9e24-11e2-852c-36be4148278d
 
-/def -mregexp -t'Sypialnia w gildii Krasnoludow Mahakamu.' _map_teleport_gildia = /_map_teleport %{_map_room_gildia}
-/def -mregexp -t'Gospoda "Pod kilofem i oskardem".' _map_teleport_fandall_karczma = /_map_teleport %{_map_room_fandall_karczma}
-/def -mregexp -t'Karczma \'Pod Tunczykiem\'.' _map_teleport_blaviken_karczma_1 = /_map_teleport %{_map_room_blaviken_karczma_1}
-/def -mregexp -t'Karczma \'Zloty Dwor\'.' _map_teleport_blaviken_karczma_2 = /_map_teleport %{_map_room_blaviken_karczma_2}
-/def -mregexp -t'Karczma \'Pod Lisem\'.' _map_teleport_wyzima = /_map_teleport %{_map_room_wyzima_1}
-/def -mregexp -t'Karczma \'Stary Narakort\'.' _map_teleport_wyzima_2 = /_map_teleport %{_map_room_wyzima_2}
-/def -mregexp -t'Karczma \'Pod Zagnica\'.' _map_teleport_piana_1 = /_map_teleport %{_map_room_piana_1}
-/def -mregexp -t'\'W Brzuchu Krakena\'.' _map_teleport_piana_2 = /_map_teleport %{_map_room_piana_2}
-/def -mregexp -t'Karczma \'Pod Kucykiem\'.' _map_teleport_oxenfurt_podgrodzie = /_map_teleport %{_map_room_oxenfurt_podgrodzie}
-/def -mregexp -t'Karczma \'\'Pod wesolym studentem\'\'.' _map_teleport_oxenfurt = /_map_teleport_temp %{_map_room_oxenfurt_1}
-/def -mregexp -t'Karczma Trzy Dzwoneczki.' _map_teleport_oxenfurt_2 = /_map_teleport %{_map_room_oxenfurt_2}
-/def -mregexp -t'Winiarnia Biala Dama.' _map_teleport_oxenfurt_4 = /_map_teleport %{_map_room_oxenfurt_4}
-/def -mregexp -t'Znana w calym miescie herbaciarnia.' _map_teleport_oxenfurt_5 = /_map_teleport %{_map_room_oxenfurt_5}
-/def -mregexp -t'Karczma Pod Pegazem.' _map_teleport_novigrad_port = /_map_teleport %{_map_room_novigrad_port}
-/def -mregexp -t'Tawerna pod Grotem Wloczni.' _map_teleport_novigrad_1 = /_map_teleport %{_map_room_novigrad_1}
-/def -mregexp -t'Karczma \'Siedem Kotow\'.' _map_teleport_novigrad_2 = /_map_teleport %{_map_room_novigrad_2}
-/def -mregexp -t'Karczma pod Zlamana Strzala.' _map_teleport_novigrad_3 = /_map_teleport %{_map_room_novigrad_3}
+/def -mregexp -Fp500 -t'Sypialnia w gildii Krasnoludow Mahakamu.' _map_teleport_gildia = /_map_teleport %{_map_room_gildia}
+/def -mregexp -Fp500 -t'Gospoda "Pod kilofem i oskardem".' _map_teleport_fandall_karczma = /_map_teleport %{_map_room_fandall_karczma}
+/def -mregexp -Fp500 -t'Karczma \'Pod Tunczykiem\'.' _map_teleport_blaviken_karczma_1 = /_map_teleport %{_map_room_blaviken_karczma_1}
+/def -mregexp -Fp500 -t'Karczma \'Zloty Dwor\'.' _map_teleport_blaviken_karczma_2 = /_map_teleport %{_map_room_blaviken_karczma_2}
+/def -mregexp -Fp500 -t'Karczma \'Pod Lisem\'.' _map_teleport_wyzima = /_map_teleport %{_map_room_wyzima_1}
+/def -mregexp -Fp500 -t'Karczma \'Stary Narakort\'.' _map_teleport_wyzima_2 = /_map_teleport %{_map_room_wyzima_2}
+/def -mregexp -Fp500 -t'Karczma \'Pod Zagnica\'.' _map_teleport_piana_1 = /_map_teleport %{_map_room_piana_1}
+/def -mregexp -Fp500 -t'\'W Brzuchu Krakena\'.' _map_teleport_piana_2 = /_map_teleport %{_map_room_piana_2}
+/def -mregexp -Fp500 -t'Karczma \'Pod Kucykiem\'.' _map_teleport_oxenfurt_podgrodzie = /_map_teleport %{_map_room_oxenfurt_podgrodzie}
+/def -mregexp -Fp500 -t'Karczma \'\'Pod wesolym studentem\'\'.' _map_teleport_oxenfurt = /_map_teleport_temp %{_map_room_oxenfurt_1}
+/def -mregexp -Fp500 -t'Karczma Trzy Dzwoneczki.' _map_teleport_oxenfurt_2 = /_map_teleport %{_map_room_oxenfurt_2}
+/def -mregexp -Fp500 -t'Winiarnia Biala Dama.' _map_teleport_oxenfurt_4 = /_map_teleport %{_map_room_oxenfurt_4}
+/def -mregexp -Fp500 -t'Znana w calym miescie herbaciarnia.' _map_teleport_oxenfurt_5 = /_map_teleport %{_map_room_oxenfurt_5}
+/def -mregexp -Fp500 -t'Karczma Pod Pegazem.' _map_teleport_novigrad_port = /_map_teleport %{_map_room_novigrad_port}
+/def -mregexp -Fp500 -t'Tawerna pod Grotem Wloczni.' _map_teleport_novigrad_1 = /_map_teleport %{_map_room_novigrad_1}
+/def -mregexp -Fp500 -t'Karczma \'Siedem Kotow\'.' _map_teleport_novigrad_2 = /_map_teleport %{_map_room_novigrad_2}
+/def -mregexp -Fp500 -t'Karczma pod Zlamana Strzala.' _map_teleport_novigrad_3 = /_map_teleport %{_map_room_novigrad_3}
+/def -mregexp -Fp500 -t'Wnetrze karczmy "Dwa Jelenie".' _map_teleport_osada_mysliwska = /_map_teleport %{_map_room_osadamysliwska}
+/def -mregexp -Fp500 -t'Po polnocnej stronie platformy, powolnym, lecz bezszelestnym ruchem otwiera sie obszerny, regularny otwor prowadzacy na wschod!' _map_teleport_mahakam_scianka = /_map_teleport %{_map_room_mahakam_scianka}
+/def -mregexp -Fp500 -t'Nagle czujesz, jak ziemia pod toba zapada sie! Zaczynasz spadac w dol... w dol...' _map_teleport_ruiny_poziom_3_4 = /_map_teleport %{_map_room_ruiny_poziom_3_4}
+/def -mregexp -Fp500 -t'Oberza \'Pod Pierwszym Razem\'.' _map_teleport_rinde_1 = /_map_teleport %{_map_room_rinde_1}
+/def -mregexp -Fp500 -t'Karczma \'Pijany D`jinn\'.' _map_teleport_rinde_2 = /_map_teleport %{_map_room_rinde_2}
+/def -mregexp -Fp500 -t'Zamtuz \'Wstazeczka Rozkoszy\'.' _map_teleport_rinde_3 = /_map_teleport %{_map_room_rinde_3}
+/def -mregexp -Fp500 -t'Karczma \'Pod ostatnim miedziakiem\'.' _map_teleport_rinde_4 = /_map_teleport %{_map_room_rinde_4}
+/def -mregexp -Fp500 -t'Tawerna \'Pod Czarnym Kotem\'.' _map_teleport_baccala = /_map_teleport %{_map_room_baccala}
+
+;------------------------------------------------------------------------
+;		   ... TELEPORTY - STATKI... 				  |
+;------------------------------------------------------------------------  
+/set _map_room_prom_novi=f4420b80-8c40-11e2-a460-9c4e368dac0c
+/set _map_room_prom_stocznia=72526efc-9e20-11e2-852c-36be4148278d
+/set _map_room_prom_nadrzecze=2b3f7e2e-8c41-11e2-a460-9c4e368dac0c
+/set _map_room_prom_temeria=bbf8f2f0-8cb5-11e2-a793-9c4e368dac0c
+/set _map_room_prom_piana=ae9dcc48-8cb5-11e2-a793-9c4e368dac0c
+/set _map_room_prom_oxen=5a6fe5d6-9e1f-11e2-852c-36be4148278d
+/set _map_room_prom_grabowa=655d90e2-9e1f-11e2-852c-36be4148278d
+/set _map_room_statek_blaviken_1=e6c6c674-9e21-11e2-852c-36be4148278d
+/set _map_room_statek_novigrad_1=e229c14e-9e20-11e2-852c-36be4148278d
+/set _map_room_statek_daevon=84a77adc-9e22-11e2-852c-36be4148278d
+/set _map_room_statek_baccala=2244578a-9e4e-11e2-a554-9c4e368dac0c
+/set _map_room_statek_rozrog=
+
 /def -mregexp -Fp500 -t' krzyczy: Doplynelismy do wsi Nadrzecze w Temerii! Mozna wysiadac!' _map_teleport_prom_nadrzecze = /_map_teleport %{_map_room_prom_nadrzecze}
+/def -mregexp -Fp500 -t' krzyczy: Doplynelismy do Stoczni Novigradzkiej! Mozna wysiadac!' _map_teleport_prom_stocznia = /_map_teleport %{_map_room_prom_stocznia}
 /def -mregexp -Fp500 -t' krzyczy: Doplynelismy do przystani pod Novigradem! Mozna wysiadac!' _map_teleport_prom_novi = /_map_teleport %{_map_room_prom_novi}
 /def -mregexp -Fp500 -t' krzyczy: Doplynelismy do przystani po Temerskiej stronie Pontaru! Mozna wysiadac!' _map_teleport_prom_temeria = /_map_teleport %{_map_room_prom_temeria}
 /def -mregexp -Fp500 -t' krzyczy: Doplynelismy do przystani opodal Piany! Mozna wysiadac!' _map_teleport_prom_piana = /_map_teleport %{_map_room_prom_piana}
-/def -mregexp -t'Wnetrze karczmy "Dwa Jelenie".' _map_teleport_osada_mysliwska = /_map_teleport %{_map_room_osadamysliwska}
-/def -mregexp -t'Po polnocnej stronie platformy, powolnym, lecz bezszelestnym ruchem otwiera sie obszerny, regularny otwor prowadzacy na wschod!' _map_teleport_mahakam_scianka = /_map_teleport %{_map_room_mahakam_scianka}
-/def -mregexp -t'Nagle czujesz, jak ziemia pod toba zapada sie! Zaczynasz spadac w dol... w dol...' _map_teleport_ruiny_poziom_3_4 = /_map_teleport %{_map_room_ruiny_poziom_3_4}
+/def -mregexp -Fp500 -t' krzyczy: Doplynelismy do przystani w Oxenfurcie na polnocnym brzegu Pontaru! Mozna wysiadac!' _map_teleport_prom_oxen = /_map_teleport %{_map_room_prom_oxen}
+/def -mregexp -Fp500 -t' krzyczy: Doplynelismy do przystani w Grabowej Buchcie na poludniowym brzegu Pontaru! Mozna wysiadac!' _map_teleport_prom_grabowa = /_map_teleport %{_map_room_prom_grabowa}
+/def -mregexp -Fp500 -t'(Flavius|Jasnowlosy sniady elf) krzyczy: Doplynelismy do portu Blaviken w krolestwie Redanii! Mozna wysiadac!' _map_teleport_statek_blaviken_1 = /_map_teleport %{_map_room_statek_blaviken_1}
+/def -mregexp -Fp500 -t'(Flavius|Jasnowlosy sniady elf) krzyczy: Doplynelismy do Novigradu w krolestwie Redanii! Mozna wysiadac!' _map_teleport_statek_novigrad_1 = /_map_teleport %{_map_room_statek_novigrad_1}
+/def -mregexp -Fp500 -t'(Flavius|Jasnowlosy sniady elf) krzyczy: Doplynelismy do Daevon, w krolestwie Kaedwen! Mozna wysiadac!' _map_teleport_statek_daevon = /_map_teleport %{_map_room_statek_deavon}
+/def -mregexp -Fp500 -t'(Charonda|Otyly czerwononosy mezczyzna) krzyczy: Doplynelismy do Baccali! Mozna wysiadac!' _map_teleport_statek_baccala = /_map_teleport %{_map_room_statek_baccala}
+/def -mregexp -Fp500 -t'(Charonda|Otyly czerwononosy mezczyzna) krzyczy: Doplynelismy do przystani pod twierdza Rozrog! Mozna wysiadac!' _map_teleport_statek_rozrog = /_map_teleport %{_map_room_statek_rozrog}
+;------------------------------------------------------------------------
+;		   ... TELEPORTY - TODO... 				  |
+;------------------------------------------------------------------------  
 
-/def -mregexp -t'Gospoda \'Zacisze\'.' _map_teleport_maribor = /_map_teleport_temp %{_map_room_maribor}
-/def -mregexp -t'Karczma \'Pohulanka\'.' _map_teleport_podmoklalaka = /_map_teleport_temp %{_map_room_podmoklalaka}
-/def -mregexp -t'Karczma \'Dom Rybaka\'.' _map_teleport_obawa = /_map_teleport_temp %{_map_room_obawa}
-/def -mregexp -t'Karczma \'U Hermana\'.' _map_teleport_bodrog = /_map_teleport_temp %{_map_room_bodrog}
-/def -mregexp -t'Karczma \'Pod dzikiem\'.' _map_teleport_bobolacy = /_map_teleport_temp %{_map_room_bobolacy}
-/def -mregexp -t'Karczma Pod Biala Lza w Eldar.' _map_teleport_eldar = /_map_teleport_temp %{_map_room_eldar}
-/def -mregexp -t'Karczma Mlynskie Kolo.' _map_teleport_bialymost = /_map_teleport_temp %{_map_room_bialymost}
-/def -mregexp -t'Karczma \'Pod Grabem\' w Grabowej Buchcie.' _map_teleport_grabowa = /_map_teleport_temp %{_map_room_grabowa}
-/def -mregexp -t'Karczma \'Pod ostatnim miedziakiem\'.' _map_teleport_rinde_podgrodzie = /_map_teleport_temp %{_map_room_rinde_podgrodzie}
-/def -mregexp -t'Portowa tawerna o milej nazwie Zeza.' _map_teleport_oxenfurt_3 = /_map_teleport_temp %{_map_room_oxenfurt_3}
-/def -mregexp -t'Glowna izba \'Karczmy katowskiej\'.' _map_teleport_gelibol_podgrodzie = /_map_teleport_temp %{_map_room_gelibol_podgrodzie}
+/def -mregexp -Fp500 -t'Gospoda \'Zacisze\'.' _map_teleport_maribor = /_map_teleport_temp %{_map_room_maribor}
+/def -mregexp -Fp500 -t'Karczma \'Pohulanka\'.' _map_teleport_podmoklalaka = /_map_teleport_temp %{_map_room_podmoklalaka}
+/def -mregexp -Fp500 -t'Karczma \'Dom Rybaka\'.' _map_teleport_obawa = /_map_teleport_temp %{_map_room_obawa}
+/def -mregexp -Fp500 -t'Karczma \'U Hermana\'.' _map_teleport_bodrog = /_map_teleport_temp %{_map_room_bodrog}
+/def -mregexp -Fp500 -t'Karczma \'Pod dzikiem\'.' _map_teleport_bobolacy = /_map_teleport_temp %{_map_room_bobolacy}
+/def -mregexp -Fp500 -t'Karczma Pod Biala Lza w Eldar.' _map_teleport_eldar = /_map_teleport_temp %{_map_room_eldar}
+/def -mregexp -Fp500 -t'Karczma Mlynskie Kolo.' _map_teleport_bialymost = /_map_teleport_temp %{_map_room_bialymost}
+/def -mregexp -Fp500 -t'Karczma \'Pod Grabem\' w Grabowej Buchcie.' _map_teleport_grabowa = /_map_teleport_temp %{_map_room_grabowa}
+/def -mregexp -Fp500 -t'Karczma \'Pod ostatnim miedziakiem\'.' _map_teleport_rinde_podgrodzie = /_map_teleport_temp %{_map_room_rinde_podgrodzie}
+/def -mregexp -Fp500 -t'Portowa tawerna o milej nazwie Zeza.' _map_teleport_oxenfurt_3 = /_map_teleport_temp %{_map_room_oxenfurt_3}
+/def -mregexp -Fp500 -t'Glowna izba \'Karczmy katowskiej\'.' _map_teleport_gelibol_podgrodzie = /_map_teleport_temp %{_map_room_gelibol_podgrodzie}
   
 ;------------------------------------------------------------------------
 ;			   ... BLOKERY ... 				  |
@@ -191,7 +227,6 @@
 /def -mregexp -Fp500 -t'Szarpiesz energicznie za klamke, lecz drzwi stawiaja opor.' _map_blokery_bloker_wyzima_swiatynia = /_map_bloker
 /def -mregexp -Fp500 -t'Pociagasz za klamke, ale drzwi sa zamkniete.' _map_blokery_bloker_wyzima_grod = /_map_bloker
 /def -mregexp -Fp500 -t'Niestety drzwi zdaja sie byc zaryglowane od wewnatrz.' _map_blokery_bloker_anchor = /_map_bloker
-/def -mregexp -Fp500 -t'Dalsza podroz sciezka jest niemozliwa, gdyz przewrocony pojazd i porastajaca go roslinnosc zupelnie blokuje przejscie.' _map_blokery_bloker_dworek = /_map_bloker
 /def -mregexp -Fp500 -t'Geste krzaki i porzucone narzedzia zupelnie blokuja dalsza podroz w tym kierunku. Niestety, musisz zawrocic.' _map_blokery_bloker_dworek_2 = /_map_bloker
 /def -mregexp -Fp500 -t'Uuups... droga sie skonczyla... Najlepiej bedzie jak zawrocisz!' _map_blokery_bloker_koniec_drogi = /_map_bloker
 /def -mregexp -Fp500 -t'Wydaje ci sie, ze kowal jest bardzo znany z tego, ze nigdy nie ma go w kuzni. W tej wiosce konia nie podkujesz i musisz poszukac gdzie indziej.' _map_blokery_bloker_kowala_niet = /_map_bloker
@@ -222,3 +257,8 @@
 /def -mregexp -Fp500 -t'Probujesz sie wcisnac do otworu, jednakze ktos najwyrazniej jest juz w srodku, a jest tam zbyt wasko by zmiescily sie tam dwie osoby na raz.' _map_bloker_rinde_ruiny = /_map_bloker
 /def -mregexp -Fp500 -t'Niestety, wyglada na to, ze wiecej osob niz jedna sie tam nie zmiesci.' _map_bloker_rinde_ruiny_2 = /_map_bloker
 /def -mregexp -Fp500 -t'Ktos inny juz to zaczal robic. Otwor nie jest dosc szeroki by udalo sie to dwom osobom na raz.' _map_bloker_rinde_ruiny_3 = /_map_bloker
+/def -mregexp -Fp500 -t'Odpadasz od sciany i lecisz w dol, jednak dzieki niewielkiej wysokosci udaje ci sie zgrabnie wyladowac na ziemi.' _map_bloker_rinde_drzewo_1 = /_map_bloker
+/def -mregexp -Fp500 -t'Odpadasz od sciany i lecisz w dol. Przez chwile spadasz, zaraz jednak uderzasz o ziemie, raniac sie.' _map_bloker_rinde_drzewo_2 = /_map_bloker
+/def -mregexp -Fp500 -t'Po chwili wahania decydujesz sie nie schodzic.' _map_bloker_shekhal_winorosl = /_map_bloker
+/def -mregexp -Fp500 -t'Chcesz wpasc do rozpadliny\? Taka decyzje musisz potwierdzic.' _map_bloker_pustynia_rozpadlina = /_map_bloker
+/def -mregexp -Fp500 -t'Probujesz wspiac sie po pniu, ale robisz to zbyt slamazarnie i zjezdzasz z powrotem w dol.' _map_bloker_baccala_pien = /_map_bloker
