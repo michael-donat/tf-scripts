@@ -78,15 +78,66 @@
 /def -q -mregexp -h'SEND ^(alkierz|altana|dom|barak|barka|brama|brod|chata|chatka|domek|drabina|drzwi|furtka|gabinet|ganek|golebnik|jaskinia|jaskinie|kamienica|kaplica|karczma|klapa|korytarz|kuchnia|kurhan|kurnik|magazyn|mlyn|most|namiot|ogrod|otwor|palac|pawilon|pieczara|pokoik|pomost|sala|schodki|schody|sklep|spizarnia|stajnia|stodola|straznica|stryszek|swiatynia|szczelina|taras|ulica|wejscie|wieza|wyrwa|wyjscie|zagroda|zajazd|zanurkuj|zielarnia)$' _map_hooks_customy = \
   /_map_go custom:%{P1}
 
-/def -q -mregexp -h'SEND ^((obroc|otworz|pchnij|podnies|przecisnij|przedrzyj|przejdz|przeplyn|przeskocz|przesun|rozsun|skocz|wdrap|wejdz|wespnij|wslizgnij|wyjdz|wynurz|zejdz|zsun|zeskocz)( .*|))$' _map_hooks_customy_2 = \
+/def -q -mregexp -h'SEND ^((obroc|otworz|pchnij|podnies|przecisnij|przeczolgaj|przedrzyj|przejdz|przeplyn|przeskocz|przesun|rozsun|skocz|wdrap|wejdz|wespnij|wslizgnij|wyjdz|wynurz|zejdz|zsun|zeskocz)( .*|))$' _map_hooks_customy_2 = \
   /_map_go custom:%{P1}
   
 ;------------------------------------------------------------------------
 ;		   ... NIECH SIE KULKA KRECI! ... 			  |
 ;------------------------------------------------------------------------
 
-/set _map_standard_exits=n|s|e|w|polnoc|poludnie|wschod|zachod|ne|se|nw|sw|polnocny-wschod|poludniowy-wschod|polnocny-zachod|poludniowy-zachod|u|d|gora|dol
-/set _map_follows_list=do wyjscia|na wyjscie|do karczmy|za palisade|do namiotu|przez furtke w palisadzie do wioski|przez klape na dol|po drabinie na gore|brodzac w wodzie na druga strone rzeki|na most|w glab ciemnosci|schodami na dol|schodami do gory|do wnetrza straznicy|na zewnatrz straznicy|przez most na drugi brzeg rzeki|brodem przez strumien|w gore traktem|w dol traktem|traktem w gore|traktem w dol|droga w dol|do otworu|w kierunku otworu|na zewnatrz karczmy|na pomost|sciezka w kierunku ruin|na schody|do srodka kurhanu|do wnetrza wyrwy|schodzisz na dol|na otwor|przez otwor na gore|opuszczajac podwoje warowni|znikajac w podwojach warowni
+/set _map_standard_exits=\
+  n|polnoc|\
+  s|poludnie|\
+  e|wschod|\
+  w|zachod|\
+  ne|polnocny-wschod|\
+  se|poludniowy-wschod|\
+  nw|polnocny-zachod|\
+  sw|poludniowy-zachod|\
+  u|gora|\
+  d|dol
+
+/set _map_follows_list=\
+  brodem przez strumien|\
+  brodzac w wodzie na druga strone rzeki|\
+  do chaty|\
+  do karczmy|\
+  do namiotu|\
+  do otworu|\
+  do srodka kurhanu|\
+  do wnetrza straznicy|\
+  do wnetrza wyrwy|\
+  do wyjscia|\
+  droga w dol|\
+  miedzy skalki|\
+  na most|\
+  na otwor|\
+  na pomost|\
+  na wyjscie|\
+  na zewnatrz karczmy|\
+  na zewnatrz straznicy|\
+  opuszczajac podwoje warowni|\
+  po schodach na dol|\
+  po schodach na gore|\
+  przez furtke w palisadzie do wioski|\
+  przez klape na dol|po drabinie na gore|\
+  przez most na drugi brzeg rzeki|\
+  przez otwor|\
+  przez otwor na gore|\
+  schodami do gory|\
+  schodami na dol|\
+  schodzisz na dol|\
+  sciezka w kierunku ruin|na schody|\
+  traktem w dol|\
+  traktem w gore|\
+  w dol traktem|\
+  w glab ciemnosci|\
+  w glab otworu|\
+  w gore traktem|\
+  w kierunku otworu|\
+  w strone skraju torfowiska|\
+  za palisade|\
+  znikajac w podwojach warowni
 
 /eval /def -mregexp -Fp500 -t'(Wraz z (.*) podazasz|Podazasz) za (.*) (%{_map_follows_list})\.' _map_podazam_za_kims_rozne = /_map_go follow:%%{P4}
 /def -mregexp -Fp500 -t'(Wraz z (.*) podazasz|Podazasz) za (.*) na gore\.' _map_podazam_za_kims_gora = /_map_go exit:gora
@@ -178,6 +229,7 @@
 /set _map_room_prom_grabowa=655d90e2-9e1f-11e2-852c-36be4148278d
 /set _map_room_statek_blaviken_1=e6c6c674-9e21-11e2-852c-36be4148278d
 /set _map_room_statek_novigrad_1=e229c14e-9e20-11e2-852c-36be4148278d
+/set _map_room_statek_novigrad_2=453ffdca-9e4e-11e2-a554-9c4e368dac0c
 /set _map_room_statek_daevon=84a77adc-9e22-11e2-852c-36be4148278d
 /set _map_room_statek_baccala=2244578a-9e4e-11e2-a554-9c4e368dac0c
 /set _map_room_statek_rozrog=
@@ -191,7 +243,8 @@
 /def -mregexp -Fp500 -t' krzyczy: Doplynelismy do przystani w Grabowej Buchcie na poludniowym brzegu Pontaru! Mozna wysiadac!' _map_teleport_prom_grabowa = /_map_teleport %{_map_room_prom_grabowa}
 /def -mregexp -Fp500 -t'(Flavius|Jasnowlosy sniady elf) krzyczy: Doplynelismy do portu Blaviken w krolestwie Redanii! Mozna wysiadac!' _map_teleport_statek_blaviken_1 = /_map_teleport %{_map_room_statek_blaviken_1}
 /def -mregexp -Fp500 -t'(Flavius|Jasnowlosy sniady elf) krzyczy: Doplynelismy do Novigradu w krolestwie Redanii! Mozna wysiadac!' _map_teleport_statek_novigrad_1 = /_map_teleport %{_map_room_statek_novigrad_1}
-/def -mregexp -Fp500 -t'(Flavius|Jasnowlosy sniady elf) krzyczy: Doplynelismy do Daevon, w krolestwie Kaedwen! Mozna wysiadac!' _map_teleport_statek_daevon = /_map_teleport %{_map_room_statek_deavon}
+/def -mregexp -Fp500 -t'(Charonda|Otyly czerwononosy mezczyzna) krzyczy: Doplynelismy do poludniowego portu Novigradu w krolestwie Redanii! Mozna wysiadac!' _map_teleport_statek_novigrad_2 = /_map_teleport %{_map_room_statek_novigrad_2}
+/def -mregexp -Fp500 -t'(Flavius|Jasnowlosy sniady elf) krzyczy: Doplynelismy do Daevon, w krolestwie Kaedwen! Mozna wysiadac!' _map_teleport_statek_daevon = /_map_teleport %{_map_room_statek_daevon}
 /def -mregexp -Fp500 -t'(Charonda|Otyly czerwononosy mezczyzna) krzyczy: Doplynelismy do Baccali! Mozna wysiadac!' _map_teleport_statek_baccala = /_map_teleport %{_map_room_statek_baccala}
 /def -mregexp -Fp500 -t'(Charonda|Otyly czerwononosy mezczyzna) krzyczy: Doplynelismy do przystani pod twierdza Rozrog! Mozna wysiadac!' _map_teleport_statek_rozrog = /_map_teleport %{_map_room_statek_rozrog}
 ;------------------------------------------------------------------------
@@ -262,3 +315,5 @@
 /def -mregexp -Fp500 -t'Po chwili wahania decydujesz sie nie schodzic.' _map_bloker_shekhal_winorosl = /_map_bloker
 /def -mregexp -Fp500 -t'Chcesz wpasc do rozpadliny\? Taka decyzje musisz potwierdzic.' _map_bloker_pustynia_rozpadlina = /_map_bloker
 /def -mregexp -Fp500 -t'Probujesz wspiac sie po pniu, ale robisz to zbyt slamazarnie i zjezdzasz z powrotem w dol.' _map_bloker_baccala_pien = /_map_bloker
+/def -mregexp -Fp500 -t' mezczyzna stoi ci na drodze.$' _map_bloker_straznica = /_map_bloker
+/def -mregexp -Fp500 -t'Probujesz sie ruszyc na (.*), jednak pajecze sieci, w ktore sie w miedzy czasie zaplatales, uniemozliwiaja ci to.' _map_bloker_pajaki = /_map_bloker

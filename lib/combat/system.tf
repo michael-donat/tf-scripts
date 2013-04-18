@@ -153,6 +153,7 @@
     /let name=$(/eval /echo %%{_team_member_name_%{1}})%;\
     /if ({name}!/"") \
         /eval /defend $$(/odmien_M_B %%{_team_member_name_%{1}})%;\
+        /order_defence%;\
     /endif
 
 

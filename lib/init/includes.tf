@@ -10,6 +10,10 @@
 /load combat/defs.tf
 /load combat/exp.tf
 /load combat/binds.tf
+/load combat/subs/spece.tf
+/load combat/subs/spece_npc.tf
+/load combat/subs/spece_bronie.tf
+/load combat/subs/hits.tf
 
 ; status bar
 /load statusbar/init.tf

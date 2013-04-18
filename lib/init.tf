@@ -31,4 +31,4 @@
 
 /map -\
 
-/load ../data/ref/thornag/1.0/src/combat/colors_hits.tf
+;/load ../data/ref/thornag/1.0/src/combat/colors_hits.tf

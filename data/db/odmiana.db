@@ -1720,11 +1720,19 @@
 /def _odmiana_husard = /set _odmiana_husard_dopelniacz=husarda%;/set _odmiana_husard_biernik=husarda%;/set _odmiana_husard_narzednik=husardem
 /def _odmiana_cannis = /set _odmiana_cannis_dopelniacz=cannisa%;/set _odmiana_cannis_biernik=cannisa%;/set _odmiana_cannis_narzednik=cannisem
 /def _odmiana_dab = /set _odmiana_dab_dopelniacz=daba%;/set _odmiana_dab_biernik=daba%;/set _odmiana_dab_narzednik=dabem
-/def _odmiana_gnshin = /set _odmiana_gnshin_dopelniacz=gnshina%;/set _odmiana_gnshin_biernik=gnshina%;/set _odmiana_gnshin_narzednik=gnshinem/def _odmiana_ahtar = /set _odmiana_ahtar_dopelniacz=ahtara%;/set _odmiana_ahtar_biernik=ahtara%;/set _odmiana_ahtar_narzednik=ahtarem
+/def _odmiana_gnshin = /set _odmiana_gnshin_dopelniacz=gnshina%;/set _odmiana_gnshin_biernik=gnshina%;/set _odmiana_gnshin_narzednik=gnshinem
+/def _odmiana_ahtar = /set _odmiana_ahtar_dopelniacz=ahtara%;/set _odmiana_ahtar_biernik=ahtara%;/set _odmiana_ahtar_narzednik=ahtarem
 /def _odmiana_janis = /set _odmiana_janis_dopelniacz=janisa%;/set _odmiana_janis_biernik=janisa%;/set _odmiana_janis_narzednik=janisem
 /def _odmiana_tyndal = /set _odmiana_tyndal_dopelniacz=tyndala%;/set _odmiana_tyndal_biernik=tyndala%;/set _odmiana_tyndal_narzednik=tyndalem
-/def _odmiana_korsarz = /set _odmiana_tyndal_dopelniacz=korsarza%;/set _odmiana_tyndal_biernik=korsarza%;/set _odmiana_tyndal_narzednik=korsarzem
+/def _odmiana_korsarz = /set _odmiana_korsarz_dopelniacz=korsarza%;/set _odmiana_korsarz_biernik=korsarza%;/set _odmiana_korsarz_narzednik=korsarzem
 /def _odmiana_gormir = /set _odmiana_gormir_dopelniacz=gormira%;/set _odmiana_gormir_biernik=gormira%;/set _odmiana_gormir_narzednik=gormirem
 /def _odmiana_erod = /set _odmiana_erod_dopelniacz=eroda%;/set _odmiana_erod_biernik=eroda%;/set _odmiana_erod_narzednik=erodem
 /def _odmiana_illudil = /set _odmiana_illudil_dopelniacz=illudila%;/set _odmiana_illudil_biernik=illudila%;/set _odmiana_illudil_narzednik=illudilem
 /def _odmiana_seleni = /set _odmiana_seleni_dopelniacz=seleni%;/set _odmiana_seleni_biernik=seleni%;/set _odmiana_seleni_narzednik=seleni
+/def _odmiana_ticz = /set _odmiana_ticz_dopelniacz=ticza%;/set _odmiana_ticz_biernik=ticza%;/set _odmiana_ticz_narzednik=ticzem
+/def _odmiana_banita = /set _odmiana_banita_dopelniacz=banity%;/set _odmiana_banita_biernik=banite%;/set _odmiana_banita_narzednik=banita
+/def _odmiana_szpieg = /set _odmiana_szpieg_dopelniacz=szpiega%;/set _odmiana_szpieg_biernik=szpiega%;/set _odmiana_szpieg_narzednik=szpiegem
+/def _odmiana_ochroniarz = /set _odmiana_ochroniarz_dopelniacz=ochroniarza%;/set _odmiana_ochroniarz_biernik=ochroniarza%;/set _odmiana_ochroniarz_narzednik=ochroniarzem
+/def _odmiana_dert = /set _odmiana_dert_dopelniacz=derta%;/set _odmiana_dert_biernik=derta%;/set _odmiana_dert_narzednik=dertem
+/def _odmiana_gordof = /set _odmiana_gordof_dopelniacz=gordofa%;/set _odmiana_gordof_biernik=gordofa%;/set _odmiana_gordof_narzednik=gordofem
+/def _odmiana_tercoral = /set _odmiana_tercoral_dopelniacz=tercorala%;/set _odmiana_tercoral_biernik=tercorala%;/set _odmiana_tercoral_narzednik=tercoralem

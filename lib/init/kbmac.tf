@@ -38,6 +38,7 @@
 /def -i -b'^[[107~' = /key_ctrl_nkp7
 /def -i -b'^[[108~' = /key_ctrl_nkp8
 /def -i -b'^[[109~' = /key_ctrl_nkp9
+/def -i -b'^[[110~' = /key_ctrl_nkp0
 
 /def -i -b'^[[201~' = /key_shift_nkp1
 /def -i -b'^[[202~' = /key_shift_nkp2

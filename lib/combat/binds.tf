@@ -28,6 +28,7 @@
 /def key_ctrl_nkp7=/zr 7
 /def key_ctrl_nkp8=/zr 8
 /def key_ctrl_nkp9=/zr 9
+/def key_ctrl_nkp0=/defend siebie%;/order_defence
 
 /def _bind_kb_key_nkpPlus = ws
 /def _bind_kb_key_nkpEquals = zmeczenie
