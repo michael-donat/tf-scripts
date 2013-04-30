@@ -85,6 +85,15 @@
     /test _exp_set("pierwszego vrana", "drugiego vrana", "trzeciego vrana", "bobolaka")%;\
     /def kasa = zajrzyj do szkatulki
 
+/def potepy = \
+    /_exp_prompt POTEPY%;\
+    /test _exp_set("pierwszego potepienca", "drugiego potepienca", "trzeciego potepienca", "czwartego potepienca")
+
+/def talwar = \
+    /_exp_prompt TALWAR%;\
+    /test _exp_set("pierwsza wojowniczke", "druga wojowniczke", "trzecia wojowniczke", "czwarta wojowniczke")%;\
+    /def skok = przeskocz nad zaglebieniem
+
 /def -p9999 -t'*Mustafa Ali IV*' _exp_location_mustafa = /mustafa
 /def -p9999 -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = /mahak
 /def -p9999 -t'Glowna sala Swiatyni Wiecznego Ognia.' _exp_location_orson = /orson

@@ -67,12 +67,12 @@
 
 /def key_f19 = /_combat_show_who_attacks_whom
 
-/load vendor/dhogrin/Arkadia/spece.tf
-/load vendor/dhogrin/Arkadia/spece_npc.tf
-/load vendor/dhogrin/Arkadia/spece_bronie.tf
-/load vendor/dhogrin/Arkadia/map.tf
-/load vendor/dhogrin/Arkadia/postepy.tf
-/load vendor/dhogrin/Arkadia/skrzynia.tf
-/load vendor/dhogrin/Arkadia/magiki.tf
-/load vendor/dhogrin/Arkadia/ocena.tf
+/load vendor/dhogrin/src/spece.tf
+/load vendor/dhogrin/src/spece_npc.tf
+/load vendor/dhogrin/src/spece_bronie.tf
+/load vendor/dhogrin/src/map.tf
+/load vendor/dhogrin/src/postepy.tf
+/load vendor/dhogrin/src/skrzynia.tf
+/load vendor/dhogrin/src/magiki.tf
+/load vendor/dhogrin/src/ocena.tf
 
