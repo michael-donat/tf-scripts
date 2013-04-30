@@ -23,3 +23,4 @@
 /def -mglob -p2 -t'*Zapalasz*lampe*' light_trigger_5 = /light_fill_tick
 /def -mglob -p2 -t'*Gasisz*' light_trigger_6 = /tickoff
 /def -mglob -p2 -t'*nie jest zapalona*' light_trigger_7 = /tickoff
+/def -mglob -p2 -t'*lampa wypala sie i gasnie.' light_trigger_8 = /tickoff

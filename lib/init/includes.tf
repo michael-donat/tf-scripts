@@ -9,10 +9,6 @@
 /load combat/system.tf
 /load combat/defs.tf
 /load combat/exp.tf
-/load combat/binds.tf
-/load combat/subs/spece.tf
-/load combat/subs/spece_npc.tf
-/load combat/subs/spece_bronie.tf
 /load combat/subs/hits.tf
 
 ; status bar
@@ -40,8 +36,6 @@
 /load hilite.tf
 /load warn.tf
 
-/load map.tf
-
 ; load external bits
 /load vendor/compatibility.tf
 /load vendor/ingwar/cechy.tf
@@ -55,11 +49,6 @@
 /eval /load %{db_odmiana}
 /eval /load init/subs.tf
 
-; temp
-;/load ../src/combat/colors_events.tf
-;/load ../src/combat/colors_hits.tf
-;/load ../src/combat/colors_weapons.tf
-;/load ../src/subs/OK.tf
-;/load ../src/subs/MC.tf
-
+; keys
+/load profile.tf
 

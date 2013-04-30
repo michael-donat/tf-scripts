@@ -1,3 +1,8 @@
+/def k_wszystkich = \
+    /set _gag_stamina=1%;\
+    /send k wszystkich%;\
+    /send zmeczenie
+
 /def zr0 = rozkaz druzynie zaslonic ciebie%;/defend siebie
 /def z0 = /defend siebie
 

@@ -66,3 +66,13 @@
 /def key_esc_f4 = /order_defence
 
 /def key_f19 = /_combat_show_who_attacks_whom
+
+/load vendor/dhogrin/Arkadia/spece.tf
+/load vendor/dhogrin/Arkadia/spece_npc.tf
+/load vendor/dhogrin/Arkadia/spece_bronie.tf
+/load vendor/dhogrin/Arkadia/map.tf
+/load vendor/dhogrin/Arkadia/postepy.tf
+/load vendor/dhogrin/Arkadia/skrzynia.tf
+/load vendor/dhogrin/Arkadia/magiki.tf
+/load vendor/dhogrin/Arkadia/ocena.tf
+

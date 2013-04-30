@@ -1,7 +1,4 @@
 
-; load and connect
-/load data/worlds/thornag.tf
-
 ; init logging
 /load lib/init/log.tf
 
@@ -29,6 +26,4 @@
 
 /pointing + - -
 
-/map -\
-
-;/load ../data/ref/thornag/1.0/src/combat/colors_hits.tf
+/map -

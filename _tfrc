@@ -2,6 +2,6 @@
 
 /load lib/init.tf
 
-; hist specific
+/eval /load ~/%{USER}.tf
 
-
+/addworld mapper localhost 23923s

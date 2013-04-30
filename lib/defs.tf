@@ -51,8 +51,8 @@
 /def wspolny = /alias ' powiedz %%{*}
 /def krasnoludzki = /alias ' jpowiedz %%{*}
 
-/alias wns /send kup bilet%;/send wejdz na statek
-/alias zzs /send zejdz ze statku
+/alias wns /send kup bilet%;/send -h wejdz na statek
+/alias zzs /send -h zejdz ze statku
 
 /def skora = \
     /send powsun dobyta bron do uprzezy%;\

@@ -1,3 +1,10 @@
+/def target = \
+    /let target=%{*}%;\
+    /if ({target}!/"") \
+        /let target_M=$(/odmien_B_M %{*})%;\
+        /test _combat_set_attack_target({target_M}, {target})%;\
+    /endif
+
 /def zabij = \
     /let target=%{*}%;\
     /if ({target}!/"") \

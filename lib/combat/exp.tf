@@ -26,6 +26,7 @@
     /test _exp_set("oficera", "kobolda", "goblina", "pukacza", "trolla", "echinopsa", "barbegazi", "poteznego dostojnego goblina", "siodmego goblina")%;\
     /alias szcz wejdz w szczeline%;\
     /def check = wyjscie%%;s%%;ob poteznego dostojnego goblina%%;n%%;swiatynia%;\
+    /def lec = wejdz w szczeline%%;e%%;e%%;ob poteznego dostojnego goblina%%;w%%;w%%;s%;\
     /_exp_prompt MAHAKAM
 
 /def redcapy = \
@@ -78,6 +79,11 @@
     /test _exp_set("pierwszego korsarza", "drugiego korsarza", "kapitana")%;\
     /_exp_prompt PIRACI%;\
     /def fusta = wejdz na fuste%%;wejdz na fuste
+
+/def vrany = \
+    /_exp_prompt VRANY%;\
+    /test _exp_set("pierwszego vrana", "drugiego vrana", "trzeciego vrana", "bobolaka")%;\
+    /def kasa = zajrzyj do szkatulki
 
 /def -p9999 -t'*Mustafa Ali IV*' _exp_location_mustafa = /mustafa
 /def -p9999 -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = /mahak
