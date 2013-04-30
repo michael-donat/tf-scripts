@@ -1,3 +1,24 @@
+/def _bind_kb_key_nkp1      = /_movement_go_exec sw
+/def _bind_kb_key_nkp2      = /_movement_go_exec s
+/def _bind_kb_key_nkp3      = /_movement_go_exec se
+/def _bind_kb_key_nkp4      = /_movement_go_exec w
+/def _bind_kb_key_nkp6      = /_movement_go_exec e
+/def _bind_kb_key_nkp7      = /_movement_go_exec nw
+/def _bind_kb_key_nkp8      = /_movement_go_exec n
+/def _bind_kb_key_nkp9      = /_movement_go_exec ne
+/def _bind_kb_key_nkp0      = /_movement_go_exec d
+/def _bind_kb_key_nkpDot    = /_movement_go_exec u
+/def _bind_kb_key_nkpMinus  = /_movement_go_exec wyjscie
+
+/def _bind_kb_key_nkp5      = /send zerknij
+
+/def _bind_kb_key_nkpDivide = /k_wszystkich
+/set fastbindkey=_bind_kb_key_nkpTimes
+
+/def _bind_kb_key_nkpPlus = ws
+/def _bind_kb_key_nkpEquals = zmeczenie
+/def key_esc_nkp/ = /_combat_show_who_attacks_whom
+
 /def key_esc_nkp1=/z 1
 /def key_esc_nkp2=/z 2
 /def key_esc_nkp3=/z 3
@@ -29,10 +50,6 @@
 /def key_ctrl_nkp8=/zr 8
 /def key_ctrl_nkp9=/zr 9
 /def key_ctrl_nkp0=/defend siebie%;/order_defence
-
-/def _bind_kb_key_nkpPlus = ws
-/def _bind_kb_key_nkpEquals = zmeczenie
-/def key_esc_nkp/ = /_combat_show_who_attacks_whom
 
 /def key_f16 = /toggle_orders
 

@@ -1,3 +1,0 @@
-#!/bin/bash
-
-cd /Users/thornag/tf/mapper/tf-mapper-1.0/version4 &&  python2.7o main.py --map=version1/map.db --no-panels
