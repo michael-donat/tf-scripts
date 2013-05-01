@@ -76,7 +76,10 @@
 
 /def odmien_M_D = \
 	/let imie=$[tolower({L})]%;\
-    /if ({-L}!~NULL) \
+    /let exception=$(/odmiana_wyjatki %{*})%;\
+    /if ({exception}!~NULL) \
+        /odmien_M_B %{exception}%;\
+    /elseif ({-L}!~NULL) \
         /_odmien_M_D %{-L}%;\
     /endif %;\
     /retrieve_D %{imie}
@@ -118,7 +121,10 @@
 
 /def odmien_M_B = \
 	/let imie=$[tolower({L})]%;\
-    /if ({-L}!~NULL) \
+    /let exception=$(/odmiana_wyjatki %{*})%;\
+    /if ({exception}!~NULL) \
+        /odmien_M_B %{exception}%;\
+    /elseif ({-L}!~NULL) \
         /_odmien_M_B %{-L}%;\
     /endif %;\
     /retrieve_B %{imie}
@@ -160,7 +166,10 @@
 
 /def odmien_M_N = \
 	/let imie=$[tolower({L})]%;\
-    /if ({-L}!~NULL) \
+	/let exception=$(/odmiana_wyjatki %{*})%;\
+    /if ({exception}!~NULL) \
+        /odmien_M_N %{exception}%;\
+    /elseif ({-L}!~NULL) \
         /_odmien_M_N %{-L}%;\
     /endif %;\
     /retrieve_N %{imie}
