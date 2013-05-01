@@ -53,3 +53,4 @@
     /echo
 
 /def rawlog = /quote -S /showme 'vendor/dhogrin/raw/raw_log
+/def testlog = /quote -S /showme '../data/testlog
