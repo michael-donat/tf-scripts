@@ -42,6 +42,11 @@
 /def odmiana_wyjatki = \
     /if ({*}=/"* ze skrzynia *") \
         /let subject=%{1} %{2} %{3}%;\
+    /elseif ({*}=/"* powietrza" | {*}=/"* ziemi" | {*}=/"* wody" | {*}=/"* ognia") \
+        /let subject=$[replace(' powietrza', '', {*})]%;\
+        /let subject=$[replace(' ziemi', '', {subject})]%;\
+        /let subject=$[replace(' wody', '', {subject})]%;\
+        /let subject=$[replace(' ognia', '', {subject})]%;\
     /else \
         /let subject=%;\
     /endif%;\
@@ -197,11 +202,14 @@
 
 /def odmien_B_M = \
 	/let imie=$[tolower({L})]%;\
-    /if ({-L}!~NULL) \
+	/let exception=$(/odmiana_wyjatki %{*})%;\
+    /if ({exception}!~NULL) \
+        /odmien_B_M %{exception}%;\
+    /elseif ({-L}!~NULL) \
         /_odmien_B_M %{-L}%;\
     /endif %;\
-    /odmien_find_M_from_B %{imie}
-;Dhogrin wskazuje wytrzymalego spokojnego wielblada ze skrzynia na grzbiecie jako cel ataku.
+    /odmien_find_M_from_B %{imie}%;\
+
 /def _odmien_B_M = \
     /while ({#}) \
 	    /let dpE=$[substr({1}, -1, 1)] %;\
