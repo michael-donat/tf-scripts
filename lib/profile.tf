@@ -14,8 +14,9 @@
 
 /def _bind_kb_key_nkpDivide = /k_wszystkich
 /set fastbindkey=_bind_kb_key_nkpTimes
+/set mapbindkey=_bind_kb_key_nkpMinus
 
-/def _bind_kb_key_nkpPlus = ws
+/def _bind_kb_key_nkpPlus = wesprzyj
 /def _bind_kb_key_nkpEquals = zmeczenie
 /def key_esc_nkp/ = /_combat_show_who_attacks_whom
 
@@ -67,6 +68,14 @@
 
 /def key_f19 = /_combat_show_who_attacks_whom
 
+/def key_f13 = /1
+/def key_f14 = /2
+/def key_f15 = /3
+
+/def key_esc_f13 = /1%;rozkaz druzynie zabic cel ataku
+/def key_esc_f14 = /2%;rozkaz druzynie zabic cel ataku
+/def key_esc_f15 = /3%;rozkaz druzynie zabic cel ataku
+
 /load vendor/dhogrin/src/listy.tf
 
 /load vendor/dhogrin/src/spece.tf
@@ -75,7 +84,7 @@
 /load vendor/dhogrin/src/map.tf
 /load vendor/dhogrin/src/postepy.tf
 /load vendor/dhogrin/src/skrzynia.tf
-/load vendor/dhogrin/src/magiki.tf
+;/load vendor/dhogrin/src/magiki.tf
 /load vendor/dhogrin/src/ocena.tf
 
 /set licznik_path=~/tf/data/stats/stat.db

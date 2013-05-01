@@ -2,6 +2,8 @@
 /def kto_stowarzyszenie = /send zapytaj ore o krasnoludy
 /alias kkto /kto_stowarzyszenie
 
+/alias uww uderz w brame
+
 /set container_money_B=swoj plecak
 /set container_money_C=swojego plecaka
 /set container_valuables_B=swoja sakiewke

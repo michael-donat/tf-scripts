@@ -27,12 +27,12 @@
     /elseif ({1}=~"+") \
         /set _movement_map_track=1%;\
         /set _map_tracking_enabled_label=$[decode_attr("[MAP]", "Cbggreen")]%;\
-        /def _bind_kb_key_nkpMinus  = /x%;\
+        /def %{mapbindkey}  = /x%;\
         /mapa on%;\
     /else \
         /set _movement_map_track=0%;\
         /set _map_tracking_enabled_label=$[decode_attr("[MAP]", "Cbgred")]%;\
-        /def _bind_kb_key_nkpMinus  = /_movement_go_exec wyjscie%;\
+        /def %{mapbindkey}  = /_movement_go_exec wyjscie%;\
         /mapa off%;\
     /endif
 

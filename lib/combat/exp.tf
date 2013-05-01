@@ -1,11 +1,3 @@
-/def key_f13 = /1
-/def key_f14 = /2
-/def key_f15 = /3
-
-/def key_esc_f13 = /1%;rozkaz druzynie zabic cel ataku
-/def key_esc_f14 = /2%;rozkaz druzynie zabic cel ataku
-/def key_esc_f15 = /3%;rozkaz druzynie zabic cel ataku
-
 /def _exp_set = \
     /purge [0-9]%;\
     /let i=0%; \
@@ -81,18 +73,18 @@
     /def fusta = wejdz na fuste%%;wejdz na fuste
 
 /def vrany = \
-    /_exp_prompt VRANY%;\
     /test _exp_set("pierwszego vrana", "drugiego vrana", "trzeciego vrana", "bobolaka")%;\
     /def kasa = zajrzyj do szkatulki
+        /_exp_prompt VRANY%;\
 
 /def potepy = \
-    /_exp_prompt POTEPY%;\
     /test _exp_set("pierwszego potepienca", "drugiego potepienca", "trzeciego potepienca", "czwartego potepienca")
+    /_exp_prompt POTEPY%;\
 
 /def talwar = \
-    /_exp_prompt TALWAR%;\
     /test _exp_set("pierwsza wojowniczke", "druga wojowniczke", "trzecia wojowniczke", "czwarta wojowniczke")%;\
     /def skok = przeskocz nad zaglebieniem
+    /_exp_prompt TALWAR%;\
 
 /def -p9999 -t'*Mustafa Ali IV*' _exp_location_mustafa = /mustafa
 /def -p9999 -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = /mahak
