@@ -67,6 +67,8 @@
 
 /def key_f19 = /_combat_show_who_attacks_whom
 
+/load vendor/dhogrin/src/listy.tf
+
 /load vendor/dhogrin/src/spece.tf
 /load vendor/dhogrin/src/spece_npc.tf
 /load vendor/dhogrin/src/spece_bronie.tf
@@ -75,4 +77,6 @@
 /load vendor/dhogrin/src/skrzynia.tf
 /load vendor/dhogrin/src/magiki.tf
 /load vendor/dhogrin/src/ocena.tf
+
+/set licznik_path=~/tf/data/stats/stat.db
 
