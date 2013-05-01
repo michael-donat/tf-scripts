@@ -249,3 +249,46 @@
 
 ; BIERNIK -> MIANOWNIK
 ; -----------------------------
+
+; -----------------------------
+; NARZEDNIK -> MIANOWNIK
+
+/def odmien_N_M = \
+	/let imie=$[tolower({L})]%;\
+	/let exception=$(/odmiana_wyjatki %{*})%;\
+    /if ({exception}!~NULL) \
+        /odmien_N_M %{exception}%;\
+    /elseif ({-L}!~NULL) \
+        /_odmien_N_M %{-L}%;\
+    /endif %;\
+    /odmien_find_M_from_N %{imie}%;\
+
+/def _odmien_N_M = \
+    /while ({#}) \
+	    /let dpE=$[substr({1}, -1, 1)] %;\
+	    /let dpEE=$[substr({1}, -2, 2)] %;\
+	    /let dpEEE=$[substr({1}, -3, 3)] %;\
+	    /let dpEEEE=$[substr({1}, -4, 4)] %;\
+		/if (dpEE=~"im") \
+		    /let op_B1=$[strcat(substr({1},0,-2),'i')]%;\
+		/elseif (dpEE=~"ym") \
+		    /let op_B1=$[strcat(substr({1},0,-2),'y')]%;\
+		/endif %;\
+	    /let op_B=$[strcat(op_B, op_B1, ' ')] %;\
+        /shift %;\
+	/done %;\
+	/echo $[tolower({op_B})]
+
+/def odmien_find_M_from_N = \
+    /let patt=*narzednik=%{1}*%;\
+    /let res=$(/list -s _odmiana_* = %{patt})%;\
+    /let res=$[regmatch("_odmiana_(.*)", {res})]%;\
+    /echo %{P1}
+
+; NARZEDNIK -> MIANOWNIK
+; -----------------------------
+
+/def odmien_N_B = \
+    /let M=$(/odmien_N_M %{*})%;\
+    /let B=$(/odmien_M_B %{M})%;\
+    /echo %{B}
