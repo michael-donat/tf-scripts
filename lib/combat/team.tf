@@ -16,13 +16,18 @@
     /let label=$[strcat(decode_attr(" -- -- DRUZYNA -- -- ", "BCbgblue"), "  ")]%;\
     /test _fast_bind_set({label}, "/druzyna", 1)
 
+/def ask_druzyna = \
+    /if ({*}=~NULL) \
+        /send druzyna%;\
+    /endif
+
 /def druzyna = \
     /def -t'Nie jestes czlonkiem zadnej druzyny.' _team_members_trigger_no_team = /_team_members_purge%;/unset _team_members_list_separated%;/quote -S /unset `/listvar -s \_team\_member\_*%;\
     /def -t'Nie jestes w zadnej druzynie.' _team_members_trigger_no_team_2 = /_team_members_purge%;/unset _team_members_list_separated%;/quote -S /unset `/listvar -s \_team\_member\_*%;\
     /def -mregexp -p5 -t'^Druzyne prowadzi (.*)( i|, w ktorej) oprocz ciebie (jest|sa) w niej jeszcze(|:) (.*)\.\$' _team_members_trigger_team_1 = /test _team_members_set("%%{P1}", "%%{P5}")%%;/set _team_leader %%{P1}%;\
     /def -mregexp -p5 -t'^Druzyne prowadzi (.*)\, zas ty jestes jej jedynym czlonkiem\.\$' _team_members_trigger_team_2 = /test _team_members_set("%%{P1}")%%;/set _team_leader %%{P1}%;\
     /def -mregexp -p5 -t'^Przewodzisz druzynie, w ktorej oprocz ciebie (jest jeszcze|sa(| w niej) jeszcze:) (.*)\.\$' _team_members_trigger_team_3 = /test _team_members_set("%%{P3}")%%;/set _team_leader=-%;\
-    /send druzyna
+    /ask_druzyna %{*}
 
 /def -mregexp -p20 -t'Od teraz jej sklad stanowicie (.*)\.' _team_changed_trigger_1 = /_team_set_fast_bind
 /def -mregexp -p20 -t'Porzucasz (swoja |)druzyne' _team_changed_trigger_2 = /_team_set_fast_bind

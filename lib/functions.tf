@@ -51,3 +51,5 @@
 ;    /eval /set ___lineTruScreen=$[strrep("-", columns()-10)]%;\
 ;    /test echo({___lineTruScreen})
     /echo
+
+/def rawlog = /quote -S /showme 'vendor/dhogrin/raw/raw_log

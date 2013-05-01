@@ -74,16 +74,16 @@
 
 /def vrany = \
     /test _exp_set("pierwszego vrana", "drugiego vrana", "trzeciego vrana", "bobolaka")%;\
-    /def kasa = zajrzyj do szkatulki
-        /_exp_prompt VRANY%;\
+    /def kasa = zajrzyj do szkatulki%;\
+    /_exp_prompt VRANY
 
 /def potepy = \
-    /test _exp_set("pierwszego potepienca", "drugiego potepienca", "trzeciego potepienca", "czwartego potepienca")
-    /_exp_prompt POTEPY%;\
+    /test _exp_set("pierwszego potepienca", "drugiego potepienca", "trzeciego potepienca", "czwartego potepienca")%;\
+    /_exp_prompt POTEPY
 
 /def talwar = \
     /test _exp_set("pierwsza wojowniczke", "druga wojowniczke", "trzecia wojowniczke", "czwarta wojowniczke")%;\
-    /def skok = przeskocz nad zaglebieniem
+    /def skok = przeskocz nad zaglebieniem%;\
     /_exp_prompt TALWAR%;\
 
 /def -p9999 -t'*Mustafa Ali IV*' _exp_location_mustafa = /mustafa

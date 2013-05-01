@@ -1,11 +1,12 @@
-/load ../src/combat/colors_hits.tf
-/def tests = /reload%;/test_combat_events
+
+/def processTargetSet = \
+    /let target=%{1}%;\
+    /set _combat_attack_target=$(/odmien_B_M %{1})%;\
+    /test _combat_prompt_attack({target})
 
 /def _set_targetting_mode_set_target = \
     /def -p50 -mregexp -t' wskazuje (.*) jako cel ataku\.$$' _combat_event_set_attack_target = \
-        /let target=%%{P1}%%;\
-        /set _combat_attack_target=$$(/odmien_B_M %%{P1})%%;\
-        /test _combat_prompt_attack({target})%;\
+        /test processTargetSet("%%{P1}")%;\
     \
     /def -p50 -mregexp -t' wskazuje (.*) jako cel obrony\.$$' _combat_event_set_defence_target = \
         /let target=%%{P1}%%;\
@@ -23,17 +24,13 @@
 /def _set_targetting_mode_point_at = \
     /def -p49 -mregexp -t' wskazuje (.*)\.$$' _combat_event_set_attack_target = \
         /if ({PL}=~{_team_leader}) \
-            /let target=%%{P1}%%;\
-            /set _combat_attack_target=$$(/odmien_B_M %%{P1})%%;\
-            /test _combat_prompt_attack({target})%%;\
+            /test processTargetSet(%{P1})%%;\
         /endif
 
 /def _set_targetting_mode_look_at_target = \
     /def -mregexp -t' spoglada morderczo na (.*)\.$$' _combat_event_set_attack_target = \
         /if ({PL}=~{_team_leader}) \
-            /let target=%%{P1}%%;\
-            /set _combat_attack_target=$$(/odmien_B_M %%{P1})%%;\
-            /test _combat_prompt_attack({target})%%;\
+            /test processTargetSet(%{P1})%%;\
         /endif%;\
     \
     /def -mregexp -t' spoglada opiekunczo na (.*)\.$$' _combat_event_set_defence_target = \
@@ -57,9 +54,7 @@
         /endif
 
 /def -mregexp -t'.* wydaje ci rozkaz ataku na (.*).' _combat_event_set_attack_target_from_order = \
-    /let target=%{P1}%;\
-    /set _combat_attack_target=$(/odmien_B_M %{P1})%;\
-    /test _combat_prompt_attack({target})
+    /test processTargetSet({P1})
 
 /def -mregexp -Fp2 -t'(Powoli osuwasz sie na ziemie|Potem robi sie ciemno|Sila uderzania zamroczyla cie|czujesz, ze tracisz przytomnosc|Nagle czujesz jak na glowe spada ci ciezki sznur|Nagle czujesz, ze tracisz kontrole nad swym cialem| wali cie na odlew)' _combat_event_stun = \
 	/let label=$[strcat(decode_attr(" --*  OGLUSZENIE *-- ", "BCbgblue"), "  ")]%;\
