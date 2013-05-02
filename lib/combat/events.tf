@@ -243,13 +243,11 @@
 
 ;##############################      ATAKI  ATAKI      ###########################
 
-/def -aLg -mregexp -t'^Na rozkaz (.*) rzuca sie do ataku na ciebie!' _combat_event_attacks_me_on_order = \
-    /echo -p >   @{Crgb025}Z rozkazu %{P1} @{Crgb500}ATAKUJE @{Crgb150}-- CIEBIE! --
-
-/def -aLg -mregexp -t'^([a-z\s]*) atakuje (.*)(?:\.|!)$$' _combat_event_attacks = \
-    /let who=%{P1}%;\
-    /let whom_B=%{P2}%;\
-    /if ({whom_B}=~"cie") \
+/def displayAttack = \
+    /let who=%{1}%;\
+    /let whom_B=%{2}%;\
+    /let how=@{Crgb025}%{3}%;\
+    /if ({whom_B}=~"cie" | {whom_B}=~"ciebie") \
         /let whom=$[decode_attr("-- CIEBIE! --", "Crgb150")]%;\
         /beep%;\
     /else \
@@ -257,7 +255,10 @@
         /let whom=$[decode_attr({whom_B}, $(/_team_get_name_color %{whom}))]%;\
     /endif%;\
     /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
-    /echo -p >   %{who} @{Crgb500}ATAKUJE@{n} %{whom}
+    /echo -p >  >  >  %{who} @{Crgb500}ATAKUJE@{n} %{whom}%{how}
+
+/def -aLg -mregexp -t'^Na rozkaz (.*) rzuca sie do ataku na ciebie!' _combat_event_attacks_me_on_order = \
+    /echo -p >   @{Crgb025}Z rozkazu %{P1} @{Crgb500}ATAKUJE @{Crgb150}-- CIEBIE! --
 
 /def -aLg -p1 -mregexp -t' wspiera (.*) w walce z (.*)\.$$' _combat_event_supports = \
     /let who=%{PL}%;\
@@ -269,41 +270,43 @@
     /echo -p >   %{who} @{Crgb500}WSPIERA@{n} %{whom}@{Cgray13} w walce z @{Crgb530}%{against}
 
 /def -aLg -p1 -mregexp -t'^Z typowym krasnoludzkim zacietrzewieniem (.*) rzuca sie na (.*) nie baczac na to, ze moze niebawem przyjdzie mu dolaczyc do swych Przodkow\.$$' _combat_event_attacks_kpzabij = \
-    /let who=%{P1}%;\
-    /let whom_B=%{P2}%;\
-    /if ({whom_B}=~"ciebie") \
-        /let whom=$[decode_attr("-- CIEBIE! --", "Crgb150")]%;\
-    /else \
-        /let whom=$(/odmien_B_M %{whom_B})%;\
-        /let whom=$[decode_attr({whom_B}, $(/_team_get_name_color %{whom}))]%;\
-    /endif%;\
-    /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
-    /echo -p >   %{who} @{Crgb500}ATAKUJE@{n} %{whom}@{Crgb025} -> via kpzabij
+    /test displayAttack({P1}, {P2}, ' -> via kpzabij')
 
-/def -aLg -p1 -mregexp -t' mruzac oczy w oczekiwaniu plynacej z walki rozkoszy rzuca sie na (.*)(?:!|\.)$$' _combat_event_attacks_mczabij = \
-    /let who=%{PL}%;\
-    /let whom_B=%{P1}%;\
-    /if ({whom_B}=~"ciebie") \
-        /let whom=$[decode_attr("-- CIEBIE! --", "Crgb150")]%;\
-    /else \
-        /let whom=$(/odmien_B_M %{whom_B})%;\
-        /let whom=$[decode_attr({whom_B}, $(/_team_get_name_color %{whom}))]%;\
-    /endif%;\
-    /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
-    /echo -p >   %{who} @{Crgb500}ATAKUJE@{n} %{whom}@{Crgb025} -> via mczabij
+/def -aLg -mregexp -t'^([a-z\s]*) atakuje (.*)(?:\.|!)$$' _combat_event_attacks = \
+    /test displayAttack({P1}, {P2})
+
+/def -aLg -p1 -mregexp -t' mruzac oczy w oczekiwaniu plynacej z walki rozkoszy rzuca sie na (.*)(?:!|\.)$$' _combat_event_attacks_sla-mczabij = \
+    /test displayAttack({PL}, {P1}, ' -> via sla-mczabij')
 
 /def -aLg -p1 -mregexp -t'Glosno wyjac z pochylonym nisko lbem, (.*) rzuca sie na (.*), niczym wyglodnialy wilk polujacy na swa ofiare\.$$' _combat_event_attacks_okzabij = \
-    /let who=%{P1}%;\
-    /let whom_B=%{P2}%;\
-    /if ({whom_B}=~"ciebie") \
-        /let whom=$[decode_attr("-- CIEBIE! --", "Crgb150")]%;\
-    /else \
-        /let whom=$(/odmien_B_M %{whom_B})%;\
-        /let whom=$[decode_attr({whom_B}, $(/_team_get_name_color %{whom}))]%;\
-    /endif%;\
-    /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
-    /echo -p >   %{who} @{Crgb500}ATAKUJE@{n} %{whom}@{Crgb025} -> via okzabij
+    /test displayAttack({P1}, {P2}, ' -> via ogr-atak')
 
+/def -aLg -p1 -mregexp -t' przerazliwie ryczac i toczac piane z pyska niczym wsciekly byk atakuje (.*)\.$$' _combat_event_attacks_wzzabij = \
+    /test displayAttack({PL}, {P1}, ' -> via zarlok-atak')
+
+/def -aLg -p1 -mregexp -t' zanoszac sie szalonym smiechem rzuca sie na (.*)[!.]' _combat_event_attacks_ras-mczabij = \
+    /test displayAttack({PL}, {P1}, ' -> via ras-mczabij')
+
+/def -aLg -p1 -mregexp -t' glosno krzyczac: Krew dla Boga Krwi! Czaszki dla Tronu Czaszek! rzuca sie na (.*)[!.]' _combat_event_attacks_kho-mczabij = \
+    /test displayAttack({PL}, {P1}, ' -> via kho-mczabij')
+
+/def -aLg -p1 -mregexp -t' z pelnym przebieglosci blyskiem w oku rzuca sie na (.*)[!.]' _combat_event_attacks_tzc-mczabij = \
+    /test displayAttack({PL}, {P1}, ' -> via tzc-mczabij')
+
+/def -aLg -p1 -mregexp -t' przyzywajac chrypiacym glosem imie Nurgla rzuca sie na (.*)[!.]' _combat_event_attacks_nur-mczabij = \
+    /test displayAttack({PL}, {P1}, ' -> via nur-mczabij')
+
+/def -aLg -p1 -mregexp -t' wykrzykujac glosno swoja nienawisc rzuca sie na (.*)[!.]' _combat_event_attacks_mal-mczabij = \
+    /test displayAttack({PL}, {P1}, ' -> via mal-mczabij')
+
+/def -aLg -p1 -mregexp -t' wykrzywiajac twarz w okrutnym grymasie rzuca sie na (.*)[!.]' _combat_event_attacks_scozabij = \
+    /test displayAttack({PL}, {P1}, ' -> via scozabij')
+
+/def -aLg -p1 -mregexp -t'Przy ogluszajacym akompaniamencie okrzyku bojowego \'von Raugen!\' (.*) rzuca sie na (.*), wiazac [^ ]+ walka!' _combat_event_attacks_vrzabij = \
+    /test displayAttack({P1}, {P2}, ' -> via vrzabij')
+
+/def -aLg -p1 -mregexp -t'W oczach (.*) rozpala sie swiety ogien nienawisci i z imieniem Morra na ustach rzuca sie do walki z (.*)[!.]' _combat_event_attacks_morrzabij = \
+    /test displayAttack({P1}, {P2}, ' -> via morzabij')
 
 /def -aLg -mregexp -t' probuje zaatakowac (.*), lecz (.*) zagradza (?:mu|jej) droge\.$$' _combat_event_unable_to_attack = \
     /let who=%{PL}%;\
@@ -366,119 +369,83 @@
 
 ;##############################      PRZEBIJANIE  PRZEBIJANIE      ###########################
 
-/def -aLg -mregexp -t' rzuca sie na (.*), bezskutecznie probujac przebic sie przez (jego|jej) ochrone\.$$' _combat_event_cover_break_failed = \
-    /let who=%{PL}%;\
-    /let whom_B=%{P1}%;\
-    /let whom=$(/odmien_B_M %{P1})%;\
-    /let whom_D=$(/odmien_M_D %{whom})%;\
-    /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
-    /let whom=$[decode_attr($(/ucfirstname %{whom_D}), $(/_team_get_name_color %{whom}))]%;\
-    /echo -p >   %{who} @{Crgb145}nie moze przebic ochrony@{n} %{whom}
-
-/def -aLg -mregexp -t'^Bezskutecznie rzucasz sie na (.*), probujac przebic sie przez (jego|jej) ochrone\.$$' _combat_event_cover_break_i_failed = \
-    /let whom_B=%{P1}%;\
-    /let whom=$(/odmien_B_M %{P1})%;\
-    /let whom_D=$(/odmien_M_D %{whom})%;\
-    /let whom=$[decode_attr($(/ucfirstname %{whom_D}), $(/_team_get_name_color %{whom}))]%;\
-    /echo -p >   @{Crgb145}-- TY -- nie mozesz przebic ochrony@{n} %{whom}
-
-/def -aLg -mregexp -t'^Rzucasz sie na (.*) przebijajac sie przez (jego|jej) ochrone\.$$' _combat_event_cover_i_break = \
-    /let whom_B=%{P1}%;\
-    /let whom=$(/odmien_B_M %{P1})%;\
-    /let whom_D=$(/odmien_M_D %{whom})%;\
-    /let whom=$[decode_attr($(/ucfirstname %{whom_D}), $(/_team_get_name_color %{whom}))]%;\
-    /echo -p >   @{Crgb145}-- TY -- PRZEBIJASZ OBRONE@{n} %{whom}
-
-/def -aLg -mregexp -t' rzuca sie na (.*) przebijajac sie przez (jego|jej) ochrone\.$$' _combat_event_cover_break = \
-    /let who=%{PL}%;\
-    /let whom_B=%{P1}%;\
-    /let whom=$(/odmien_B_M %{P1})%;\
-    /if ({whom}=~{_combat_attack_target}) \
-        /_combat_prompt_attack_after_break %{whom_B}%;\
+/def displayGuardBreakAttempt = \
+    /let who=%{1}%;\
+    /let whom_B=%{2}%;\
+    /let success=%{3}%;\
+    /if ({whom_B}=~"") \
+        /if ({success}=~"true") \
+            /let info=~+-~+-~+-~+- RZUCA SIE NA ~+-~+-~+-~+- @{Crgb150} -- CIEBIE --%;\
+            /let color=@{Cred}%;\
+        /else \
+            /let info=probuje rzucic sie na @{Crgb150}-- CIEBIE --%;\
+            /let color=@{Cred}%;\
+        /endif %;\
+    /else \
+        /let whom=$(/odmien_B_M %{whom_B})%;\
+        /let is_member=$[_team_is_member({whom})]%;\
+        /let whom_D=$(/odmien_M_D %{whom})%;\
+        /if ({who}=~"") \
+            /if ({success}=~"true") \
+                /let info=-- TY -- PRZEBIJASZ OCHRONE%;\
+                /let color=@{Crgb145}%;\
+            /else \
+                /let info=-- TY -- nie mozesz przebic ochrony%;\
+                /let color=@{Crgb145}%;\
+            /endif %;\
+        /else \
+            /if ({success}=~"true") \
+                /if ({is_member}!=1) \
+                    /let info=PRZEBIL OCHRONE%;\
+                    /let color=@{Crgb145}%;\
+                /else \
+                    /let info=~+-~+-~+-~+-  PRZEBIL OCHRONE  ~+-~+-~+-~+- %;\
+                    /defend %{whom}%;\
+                    /let color=@{Crgb505}%;\
+                /endif%;\
+            /else \
+                /let info=nie moze przebic ochrony%;\
+                /let color=@{Crgb145}%;\
+            /endif%;\
+            /if ({whom}=~{_combat_attack_target}) \
+                /_combat_prompt_attack_after_break %{whom_B}%;\
+            /endif%;\
+        /endif%;\
     /endif%;\
-    /let whom_D=$(/odmien_M_D %{whom})%;\
-    /let whom=$[decode_attr($(/ucfirstname %{whom_D}), $(/_team_get_name_color %{whom}))]%;\
+    \
     /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
-    /echo -p >   %{who} @{Crgb145}PRZEBIL OCHRONE@{n} %{whom}
+    /let whom=$[decode_attr($(/ucfirstname %{whom_D}), $(/_team_get_name_color %{whom}))]%;\
+    /echo -p >   %{who} %{color}%{info}@{n} %{whom}
+
+/def -p100 -aLg -mregexp -t' rzuca sie na ciebie, bezskutecznie probujac przebic sie przez twoja ochrone\.$$' _combat_event_my_cover_break_failed = \
+    /test displayGuardBreakAttempt({PL}, '', "false")
+
+/def -p100 -aLg -mregexp -t' rzuca sie na ciebie przebijajac sie przez twoja ochrone\.$$' _combat_event_my_cover_break = \
+    /test displayGuardBreakAttempt({PL}, '', "true")
+
+/def -p100 -aLg -mregexp -t' rzuca sie na (.*), bezskutecznie probujac przebic sie przez (jego|jej) ochrone\.$$' _combat_event_cover_break_failed = \
+    /test displayGuardBreakAttempt({PL}, {P1}, "false")
+
+/def -p100 -aLg -mregexp -t'^Bezskutecznie rzucasz sie na (.*), probujac przebic sie przez (jego|jej) ochrone\.$$' _combat_event_cover_break_i_failed = \
+    /test displayGuardBreakAttempt('', {P1}, "false")
+
+/def -p100 -aLg -mregexp -t'^Rzucasz sie na (.*) przebijajac sie przez (jego|jej) ochrone\.$$' _combat_event_cover_i_break = \
+    /test displayGuardBreakAttempt('', {P1}, "true")
+
+/def -p100 -aLg -mregexp -t' rzuca sie na (.*) przebijajac sie przez (jego|jej) ochrone\.$$' _combat_event_cover_break = \
+    /test displayGuardBreakAttempt({PL}, {P1}, "true")
 
 
 ;######################## INNE INNE INNE ###############################
 
-/def -ag -t'Zabiles *' -p15 _combat_event_kill_1 = \
+/def -p100 -ag -t'Zabiles *' -p15 _combat_event_kill_1 = \
     /echo -p @{Cbgred} |  ############  Z A B I L E S  ############%;\
     /echo -p @{Cbgred} |  ############  Z A B I L E S  ############%;\
     /echo -p @{Cbgred} |  ############  Z A B I L E S  ############%;\
 
-/def -mregexp -ag -t'(.*) (polegl|umarl)(a|)\.' -p15 _combat_event_kill_2 = \
+/def -p100 -mregexp -ag -t'(.*) (polegl|umarl)(a|)\.' -p15 _combat_event_kill_2 = \
     /echo%;\
     /echo -p @{Cred} |  ############  Z G O N  ############%;\
     /echo -p @{Cred} |  ############  Z G O N  ############    %{P1}%;\
     /echo -p @{Cred} |  ############  Z G O N  ############%;\
     /echo
-
-
-
-
-/def test_combat_events = \
-/showme%;\
-/showme ##############################      ZASLONY ZASLONY      ###########################%;\
-/showme #%;\
-/showme #               Brak druzyny, celu ataku i obrony%;\
-/showme #%;\
-/echo%;\
-/_combat_clear_attack_target%;/_combat_clear_defence_target%;\
-/showme Dhogrin zrecznie zaslania Ravene przed ciosami postawnej burkliwej kobiety.%;\
-/showme Dhogrin zrecznie zaslania postawna burkliwa kobiete przed ciosami wrogow.%;\
-/showme Imrod zrecznie zaslania cie przed ciosami Sagita.%;\
-/showme Imrod zrecznie zaslania cie przed ciosami wrogow.%;\
-/showme Na rozkaz Hunverta Oja zaslania cie przed ciosami morderczego kobolda.%;\
-/showme Na rozkaz Galnosa Ghardrim zaslania Samora przed ciosami uwaznego ogolonego mezczyzny.%;\
-/showme Na rozkaz Hunverta Oja zaslania cie przed ciosami wrogow.%;\
-/showme Na rozkaz Galnosa Ghardrim zaslania Samora przed ciosami wrogow.%;\
-/showme Na twoj rozkaz Connie zaslania cie przed ciosami Armanzora.%;\
-/showme Na twoj rozkaz Loptak probuje zaslonic cie przed ciosami Iluandile, jednak nie jest w stanie tego uczynic.%;\
-/showme Mlody smagly mezczyzna zrecznie zaslania mlodego zylastego mezczyzne przed twoimi ciosami.%;\
-/showme Zrecznie zaslaniasz Dalgara przed ciosami jaskiniowego ogromnego trolla.%;\
-/showme Na rozkaz Hunverta zaslaniasz Gharkha przed ciosami ogromnego kudlatego mezczyzny.%;\
-/showme >%;\
-/showme Grodo probuje zaslonic postawna burkliwa kobiete przed ciosami okrutnego kobolda, jednak nie jest w stanie tego uczynic.%;\
-/showme Grodo probuje zaslonic cie przed ciosami poteznego martwego mezczyzny, jednak nie jest w stanie tego uczynic.%;\
-/showme Na rozkaz Hunverta Gwilli probuje zaslonic cie przed ciosami poteznego martwego mezczyzny, jednak nie jest w stanie tego uczynic.%;\
-/showme Probujesz zaslonic Varriza przed ciosami okrutnego kobolda, jednak nie jestes w stanie tego uczynic.%;\
-/showme Na rozkaz Hunverta probujesz zaslonic Groda przed ciosami ogromnego smierdzacego wichta i wysokiego agresywnego wichta, jednak nie jestes w stanie tego uczynic.%;\
-/showme >%;\
-/showme >%;\
-/showme%;\
-/showme ##############################      ATAKI ATAKI      ###########################%;\
-/showme #%;\
-/showme #               Brak druzyny, celu ataku i obrony%;\
-/showme #%;\
-/showme%;\
-/showme Dlugoreki potezny redcap atakuje cie!%;\
-/showme Wspierasz Meksora w walce z jaskiniowym ogromnym trollem.%;\
-/showme Geronia atakuje Belmora.%;\
-/showme Na rozkaz Sagita Iluandile rzuca sie do ataku na ciebie!%;\
-/showme Pokraczny ogromny redcap wspiera pokracznego poteznego redcapa w walce z Borubarem.%;\
-/showme Z typowym krasnoludzkim zacietrzewieniem Borubar rzuca sie na pokracznego poteznego redcapa nie baczac na to, ze moze niebawem przyjdzie mu dolaczyc do swych Przodkow.%;\
-/showme Z typowym krasnoludzkim zacietrzewieniem Borubar rzuca sie na ciebie nie baczac na to, ze moze niebawem przyjdzie mu dolaczyc do swych Przodkow.%;\
-/showme Thrangorn mruzac oczy w oczekiwaniu plynacej z walki rozkoszy rzuca sie na ciebie!%;\
-/showme Thrangorn mruzac oczy w oczekiwaniu plynacej z walki rozkoszy rzuca sie na Borubara!%;\
-/showme Glosno wyjac z pochylonym nisko lbem, Gromgol rzuca sie na ciebie, niczym wyglodnialy wilk polujacy na swa ofiare.%;\
-/showme Glosno wyjac z pochylonym nisko lbem, Gromgol rzuca sie na Varriza, niczym wyglodnialy wilk polujacy na swa ofiare.%;\
-/showme Varriz probuje zaatakowac tegiego butnego mezczyzne, lecz dlugoreki czarnowlosy mezczyzna zagradza mu droge.%;\
-/showme Ravena probuje wesprzec Hunverta w walce z klekoczacym strasznym kosciotrupem, lecz gnijacy martwy mezczyzna zagradza jej droge.%;\
-/showme Heimo probuje zaatakowac Groda, lecz zagradzasz mu droge.%;\
-/showme Grozny goblin probuje zaatakowac Varriza, ale zagradzasz mu droge!%;\
-/showme Okrutny kobold probuje zaatakowac ciebie, ale Hunvert zagradza mu droge!%;\
-/showme Probujesz wesprzec Hunverta w walce z silna burkliwa kobieta, lecz smukla burkliwa kobieta zagradza ci droge.%;\
-/showme Atakujesz muskularnego goblina, lecz zezowaty goblin zagradza ci droge.%;\
-/showme Na rozkaz Bushiego Hunvert rzuca sie do ataku na trupiobladego demonicznego mezczyzne!%;\
-/showme Na rozkaz Dhogrina rzucasz sie do ataku na przerazajacego wysokiego goblina!%;\
-/showme >%;\
-/showme Dhogrin rzuca sie na postawna burkliwa kobiete, bezskutecznie probujac przebic sie przez jej ochrone.%;\
-/showme Dhogrin rzuca sie na postawna burkliwa kobiete przebijajac sie przez jej ochrone.%;\
-/showme Bezskutecznie rzucasz sie na pomniejszego czarnego demona, probujac przebic sie przez jego ochrone.%;\
-/showme Rzucasz sie na Xamusa przebijajac sie przez jego ochrone.%;\
-/showme Na rozkaz Bushiego Talos rzuca sie do ataku na pomniejszego czarnego demona, ale wpada na wiekszego czarnego demona!%;\
-/showme DODAJ SWOJE ROZKAZY
-

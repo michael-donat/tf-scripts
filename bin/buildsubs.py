@@ -21,25 +21,25 @@ class Callbacks:
         return "/set MCsign=@{BxCyellow}(@{BxCred}~MC~@{BxCyellow})@{n}"
 
     def lineMC(self, p1, p2, r, i):
-        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+""+p1[1:]+") "+p2+" (mutant|mutantka|"+r+")|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /substitute -p @{}%{PL}%{P1}%{MCsign}%{P4}%{PR}"
+        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+""+p1[1:]+") "+p2+" (mutant|mutantka|"+r+")|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /substitute -p @{}%{PL}%{P1}%{MCsign}%{P4- }%{PR}"
 
     def headerOHM(self):
         return "/set OHMsign=[OHM] @{n}"
 
     def lineOHM(self, p1, p2, r, i):
-        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+")"+p1[1:]+" "+p2+" "+r+"|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /substitute -p @{}%{PL}%{P1}%{OHMsign}%{P4}%{PR}"
+        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+")"+p1[1:]+" "+p2+" "+r+"|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /substitute -p @{}%{PL}%{P1}%{OHMsign}%{P4- }%{PR}"
 
     def headerSC(self):
         return "/set SCsign=@{BxCyellow}(@{BxCgreen}~SC~@{BxCyellow})@{n}"
 
     def lineSC(self, p1, p2, r, i):
-        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+")"+p1[1:]+" "+p2+" "+r+"|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /substitute -p @{}%{PL}%{P1}%{SCsign}%{P4}%{PR}"
+        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+")"+p1[1:]+" "+p2+" "+r+"|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /substitute -p @{}%{PL}%{P1}%{SCsign}%{P4- }%{PR}"
 
     def headerOK(self):
         return "/set OKsign=@{BxCyellow}(@{BxCred}~OK~@{BxCyellow})@{n}"
 
     def lineOK(self, p1, p2, r, i):
-        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+")"+p1[1:]+" "+p2+" "+r+"|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /substitute -p @{}%{PL}%{P1}%{OKsign}%{P4}%{PR}"
+        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+")"+p1[1:]+" "+p2+" "+r+"|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /substitute -p @{}%{PL}%{P1}%{OKsign}%{P4- }%{PR}"
 
 def usage():
     print 'buildsubs --source= --destination='
