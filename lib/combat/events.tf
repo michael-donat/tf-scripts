@@ -4,53 +4,47 @@
     /set _combat_attack_target=$(/odmien_B_M %{1})%;\
     /test _combat_prompt_attack({target})
 
+/def processDefenceSet = \
+    /let target=%{1}%;\
+    /let who=%{2}%;\
+    /if ({target}=~"ciebie") \
+        /set _combat_defence_target=TY%;\
+    /elseif ({target}=~"siebie") \
+        /set _combat_defence_target=%{who}%;\
+        /let promptlabel=$(/odmien_M_B %{who})%;\
+        /test _combat_prompt_defence({promptlabel})%;\
+    /else \
+        /set _combat_defence_target=$(/odmien_B_M %{target})%;\
+        /test _combat_prompt_defence({target})%;\
+    /endif
+
 /def _set_targetting_mode_set_target = \
     /def -p50 -mregexp -t' wskazuje (.*) jako cel ataku\.$$' _combat_event_set_attack_target = \
         /test processTargetSet("%%{P1}")%;\
     \
     /def -p50 -mregexp -t' wskazuje (.*) jako cel obrony\.$$' _combat_event_set_defence_target = \
-        /let target=%%{P1}%%;\
-        /if ({P1}=~"ciebie") \
-            /set _combat_defence_target=TY%%;\
-        /elseif ({P1}=~"siebie") \
-            /set _combat_defence_target=%%{PL}%%;\
-            /let promptlabel=$$(/odmien_M_B %%{PL})%%;\
-            /test _combat_prompt_defence({promptlabel})%%;\
-        /else \
-            /set _combat_defence_target=$$(/odmien_B_M %%{P1})%%;\
-            /test _combat_prompt_defence({target})%%;\
-        /endif
+        /test processDefenceSet("%%{P1}", "%%{PL}")%;\
 
 /def _set_targetting_mode_point_at = \
     /def -p49 -mregexp -t' wskazuje (.*)\.$$' _combat_event_set_attack_target = \
         /if ({PL}=~{_team_leader}) \
-            /test processTargetSet(%{P1})%%;\
+            /test processTargetSet("%%{P1}")%%;\
         /endif
 
 /def _set_targetting_mode_look_at_target = \
     /def -mregexp -t' spoglada morderczo na (.*)\.$$' _combat_event_set_attack_target = \
         /if ({PL}=~{_team_leader}) \
-            /test processTargetSet(%{P1})%%;\
+            /test processTargetSet("%%{P1}")%%;\
         /endif%;\
     \
     /def -mregexp -t' spoglada opiekunczo na (.*)\.$$' _combat_event_set_defence_target = \
         /if ({PL}=~{_team_leader}) \
-            /let target=%%{P1}%%;\
-            /if ({target}=~"ciebie") \
-                /set _combat_defence_target=TY%%;\
-            /else \
-                /set _combat_defence_target=$$(/odmien_B_M %%{target})%%;\
-                /test _combat_prompt_defence({target})%%;\
-            /endif%%;\
+            /test processDefenceSet("%%{P1}", "%%{PL}")%%;\
         /endif%;\
     \
     /def -mregexp -t' spoglada na siebie opiekunczo\.$$' _combat_event_set_defence_target_on_self = \
         /if ({PL}=~{_team_leader}) \
-            /let target=%%{PL}%%;\
-            /set _combat_defence_target=%%{target}%%;\
-            /let target_B=$$(/odmien_M_B %%{target})%%;\
-            /let target_B=$$(/ucfirstname %%{target_B})%%;\
-            /test _combat_prompt_defence({target_B})%%;\
+            /test processDefenceSet("siebie", "%%{PL}")%%;\
         /endif
 
 /def -mregexp -t'.* wydaje ci rozkaz ataku na (.*).' _combat_event_set_attack_target_from_order = \
@@ -398,6 +392,9 @@
                 /if ({is_member}!=1) \
                     /let info=PRZEBIL OCHRONE%;\
                     /let color=@{Crgb145}%;\
+                    /if ({whom}=~{_combat_attack_target}) \
+                        /_combat_prompt_attack_after_break %{whom_B}%;\
+                    /endif%;\
                 /else \
                     /let info=~+-~+-~+-~+-  PRZEBIL OCHRONE  ~+-~+-~+-~+- %;\
                     /defend %{whom}%;\
@@ -406,9 +403,6 @@
             /else \
                 /let info=nie moze przebic ochrony%;\
                 /let color=@{Crgb145}%;\
-            /endif%;\
-            /if ({whom}=~{_combat_attack_target}) \
-                /_combat_prompt_attack_after_break %{whom_B}%;\
             /endif%;\
         /endif%;\
     /endif%;\
