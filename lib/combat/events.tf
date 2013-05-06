@@ -1,23 +1,4 @@
 
-/def processTargetSet = \
-    /let target=%{1}%;\
-    /set _combat_attack_target=$(/odmien_B_M %{1})%;\
-    /test _combat_prompt_attack({target})
-
-/def processDefenceSet = \
-    /let target=%{1}%;\
-    /let who=%{2}%;\
-    /if ({target}=~"ciebie") \
-        /set _combat_defence_target=TY%;\
-    /elseif ({target}=~"siebie") \
-        /set _combat_defence_target=%{who}%;\
-        /let promptlabel=$(/odmien_M_B %{who})%;\
-        /test _combat_prompt_defence({promptlabel})%;\
-    /else \
-        /set _combat_defence_target=$(/odmien_B_M %{target})%;\
-        /test _combat_prompt_defence({target})%;\
-    /endif
-
 /def _set_targetting_mode_set_target = \
     /def -p50 -mregexp -t' wskazuje (.*) jako cel ataku\.$$' _combat_event_set_attack_target = \
         /test processTargetSet("%%{P1}")%;\

@@ -193,11 +193,33 @@
     /echo
 
 /def _combat_prompt_guard_break_for_oneself = \
+    /return%;\
     /echo%;\
     /test echo(decode_attr(strcat("             ","META_F1 - PRZELAM DLA SIEBIE -   ", {*}), "Cred"))%;\
     /echo
 
 /def _combat_prompt_guard_break_for_someone = \
+    /return%;\
     /echo%;\
     /test echo(decode_attr(strcat("             ","META_F1 - PRZELAM DLA KOGOS -   ", {*}), "Cred"))%;\
     /echo
+
+
+/def processTargetSet = \
+    /let target=%{1}%;\
+    /set _combat_attack_target=$(/odmien_B_M %{1})%;\
+    /test _combat_prompt_attack({target})
+
+/def processDefenceSet = \
+    /let target=%{1}%;\
+    /let who=%{2}%;\
+    /if ({target}=~"ciebie") \
+        /set _combat_defence_target=TY%;\
+    /elseif ({target}=~"siebie") \
+        /set _combat_defence_target=%{who}%;\
+        /let promptlabel=$(/odmien_M_B %{who})%;\
+        /test _combat_prompt_defence({promptlabel})%;\
+    /else \
+        /set _combat_defence_target=$(/odmien_B_M %{target})%;\
+        /test _combat_prompt_defence({target})%;\
+    /endif
