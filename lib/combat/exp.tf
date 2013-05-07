@@ -84,7 +84,11 @@
 /def talwar = \
     /test _exp_set("pierwsza wojowniczke", "druga wojowniczke", "trzecia wojowniczke", "czwarta wojowniczke")%;\
     /def skok = przeskocz nad zaglebieniem%;\
-    /_exp_prompt TALWAR%;\
+    /_exp_prompt TALWAR
+
+/def korredy = \
+    /test _exp_set("pierwsza kreature", "druga kreature", "potwora")%;\
+    /_exp_prompt KORREDY
 
 /def -p9999 -t'*Mustafa Ali IV*' _exp_location_mustafa = /mustafa
 /def -p9999 -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = /mahak
