@@ -1736,3 +1736,4 @@
 /def _odmiana_dert = /set _odmiana_dert_dopelniacz=derta%;/set _odmiana_dert_biernik=derta%;/set _odmiana_dert_narzednik=dertem
 /def _odmiana_gordof = /set _odmiana_gordof_dopelniacz=gordofa%;/set _odmiana_gordof_biernik=gordofa%;/set _odmiana_gordof_narzednik=gordofem
 /def _odmiana_tercoral = /set _odmiana_tercoral_dopelniacz=tercorala%;/set _odmiana_tercoral_biernik=tercorala%;/set _odmiana_tercoral_narzednik=tercoralem
+/def _odmiana_dahira = /set _odmiana_dahira_dopelniacz=dahiry%;/set _odmiana_dahira_biernik=dahire%;/set _odmiana_dahira_narzednik=dahira
