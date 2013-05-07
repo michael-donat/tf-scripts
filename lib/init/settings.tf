@@ -15,6 +15,7 @@
 
 /set db_odmiana=../data/db/odmiana.db
 
+/def -Fp1000 -mregexp -t'^>' _usuwanie_prompta = \ /substitute %{PR}
 
 /def setcolors = \
     /send kolor tekst 250%;\
