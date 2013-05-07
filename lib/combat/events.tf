@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 55288783683f7482ad0f280adcaa00d0f7615b44
 /def _set_targetting_mode_set_target = \
     /def -p50 -mregexp -t' wskazuje (.*) jako cel ataku\.$$' _combat_event_set_attack_target = \
         /test processTargetSet("%%{P1}")%;\

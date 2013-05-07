@@ -90,6 +90,10 @@
     /test _exp_set("pierwsza kreature", "druga kreature", "potwora")%;\
     /_exp_prompt KORREDY
 
+/def fort = \
+    /test _exp_set("pierwszego zboja", "xamusa", "maxusa")%;\
+    /_exp_prompt FORT
+
 /def -p9999 -t'*Mustafa Ali IV*' _exp_location_mustafa = /mustafa
 /def -p9999 -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = /mahak
 /def -p9999 -t'Glowna sala Swiatyni Wiecznego Ognia.' _exp_location_orson = /orson
