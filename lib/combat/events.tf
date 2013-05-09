@@ -49,7 +49,7 @@
     /test displayRetreat({PL}, {P1}, {P2}, 'false')
 
 /def -aLg -p20 -mregexp -t' unosi swoja .* i szybko przesuwa sie w twoja strone, bezskutecznie probujac skryc sie za toba przed atakami (.*)\.$$' _combat_event_retreat_behind_me_fail = \
-    /test displayRetreat({PL}, 'ciebie', {P3}, 'false')}
+    /test displayRetreat({PL}, 'ciebie', {P3}, 'false')
 
 ;
 ;##############################      ZASLONY ZASLONY      ###########################
