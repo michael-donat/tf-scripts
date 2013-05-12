@@ -149,6 +149,7 @@
 /def onload = wez glazy%;wloz glazy do worka%;wez glazy%;wloz glazy do drugiego worka%;wez glazy%;wloz glazy do trzeciego worka%;wez glazy%;wloz glazy do plecaka
 /def offload = wez glazy z plecaka%;odloz glazy%;wez glazy z worka%;odloz glazy%;wez glazy z drugiego worka%;wez glazy z trzeciego worka%;odloz glazy
 
-
+/def butyon = wloz grawerowana zbroje do plecaka%;wez buty z plecaka%;zaloz buty
+/def butyoff = wloz buty do plecaka%;wez grawerowana zbroje z plecaka%;zaloz zbroje
 
 

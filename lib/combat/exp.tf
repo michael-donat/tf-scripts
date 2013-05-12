@@ -34,7 +34,7 @@
     /def wespnij = wespnij sie do gory%%;wespnij sie na gore%;\
     /def rzezba = obroc rzezbe%;\
     /def wcisnij = wcisnij plaskorzezbe%;\
-    /test _exp_set("kosciotrupa", "zombiego", "wichta", "demona", "szalenca", "szczurolaka")%;\
+    /test _exp_set("szkielet", "zombiego", "wichta", "demona", "szalenca", "szczurolaka")%;\
     /_exp_prompt RUINY
 
 /def lorenzo = \

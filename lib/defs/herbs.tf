@@ -13,10 +13,10 @@
     wloz czterokanciaste rozgalezione lodygi do drugiego przytroczonego woreczka%; \
     wloz kremowe owlosione kwiaty do trzeciego przytroczonego woreczka%; \
     wloz drobne ukwiecone galazki do czwartego przytroczonego woreczka%; \
-    wloz ziola do pierwszego przytroczonego woreczka%; \
-    wloz ziola do drugiego przytroczonego woreczka%; \
     wloz ziola do trzeciego przytroczonego woreczka%; \
     wloz ziola do czwartego przytroczonego woreczka%; \
+    wloz ziola do pierwszego przytroczonego woreczka%; \
+    wloz ziola do drugiego przytroczonego woreczka%; \
     wloz ziola do piatego przytroczonego woreczka%; \
     zamknij woreczki
 
