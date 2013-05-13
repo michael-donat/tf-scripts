@@ -39,3 +39,4 @@
 /def -Fp50 -aCrgb455 -mregexp -t'((Jest|Jestes) .*, (znanym|znana) jako:|Jest to [^ ]+ [^ ]+ (elf|elfka|krasnolud|krasnoludka|gnom|gnomka|ogr|ogrzyca|niziolek|niziolka|polelf|polelfka|mezczyzna|kobieta|halfling|halflina|mutant|mutantka)\.)' _rozdzielenie_opisow_postaci = /echo%; /echo +---------------------------------------------------------------------------------+%; /echo
 /def -ab -t'Masz nowa poczte od *.' _poczta_prompt = /echo%;/echo%;/echo NOWA POCZTA!%;/echo%;/echo
 /def -aCrgb515 -t'*dobywa*' _wielding
+/def -aCrgb515 -t'*unosi swoja partyzane*' _wielding_parta
