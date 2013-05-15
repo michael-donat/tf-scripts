@@ -1,6 +1,6 @@
 ; werbat
 /set kolor_info=magenta
-
+/set c_info=rgb014
 
 ;dho
 /def _get_index = \
