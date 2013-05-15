@@ -3,6 +3,9 @@
 /set c_info=rgb014
 
 ;dho
+
+/set color_magic=Crgb551
+
 /def _get_index = \
   /let __element=%{1}%; \
   /let __list=%{2}|%; \
