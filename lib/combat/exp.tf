@@ -83,6 +83,8 @@
 
 /def talwar = \
     /test _exp_set("pierwsza wojowniczke", "druga wojowniczke", "trzecia wojowniczke", "czwarta wojowniczke")%;\
+    /def pret = przeszukaj zaglebienie%;\
+    /def prett = umiesc pret w mechanizmie%;\
     /def skok = przeskocz nad zaglebieniem%;\
     /_exp_prompt TALWAR
 
@@ -93,6 +95,14 @@
 /def fort = \
     /test _exp_set("pierwszego zboja", "xamusa", "maxusa")%;\
     /_exp_prompt FORT
+
+/def krwiak = \
+    /def prycza = odsun prycze%;\
+    /test _exp_set("ochroniarza", "szpiega")%;\
+    /_exp_prompt SZPIEDZY
+
+/def szpiedzy = /krwiak
+
 
 /def -p9999 -t'*Mustafa Ali IV*' _exp_location_mustafa = /mustafa
 /def -p9999 -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = /mahak

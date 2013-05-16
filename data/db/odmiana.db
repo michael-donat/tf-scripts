@@ -1738,3 +1738,5 @@
 /def _odmiana_tercoral = /set _odmiana_tercoral_dopelniacz=tercorala%;/set _odmiana_tercoral_biernik=tercorala%;/set _odmiana_tercoral_narzednik=tercoralem
 /def _odmiana_dahira = /set _odmiana_dahira_dopelniacz=dahiry%;/set _odmiana_dahira_biernik=dahire%;/set _odmiana_dahira_narzednik=dahira
 /def _odmiana_asparus = /set _odmiana_asparus_dopelniacz=asparusa%;/set _odmiana_asparus_biernik=asparusa%;/set _odmiana_asparus_narzednik=asparusem
+/def _odmiana_yanash = /set _odmiana_yanash_dopelniacz=yanasha%;/set _odmiana_yanash_biernik=yanasha%;/set _odmiana_yanash_narzednik=yanashem
+/def _odmiana_ildari = /set _odmiana_ildari_dopelniacz=ildari%;/set _odmiana_ildari_biernik=ildari%;/set _odmiana_ildari_narzednik=ildari

@@ -14,6 +14,7 @@
 
 
 /set db_odmiana=../data/db/odmiana.db
+/set licznik_path=../data/db/stat.db
 
 /def -Fp1000 -mregexp -t'^>' _usuwanie_prompta = \ /substitute %{PR}
 

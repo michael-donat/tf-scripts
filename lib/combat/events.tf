@@ -233,7 +233,7 @@
 /def -mregexp -p2 -t'(Powoli dochodzisz do siebie|Czujesz jak slabosc po zadanym ciosie w glowe mija|Udaje ci sie uwolnic z sieci|Powoli odzyskujesz swobode ruchow)' _combat_event_nostun = \
 	/_fast_bind_clear
 
-/def -mregexp -Fp2 -t'(.* wytraca ci (.*) z (rak|reki)|Uderzenie jest tak silne, ze bezwiednie puszczasz|zakleszczajac lewakiem twoj .* Czujesz potezne szarpniecie)' _combat_event_disarm = \
+/def -mregexp -Fp120 -t'(.* wytraca ci (.*) z (rak|reki)|Uderzenie jest tak silne, ze bezwiednie puszczasz|zakleszczajac lewakiem twoj .* Czujesz potezne szarpniecie)' _combat_event_disarm = \
     /let label=$[strcat(decode_attr(" --*  WYTRACENIE *-- ", "BCbgred"), "  ")]%;\
     /set im_disarmed=1%;\
     /test _fast_bind_set({label},"")
@@ -262,3 +262,22 @@
     /echo -p @{Cred} |  ############  Z G O N  ############    %{P1}%;\
     /echo -p @{Cred} |  ############  Z G O N  ############%;\
     /echo
+
+;######################## DLA PROWADZACEGO ###########################
+;Potezny dostojny goblin silnym ciosem dwurecznego gnomiego mlota oglusza Hunverta.
+;Hunvert powoli dochodzi do siebie.
+
+/def -Fp100 -mregexp -t'oglusza ([A-Za-z]+)\.$$' ogluszenie_czlonka_druzyny = \
+    /let whom_B=%{P1}%;\
+    /let whom=$(/odmien_B_M %{whom_B})%;\
+    /let is_member=$[_team_is_member({whom})]%;\
+    /if ({is_member}==1) \
+        /warn OGLUSZENIE %{whom_B}%;\
+    /endif
+
+/def -Fp100 -mregexp -t' powoli dochodzi do siebie\.$$' ogluszenie_czlonka_druzyny_end = \
+    /let whom=%{PL}%;\
+    /let is_member=$[_team_is_member({whom})]%;\
+    /if ({is_member}==1) \
+        /info %{whom} WSTAL%;\
+    /endif
