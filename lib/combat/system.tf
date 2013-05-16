@@ -2,6 +2,7 @@
     /let who=%{1}%;\
     /let whom_B=%{2}%;\
     /let from=%{3}%;\
+    /let from_p=%{3}%;\
     /if ({whom_B}=~"cie") \
         /let whom=$[decode_attr("-- CIEBIE -- ", "Crgb150")]%;\
     /else \
@@ -29,7 +30,7 @@
         /let success=@{Crgb150}ZASLANIA%;\
     /else \
         /let success=@{Crgb020}probuje zaslonic%;\
-        /if ({from}=~'twoimi') \
+        /if ({from_p}=~'twoimi') \
             /let from=@{Crgb020}-- PRZED TOBA --%;\
         /endif%;\
     /endif%;\
