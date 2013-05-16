@@ -29,6 +29,9 @@
         /let success=@{Crgb150}ZASLANIA%;\
     /else \
         /let success=@{Crgb020}probuje zaslonic%;\
+        /if ({from}=~'twoimi') \
+            /let from=@{Crgb020}-- PRZED TOBA --%;\
+        /endif%;\
     /endif%;\
     \
     /if ({who}=~'ty') \
