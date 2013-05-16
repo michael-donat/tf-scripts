@@ -152,4 +152,6 @@
 /def butyon = wloz grawerowana zbroje do plecaka%;wez buty z plecaka%;zaloz buty
 /def butyoff = wloz buty do plecaka%;wez grawerowana zbroje z plecaka%;zaloz zbroje
 
+/def sark = otworz sarkofag%;ob go%;wez wszystko z niego
+
 
