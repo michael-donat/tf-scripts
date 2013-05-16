@@ -86,6 +86,6 @@
 /load vendor/dhogrin/src/skrzynia.tf
 /load vendor/dhogrin/src/magiki.tf
 /load vendor/dhogrin/src/ocena.tf
-
-/set licznik_path=~/tf/data/stats/stat.db
+/load vendor/dhogrin/src/licznik.tf
+/load vendor/dhogrin/src/stat.tf
 

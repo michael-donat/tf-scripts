@@ -44,6 +44,7 @@
 /load vendor/dhogrin/skrzynia.tf
 /load vendor/dhogrin/postepy.tf
 /load vendor/werbat/calendar.tf
+/load vendor/dhogrin/stat.tf.tf
 
 ; load databases
 /eval /load %{db_odmiana}
