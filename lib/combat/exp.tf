@@ -64,7 +64,7 @@
     /_exp_prompt MUSTAFA
 
 /def karawana = \
-    /test _exp_set("pierwszego nomada", "wielblada")%;\
+    /test _exp_set("pierwszego nomada", "wielblada", "drugiego wielblada", "poteznego wielblada")%;\
     /_exp_prompt KARAWANA
 
 /def piraci = \
@@ -103,6 +103,9 @@
 
 /def szpiedzy = /krwiak
 
+/def blavi = \
+    /test _exp_set("pierwsza zjawe", "druga zjawe", "trzecia zjawe", "czwarta zjawe", "piata zjawe")%;\
+    /_exp_prompt BLAVIKEN
 
 /def -p9999 -t'*Mustafa Ali IV*' _exp_location_mustafa = /mustafa
 /def -p9999 -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = /mahak

@@ -47,6 +47,9 @@
         /let subject=$[replace(' ziemi', '', {subject})]%;\
         /let subject=$[replace(' wody', '', {subject})]%;\
         /let subject=$[replace(' ognia', '', {subject})]%;\
+    /elseif ({*}=/"* zjawa mezczyzny" | {*}=/"* zjawa kobiety") \
+        /let subject=$[replace(' kobiety', '', {*})]%;\
+        /let subject=$[replace(' mezczyzny', '', {subject})]%;\
     /else \
         /let subject=%;\
     /endif%;\

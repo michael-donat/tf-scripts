@@ -256,7 +256,7 @@
     /echo -p @{Cbgred} |  ############  Z A B I L E S  ############%;\
     /echo -p @{Cbgred} |  ############  Z A B I L E S  ############%;\
 
-/def -p100 -mregexp -ag -t'(.*) (polegl|umarl)(a|)\.' -p15 _combat_event_kill_2 = \
+/def -p100 -mregexp -ag -t'(.*) (z cichym jekiem osuwa sie na ziemie|polegl|umarl)(a|)\.' -p15 _combat_event_kill_2 = \
     /echo%;\
     /echo -p @{Cred} |  ############  Z G O N  ############%;\
     /echo -p @{Cred} |  ############  Z G O N  ############    %{P1}%;\

@@ -1741,3 +1741,7 @@
 /def _odmiana_yanash = /set _odmiana_yanash_dopelniacz=yanasha%;/set _odmiana_yanash_biernik=yanasha%;/set _odmiana_yanash_narzednik=yanashem
 /def _odmiana_ildari = /set _odmiana_ildari_dopelniacz=ildari%;/set _odmiana_ildari_biernik=ildari%;/set _odmiana_ildari_narzednik=ildari
 /def _odmiana_borgon = /set _odmiana_borgon_dopelniacz=borgona%;/set _odmiana_borgon_biernik=borgona%;/set _odmiana_borgon_narzednik=borgonem
+/def _odmiana_pinaq = /set _odmiana_pinaq_dopelniacz=pinaq%;/set _odmiana_pinaq_biernik=pinaq%;/set _odmiana_pinaq_narzednik=pinaq
+/def _odmiana_ajka = /set _odmiana_ajka_dopelniacz=ajki%;/set _odmiana_ajka_biernik=ajke%;/set _odmiana_ajka_narzednik=ajka
+/def _odmiana_nathaniel = /set _odmiana_nathaniel_dopelniacz=nathaniela%;/set _odmiana_nathaniel_biernik=nathaniela%;/set _odmiana_nathaniel_narzednik=nathanielem
+/def _odmiana_denea = /set _odmiana_denea_dopelniacz=denei%;/set _odmiana_denea_biernik=denee%;/set _odmiana_denea_narzednik=denea
