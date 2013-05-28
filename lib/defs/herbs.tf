@@ -91,7 +91,6 @@
     opusc bron%; \
     otworz czwarty przytroczony woreczek%; \
     wez drobna ukwiecona galazke z niego%; \
-    zamknij otwarte woreczki%; \
     rozgryz drobna ukwiecona galazke%; \
     wloz ziola do niego%;\
     dobadz broni%; \
@@ -101,7 +100,6 @@
     opusc bron%; \
     otworz trzeci przytroczony woreczek%; \
     wez kanciasta parzaca lodyge z niego%; \
-    zamknij otwarte woreczki%; \
     zjedz kanciasta parzaca lodyge%; \
     wloz ziola do niego%;\
     dobadz broni%; \
