@@ -1745,3 +1745,4 @@
 /def _odmiana_ajka = /set _odmiana_ajka_dopelniacz=ajki%;/set _odmiana_ajka_biernik=ajke%;/set _odmiana_ajka_narzednik=ajka
 /def _odmiana_nathaniel = /set _odmiana_nathaniel_dopelniacz=nathaniela%;/set _odmiana_nathaniel_biernik=nathaniela%;/set _odmiana_nathaniel_narzednik=nathanielem
 /def _odmiana_denea = /set _odmiana_denea_dopelniacz=denei%;/set _odmiana_denea_biernik=denee%;/set _odmiana_denea_narzednik=denea
+/def _odmiana_kornix = /set _odmiana_kornix_dopelniacz=kornixa%;/set _odmiana_kornix_biernik=kornixa%;/set _odmiana_kornix_narzednik=kornixem
