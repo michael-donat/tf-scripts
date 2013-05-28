@@ -41,13 +41,13 @@
 
 /def odmiana_wyjatki = \
     /if ({*}=/"* ze skrzynia *") \
-        /let subject=%{1} %{2} %{3}%;\
+        /let subject=$[replace(' ze skrzynia na grzbiecie', '', {*})]%;\
     /elseif ({*}=/"* powietrza" | {*}=/"* ziemi" | {*}=/"* wody" | {*}=/"* ognia") \
         /let subject=$[replace(' powietrza', '', {*})]%;\
         /let subject=$[replace(' ziemi', '', {subject})]%;\
         /let subject=$[replace(' wody', '', {subject})]%;\
         /let subject=$[replace(' ognia', '', {subject})]%;\
-    /elseif ({*}=/"* zjawa mezczyzny" | {*}=/"* zjawa kobiety") \
+    /elseif ({*}=/"* zjaw* mezczyzny" | {*}=/"* zjaw* kobiety") \
         /let subject=$[replace(' kobiety', '', {*})]%;\
         /let subject=$[replace(' mezczyzny', '', {subject})]%;\
     /else \
@@ -59,6 +59,7 @@
     /let exception=$(/odmiana_wyjatki %{*})%;\
     /if ({exception}!~NULL) \
         /odmien %{exception}%;\
+        /return%;\
     /elseif ($(/list _odmiana_%{L})=/"") \
         /fast_bind_odmien %{L}%;\
 ;        /repeat -1 1 /odmien_process %{*}%;\
@@ -78,14 +79,18 @@
 ; MIANOWNIK -> DOPELNIACZ
 
 /def odmien_M_D = \
+    /test $[getopts("s#r:", "")]%;\
 	/let imie=$[tolower({L})]%;\
     /let exception=$(/odmiana_wyjatki %{*})%;\
     /if ({exception}!~NULL) \
-        /odmien_M_B %{exception}%;\
+        /let reminder=$[replace({exception} , '', %{*})]%;\
+        /odmien_M_D -r"%{reminder}" %{exception}%;\
+        /return%;\
     /elseif ({-L}!~NULL) \
         /_odmien_M_D %{-L}%;\
     /endif %;\
-    /retrieve_D %{imie}
+    /retrieve_D %{imie}%;\
+    /echo %{opt_r}
 
 /def retrieve_D = \
     /if ($(/list _odmiana_%{1})=/"") \
@@ -124,13 +129,17 @@
 
 /def odmien_M_B = \
 	/let imie=$[tolower({L})]%;\
+	/test $[getopts("s#r:", "")]%;\
     /let exception=$(/odmiana_wyjatki %{*})%;\
     /if ({exception}!~NULL) \
-        /odmien_M_B %{exception}%;\
+        /let reminder=$[replace({exception} , '', %{*})]%;\
+        /odmien_M_B -r"%{reminder}" %{exception}%;\
+        /return%;\
     /elseif ({-L}!~NULL) \
         /_odmien_M_B %{-L}%;\
     /endif %;\
-    /retrieve_B %{imie}
+    /retrieve_B %{imie}%;\
+    /echo %{opt_r}
 
 /def retrieve_B = \
     /if ($(/list _odmiana_%{1})=/"") \
@@ -168,14 +177,18 @@
 ; MIANOWNIK -> NARZEDNIK
 
 /def odmien_M_N = \
+    /test $[getopts("s#r:", "")]%;\
 	/let imie=$[tolower({L})]%;\
 	/let exception=$(/odmiana_wyjatki %{*})%;\
     /if ({exception}!~NULL) \
-        /odmien_M_N %{exception}%;\
+        /let reminder=$[replace({exception} , '', %{*})]%;\
+        /odmien_M_N -r"%{reminder}" %{exception}%;\
+        /return%;\
     /elseif ({-L}!~NULL) \
         /_odmien_M_N %{-L}%;\
     /endif %;\
-    /retrieve_N %{imie}
+    /retrieve_N %{imie}%;\
+    /echo %{opt_r}
 
 /def retrieve_N = \
     /if ($(/list _odmiana_%{1})=/"") \
@@ -213,14 +226,18 @@
 ; BIERNIK -> MIANOWNIK
 
 /def odmien_B_M = \
+    /test $[getopts("s#r:", "")]%;\
 	/let imie=$[tolower({L})]%;\
 	/let exception=$(/odmiana_wyjatki %{*})%;\
     /if ({exception}!~NULL) \
-        /odmien_B_M %{exception}%;\
+        /let reminder=$[replace({exception} , '', %{*})]%;\
+        /odmien_B_M -r"%{reminder}" %{exception}%;\
+        /return%;\
     /elseif ({-L}!~NULL) \
         /_odmien_B_M %{-L}%;\
     /endif %;\
     /odmien_find_M_from_B %{imie}%;\
+    /echo %{opt_r}
 
 /def _odmien_B_M = \
     /while ({#}) \
@@ -256,15 +273,20 @@
 ; -----------------------------
 ; NARZEDNIK -> MIANOWNIK
 
+
 /def odmien_N_M = \
+    /test $[getopts("s#r:", "")]%;\
 	/let imie=$[tolower({L})]%;\
 	/let exception=$(/odmiana_wyjatki %{*})%;\
     /if ({exception}!~NULL) \
-        /odmien_N_M %{exception}%;\
+        /let reminder=$[replace({exception} , '', %{*})]%;\
+        /odmien_N_M -r"%{reminder}" %{exception}%;\
+        /return%;\
     /elseif ({-L}!~NULL) \
         /_odmien_N_M %{-L}%;\
     /endif %;\
     /odmien_find_M_from_N %{imie}%;\
+    /echo %{opt_r}
 
 /def _odmien_N_M = \
     /while ({#}) \
