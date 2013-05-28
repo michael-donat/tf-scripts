@@ -96,3 +96,13 @@
     wloz ziola do niego%;\
     dobadz broni%; \
     zamknij otwarte woreczki
+
+/def pokrz = \
+    opusc bron%; \
+    otworz trzeci przytroczony woreczek%; \
+    wez kanciasta parzaca lodyge z niego%; \
+    zamknij otwarte woreczki%; \
+    zjedz kanciasta parzaca lodyge%; \
+    wloz ziola do niego%;\
+    dobadz broni%; \
+    zamknij otwarte woreczki
