@@ -90,7 +90,7 @@
         /_odmien_M_D %{-L}%;\
     /endif %;\
     /retrieve_D %{imie}%;\
-    /echo %{opt_r}
+    /if ({opt_r}!/"") /echo %{opt_r}%; /endif
 
 /def retrieve_D = \
     /if ($(/list _odmiana_%{1})=/"") \
@@ -139,7 +139,7 @@
         /_odmien_M_B %{-L}%;\
     /endif %;\
     /retrieve_B %{imie}%;\
-    /echo %{opt_r}
+    /if ({opt_r}!/"") /echo %{opt_r}%; /endif
 
 /def retrieve_B = \
     /if ($(/list _odmiana_%{1})=/"") \
@@ -188,7 +188,7 @@
         /_odmien_M_N %{-L}%;\
     /endif %;\
     /retrieve_N %{imie}%;\
-    /echo %{opt_r}
+    /if ({opt_r}!/"") /echo %{opt_r}%; /endif
 
 /def retrieve_N = \
     /if ($(/list _odmiana_%{1})=/"") \
@@ -237,7 +237,7 @@
         /_odmien_B_M %{-L}%;\
     /endif %;\
     /odmien_find_M_from_B %{imie}%;\
-    /echo %{opt_r}
+    /if ({opt_r}!/"") /echo %{opt_r}%; /endif
 
 /def _odmien_B_M = \
     /while ({#}) \
@@ -286,7 +286,7 @@
         /_odmien_N_M %{-L}%;\
     /endif %;\
     /odmien_find_M_from_N %{imie}%;\
-    /echo %{opt_r}
+    /if ({opt_r}!/"") /echo %{opt_r}%; /endif
 
 /def _odmien_N_M = \
     /while ({#}) \
@@ -298,6 +298,8 @@
 		    /let op_B1=$[strcat(substr({1},0,-2),'i')]%;\
 		/elseif (dpEE=~"ym") \
 		    /let op_B1=$[strcat(substr({1},0,-2),'y')]%;\
+        /else \
+            /let op_B1=%{1}%;\
 		/endif %;\
 	    /let op_B=$[strcat(op_B, op_B1, ' ')] %;\
         /shift %;\

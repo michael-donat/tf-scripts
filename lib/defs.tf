@@ -20,7 +20,9 @@
 
 /alias pij /send napij sie do syta
 /alias koks /send napij sie z buklaka%;/send stan
+/alias koksior /send napij sie z manierki%;/send stan
 /alias koksik /get_money%;kup zabojce trolli do buklaka%;/pack_money
+/alias koksiorek /get_money%;kup przepalanke do manierki%;/pack_money
 
 /def read_board = \
     /if ({1} == 1) \
