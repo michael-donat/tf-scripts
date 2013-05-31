@@ -39,6 +39,11 @@
         /echo Entry already exists%;\
     /endif%;\
 
+/def odmien_B_exception = \
+    /if ({*}=/"* szkielet*") \
+        /return 1%;\
+    /endif%;\
+
 /def odmiana_wyjatki = \
     /if ({*}=/"* ze skrzynia *") \
         /let subject=$[replace(' ze skrzynia na grzbiecie', '', {*})]%;\
@@ -50,6 +55,8 @@
     /elseif ({*}=/"* zjaw* mezczyzny" | {*}=/"* zjaw* kobiety") \
         /let subject=$[replace(' kobiety', '', {*})]%;\
         /let subject=$[replace(' mezczyzny', '', {subject})]%;\
+    /elseif ({*}=/"* szkielet* trolla") \
+            /let subject=$[replace(' trolla', '', {*})]%;\
     /else \
         /let subject=%;\
     /endif%;\
@@ -128,6 +135,10 @@
 ; MIANOWNIK -> BIERNIK
 
 /def odmien_M_B = \
+    /if (odmien_B_exception({*})==1) \
+        /echo %{*}%;\
+        /return%;\
+    /endif%;\
 	/let imie=$[tolower({L})]%;\
 	/test $[getopts("s#r:", "")]%;\
     /let exception=$(/odmiana_wyjatki %{*})%;\
@@ -225,7 +236,13 @@
 ; -----------------------------
 ; BIERNIK -> MIANOWNIK
 
+
+
 /def odmien_B_M = \
+    /if (odmien_B_exception({*})==1) \
+        /echo %{*}%;\
+        /return%;\
+    /endif%;\
     /test $[getopts("s#r:", "")]%;\
 	/let imie=$[tolower({L})]%;\
 	/let exception=$(/odmiana_wyjatki %{*})%;\
