@@ -66,6 +66,9 @@
 /def key_f4 = /prompt_defence
 /def key_esc_f4 = /order_defence
 
+/def key_f5 = /cover_target_next
+/def key_esc_f5 = /order_defence_next
+
 /def key_f19 = /_combat_show_who_attacks_whom
 
 /def key_f13 = /1
@@ -88,4 +91,5 @@
 /load vendor/dhogrin/src/ocena.tf
 /load vendor/dhogrin/src/licznik.tf
 /load vendor/dhogrin/src/stat.tf
+/load vendor/dhogrin/src/ruch_zliczanie.tf
 

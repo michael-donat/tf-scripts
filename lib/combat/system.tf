@@ -116,8 +116,10 @@
                     /endif%;\
                 /else \
                     /let info=~+-~+-~+-~+-  PRZEBIL OCHRONE  ~+-~+-~+-~+- %;\
-                    /defend %{whom}%;\
-                    /let color=@{Crgb505}%;\
+                    /defend_next %{whom}%;\
+                    /_combat_prompt_defence_after_break %{whom_B}%;\
+                    /let color=@{Cwhite}%;\
+                    /let linecolor=@{Cbgred}%;\
                 /endif%;\
             /else \
                 /let info=nie moze przebic ochrony%;\
@@ -128,7 +130,7 @@
     \
     /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
     /let whom=$[decode_attr($(/ucfirstname %{whom_D}), $(/_team_get_name_color %{whom}))]%;\
-    /substitute -p >   %{who} %{color}%{info}@{n} %{whom}
+    /substitute -p %{linecolor} >   %{who} %{color}%{info}@{n}%{linecolor} %{whom}
 
 /def processTargetSet = \
     /let target=%{1}%;\
@@ -241,11 +243,19 @@
         /endif%;\
     /endif
 
+/def cover_target_next = \
+    /cover_target %{_combat_defence_next_target}
+
 /def cover_target = \
-    /if ({_combat_defence_target}=~"TY") \
+    /if ({_combat_defence_target}!/"") \
+        /let defenceTarget=%{_combat_defence_target}%;\
+    /else \
+        /let defenceTarget=%{*}%;\
+    /endif %;\
+    /if ({defenceTarget}=~"TY") \
         /echo -p @{Crgb055} Nie mozesz zaslonic siebie%;\
-    /elseif ({_combat_defence_target}!/"") \
-        /send zaslon $(/odmien_M_B %{_combat_defence_target})%;\
+    /elseif ({defenceTarget}!/"") \
+        /send zaslon $(/odmien_M_B %{defenceTarget})%;\
     /endif
 
 /def group_cover_target = \
@@ -264,9 +274,18 @@
         /endif%;\
     /endif
 
+/def order_defence_next = \
+    /order_defence %{_combat_defence_next_target}%;\
+    /prompt_defence %{_combat_defence_next_target}
+
 /def order_defence = \
     /if ({_combat_defence_target}!/"") \
-        /if ({_combat_defence_target}=~"TY") /let target=ciebie %; /else /let target=$(/odmien_M_B %{_combat_defence_target}) %; /endif%;\
+        /let defenceTarget=%{_combat_defence_target}%;\
+    /else \
+        /let defenceTarget=%{*}%;\
+    /endif %;\
+    /if ({defenceTarget}!/"") \
+        /if ({defenceTarget}=~"TY") /let target=ciebie %; /else /let target=$(/odmien_M_B %{defenceTarget}) %; /endif%;\
         /if ({_team_leader}=~"-") \
             /send rozkaz druzynie zaslonic %{target}%;\
         /else \
@@ -283,6 +302,13 @@
         /let target=%{*}%;\
     /endif%;\
     /prompt_defence
+
+/def defend_next = \
+    /if (%{*}=~"siebie") \
+        /set _combat_defence_next_target=TY%;\
+    /else \
+        /set _combat_defence_next_target=$(/odmien_B_M %{*})%;\
+    /endif
 
 /def d = \
     /let name=$(/eval /echo %%{_team_member_name_%{1}})%;\
@@ -317,26 +343,20 @@
 
 
 /def _combat_prompt_attack = \
-    /echo%;\
-    /test echo(decode_attr(strcat("             ","F1      - ZABIJ    -   ", {*}), "Cred"))%;\
-    /test echo(decode_attr(strcat("             ","META_F1 - PRZELAM  -   ", {*}), "Cred"))%;\
-    /echo
+    /echo -p @{Cred}@----------------------------------------------%;\
+    /test echo(decode_attr(strcat("| ","F1      - ZABIJ    -   ", {*}), "Cred"))%;\
+    /test echo(decode_attr(strcat("| ","META_F1 - PRZELAM  -   ", {*}), "Cred"))%;\
 
 /def _combat_prompt_attack_after_break = \
-    /echo%;\
     /test echo(decode_attr(strcat("             ","F1      - ZABIJ    -   ", {*}), "Cred"))%;\
-    /echo
 
 /def _combat_prompt_guard_break = \
-    /echo%;\
     /test echo(decode_attr(strcat("             ","META_F1 - PRZELAM  -   ", {*}), "Cred"))%;\
-    /echo
 
 /def _combat_prompt_defence = \
-    /echo%;\
-    /test echo(decode_attr(strcat("             ","F2      - ZASLON  -   ", {*}), "Cgreen"))%;\
-    /test echo(decode_attr(strcat("             ","META_F2 - GRUPOWA -   ", {*}), "Cgreen"))%;\
-    /echo
+    /echo -p @{Cgreen}@----------------------------------------------%;\
+    /test echo(decode_attr(strcat("| ","F2      - ZASLON  -   ", {*}), "Cgreen"))%;\
+    /test echo(decode_attr(strcat("| ","META_F2 - GRUPOWA -   ", {*}), "Cgreen"))%;\
 
 /def _combat_prompt_defence_with_order = \
     /echo%;\
@@ -346,9 +366,13 @@
 
 /def _combat_prompt_guard_break_for_oneself = \
     /return%;\
-    /echo%;\
     /test echo(decode_attr(strcat("             ","META_F1 - PRZELAM DLA SIEBIE -   ", {*}), "Cred"))%;\
     /echo
+
+/def _combat_prompt_defence_after_break = \
+    /echo -p @{Crgb505}@----------------------------------------------%;\
+    /test echo(decode_attr(strcat("| ","F5      - ZASLON -              ", {*}), "Crgb505"))%;\
+    /test echo(decode_attr(strcat("| ","META_F5 - ROZKAZ ZASLONY -      ", {*}), "Crgb505"))%;\
 
 /def _combat_prompt_guard_break_for_someone = \
     /return%;\
