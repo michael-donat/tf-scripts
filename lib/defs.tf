@@ -156,4 +156,15 @@
 
 /def sark = otworz sarkofag%;ob go%;wez wszystko z niego
 
+/def nago = wez worek z plecaka%;odloz go%;wloz wszystkie zbroje do niego
+/def nagoo = wez wszystkie zbroje z worka%;zaloz je%;wez worek%;wloz go do plecaka
+
+
+/def -mregexp -t'(Na two.* ramie.* niespodziewanie.* szczur|Bialy golab pocztowy laduje na twoim ramieniu\\.|Na twoim ramieniu niespodziewanie wyladowal|Masz nowa poczte od (.*)\\.)' new_mail = \
+    /poczta +%;/info Poczta od: %{P2-golab}
+
+/def -mregexp -t'Mowisz do (.*?)(:| w .*):?.*' speach_catch_whom = \
+    /set global_speach_target=%{P1}
+
+/alias @ /send jpowiedz do %{global_speach_target} %{*}
 

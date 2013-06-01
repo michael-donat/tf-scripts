@@ -33,6 +33,22 @@
 
 
 ;
+;##############################      WYCOFKA POTEPOW      ###########################
+;
+
+/def -aLg -Fp20 -mregexp -t' szybko przesuwa sie za (.*), uciekajac przed twoimi ciosami\.$$' _combat_event_hide_from_you_ok = \
+    /test displayRetreat({PL}, {P1}, 'twoimi', 'true')
+
+/def -aLg -Fp20 -mregexp -t' szybko przesuwa sie w strone (.*), bezskutecznie probujac uciec przed twoimi ciosami\.$$' _combat_event_hide_from_you_ok_fail = \
+    /test displayRetreat({PL}, {P1}, 'twoimi', 'false')
+
+/def -aLg -Fp20 -mregexp -t'^([a-z]+ [a-z]+ [a-z]+) szybko przesuwa sie za (.*), kryjac sie przed atakami (.*)\.$$' _combat_event_hide_ok = \
+    /test displayRetreat({P1}, {P2}, {P3}, 'true')
+
+/def -aLg -p20 -mregexp -t'^([a-z]+ [a-z]+ [a-z]+) szybko przesuwa sie w strone (.*), bezskutecznie probujac skryc sie za (?:nim|nia) przed atakami (.*)\.$$' _combat_event_hide_fail = \
+    /test displayRetreat({P1}, {P2}, {P3}, 'false')
+
+;
 ;##############################      WYCOFKA WYCOFKA      ###########################
 ;
 

@@ -66,7 +66,7 @@
         /let from=@{Crgb530}%{3}%;\
     /endif %;\
     \
-    /echo -p >  %{who} %{success}@{n} %{whom} @{Cgray13}przed atakami %{from}
+    /echo -p >   %{who} %{success}@{n} %{whom} @{Cgray13}przed atakami %{from}
 
 /def displayAttack = \
     /let who=%{1}%;\
@@ -89,7 +89,8 @@
     /if ({whom_B}=~"") \
         /if ({success}=~"true") \
             /let info=~+-~+-~+-~+- RZUCA SIE NA ~+-~+-~+-~+- @{Crgb150} -- CIEBIE --%;\
-            /let color=@{Cred}%;\
+            /let color=@{Cwhite}%;\
+            /let linecolor=@{Cbgred}%;\
         /else \
             /let info=probuje rzucic sie na @{Crgb150}-- CIEBIE --%;\
             /let color=@{Cred}%;\
@@ -348,7 +349,8 @@
     /test echo(decode_attr(strcat("| ","META_F1 - PRZELAM  -   ", {*}), "Cred"))%;\
 
 /def _combat_prompt_attack_after_break = \
-    /test echo(decode_attr(strcat("             ","F1      - ZABIJ    -   ", {*}), "Cred"))%;\
+    /echo -p @{Cred}@----------------------------------------------%;\
+    /test echo(decode_attr(strcat("| ","F1      - ZABIJ    -   ", {*}), "Cred"))%;\
 
 /def _combat_prompt_guard_break = \
     /test echo(decode_attr(strcat("             ","META_F1 - PRZELAM  -   ", {*}), "Cred"))%;\

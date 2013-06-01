@@ -1747,3 +1747,4 @@
 /def _odmiana_denea = /set _odmiana_denea_dopelniacz=denei%;/set _odmiana_denea_biernik=denee%;/set _odmiana_denea_narzednik=denea
 /def _odmiana_kornix = /set _odmiana_kornix_dopelniacz=kornixa%;/set _odmiana_kornix_biernik=kornixa%;/set _odmiana_kornix_narzednik=kornixem
 /def _odmiana_terenes = /set _odmiana_terenes_dopelniacz=terenesa%;/set _odmiana_terenes_biernik=terenesa%;/set _odmiana_terenes_narzednik=terenesem
+/def _odmiana_tywald = /set _odmiana_tywald_dopelniacz=tywalda%;/set _odmiana_tywald_biernik=tywalda%;/set _odmiana_tywald_narzednik=tywaldem
