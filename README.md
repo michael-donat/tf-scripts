@@ -69,6 +69,8 @@ Tutaj wazne jest, zeby pamietac ze esc_key to sekwencja najpierw ESC pozniej kla
 - ESC_F3 - rozkaz zabicia celu
 - F4 - weskazanie celu obrony dla druzyny
 - ESC_F4 - rozkaz zasloniecia celu obrony
+- F5 - zaslona przelamanego czlonka druzyny
+- ESC_F5 - rozkaz zaslony przelamanego czlonka druzyny
 
 Zaslony z numeryka
 
