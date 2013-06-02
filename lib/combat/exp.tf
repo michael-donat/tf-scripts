@@ -86,6 +86,8 @@
     /def pret = przeszukaj zaglebienie%;\
     /def prett = umiesc pret w mechanizmie%;\
     /def skok = przeskocz nad zaglebieniem%;\
+    /def pret = przeszukaj wgblebienie%;\
+    /def prett = umiesc pret w mechanizmie%;\
     /_exp_prompt TALWAR
 
 /def korredy = \

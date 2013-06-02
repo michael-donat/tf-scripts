@@ -36,14 +36,21 @@
         /mapa off%;\
     /endif
 
+/def _movement_go_mask_eval = \
+    /eval /echo %%_movement_go_mask_%{1}
+
 /def _movement_go_exec =    \
 \
     /if (_movement_disabled!=1) \
-        /send -h %{1}%;\
+        /let helper=$(/_movement_go_mask_eval %{1})%;\
+        /if ({helper}!~"") /send -h %{helper}%;\
+        /else /send -h %{1}%;\
+        /endif%;\
     /endif
 
 /def -agL -mregexp -t'(Krete, widmowe drozki prowadza na |(Jest|Sa) tutaj ([^ ]*) (widoczne|widocznych) (wyjsc|wyjscia|wyjscie): |Rozpadlina ciagnie sie na |Trakt wiedzie na |W mroku nocy dostrzegasz .* widoczn(e|ych) wyjsc(|ia|ie): |Trakt rozgalezia sie na |W gestych ciemnosciach dostrzegasz trakt wiodacy na |W gestych ciemnosciach dostrzegasz, ze trakt rozgalezia sie na |Sciezka prowadzi tutaj w .* (kierunkach|kierunku): |Szlak.* tutaj w .* kierunk.*: |Wyjsc.* prowadz.* tutaj w .* (kierunkach|kierunku): |Tunel.* ciagn.* na |Wedrowke przez rozlegle laki mozesz kontynuowac udajac sie na )' _movement_match_exists = \
     /let _movement_exists=$[replace(". Mozna jednak z niego zejsc i udac sie na ", ", ", {PR})] %;\
+    /let _movement_exists=$[replace(". Jedyne inne widoczne wyjscie to: ", ", ", {_movement_exists})] %;\
     /let _movement_exists=$[replace(".", "", replace(" i ", ", ", {_movement_exists}))]%;\
     /_movement_exists %{_movement_exists}%;\
     /let _movement_exists=$[replace(", ", " ", {_movement_exists})]%;\
@@ -55,7 +62,14 @@
 
 /def -p500 -aL -mregexp -t'exit:([A-Z]+):(.*)' _map_exit_rebind_mine = \
   /echo -p @{Cblue}         /%{P1} -> %{P2}%;\
-  /def %{P1} = /send -h %{P2}
+  /def %{P1} = /send -h %{P2}%;\
+  /let helper=$[tolower({P1})]%;\
+  /set _movement_go_mask_%{helper}=%{P2}
+
+/def -p500 -aL -mregexp -t'exit:custom\[\]:(.*)' _map_exit_rebind_custom_array_mine = \
+    /set map_custom_def=%{map_custom_def}c%;\
+    /def %{map_custom_def} = /send -h %{P1}
+
 
 /def -p500 -aL -mregexp -t'exit:custom:(.*)' _map_exit_rebind_custom_mine = \
   /set _map_bound_exit=%{P1}%;\
@@ -64,4 +78,6 @@
 /def -p500 -aL -mregexp -t'exit:reset' _map_exit_reset_nolog_mine = \
   /set _map_bound_exit=%;\
   /purge _map_location_*%;\
-  /purge x%; /purge n%; /purge ne%; /purge r%; /purge se%; /purge s%; /purge sw%; /purge w%; /purge nw%; /purge up%; /purge dn%;
+  /set map_custom_def=%;\
+  /purge x%; /purge n%; /purge ne%; /purge r%; /purge se%; /purge s%; /purge sw%; /purge w%; /purge nw%; /purge up%; /purge dn%;\
+  /quote -S /unset `/listvar -s _movement_go_mask_*

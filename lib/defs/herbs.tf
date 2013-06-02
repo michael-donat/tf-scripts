@@ -57,6 +57,29 @@
     zajrzyj do czwartego przytroczonego woreczka%;\
     zajrzyj do piatego przytroczonego woreczka%;\
 
+/def ziolo = \
+    /let woreczek=%{1}%;\
+    /let ziolo=%{2}%;\
+    /let co=%{3}%;\
+    /if ({woreczek}=~1) \
+        /let woreczek pierwszy%;\
+    /elseif ({woreczek}=~2) \
+        /let woreczek drugi%;\
+    /elseif ({woreczek}=~3) \
+        /let woreczek trzeci%;\
+    /else \
+        /let woreczek czwarty%;\
+    /endif%;\
+    \
+    /send otworz %{woreczek} przytroczony woreczek%;\
+    /send wez %{ziolo} z niego%;\
+    /send zamknij woreczki%;\
+    /if ({co}!~NULL) \
+        /send %{co} %{ziolo}%;\
+    /endif
+
+
+
 /def dell = \
     przestan walczyc%; \
     opusc bron%; \

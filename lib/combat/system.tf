@@ -118,6 +118,7 @@
                 /else \
                     /let info=~+-~+-~+-~+-  PRZEBIL OCHRONE  ~+-~+-~+-~+- %;\
                     /defend_next %{whom}%;\
+                    /set defend_next_from=$(/odmien_M_N %{who})%;\
                     /_combat_prompt_defence_after_break %{whom_B}%;\
                     /let color=@{Cwhite}%;\
                     /let linecolor=@{Cbgred}%;\
@@ -245,7 +246,7 @@
     /endif
 
 /def cover_target_next = \
-    /cover_target %{_combat_defence_next_target}
+    /send zaslon $(/odmien_M_B %{_combat_defence_next_target}) przed %{defend_next_from}
 
 /def cover_target = \
     /if ({_combat_defence_target}!/"") \

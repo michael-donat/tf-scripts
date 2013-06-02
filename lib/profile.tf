@@ -79,6 +79,11 @@
 /def key_esc_f14 = /2%;rozkaz druzynie zabic cel ataku
 /def key_esc_f15 = /3%;rozkaz druzynie zabic cel ataku
 
+/def key_pgdn = /dokey_hpage
+/def key_pgup = /dokey_hpageback
+/def key_esc_pgdn = /dokey_page
+/def key_esc_pgup = /dokey_pageback
+
 /load vendor/dhogrin/src/listy.tf
 
 /load vendor/dhogrin/src/spece.tf

@@ -43,3 +43,9 @@
 
 
 /def -P1Crgb034 -mregexp -t' glosno sapiac, przystaje na chwile, ociera swa dlonia krople potu z czola sygnalizujac ze jest (.*)\\.' info_zmeczenie_kmodpocznij
+
+
+/def brama = otworz brame kula
+/def zlozklucz = zloz pierwsza polkule z druga polkula
+/def -mregexp -F -t'Znajdujacy sie na lewym skrzydle wizerunek przedstawia (.*?)(\\.|,)' blavi_color_1 =   /echo -p LEWE SKRZYDLO:   @{Crgb520}%{P1}
+/def -mregexp -F -t'Obraz na prawym skrzydle bramy pokazuje z kolei (.*?)(\\.|,)' blavi_color_2 =          /echo -p PRAWE SKRZYDLO:  @{Crgb520}%{P1}
