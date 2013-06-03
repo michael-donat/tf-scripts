@@ -20,9 +20,6 @@
 /load statusbar/order.tf
 /load statusbar/blocks.tf
 
-; movement binds
-/load movement.tf
-
 ; other defs/binds
 /load binds.tf
 /load defs.tf
@@ -40,11 +37,19 @@
 /load vendor/compatibility.tf
 /load vendor/ingwar/cechy.tf
 /load vendor/ingwar/zielnik.tf
-/load vendor/dhogrin/ocena.tf
-/load vendor/dhogrin/skrzynia.tf
-/load vendor/dhogrin/postepy.tf
-/load vendor/werbat/calendar.tf
-/load vendor/dhogrin/stat.tf.tf
+
+/load vendor/dhogrin/src/listy.tf
+/load vendor/dhogrin/src/spece.tf
+/load vendor/dhogrin/src/spece_npc.tf
+/load vendor/dhogrin/src/spece_bronie.tf
+/load vendor/dhogrin/src/map.tf
+/load vendor/dhogrin/src/postepy.tf
+/load vendor/dhogrin/src/skrzynia.tf
+/load vendor/dhogrin/src/magiki.tf
+/load vendor/dhogrin/src/ocena.tf
+/load vendor/dhogrin/src/licznik.tf
+/load vendor/dhogrin/src/stat.tf
+/load vendor/dhogrin/src/ruch_zliczanie.tf
 
 ; load databases
 /eval /load %{db_odmiana}
@@ -52,4 +57,10 @@
 
 ; keys
 /load profile.tf
+
+; anything that needs to override vendor
+
+; movement binds
+/load movement.tf
+
 

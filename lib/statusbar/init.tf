@@ -39,7 +39,7 @@
 /eval /status_add -r3 _targetting_mode:5
 /eval /status_add -r3 _setting_target_mode:5
 /eval /status_add -r3 _map_tracking_enabled_label:5
-/eval /status_add -r3 "X: " _map_bound_exit::Crgb045
+/eval /status_add -r3 "X: " _map_bound_exit::
 ;/eval /status_add -r3 "R: [ ":: rozkaz_ataku:46:BC%kolor_alarm
 ;/eval /status_add -r3 "]  Bind: ":: bindings:35:BC%kolor_info
 ;/eval /status_add -r3 spacebreak::

@@ -14,7 +14,8 @@
 
 /def _bind_kb_key_nkpDivide = /k_wszystkich
 /set fastbindkey=_bind_kb_key_nkpTimes
-/set mapbindkey=_bind_kb_key_nkpMinus
+/set _map_setting_custom_exit_key=_bind_kb_key_nkpMinus
+/set _map_setting_custom_exit_switch_key=_bind_kb_key_nkpMinusMeta
 
 /def _bind_kb_key_nkpPlus = wesprzyj
 /def _bind_kb_key_nkpEquals = zmeczenie
@@ -83,18 +84,3 @@
 /def key_pgup = /dokey_hpageback
 /def key_esc_pgdn = /dokey_page
 /def key_esc_pgup = /dokey_pageback
-
-/load vendor/dhogrin/src/listy.tf
-
-/load vendor/dhogrin/src/spece.tf
-/load vendor/dhogrin/src/spece_npc.tf
-/load vendor/dhogrin/src/spece_bronie.tf
-/load vendor/dhogrin/src/map.tf
-/load vendor/dhogrin/src/postepy.tf
-/load vendor/dhogrin/src/skrzynia.tf
-/load vendor/dhogrin/src/magiki.tf
-/load vendor/dhogrin/src/ocena.tf
-/load vendor/dhogrin/src/licznik.tf
-/load vendor/dhogrin/src/stat.tf
-/load vendor/dhogrin/src/ruch_zliczanie.tf
-

@@ -6,6 +6,7 @@
 /def key_nkpEnt = /_bind_kb_key_nkpEnt
 /def key_nkp+ = /_bind_kb_key_nkpPlus
 /def key_nkp- = /_bind_kb_key_nkpMinus
+/def key_esc_nkp- = /_bind_kb_key_nkpMinusMeta
 
 /def key_nkp1 = /_bind_kb_key_nkp1
 /def key_nkp2 = /_bind_kb_key_nkp2

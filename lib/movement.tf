@@ -27,12 +27,13 @@
     /elseif ({1}=~"+") \
         /set _movement_map_track=1%;\
         /set _map_tracking_enabled_label=$[decode_attr("[MAP]", "Cbggreen")]%;\
-        /def %{mapbindkey}  = /x%;\
+        /def %{_map_setting_custom_exit_key}  = /x%;\
+        /def %{_map_setting_custom_exit_switch_key} = /_map_custom_switch%%;/_map_custom_show%;\
         /mapa on%;\
     /else \
         /set _movement_map_track=0%;\
         /set _map_tracking_enabled_label=$[decode_attr("[MAP]", "Cbgred")]%;\
-        /def %{mapbindkey}  = /_movement_go_exec wyjscie%;\
+        /def %{_map_setting_custom_exit_key}  = /_movement_go_exec wyjscie%;\
         /mapa off%;\
     /endif
 
@@ -41,12 +42,15 @@
 
 /def _movement_go_exec =    \
 \
+    /let command=%;\
     /if (_movement_disabled!=1) \
-        /let helper=$(/_movement_go_mask_eval %{1})%;\
-        /if ({helper}!~"") /send -h %{helper}%;\
-        /else /send -h %{1}%;\
-        /endif%;\
-    /endif
+        /let command=%{1}%;\
+    /elseif (_movement_sneak==1) \
+        /let command=przemknij sie %{1} %;\
+    /elseif (_movement_sneak_team==1) \
+        /let command=przemknij sie z druzyna %{1} %;\
+    /endif%;\
+    /send -h %{command}
 
 /def -agL -mregexp -t'(Krete, widmowe drozki prowadza na |(Jest|Sa) tutaj ([^ ]*) (widoczne|widocznych) (wyjsc|wyjscia|wyjscie): |Rozpadlina ciagnie sie na |Trakt wiedzie na |W mroku nocy dostrzegasz .* widoczn(e|ych) wyjsc(|ia|ie): |Trakt rozgalezia sie na |W gestych ciemnosciach dostrzegasz trakt wiodacy na |W gestych ciemnosciach dostrzegasz, ze trakt rozgalezia sie na |Sciezka prowadzi tutaj w .* (kierunkach|kierunku): |Szlak.* tutaj w .* kierunk.*: |Wyjsc.* prowadz.* tutaj w .* (kierunkach|kierunku): |Tunel.* ciagn.* na |Wedrowke przez rozlegle laki mozesz kontynuowac udajac sie na )' _movement_match_exists = \
     /let _movement_exists=$[replace(". Mozna jednak z niego zejsc i udac sie na ", ", ", {PR})] %;\
@@ -59,25 +63,10 @@
 /def _movement_exists = \
     /echo -p @{BCyellow} ==  @{BCgreen}%{*}
 
-
-/def -p500 -aL -mregexp -t'exit:([A-Z]+):(.*)' _map_exit_rebind_mine = \
-  /echo -p @{Cblue}         /%{P1} -> %{P2}%;\
-  /def %{P1} = /send -h %{P2}%;\
-  /let helper=$[tolower({P1})]%;\
-  /set _movement_go_mask_%{helper}=%{P2}
-
-/def -p500 -aL -mregexp -t'exit:custom\[\]:(.*)' _map_exit_rebind_custom_array_mine = \
-    /set map_custom_def=%{map_custom_def}c%;\
-    /def %{map_custom_def} = /send -h %{P1}
-
-
-/def -p500 -aL -mregexp -t'exit:custom:(.*)' _map_exit_rebind_custom_mine = \
-  /set _map_bound_exit=%{P1}%;\
-  /def x = /send -h %{P1}
-
-/def -p500 -aL -mregexp -t'exit:reset' _map_exit_reset_nolog_mine = \
+/def _map_custom_show = \
   /set _map_bound_exit=%;\
-  /purge _map_location_*%;\
-  /set map_custom_def=%;\
-  /purge x%; /purge n%; /purge ne%; /purge r%; /purge se%; /purge s%; /purge sw%; /purge w%; /purge nw%; /purge up%; /purge dn%;\
-  /quote -S /unset `/listvar -s _movement_go_mask_*
+  /if ({_map_custom_exits_count} == 0) /return%; /endif%; \
+  /let __exits=%{_map_custom_all}%; \
+  /let __exits=$[replace({_map_custom_current}, strcat("@{Crgb050}", {_map_custom_current}, "@{Crgb045}"), {__exits})]%; \
+  /let __exits=$[replace("|", " ", {__exits})]%; \
+  /set _map_bound_exit=$(/echo -p @{Crgb045}%{__exits})
