@@ -40,15 +40,23 @@
 /def _movement_go_mask_eval = \
     /eval /echo %%_movement_go_mask_%{1}
 
+/def _movement_get_rebind = \
+    /eval /echo %%_map_rebind_exit_%{1}
+
 /def _movement_go_exec =    \
 \
+    /let direction=%{1}%;\
     /let command=%;\
+    /let rebind=$(/_movement_get_rebind %{direction})%;\
+    /if ({rebind}!~NULL) \
+        /let direction=%{rebind}%;\
+    /endif%;\
     /if (_movement_disabled!=1) \
-        /let command=%{1}%;\
+        /let command=%{direction}%;\
     /elseif (_movement_sneak==1) \
-        /let command=przemknij sie %{1} %;\
+        /let command=przemknij sie %{direction} %;\
     /elseif (_movement_sneak_team==1) \
-        /let command=przemknij sie z druzyna %{1} %;\
+        /let command=przemknij sie z druzyna %{direction} %;\
     /endif%;\
     /send -h %{command}
 
@@ -58,29 +66,20 @@
     /let _movement_exists=$[replace(".", "", replace(" i ", ", ", {_movement_exists}))]%;\
     /let _movement_exists_clean=$[replace(", ", " ", {_movement_exists})]%;\
     /_statusbar_update_compass %{_movement_exists_clean}%;\
-    /test _movement_exists({_movement_exists}, {_movement_exists_clean})%;\
-
+    /set __movement_exits=%{_movement_exists}%; \
+    /_movement_exists %{_movement_exists}
 
 /def _movement_exists = \
-    /let exits=$(/_movement_rebind_replace %{1}, %{2})%;\
-    /echo -p @{BCyellow} ==  @{BCgreen}%{1}
+    /_movement_exits_prepare%; \
+    /echo -p @{BCyellow} ==  @{BCgreen}%{__movement_exits}
 
-/def _movement_rebind_eval = \
-    /eval /echo %%_map_rebind_exit_%{1}%;\
+/def _movement_exits_prepare = \
+    /quote -S /_movement_exit_prepare `/listvar -mregexp _map_rebind_exit_(.*)
 
-/def _movement_rebind_replace = \
-    /let _movement_compass_exit_check_list=%{2}%;\
-    /let _movement_compass_exit_check_list_processed=%{1}%;\
-    /while /let i=$[i+1]%; /@test i<={#}%; /do \
-        /let _movement_compass_exit_check=$(/list_shift %{_movement_compass_exit_check_list})%;\
-        /let _movement_rebind_value=$(/_movement_rebind_eval %{_movement_compass_exit_check})%;\
-        /if (_movement_rebind_value!~NULL) \
-            /let replace_value=%{_movement_compass_exit_check}(%{_movement_rebind_value})%;\
-            /let _movement_compass_exit_check_list_processed=$[replace({_movement_compass_exit_check}, {replace_value}, {_movement_compass_exit_check_list_processed})]%;\
-        /endif%;\
-        /let _movement_compass_exit_check_list=$(/list_remove_first %{_movement_compass_exit_check_list})%;\
-    /done%;\
-    /echo %{_movement_compass_exit_check_list_processed}
+/def _movement_exit_prepare = \
+    /let __all=%{*}%; \
+    /let __cos=$[regmatch("_map_rebind_exit_(.*)=(.*)", {__all})]%; \
+    /set __movement_exits=$[replace({P2}, strcat({P2}, " (", {P1}, ")"), {__movement_exits})]%;\
 
 /def _map_custom_show = \
   /set _map_bound_exit=%;\
