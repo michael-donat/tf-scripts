@@ -56,12 +56,31 @@
     /let _movement_exists=$[replace(". Mozna jednak z niego zejsc i udac sie na ", ", ", {PR})] %;\
     /let _movement_exists=$[replace(". Jedyne inne widoczne wyjscie to: ", ", ", {_movement_exists})] %;\
     /let _movement_exists=$[replace(".", "", replace(" i ", ", ", {_movement_exists}))]%;\
-    /_movement_exists %{_movement_exists}%;\
-    /let _movement_exists=$[replace(", ", " ", {_movement_exists})]%;\
-    /_statusbar_update_compass %{_movement_exists}
+    /let _movement_exists_clean=$[replace(", ", " ", {_movement_exists})]%;\
+    /_statusbar_update_compass %{_movement_exists_clean}%;\
+    /test _movement_exists({_movement_exists}, {_movement_exists_clean})%;\
+
 
 /def _movement_exists = \
-    /echo -p @{BCyellow} ==  @{BCgreen}%{*}
+    /let exits=$(/_movement_rebind_replace %{1}, %{2})%;\
+    /echo -p @{BCyellow} ==  @{BCgreen}%{1}
+
+/def _movement_rebind_eval = \
+    /eval /echo %%_map_rebind_exit_%{1}%;\
+
+/def _movement_rebind_replace = \
+    /let _movement_compass_exit_check_list=%{2}%;\
+    /let _movement_compass_exit_check_list_processed=%{1}%;\
+    /while /let i=$[i+1]%; /@test i<={#}%; /do \
+        /let _movement_compass_exit_check=$(/list_shift %{_movement_compass_exit_check_list})%;\
+        /let _movement_rebind_value=$(/_movement_rebind_eval %{_movement_compass_exit_check})%;\
+        /if (_movement_rebind_value!~NULL) \
+            /let replace_value=%{_movement_compass_exit_check}(%{_movement_rebind_value})%;\
+            /let _movement_compass_exit_check_list_processed=$[replace({_movement_compass_exit_check}, {replace_value}, {_movement_compass_exit_check_list_processed})]%;\
+        /endif%;\
+        /let _movement_compass_exit_check_list=$(/list_remove_first %{_movement_compass_exit_check_list})%;\
+    /done%;\
+    /echo %{_movement_compass_exit_check_list_processed}
 
 /def _map_custom_show = \
   /set _map_bound_exit=%;\
