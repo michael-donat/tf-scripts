@@ -1,0 +1,3 @@
+[submodule "lib/vendor/dhogrin"]
+	path = lib/vendor/dhogrin
+	url = git@github.com:kailip/tf
