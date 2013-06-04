@@ -80,6 +80,10 @@
     /let __all=%{*}%; \
     /let __cos=$[regmatch("_map_rebind_exit_(.*)=(.*)", {__all})]%; \
     /set __movement_exits=$[replace({P2}, strcat({P2}, " (", {P1}, ")"), {__movement_exits})]%;\
+    /let index=$[strstr({__movement_exits}, {P2}, 0)]%;\
+    /if ({index}==-1) \
+        /set __movement_exits=%{__movement_exits}, %{P2} (%{P1})%;\
+    /endif
 
 /def _map_custom_show = \
   /set _map_bound_exit=%;\
