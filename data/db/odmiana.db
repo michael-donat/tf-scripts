@@ -1749,3 +1749,6 @@
 /def _odmiana_terenes = /set _odmiana_terenes_dopelniacz=terenesa%;/set _odmiana_terenes_biernik=terenesa%;/set _odmiana_terenes_narzednik=terenesem
 /def _odmiana_tywald = /set _odmiana_tywald_dopelniacz=tywalda%;/set _odmiana_tywald_biernik=tywalda%;/set _odmiana_tywald_narzednik=tywaldem
 /def _odmiana_bazyliszek = /set _odmiana_bazyliszek_dopelniacz=bazyliszka%;/set _odmiana_bazyliszek_biernik=bazyliszka%;/set _odmiana_bazyliszek_narzednik=bazyliszkiem
+/def _odmiana_shirro = /set _odmiana_shirro_dopelniacz=shirro%;/set _odmiana_shirro_biernik=shirro%;/set _odmiana_shirro_narzednik=shirro
+/def _odmiana_fuin = /set _odmiana_fuin_dopelniacz=fuina%;/set _odmiana_fuin_biernik=fuina%;/set _odmiana_fuin_narzednik=fuinem
+/def _odmiana_auger = /set _odmiana_auger_dopelniacz=augera%;/set _odmiana_auger_biernik=augera%;/set _odmiana_auger_narzednik=augerem
