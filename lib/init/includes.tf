@@ -28,6 +28,7 @@
 /load defs/herbs.tf
 /load defs/fastbind.tf
 /load defs/light.tf
+/load defs/fishing.tf
 
 ; basic hilights
 /load hilite.tf
