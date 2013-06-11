@@ -1,6 +1,7 @@
 /set fastbindkey=_bind_kb_key_nkpTimes
 
 /def _fast_bind_set = \
+    /beep%;\
     /set _fast_bind_label=%{1}%;\
     /if ({3}==1) \
         /def %{fastbindkey} = %{2}%%;/_fast_bind_clear%;\

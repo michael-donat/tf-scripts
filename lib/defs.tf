@@ -147,7 +147,7 @@
         /set _statusbar_mail=[MAIL]%;\
     /endif
 
-/def -arCrgb035 -t'*glaz*' glaz1
+;/def -arCrgb035 -t'*glaz*' glaz1
 /def onload = wez glazy%;wloz glazy do worka%;wez glazy%;wloz glazy do drugiego worka%;wez glazy%;wloz glazy do trzeciego worka%;wez glazy%;wloz glazy do plecaka
 /def offload = wez glazy z plecaka%;odloz glazy%;wez glazy z worka%;odloz glazy%;wez glazy z drugiego worka%;wez glazy z trzeciego worka%;odloz glazy
 
@@ -166,5 +166,12 @@
 /def -mregexp -t'Mowisz do (.*?)(:| w .*):?.*' speach_catch_whom = \
     /set global_speach_target=%{P1}
 
-/alias @ /send jpowiedz do %{global_speach_target} %{*}
+/alias @ " do %{global_speach_target} %{*}
+
+/def pp = pobierz paczke %{1}%;wloz paczke do plecaka
+/def ppp = wez paczke z plecaka%;ob paczke%;oddaj paczke%;mmm%;wloz paczke do plecaka
+
+/def dd = wez %{*} z plecaka
+/def dp = wloz %{*} do plecaka
+
 
