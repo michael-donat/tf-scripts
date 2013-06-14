@@ -166,7 +166,7 @@
 /def -mregexp -t'Mowisz do (.*?)(:| w .*):?.*' speach_catch_whom = \
     /set global_speach_target=%{P1}
 
-/alias @ " do %{global_speach_target} %{*}
+/alias @ ' do %{global_speach_target} %{*}
 
 /def pp = pobierz paczke %{1}%;wloz paczke do plecaka
 /def ppp = wez paczke z plecaka%;ob paczke%;oddaj paczke%;mmm%;wloz paczke do plecaka
