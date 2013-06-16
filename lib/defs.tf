@@ -171,7 +171,21 @@
 /def pp = pobierz paczke %{1}%;wloz paczke do plecaka
 /def ppp = wez paczke z plecaka%;ob paczke%;oddaj paczke%;mmm%;wloz paczke do plecaka
 
-/def dd = wez %{*} z plecaka
-/def dp = wloz %{*} do plecaka
+/def container_process = \
+    /test $[getopts("a:c:", "")]%;\
+    /let list=%{*}%;\
+    /let pointer=$[strstr({list},",")] %;\
+    /let index=0%;\
+    \
+    /while ({pointer}!=-1) \
+        /let index=$[%{index}+1]%;\
+        /let item=$[substr({list},0,{pointer})]%;\
+        /let list=$[substr({list},{pointer}+1)]%;\
+        /let pointer=$[strstr({list}, ",")]%;\
+        /send %{opt_a} %{item} %{opt_c}%;\
+     /done%;\
+
+/def dd = /container_process -a'wez' -c'z plecaka' %{*},
+/def dp = /container_process -a'wloz' -c'do plecaka' %{*},
 
 
