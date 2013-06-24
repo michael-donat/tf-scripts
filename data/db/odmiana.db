@@ -1,4 +1,4 @@
-def _odmiana_elf = /set _odmiana_elf_dopelniacz=elfa%;/set _odmiana_elf_biernik=elfa%;/set _odmiana_elf_narzednik=elfem
+/def _odmiana_elf = /set _odmiana_elf_dopelniacz=elfa%;/set _odmiana_elf_biernik=elfa%;/set _odmiana_elf_narzednik=elfem
 /def _odmiana_skrang = /set _odmiana_skrang_dopelniacz=skranga%;/set _odmiana_skrang_biernik=skranga%;/set _odmiana_skrang_narzednik=skrangiem
 /def _odmiana_dziecko = /set _odmiana_dziecko_dopelniacz=dziecka%;/set _odmiana_dziecko_biernik=dziecko%;/set _odmiana_dziecko_narzednik=dzieckiem
 /def _odmiana_krasnolud = /set _odmiana_krasnolud_dopelniacz=krasnoluda%;/set _odmiana_krasnolud_biernik=krasnoluda%;/set _odmiana_krasnolud_narzednik=krasnoludem
