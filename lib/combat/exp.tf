@@ -113,6 +113,10 @@
     /test _exp_set("zywiolaka", "druga zjawe", "trzecia zjawe", "czwarta zjawe", "piata zjawe")%;\
     /_exp_prompt ZYWKI
 
+/def skavy = \
+    /test _exp_set("skavena", "drugiego skavena", "trzeciego skavena", "czwartego skavena")%;\
+    /_exp_prompt SKAVENY
+
 
 /def -p9999 -t'*Mustafa Ali IV*' _exp_location_mustafa = /mustafa
 /def -p9999 -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = /mahak

@@ -170,6 +170,7 @@
 
 /def pp = pobierz paczke %{1}%;wloz paczke do plecaka
 /def ppp = wez paczke z plecaka%;ob paczke%;oddaj paczke%;mmm%;wloz paczke do plecaka
+/def pppp = zdejmij plecak%;odloz plecak%;wez paczke z plecaka%;ob paczke%;oddaj paczke%;mmm%;wez plecak%;zaloz plecak%;wloz paczke do plecaka
 
 /def container_process = \
     /test $[getopts("a:c:", "")]%;\
@@ -188,4 +189,6 @@
 /def dd = /container_process -a'wez' -c'z plecaka' %{*},
 /def dp = /container_process -a'wloz' -c'do plecaka' %{*},
 
+/def zbin = przejrzyj depozyt%;wloz wszystkie zbroje do depozytu%;wez buty z depozytu%;zaloz je
+/def zbon = przejrzyj depozyt%;wloz buty do depozytu%;wez wszystkie zbroje z depozytu%;zaloz je
 

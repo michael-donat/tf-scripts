@@ -1753,3 +1753,7 @@
 /def _odmiana_fuin = /set _odmiana_fuin_dopelniacz=fuina%;/set _odmiana_fuin_biernik=fuina%;/set _odmiana_fuin_narzednik=fuinem
 /def _odmiana_auger = /set _odmiana_auger_dopelniacz=augera%;/set _odmiana_auger_biernik=augera%;/set _odmiana_auger_narzednik=augerem
 /def _odmiana_loram = /set _odmiana_loram_dopelniacz=lorama%;/set _odmiana_loram_biernik=lorama%;/set _odmiana_loram_narzednik=loramem
+/def _odmiana_aru = /set _odmiana_aru_dopelniacz=aru%;/set _odmiana_aru_biernik=aru%;/set _odmiana_aru_narzednik=aru
+/def _odmiana_nadja = /set _odmiana_nadja_dopelniacz=nadji%;/set _odmiana_nadja_biernik=nadje%;/set _odmiana_nadja_narzednik=nadja
+/def _odmiana_dermot = /set _odmiana_dermot_dopelniacz=dermota%;/set _odmiana_dermot_biernik=dermota%;/set _odmiana_dermot_narzednik=dermotem
+/def _odmiana_finmor = /set _odmiana_finmor_dopelniacz=finmora%;/set _odmiana_finmor_biernik=finmora%;/set _odmiana_finmor_narzednik=finmorem
