@@ -29,3 +29,5 @@
 
 /def -p999999 -t'* przymierza sie do odciecia ci drogi ucieczki.' _warn_trigger_4 = /warn -c'BLOK      BLOK     BLOK' %{*}
 
+/def -ab -mregexp -F -t'Z zewnatrz .* glos woznicy: (.*)' _dylizans_1 = /info %{P1}
+/def -ab -t'* pedzacy dylizans powoli zatrzymuje sie.' _dylizans_2 = /info DYLIZANS

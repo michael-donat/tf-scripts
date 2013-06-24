@@ -21,7 +21,7 @@
     zamknij woreczki
 
 /def ziola_chowaj = \
-    otworz %{*} woreczek%;\
+    otworz %{*} przytroczony woreczek%;\
     wloz ziola do niego%;\
     zamknij go
 

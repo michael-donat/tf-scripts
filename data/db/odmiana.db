@@ -1,4 +1,4 @@
-/def _odmiana_elf = /set _odmiana_elf_dopelniacz=elfa%;/set _odmiana_elf_biernik=elfa%;/set _odmiana_elf_narzednik=elfem
+def _odmiana_elf = /set _odmiana_elf_dopelniacz=elfa%;/set _odmiana_elf_biernik=elfa%;/set _odmiana_elf_narzednik=elfem
 /def _odmiana_skrang = /set _odmiana_skrang_dopelniacz=skranga%;/set _odmiana_skrang_biernik=skranga%;/set _odmiana_skrang_narzednik=skrangiem
 /def _odmiana_dziecko = /set _odmiana_dziecko_dopelniacz=dziecka%;/set _odmiana_dziecko_biernik=dziecko%;/set _odmiana_dziecko_narzednik=dzieckiem
 /def _odmiana_krasnolud = /set _odmiana_krasnolud_dopelniacz=krasnoluda%;/set _odmiana_krasnolud_biernik=krasnoluda%;/set _odmiana_krasnolud_narzednik=krasnoludem
@@ -1753,4 +1753,9 @@
 /def _odmiana_fuin = /set _odmiana_fuin_dopelniacz=fuina%;/set _odmiana_fuin_biernik=fuina%;/set _odmiana_fuin_narzednik=fuinem
 /def _odmiana_auger = /set _odmiana_auger_dopelniacz=augera%;/set _odmiana_auger_biernik=augera%;/set _odmiana_auger_narzednik=augerem
 /def _odmiana_loram = /set _odmiana_loram_dopelniacz=lorama%;/set _odmiana_loram_biernik=lorama%;/set _odmiana_loram_narzednik=loramem
+/def _odmiana_aru = /set _odmiana_aru_dopelniacz=aru%;/set _odmiana_aru_biernik=aru%;/set _odmiana_aru_narzednik=aru
+/def _odmiana_nadja = /set _odmiana_nadja_dopelniacz=nadji%;/set _odmiana_nadja_biernik=nadje%;/set _odmiana_nadja_narzednik=nadja
+/def _odmiana_dermot = /set _odmiana_dermot_dopelniacz=dermota%;/set _odmiana_dermot_biernik=dermota%;/set _odmiana_dermot_narzednik=dermotem
+/def _odmiana_finmor = /set _odmiana_finmor_dopelniacz=finmora%;/set _odmiana_finmor_biernik=finmora%;/set _odmiana_finmor_narzednik=finmorem
+
 /def _odmiana_grhun = /set _odmiana_grhun_dopelniacz=grhuna%;/set _odmiana_grhun_biernik=grhuna%;/set _odmiana_grhun_narzednik=grhunem
