@@ -1753,3 +1753,4 @@
 /def _odmiana_fuin = /set _odmiana_fuin_dopelniacz=fuina%;/set _odmiana_fuin_biernik=fuina%;/set _odmiana_fuin_narzednik=fuinem
 /def _odmiana_auger = /set _odmiana_auger_dopelniacz=augera%;/set _odmiana_auger_biernik=augera%;/set _odmiana_auger_narzednik=augerem
 /def _odmiana_loram = /set _odmiana_loram_dopelniacz=lorama%;/set _odmiana_loram_biernik=lorama%;/set _odmiana_loram_narzednik=loramem
+/def _odmiana_grhun = /set _odmiana_grhun_dopelniacz=grhuna%;/set _odmiana_grhun_biernik=grhuna%;/set _odmiana_grhun_narzednik=grhunem
