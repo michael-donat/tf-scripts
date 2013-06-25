@@ -117,6 +117,17 @@
     /test _exp_set("skavena", "drugiego skavena", "trzeciego skavena", "czwartego skavena")%;\
     /_exp_prompt SKAVENY
 
+/def ryby = \
+    /test _exp_set("pierwszego ryboczleka", "drugiego ryboczleka", "trzeciego ryboczleka", "czwartego ryboczleka")%;\
+    /_exp_prompt RYBOCZLEKI
+
+/def zboje = \
+    /test _exp_set("pierwszego zboja", "drugiego zboja", "trzeciego zboja", "czwartego zboja")%;\
+    /_exp_prompt ZBOJE
+
+/def golemy = \
+    /test _exp_set("pierwszego golema", "drugiego golema", "trzeciego golema", "czwartego golema")%;\
+    /_exp_prompt GOLEMY
 
 /def -p9999 -t'*Mustafa Ali IV*' _exp_location_mustafa = /mustafa
 /def -p9999 -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = /mahak

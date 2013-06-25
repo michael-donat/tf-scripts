@@ -192,3 +192,5 @@
 /def zbin = przejrzyj depozyt%;wloz wszystkie zbroje do depozytu%;wez buty z depozytu%;zaloz je
 /def zbon = przejrzyj depozyt%;wloz buty do depozytu%;wez wszystkie zbroje z depozytu%;zaloz je
 
+/def key_f18 = /zabij mutanta%;rozkaz druzynie zabic mutanta%;przedstaw mutanta
+/def key_f19 = /zabij gromgola%;rozkaz druzynie zabic gromgola%;przedstaw gromgola
