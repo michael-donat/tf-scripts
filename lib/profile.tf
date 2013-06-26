@@ -19,6 +19,7 @@
 
 /def _bind_kb_key_nkpPlus = wesprzyj
 /def _bind_kb_key_nkpEquals = zmeczenie
+/def key_esc_nkpEq = stan
 /def key_esc_nkp/ = /_combat_show_who_attacks_whom
 
 /def key_esc_nkp1=/z 1

@@ -164,12 +164,14 @@
     /let target=%{*}%;\
     /if ({target}!/"") \
         /let target_M=$(/odmien_B_M %{*})%;\
-        /send zabij %{target}%;\
         /test _combat_set_attack_target({target_M}, {target})%;\
-        /prompt_attack%;\
-;        /if ({_combat_orders_enabled}==1) \
-;            /order_attack%;\
-;        /endif%;\
+        /if ({_combat_orders_enabled}==1 & {_team_leader}=~"-") \
+            /order_attack%;\
+        /else \
+            /send zabij %{target}%;\
+            /prompt_attack%;\
+        /endif%;\
+        /if ({_team_leader}=~"-") \
     /endif
 
 ;---------------------------------------------------------------------------------
@@ -430,4 +432,12 @@
             /set _combat_auto_cover_index=0%;\
         /endif%;\
         /substitute -p %{line} @{Crgb055}[Zaslona: @{Crgb030}-%{label}-@{n}@{Crgb055}]%;\
+    /endif
+
+/def prompt_PVP = \
+    /if ({1}=~"." | {1}=~"," | {1} =~"]," | {1} =~"].") \
+        /let target=$(/_odmien_M_B %{-1})%;\
+        /eval /def key_f19 = /zabij %{target}%;przedstaw %{target}\
+        /echo -p @{Cbgred}# # # # # # # # #    S T O P     S T O P    # # # # # # # # #%;\
+        /echo -p @{Cbgred} F19  F19  F19  F19  F19    %{target}    F19  F19  F19  F19  F19%;\
     /endif

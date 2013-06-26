@@ -17,56 +17,49 @@ class Callbacks:
         reply += "\n".join(subs)
         return reply
 
+    """
+    WR
+    """
+
     def headerWR(self):
-        return """\
-/set WRsign=@{BxCyellow}(@{BxCred}~WR~@{BxCyellow})@{n}
-/def _WR_player_sub = \\
-    /substitute -p @{}%{PL}%{P1}%{WRsign}%{P4- }%{PR}%;\\
-    /if ({P3}=~"." | {P3}=~",") \
-        /let target=$(/_odmien_M_B %{P1})%;\\
-        /eval /def key_f6 = /zabij %{target}%;\\
-    /endif
-"""
+        return "/set WRsign=@{BxCyellow}(@{BxCred}~WR~@{BxCyellow})@{n}\n/def _WR_player_sub = /substitute -p @{}%{PL}%{P1}%{WRsign}%{P3- }%{PR}%;/prompt_PVP %{P3} %{P1}"
 
     def lineWR(self, p1, p2, r, i):
         return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+")"+p1[1:]+" "+p2+" (?:mutant|mutantka|"+r+")|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /_WR_player_sub"
 
+    """
+    OK
+    """
+
+
+    def headerOK(self):
+        return "/set OKsign=@{BxCyellow}(@{BxCred}~OK~@{BxCyellow})@{n}\n/def _OK_player_sub = /substitute -p @{}%{PL}%{P1}%{OKsign}%{P3- }%{PR}%;/prompt_PVP %{P3} %{P1}"
+
     def lineOK(self, p1, p2, r, i):
-        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+")"+p1[1:]+" "+p2+" "+r+"|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /_OK_player_sub"
+        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+")"+p1[1:]+" "+p2+" "+r+"|"+i+")(\].|[*,. ]|$)' _player_sub_"+str(self.counter)+" = /_OK_player_sub"
+
+    """
+    MC
+    """
 
     def headerMC(self):
-        return "/set MCsign=@{BxCyellow}(@{BxCred}~MC~@{BxCyellow})@{n}"
+        return "/set MCsign=@{BxCyellow}(@{BxCred}~MC~@{BxCyellow})@{n}\n/def _MC_player_sub = /substitute -p @{}%{PL}%{P1}%{MCsign}%{P3- }%{PR}%;/prompt_PVP %{P3} %{P1}"
 
     def lineMC(self, p1, p2, r, i):
-        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+")"+p1[1:]+" "+p2+" (?:mutant|mutantka|"+r+")|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /substitute -p @{}%{PL}%{P1}%{MCsign}%{P4- }%{PR}"
+        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+")"+p1[1:]+" "+p2+" (?:mutant|mutantka|"+r+")|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /_MC_player_sub"
+
 
     def headerOHM(self):
         return "/set OHMsign=[OHM] @{n}"
 
     def lineOHM(self, p1, p2, r, i):
-        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+")"+p1[1:]+" "+p2+" "+r+"|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /substitute -p @{}%{PL}%{P1}%{OHMsign}%{P4- }%{PR}"
+        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+")"+p1[1:]+" "+p2+" "+r+"|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /substitute -p @{}%{PL}%{P1}%{OHMsign}%{P3- }%{PR}"
 
     def headerSC(self):
         return "/set SCsign=@{BxCyellow}(@{BxCgreen}~SC~@{BxCyellow})@{n}"
 
     def lineSC(self, p1, p2, r, i):
-        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+")"+p1[1:]+" "+p2+" "+r+"|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /substitute -p @{}%{PL}%{P1}%{SCsign}%{P4- }%{PR}"
-
-    def headerOK(self):
-        return """
-/set OKsign=@{BxCyellow}(@{BxCred}~OK~@{BxCyellow})@{n}
-/def _OK_player_sub = \\
-    /substitute -p @{}%{PL}%{P1}%{OKsign}%{P4- }%{PR}%;\\
-    /echo 1: %{P1}%;\\
-    /echo 2: %{P2}%;\\
-    /echo 3: %{P3}%;\\
-    /echo 4: %{P4}%;\\
-    /echo 5: %{P5}%;\\
-    /if ({P4}=~"." | {P4}=~",") \
-        /let target=$(/_odmien_M_B %{P1})%;\\
-        /eval /def key_f6 = /zabij %{target}%;\\
-    /endif
-"""
+        return "/def -Fp3 -mregexp -t'(("+p1[:1].lower()+"|"+p1[:1].upper()+")"+p1[1:]+" "+p2+" "+r+"|"+i+")([*,.\] ]|$)' _player_sub_"+str(self.counter)+" = /substitute -p @{}%{PL}%{P1}%{SCsign}%{P3- }%{PR}"
 
 
 def usage():
