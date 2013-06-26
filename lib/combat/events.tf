@@ -283,17 +283,21 @@
 ;Potezny dostojny goblin silnym ciosem dwurecznego gnomiego mlota oglusza Hunverta.
 ;Hunvert powoli dochodzi do siebie.
 
-/def -Fp100 -mregexp -t'oglusza ([A-Za-z]+)\.$$' ogluszenie_czlonka_druzyny = \
+/def -Fp100 -mregexp -t'oglusza ([A-Za-z ]+)\.$$' ogluszenie_czlonka_druzyny = \
     /let whom_B=%{P1}%;\
     /let whom=$(/odmien_B_M %{whom_B})%;\
     /let is_member=$[_team_is_member({whom})]%;\
     /if ({is_member}==1) \
         /warn OGLUSZENIE %{whom_B}%;\
-    /endif
+    /endif%;\
+    /let whom=$[tolower(replace(' ', '_', {whom}))]%;\
+    /set is_stunned_%{whom}=1
 
 /def -Fp100 -mregexp -t' powoli dochodzi do siebie\.$$' ogluszenie_czlonka_druzyny_end = \
     /let whom=%{PL}%;\
     /let is_member=$[_team_is_member({whom})]%;\
     /if ({is_member}==1) \
         /info %{whom} WSTAL%;\
-    /endif
+    /endif%;\
+    /let whom=$[tolower(replace(' ', '_', {whom}))]%;\
+    /unset is_stunned_%{whom}

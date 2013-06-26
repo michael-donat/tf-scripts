@@ -54,3 +54,8 @@
 
 /def rawlog = /quote -S /showme 'vendor/dhogrin/raw/raw_log
 /def testlog = /quote -S /showme '../data/testlog
+
+/def getvariable = \
+    /echo PRE%;\
+    /eval /echo %%is_stunned_%{1}%;\
+    /echo POST

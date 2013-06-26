@@ -23,8 +23,7 @@
     /let _combat_health_hp_color=%{1}%;\
     /let who=%{3}%;\
     /let hplabel=%{4}%;\
-    \
-    /let bar=$[decode_attr(strcat(strrep(" ", 14-{_combat_health_hp}*2),strrep("#", {_combat_health_hp}*2)), {_combat_health_hp_color})]%;\
+    /let char=$[decode_attr("#")]%;\
     \
     /let is_member=$[_team_is_member({who})]%;\
     /if ({who}=~"Ty") \
@@ -51,6 +50,13 @@
         /let enemy_count=$[pad(enemy_count, 2)]%;\
         /test _combat_system_who_attacks_whom_mark({3}, {5}, {who_whom_indicator})%;\
     /endif%; \
+    \
+    /let gotstun=$[tolower(replace(' ', '_', {who}))]%;\
+    /if ($(/listvar is_stunned_%{gotstun})!/"") \
+        /let char=$[decode_attr("*")]%;\
+    /endif%;\
+    \
+    /let bar=$[decode_attr(strcat(strrep(" ", 14-{_combat_health_hp}*2),strrep({char}, {_combat_health_hp}*2)), {_combat_health_hp_color})]%;\
     \
     /let line=$[decode_attr(strcat("[",{_combat_health_hp},"/7][",{enemy_count},"][",{bar},"][",{number},"] ", decode_attr({who}, {_combat_health_hp_color}), " - ",  decode_attr({hplabel}, {_combat_health_hp_color})), {line_color})]%;\
     /substitute %{line}
