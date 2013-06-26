@@ -1,0 +1,10 @@
+/set WRsign=@{BxCyellow}(@{BxCred}~WR~@{BxCyellow})@{n}
+/def _WR_player_sub = \
+    /substitute -p @{}%{PL}%{P1}%{WRsign}%{P4- }%{PR}%;\
+    /if ({P4}=~"." | {P4}=~",")         /let target=$(/_odmien_M_B %{P1})%;\
+        /eval /def key_f6 = /zabij %{target}%;\
+    /endif
+
+/def -Fp3 -mregexp -t'((c|Czarnowlosy) czarnooki (mutant|mutantka|mezczyzna)|Arid)([*,.\] ]|$)' _player_sub_231 = /_WR_player_sub
+/def -Fp3 -mregexp -t'((p|Ponury) brzuchaty (mutant|mutantka|ogr)|Maldun)([*,.\] ]|$)' _player_sub_232 = /_WR_player_sub
+/def -Fp3 -mregexp -t'((z|Zwalisty) bezzebny (mutant|mutantka|mezczyzna)|NieznanyZImienia)([*,.\] ]|$)' _player_sub_233 = /_WR_player_sub
