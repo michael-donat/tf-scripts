@@ -402,3 +402,32 @@
         /set _combat_defence_target=$(/odmien_B_M %{target})%;\
         /test _combat_prompt_defence({target})%;\
     /endif
+
+/set _combat_auto_cover_index=0
+
+/def -mregexp -t' koncentruje sie na walce z (.*)\.' _combat_auto_cover_event = \
+    /let line=%{PL} %{P0}%;\
+    /let who=%{PL}%;\
+    /let whom_N=%{P1}%;\
+    /let whom=$(/odmien_N_M %{whom_N})%;\
+    /let is_member=$[_team_is_member({whom})]%;\
+    /if ({is_member}!=0) \
+        /set _combat_auto_cover_index=$[%{_combat_auto_cover_index}+1]%;\
+        /let whom_B=$(/odmien_M_B %{whom})%;\
+        /let who_N=$(/odmien_M_N %{who})%;\
+        /if ({_combat_auto_cover_index}==1) \
+            /eval /def key_f7 = zaslon %{whom_B} przed %{who_N}%;\
+            /let label=F7%;\
+        /elseif ({_combat_auto_cover_index}==2) \
+            /eval /def key_f8 = zaslon %{whom_B} przed %{who_N}%;\
+            /let label=F8%;\
+        /elseif ({_combat_auto_cover_index}==3) \
+            /eval /def key_f9 = zaslon %{whom_B} przed %{who_N}%;\
+            /let label=F9%;\
+        /else \
+            /eval /def key_f10 = zaslon %{whom_B} przed %{who_N}%;\
+            /let label=F10%;\
+            /set _combat_auto_cover_index=0%;\
+        /endif%;\
+        /substitute -p %{line} @{Crgb055}[Zaslona: @{Crgb030}-%{label}-@{n}@{Crgb055}]%;\
+    /endif

@@ -42,7 +42,7 @@
 /def -aCrgb515 -t'*unosi swoja partyzane*' _wielding_parta
 
 
-/def -P1Crgb034 -mregexp -t' glosno sapiac, przystaje na chwile, ociera swa dlonia krople potu z czola sygnalizujac ze jest (.*)\\.' info_zmeczenie_kmodpocznij
+/def -P1Crgb034 -mregexp -t' glosno sapiac, przystaje na chwile, ociera swa dlonia krople potu z czola sygnalizujac ze jest (.*)\.' info_zmeczenie_kmodpocznij
 
 
 /def brama = otworz brame kula
