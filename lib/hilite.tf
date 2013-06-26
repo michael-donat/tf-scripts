@@ -4,9 +4,9 @@
 ;--------------------------------------------------------------
 
 /set _info_events_speech_type_list=(mowi|nuci|szepcze zlowieszczo|zlowieszczo szepcze|syczy|bulgocze)
-/eval /def -mregexp -t'.* %{_info_events_speech_type_list} do ciebie:? (.*)' -aB -Fp5 _info_events_speech_1
-/eval /def -mregexp -t'(.* %{_info_events_speech_type_list}.*: )(.*)' -aCrgb552 -Fp10 _info_events_speech_2 = /test  substitute(strcat("- ", "%%{P1}", decode_attr("%%{P3}", "Crgb551")))
-/def -mregexp -t'(Szepczesz zlowieszczo:?|Mowisz:?) .*' -aCrgb315 -Fp15 _info_events_speech_3
+/eval /def -mregexp -t'.* %{_info_events_speech_type_list} do ciebie:? (.*)' -aB -Fp1 -aCbgrgb010 _info_events_speech_1
+/eval /def -mregexp -t'(.* %{_info_events_speech_type_list}.*: )(.*)' -aCbgrgb001 -aCrgb510 -Fp10 _info_events_speech_2 = /test substitute(strcat("- ", "%%{P1}", decode_attr("%%{P3}", "Crgb550")))
+/def -mregexp -t'(Szepczesz zlowieszczo:?|Mowisz:?) .*' -aCbgrgb001 -aCrgb550 -Fp15 _info_events_speech_3
 
 
 ;--------------------------------------------------------------
