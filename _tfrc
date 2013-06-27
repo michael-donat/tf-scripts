@@ -4,4 +4,4 @@
 /def key_f9 = /load vendor/dhogrin/src/map.tf%;/load movement.tf%;/map +
 /eval /load ~/%{USER}.tf
 
-/addworld mapper localhost 23923s
+/addworld mapper localhost 23923
