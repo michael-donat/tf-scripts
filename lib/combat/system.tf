@@ -437,7 +437,7 @@
 /def prompt_PVP = \
     /if ({1}=~"." | {1}=~"," | {1} =~"]," | {1} =~"].") \
         /let target=$(/_odmien_M_B %{-1})%;\
-        /eval /def key_f19 = /zabij %{target}%;przedstaw %{target}\
+        /eval /def key_f19 = /zabij %{target}%%%;przedstaw %{target}%;\
         /echo -p @{Cbgred}# # # # # # # # #    S T O P     S T O P    # # # # # # # # #%;\
         /echo -p @{Cbgred} F19  F19  F19  F19  F19    %{target}    F19  F19  F19  F19  F19%;\
     /endif
