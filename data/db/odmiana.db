@@ -1759,3 +1759,5 @@
 /def _odmiana_finmor = /set _odmiana_finmor_dopelniacz=finmora%;/set _odmiana_finmor_biernik=finmora%;/set _odmiana_finmor_narzednik=finmorem
 
 /def _odmiana_grhun = /set _odmiana_grhun_dopelniacz=grhuna%;/set _odmiana_grhun_biernik=grhuna%;/set _odmiana_grhun_narzednik=grhunem
+/def _odmiana_markad = /set _odmiana_markad_dopelniacz=markada%;/set _odmiana_markad_biernik=markada%;/set _odmiana_markad_narzednik=markadem
+/def _odmiana_ildefonso = /set _odmiana_ildefonso_dopelniacz=ildefonso%;/set _odmiana_ildefonso_biernik=ildefonso%;/set _odmiana_ildefonso_narzednik=ildefonso

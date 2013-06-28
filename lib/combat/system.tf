@@ -239,9 +239,9 @@
     /if ({_combat_attack_target}!/"") \
         /if ({_team_leader}=~"-") \
             /let target=$(/odmien_M_B %{_combat_attack_target})%;\
-            /send rozkaz druzynie zabic %{target}%;\
-	    /prompt_attack %{_combat_attack_target}%;\
             /send zabij %{target}%;\
+            /send rozkaz druzynie zabic %{target}%;\
+	        /prompt_attack %{_combat_attack_target}%;\
         /else \
             /echo -p @{Crgb055} Nie mozesz rozkazywac kiedy nie dowodzisz%;\
         /endif%;\
@@ -441,3 +441,5 @@
         /echo -p @{Cbgred}# # # # # # # # #    S T O P     S T O P    # # # # # # # # #%;\
         /echo -p @{Cbgred} F19  F19  F19  F19  F19    %{target}    F19  F19  F19  F19  F19%;\
     /endif
+
+/def ra = rozkaz druzynie zabic przeciwnika
