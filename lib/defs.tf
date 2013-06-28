@@ -194,3 +194,6 @@
 
 /def key_f18 = /zabij mutanta%;rozkaz druzynie zabic mutanta%;przedstaw mutanta
 /def key_f19 = /zabij gromgola%;rozkaz druzynie zabic gromgola%;przedstaw gromgola
+
+
+/def trof = /send powsun dobyta bron do uprzezy%;/send podobadz broni z pochwy%;/send wytnij trofeum z %{*} ciala%;/send wloz trofea do plecaka%;/send poschowaj dobyta bron do pochwy%;/send powyjmij bron z uprzezy%;/send dobadz jej
