@@ -56,3 +56,5 @@
     /let __string=$[substr({__string},{__p}+1)]%; \
   /done%; \
   /return %{__count}
+
+/def _walka_ktokogo_set
