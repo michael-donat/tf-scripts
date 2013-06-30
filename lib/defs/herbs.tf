@@ -13,6 +13,7 @@
     wloz czterokanciaste rozgalezione lodygi do drugiego przytroczonego woreczka%; \
     wloz kremowe owlosione kwiaty do trzeciego przytroczonego woreczka%; \
     wloz drobne ukwiecone galazki do czwartego przytroczonego woreczka%; \
+    wloz kanciaste parzace lodygi do piatego przytroczonego woreczka%; \
     wloz ziola do trzeciego przytroczonego woreczka%; \
     wloz ziola do czwartego przytroczonego woreczka%; \
     wloz ziola do pierwszego przytroczonego woreczka%; \
@@ -121,7 +122,7 @@
 
 /def pokrz = \
     opusc bron%; \
-    otworz trzeci przytroczony woreczek%; \
+    otworz piaty przytroczony woreczek%; \
     wez kanciasta parzaca lodyge z niego%; \
     zjedz kanciasta parzaca lodyge%; \
     wloz ziola do niego%;\

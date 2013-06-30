@@ -1761,3 +1761,4 @@
 /def _odmiana_grhun = /set _odmiana_grhun_dopelniacz=grhuna%;/set _odmiana_grhun_biernik=grhuna%;/set _odmiana_grhun_narzednik=grhunem
 /def _odmiana_markad = /set _odmiana_markad_dopelniacz=markada%;/set _odmiana_markad_biernik=markada%;/set _odmiana_markad_narzednik=markadem
 /def _odmiana_ildefonso = /set _odmiana_ildefonso_dopelniacz=ildefonso%;/set _odmiana_ildefonso_biernik=ildefonso%;/set _odmiana_ildefonso_narzednik=ildefonso
+/def _odmiana_esme = /set _odmiana_esme_dopelniacz=esme%;/set _odmiana_esme_biernik=esme%;/set _odmiana_esme_narzednik=esme
