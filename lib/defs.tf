@@ -92,7 +92,7 @@
     /send zepnij plaszcz spinka%;\
     /send wloz monety do plecaka
 
-/def -p5 -F -aCred -t'* nie nadaje sie do naprawy.' _naprawa_nogood
+/def -p1 -aCbgred -t'* nie nadaje sie do naprawy.' _naprawa_nogood
 
 /def dbz = \
     wez bron drzewcowa z plecaka%;\
@@ -194,6 +194,10 @@
 
 /def key_f18 = /zabij mutanta%;rozkaz druzynie zabic mutanta%;przedstaw mutanta
 /def key_f19 = /zabij gromgola%;rozkaz druzynie zabic gromgola%;przedstaw gromgola
+
+/def krew = dbb%;podobadz broni z pochwy
+/def kreww = poschowaj bron do pochwy%;ddb
+
 
 
 /def trof = /send powsun dobyta bron do uprzezy%;/send podobadz broni z pochwy%;/send wytnij trofeum z %{*} ciala%;/send wloz trofea do plecaka%;/send poschowaj dobyta bron do pochwy%;/send powyjmij bron z uprzezy%;/send dobadz jej
