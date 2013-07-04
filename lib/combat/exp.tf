@@ -19,6 +19,7 @@
     /alias szcz wejdz w szczeline%;\
     /def check = wyjscie%%;s%%;ob poteznego dostojnego goblina%%;n%%;swiatynia%;\
     /def lec = wejdz w szczeline%%;e%%;e%%;ob poteznego dostojnego goblina%%;w%%;w%%;s%;\
+    /def top = otworz skrzynie kluczem%%;otworz skrzynie%%;wez topor z skrzyni%%;wloz klucz do skrzyni%;\
     /_exp_prompt MAHAKAM
 
 /def redcapy = \
@@ -107,10 +108,13 @@
 
 /def blavi = \
     /test _exp_set("pierwsza zjawe", "druga zjawe", "trzecia zjawe", "czwarta zjawe", "piata zjawe")%;\
+    /def key_f6 = ob wglebienia%%;ob mozaike%%; wcisnij kafelek%%;przekrec rubin%%;ob oltarz%%;ob sarkofag%;\
+    /def klucz = zloz pierwsza polkule z druga polkula%;\
+    /def brama = otworz brame kula%;\
     /_exp_prompt BLAVIKEN
 
 /def zywki = \
-    /test _exp_set("zywiolaka", "druga zjawe", "trzecia zjawe", "czwarta zjawe", "piata zjawe")%;\
+    /test _exp_set("zywiolaka", "drugiego zywiolaka", "trzeciego zywiolaka")%;\
     /_exp_prompt ZYWKI
 
 /def skavy = \

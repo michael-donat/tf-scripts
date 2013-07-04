@@ -1426,7 +1426,6 @@
 /def _odmiana_irma = /set _odmiana_irma_dopelniacz=irmy%;/set _odmiana_irma_biernik=irme%;/set _odmiana_irma_narzednik=irma
 /def _odmiana_cerhil = /set _odmiana_cerhil_dopelniacz=cerhila%;/set _odmiana_cerhil_biernik=cerhila%;/set _odmiana_cerhil_narzednik=cerhilem
 /def _odmiana_ravt = /set _odmiana_ravt_dopelniacz=ravta%;/set _odmiana_ravt_biernik=ravta%;/set _odmiana_ravt_narzednik=ravtem
-/def _odmiana_esma = /set _odmiana_esma_dopelniacz=esmy%;/set _odmiana_esma_biernik=esme%;/set _odmiana_esma_narzednik=esma
 /def _odmiana_mogg = /set _odmiana_mogg_dopelniacz=mogga%;/set _odmiana_mogg_biernik=mogga%;/set _odmiana_mogg_narzednik=moggiem
 /def _odmiana_saetiviel = /set _odmiana_saetiviel_dopelniacz=saetiviel%;/set _odmiana_saetiviel_biernik=saetiviel%;/set _odmiana_saetiviel_narzednik=saetiviel
 /def _odmiana_morandin = /set _odmiana_morandin_dopelniacz=morandina%;/set _odmiana_morandin_biernik=morandina%;/set _odmiana_morandin_narzednik=morandinem
@@ -1757,7 +1756,6 @@
 /def _odmiana_nadja = /set _odmiana_nadja_dopelniacz=nadji%;/set _odmiana_nadja_biernik=nadje%;/set _odmiana_nadja_narzednik=nadja
 /def _odmiana_dermot = /set _odmiana_dermot_dopelniacz=dermota%;/set _odmiana_dermot_biernik=dermota%;/set _odmiana_dermot_narzednik=dermotem
 /def _odmiana_finmor = /set _odmiana_finmor_dopelniacz=finmora%;/set _odmiana_finmor_biernik=finmora%;/set _odmiana_finmor_narzednik=finmorem
-
 /def _odmiana_grhun = /set _odmiana_grhun_dopelniacz=grhuna%;/set _odmiana_grhun_biernik=grhuna%;/set _odmiana_grhun_narzednik=grhunem
 /def _odmiana_markad = /set _odmiana_markad_dopelniacz=markada%;/set _odmiana_markad_biernik=markada%;/set _odmiana_markad_narzednik=markadem
 /def _odmiana_ildefonso = /set _odmiana_ildefonso_dopelniacz=ildefonso%;/set _odmiana_ildefonso_biernik=ildefonso%;/set _odmiana_ildefonso_narzednik=ildefonso

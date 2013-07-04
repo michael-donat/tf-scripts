@@ -44,5 +44,13 @@
 /def -ab -t'W szkatulce znajdujesz *, ktore szybko zabierasz.' _fast_bind_trigger_6 = \
     /_fast_bind_clear
 
+/def -t'Siegasz * dobywajac z niej dlugiego krwistego sztyletu.' _krwiak_prompt_button = \
+    /let label=$[strcat(decode_attr("  --   TRUJ    --   ", "BCbgblue"), "  ")]%;\
+    /test _fast_bind_set({label}, "nacisnij przycisk sztyletu", 1)
+
+/def -t'* wiec trucizna musi juz plonac  w * zylach.' _krwiak_prompt_done = \
+    /let label=$[strcat(decode_attr("  --   OK    --   ", "BCbggreen"), "  ")]%;\
+    /test _fast_bind_set({label}, "/kreww", 1)
+
 
 
