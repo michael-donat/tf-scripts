@@ -278,7 +278,6 @@
     /echo -p @{Cred} |  ############  Z G O N  ############    %{P1}%;\
     /echo -p @{Cred} |  ############  Z G O N  ############%;\
     /echo
-;Widmowe przedmioty bedace w posiadaniu ezoterycznej powabnej zjawy kobiety opadaja lekko i bezglosnie na ziemie u twych stop, po czym rozjarzywszy sie na chwile szmaragdowa poswiata nabieraja realnego wygladu i ksztaltow.
 
 /def -p100 -mregexp -t'Widmowe przedmioty bedace w posiadaniu (.*) opadaja lekko' -p15 _combat_event_kill_3 = \
     /echo%;\
