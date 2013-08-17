@@ -336,3 +336,54 @@
     /let M=$(/odmien_N_M %{*})%;\
     /let B=$(/odmien_M_B %{M})%;\
     /echo %{B}
+
+
+; -----------------------------
+; DOPELNIACZ -> MIANOWNIK
+
+
+/def odmien_D_M = \
+    /test $[getopts("s#r:", "")]%;\
+	/let imie=$[tolower({L})]%;\
+	/let exception=$(/odmiana_wyjatki %{*})%;\
+    /if ({exception}!~NULL) \
+        /let reminder=$[replace({exception} , '', %{*})]%;\
+        /odmien_D_M -r"%{reminder}" %{exception}%;\
+        /return%;\
+    /elseif ({-L}!~NULL) \
+        /_odmien_D_M %{-L}%;\
+    /endif %;\
+    /odmien_find_M_from_D %{imie}%;\
+    /if ({opt_r}!/"") /echo %{opt_r}%; /endif
+
+/def _odmien_D_M = \
+    /while ({#}) \
+	    /let dpE=$[substr({1}, -1, 1)] %;\
+	    /let dpEE=$[substr({1}, -2, 2)] %;\
+	    /let dpEEE=$[substr({1}, -3, 3)] %;\
+	    /let dpEEEE=$[substr({1}, -4, 4)] %;\
+		/if (dpEEEE=~"iego") \
+		    /let op_B1=$[strcat(substr({1},0,-4),'i')]%;\
+        /elseif (dpEEE=~"iej") \
+		    /let op_B1=$[strcat(substr({1},0,-3),'a')]%;\
+		/elseif (dpEEE=~"ego") \
+		    /let op_B1=$[strcat(substr({1},0,-3),'y')]%;\
+        /elseif (dpEE=~"ej") \
+		    /let op_B1=$[strcat(substr({1},0,-2),'a')]%;\
+		/else \
+		    /let op_B1=$[substr({1},0,-1)] %;\
+		/endif %;\
+	    /let op_B=$[strcat(op_B, op_B1, ' ')] %;\
+        /shift %;\
+	/done %;\
+	/echo $[tolower({op_B})]
+
+/def odmien_find_M_from_D = \
+    /let patt=*dopelniacz=%{1}*%;\
+    /let res=$(/list -s _odmiana_* = %{patt})%;\
+    /let res=$[regmatch("_odmiana_(.*)", {res})]%;\
+    /echo %{P1}
+
+
+; DOPELNIACZ -> MIANOWNIK
+; -----------------------------

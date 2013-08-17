@@ -203,3 +203,5 @@
 /def trof = /send powsun dobyta bron do uprzezy%;/send podobadz broni z pochwy%;/send wytnij trofeum z %{*} ciala%;/send wloz trofea do plecaka%;/send poschowaj dobyta bron do pochwy%;/send powyjmij bron z uprzezy%;/send dobadz jej
 
 /def zdajkosz = wloz amulety do kosza%;wloz buty do kosza%;wloz okulary do kosza
+
+/def wkl = wez wszystko z ciala
