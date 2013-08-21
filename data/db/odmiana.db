@@ -1760,3 +1760,4 @@
 /def _odmiana_markad = /set _odmiana_markad_dopelniacz=markada%;/set _odmiana_markad_biernik=markada%;/set _odmiana_markad_narzednik=markadem
 /def _odmiana_ildefonso = /set _odmiana_ildefonso_dopelniacz=ildefonso%;/set _odmiana_ildefonso_biernik=ildefonso%;/set _odmiana_ildefonso_narzednik=ildefonso
 /def _odmiana_esme = /set _odmiana_esme_dopelniacz=esme%;/set _odmiana_esme_biernik=esme%;/set _odmiana_esme_narzednik=esme
+/def _odmiana_murakor = /set _odmiana_murakor_dopelniacz=murakora%;/set _odmiana_murakor_biernik=murakora%;/set _odmiana_murakor_narzednik=murakorem
