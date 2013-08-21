@@ -28,8 +28,8 @@
 /def -Fp3 -mregexp -t'((l|L)aciaty chudy ogr|Sgroz)(\].|[*,. ]|$)' _player_sub_164 = /_OK_player_sub
 /def -Fp3 -mregexp -t'((o|O)gromny grozny ogr|Trog)(\].|[*,. ]|$)' _player_sub_165 = /_OK_player_sub
 /def -Fp3 -mregexp -t'((z|Z)ielonkawy spokojny ogr|Tyg)(\].|[*,. ]|$)' _player_sub_166 = /_OK_player_sub
-/def -Fp3 -mregexp -t'((d|D)lugoreki skoltuniony ogr|Zub)(\].|[*,. ]|$)' _player_sub_167 = /_OK_player_sub
-/def -Fp3 -mregexp -t'((b|B)ladoskory czerwononosy ogr|KtosTam)(\].|[*,. ]|$)' _player_sub_168 = /_OK_player_sub
+/def -Fp3 -mregexp -t'((b|B)ladoskory czerwononosy ogr|Zook)(\].|[*,. ]|$)' _player_sub_167 = /_OK_player_sub
+/def -Fp3 -mregexp -t'((d|D)lugoreki skoltuniony ogr|Zub)(\].|[*,. ]|$)' _player_sub_168 = /_OK_player_sub
 /def -Fp3 -mregexp -t'((s|S)zczerbaty garbaty ogr|KtosTam)(\].|[*,. ]|$)' _player_sub_169 = /_OK_player_sub
 /def -Fp3 -mregexp -t'((w|W)ielki zielonkawy ogr|KtosTam)(\].|[*,. ]|$)' _player_sub_170 = /_OK_player_sub
 /def -Fp3 -mregexp -t'((z|Z)ezowaty masywny ogr|KtosTam)(\].|[*,. ]|$)' _player_sub_171 = /_OK_player_sub

@@ -1761,3 +1761,6 @@
 /def _odmiana_ildefonso = /set _odmiana_ildefonso_dopelniacz=ildefonso%;/set _odmiana_ildefonso_biernik=ildefonso%;/set _odmiana_ildefonso_narzednik=ildefonso
 /def _odmiana_esme = /set _odmiana_esme_dopelniacz=esme%;/set _odmiana_esme_biernik=esme%;/set _odmiana_esme_narzednik=esme
 /def _odmiana_murakor = /set _odmiana_murakor_dopelniacz=murakora%;/set _odmiana_murakor_biernik=murakora%;/set _odmiana_murakor_narzednik=murakorem
+/def _odmiana_stworzenie = /set _odmiana_stworzenie_dopelniacz=stworzenia%;/set _odmiana_stworzenie_biernik=stworzenie%;/set _odmiana_stworzenie_narzednik=stworzeniem
+/def _odmiana_avargon = /set _odmiana_avargon_dopelniacz=avargona%;/set _odmiana_avargon_biernik=avargona%;/set _odmiana_avargon_narzednik=avargonem
+/def _odmiana_ethnin = /set _odmiana_ethnin_dopelniacz=ethnin%;/set _odmiana_ethnin_biernik=ethnin%;/set _odmiana_ethnin_narzednik=ethnin
