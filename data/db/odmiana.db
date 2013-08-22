@@ -1763,3 +1763,6 @@
 /def _odmiana_stworzenie = /set _odmiana_stworzenie_dopelniacz=stworzenia%;/set _odmiana_stworzenie_biernik=stworzenie%;/set _odmiana_stworzenie_narzednik=stworzeniem
 /def _odmiana_avargon = /set _odmiana_avargon_dopelniacz=avargona%;/set _odmiana_avargon_biernik=avargona%;/set _odmiana_avargon_narzednik=avargonem
 /def _odmiana_ethnin = /set _odmiana_ethnin_dopelniacz=ethnin%;/set _odmiana_ethnin_biernik=ethnin%;/set _odmiana_ethnin_narzednik=ethnin
+/def _odmiana_beori = /set _odmiana_beori_dopelniacz=beoriego%;/set _odmiana_beori_biernik=beoriego%;/set _odmiana_beori_narzednik=beorim
+/def _odmiana_kern = /set _odmiana_kern_dopelniacz=kerna%;/set _odmiana_kern_biernik=kerna%;/set _odmiana_kern_narzednik=kernem
+/def _odmiana_elernai = /set _odmiana_elernai_dopelniacz=elernaia%;/set _odmiana_elernai_biernik=elernaia%;/set _odmiana_elernai_narzednik=elernaiem
