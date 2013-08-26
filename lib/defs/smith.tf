@@ -1,5 +1,6 @@
 /def naprawa = \
     /send zaloz wszystkie zbroje%;\
+    /def -t'Twe cialo chronia grube plyty mahakamskiej *' _trigger_equip_napraw_patriotka = /send napraw mahakamska wojenna zbroje plytowa%;\
     /def -t'Masz na sobie (.*)\.' -mregexp _trigger_equip_napraw = /test _trigger_equip_napraw_execute("%%{P1}")%;\
     /send i
 
@@ -15,4 +16,4 @@
         /send napraw %{_stuff_for_fixing_item}%;\
      /done%;\
      /send naostrz bron%;\
-     /purge \_trigger\_equip\_napraw
+     /purge \_trigger\_equip\_napraw*

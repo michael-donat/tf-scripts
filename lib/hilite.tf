@@ -20,17 +20,13 @@
 ;------------------------------------------------------------------------
 ; Sprzet
 ;------------------------------------------------------------------------
-/def -p10 -mregexp -F -aBCgreen -t'Ma(|sz) na sobie .*(.)$' _masz_przy_sobie_1 =\
-    /if ({P2}!~".") \
-      /def -p10 -F -aBCgreen -t"*" _masz_przy_sobie_1a %;\
-      /def -p15 -1 -mregexp -F -aBCgreen -t"\\\\.$$" _masz_przy_sobie_1b=/purge _masz_przy_sobie_1a %;\
-    /endif
-/def -p20 -mregexp -F -aCgreen -t'Masz przy sobie .*([^\\.]|\\.)$' _masz_przy_sobie_2 =\
-    /if ({P1}!~".") \
-      /def -p20 -F -aCgreen -t"*" _masz_przy_sobie_2a %;\
-      /def -p25 -1 -mregexp -F -aCgreen -t"\\\\.$$" _masz_przy_sobie_2b=/purge _masz_przy_sobie_2a %;\
-    /endif
-/def -p10 -F -aBCmagenta -mregexp -t'Trzyma(|sz) ' _masz_przy_sobie_4
+
+/eval /def -Fp100 -mregexp -aBCgreen -t'^Masz przy sobie ' _kolorki_ekwipunek_przy_sobie
+/eval /def -Fp100 -mregexp -aBCgreen -t'^Ma(sz|) na sobie ' _kolorki_ekwipunek_na_sobie
+/eval /def -Fp100 -mregexp -aBCgreen -t'Twe cialo chronia grube plyty mahakamskiej wojennej zbroi plytowej, pancerza, ktory od pokolen kuty jest przez twych przodkow w kuzniach twierdzy Mons Arx. Idealnie wyprofilowany na krasnoludzkie potrzeby ekwipunek uklada sie wyjatkowo wygodnie na twym ciele, nie dajac ci odczuc swej pokaznej masy.| cialo chronia grube plyty mahakamskiej wojennej zbroi plytowej, pancerza, ktory od pokolen kuty jest przez twych przodkow w kuzniach twierdzy Mons Arx.' _kolorki_ekwipunek_na_sobie_mahakamska_plytowka
+/eval /def -Fp100 -mregexp -aBCgreen -t'Od stop do glow zakut[ay] jest w ' _kolorki_ekwipunek_na_sobie_mutanty
+/eval /def -Fp100 -mregexp -aBCgreen -t' cialo przykrywaja stalowe plyty pelnego pancerza, na ktorego powierzchni widnieja krwistoczerwone malunki, przesycone pierwotna zadza destrukcji, zla i zaglady.' _kolorki_ekwipunek_na_sobie_ogry
+/eval /def -Fp100 -mregexp -aBCmagenta -t'^Trzyma(sz|)( oburacz .*|.* w (prawej|lewej) rece)\.' _kolorki_ekwipunek_bron
 
 ;------------------------------------------------------------------------
 ; Inne fajne

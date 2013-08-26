@@ -143,3 +143,4 @@
 /def -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = /mahak
 /def -t'Glowna sala Swiatyni Wiecznego Ognia.' _exp_location_orson = /orson
 /def -t"'Profesor' vel Ralf Blunden, mezczyzna." _exp_location_profesor = /profesor
+/def -t'* drewniana prycze, wraz z przymocowanym do niej fragmentem podlogi*' = /krwiak

@@ -23,6 +23,7 @@
 ; other defs/binds
 /load binds.tf
 /load defs.tf
+/load defs/poison.tf
 /load defs/smith.tf
 /load defs/odmiana.tf
 /load defs/herbs.tf
