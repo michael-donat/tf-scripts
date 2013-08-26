@@ -26,18 +26,6 @@
     /test _exp_set("pierwszego redcapa", "drugiego redcapa", "trzeciego redcapa", "czwartego redcapa")%;\
     /_exp_prompt REDCAPY
 
-/def ruiny = \
-    /def studnia = wejdz do studni%%;przecisnij sie przez otwor%;\
-    /def podest = wejdz na podest%%;wejdz do grobowca%;\
-    /def otwor = przecisnij sie przez otwor%;\
-    /def sciana = wejdz w sciane%;\
-    /def glaz = zeskocz na glaz%%;wskocz do wody%%;zanurkuj pod wode%;\
-    /def wespnij = wespnij sie do gory%%;wespnij sie na gore%;\
-    /def rzezba = obroc rzezbe%;\
-    /def wcisnij = wcisnij plaskorzezbe%;\
-    /test _exp_set("szkielet", "zombiego", "wichta", "demona", "szalenca", "szczurolaka")%;\
-    /_exp_prompt RUINY
-
 /def lorenzo = \
     /test _exp_set("pierwszego karla", "pierwszego zboja", "lorenza")%;\
     /_exp_prompt LORENZO
@@ -136,6 +124,13 @@
 /def rivanon = \
     /test _exp_set("rivanona", "markada", "ildefonso")%;\
     /_exp_prompt RIVANON
+
+/def ruiny = \
+    /test _exp_set("wichta", "zombiego", "szkielet", "demona", "szalenca", "szczurolaka")%;\
+    /load combat/exp/rinde.tf%;\
+    /_exp_prompt RUINY
+
+/def rinde = /ruiny
 
 
 /def -t'*Oto Rivanon von Willgenstein, rycerz z mroznej polnocy.' _expo_location_rivanon = /rivanon

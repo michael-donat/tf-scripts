@@ -45,3 +45,8 @@
 /def zlozklucz = zloz pierwsza polkule z druga polkula
 /def -mregexp -F -t'Znajdujacy sie na lewym skrzydle wizerunek przedstawia (.*?)(\\.|,)' blavi_color_1 =   /echo -p LEWE SKRZYDLO:   @{Crgb520}%{P1}
 /def -mregexp -F -t'Obraz na prawym skrzydle bramy pokazuje z kolei (.*?)(\\.|,)' blavi_color_2 =          /echo -p PRAWE SKRZYDLO:  @{Crgb520}%{P1}
+
+
+/def -mregexp -P1Crgb035 -Fp100 -t'Nad powierzchnia unos.* sie:?(.*)\\.' _zywiolaki_hilite
+
+/def -F -t'* blokuje * droge na *.' -aCrgb402 _common_blok

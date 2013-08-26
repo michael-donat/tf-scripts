@@ -1767,3 +1767,5 @@
 /def _odmiana_beori = /set _odmiana_beori_dopelniacz=beoriego%;/set _odmiana_beori_biernik=beoriego%;/set _odmiana_beori_narzednik=beorim
 /def _odmiana_kern = /set _odmiana_kern_dopelniacz=kerna%;/set _odmiana_kern_biernik=kerna%;/set _odmiana_kern_narzednik=kernem
 /def _odmiana_elernai = /set _odmiana_elernai_dopelniacz=elernaia%;/set _odmiana_elernai_biernik=elernaia%;/set _odmiana_elernai_narzednik=elernaiem
+/def _odmiana_wolfgar = /set _odmiana_wolfgar_dopelniacz=wolfgara%;/set _odmiana_wolfgar_biernik=wolfgara%;/set _odmiana_wolfgar_narzednik=wolfgarem
+/def _odmiana_gallar = /set _odmiana_gallar_dopelniacz=gallara%;/set _odmiana_gallar_biernik=gallara%;/set _odmiana_gallar_narzednik=gallarem
