@@ -1769,3 +1769,4 @@
 /def _odmiana_elernai = /set _odmiana_elernai_dopelniacz=elernaia%;/set _odmiana_elernai_biernik=elernaia%;/set _odmiana_elernai_narzednik=elernaiem
 /def _odmiana_wolfgar = /set _odmiana_wolfgar_dopelniacz=wolfgara%;/set _odmiana_wolfgar_biernik=wolfgara%;/set _odmiana_wolfgar_narzednik=wolfgarem
 /def _odmiana_gallar = /set _odmiana_gallar_dopelniacz=gallara%;/set _odmiana_gallar_biernik=gallara%;/set _odmiana_gallar_narzednik=gallarem
+/def _odmiana_bhalin = /set _odmiana_bhalin_dopelniacz=bhalina%;/set _odmiana_bhalin_biernik=bhalina%;/set _odmiana_bhalin_narzednik=bhalinem

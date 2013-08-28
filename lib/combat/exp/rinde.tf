@@ -16,8 +16,8 @@
         /test echo(decode_attr("    #########  "), "Cwhite") %%;\
         /test echo(decode_attr("           #   "), "Cwhite") %%;\
         /test echo(decode_attr("          #    "), "Cwhite") %%;\
-        /set _map_room_ruiny_panika=%%{_map_room_ruiny_panika_d}%%;\
-        /purge _rinde_klapa_kierunek*%;\
+        /set _map_room_ruiny_panika=%%{_map_room_ruiny_panika_d}%%:\
+        /purde _rinde_klapa_kierunek*%;\
         \
     /def -msubstr -t'poludniowy-wschod, polnoc i zachod' -n1 _rinde_klapa_kierunek2 = %%;\
         /test echo(decode_attr("       #       "), "Cwhite") %%;\
@@ -26,24 +26,24 @@
         /test echo(decode_attr("       #       "), "Cwhite") %%;\
         /test echo(decode_attr("       #       "), "Cwhite") %%;\
         /set _map_room_ruiny_panika=%%{_map_room_ruiny_panika_c}%%;\
-        /purge _rinde_klapa_kierunek*%;\
+        /purde _rinde_klapa_kierunek*%;\
         \
-    /def -msubstr -t'poludniowy-zachod, polnocny-wschod i zachod' -n1 _rinde_klapa_kierunek3 = %;\
+    /def -msubstr -t'poludniowy-zachod, polnocny-wschod i zachod' -n1 _rinde_klapa_kierunek3 = %%;\
         /test echo(decode_attr("     #         "), "Cwhite") %%;\
         /test echo(decode_attr("    #          "), "Cwhite") %%;\
         /test echo(decode_attr("   ##########  "), "Cwhite") %%;\
         /test echo(decode_attr("    #          "), "Cwhite") %%;\
         /test echo(decode_attr("     #         "), "Cwhite") %%;\
         /set _map_room_ruiny_panika=%%{_map_room_ruiny_panika_e}%%;\
-        /purge _rinde_klapa_kierunek*%;\
+        /purde _rinde_klapa_kierunek*%;\
         \
-    /def -msubstr -t'polnocny-wschod, polnoc, poludniowy-zachod, wschod i zachod' -n1 _rinde_klapa_kierunek4 = %;\
+    /def -msubstr -t'polnocny-wschod, polnoc, poludniowy-zachod, wschod i zachod' -n1 _rinde_klapa_kierunek4 = %%;\
         /test echo(decode_attr("        # # #  "), "Cwhite") %%;\
         /test echo(decode_attr("          # #  "), "Cwhite") %%;\
         /test echo(decode_attr("        #   #  "), "Cwhite") %%;\
         /test echo(decode_attr("      #        "), "Cwhite") %%;\
         /test echo(decode_attr("    #          "), "Cwhite") %%;\
         /set _map_room_ruiny_panika=%%{_map_room_ruiny_panika_i}%%;\
-        /purge _rinde_klapa_kierunek*%;\
+        /purde _rinde_klapa_kierunek*%;\
     podnies klape
 

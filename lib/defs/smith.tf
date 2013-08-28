@@ -16,4 +16,5 @@
         /send napraw %{_stuff_for_fixing_item}%;\
      /done%;\
      /send naostrz bron%;\
-     /purge \_trigger\_equip\_napraw*
+     /purge \_trigger\_equip\_napraw%;\
+     /purge \_trigger\_equip\_napraw\_patriotka
