@@ -116,6 +116,9 @@
 /def -aLg -mregexp -t'^([a-z\s]*) atakuje (.*)(?:\.|!)$$' _combat_event_attacks = \
     /test displayAttack({P1}, {P2})
 
+/def -aLg -p1 -mregexp -t' rzuca sie do ataku na (.*)(?:!|\.)$$' _combat_event_attacks_chaos_atak = \
+    /test displayAttack({PL}, {P1}, ' -> via chaos-atak')
+
 /def -aLg -p1 -mregexp -t' mruzac oczy w oczekiwaniu plynacej z walki rozkoszy rzuca sie na (.*)(?:!|\.)$$' _combat_event_attacks_sla-mczabij = \
     /test displayAttack({PL}, {P1}, ' -> via sla-mczabij')
 
@@ -272,10 +275,10 @@
     /echo -p @{Cbgred} |  ############  Z A B I L E S  ############%;\
     /echo -p @{Cbgred} |  ############  Z A B I L E S  ############%;\
 
-/def -p100 -mregexp -ag -t'(.*) (z cichym jekiem osuwa sie na ziemie|polegl|umarl)(a|)\.' -p15 _combat_event_kill_2 = \
+/def -p100 -mregexp -ag -t' (wydaje z siebie glosny skowyt, po czym przewraca sie na bok i nieruchomieje|z cichym jekiem osuwa sie na ziemie|polegl|umarl)(a|)\.' -p15 _combat_event_kill_2 = \
     /echo%;\
     /echo -p @{Cred} |  ############  Z G O N  ############%;\
-    /echo -p @{Cred} |  ############  Z G O N  ############    %{P1}%;\
+    /echo -p @{Cred} |  ############  Z G O N  ############    %{PL}%;\
     /echo -p @{Cred} |  ############  Z G O N  ############%;\
     /echo
 

@@ -48,4 +48,3 @@
 
 /def -t'Otaczajaca * sfera znika z cichym szumem.' _warn_sfera_4 = \
     /warn %{*}
-    

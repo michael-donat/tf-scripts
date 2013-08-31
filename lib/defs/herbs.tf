@@ -9,8 +9,14 @@
     wez wszystko z niego%; \
     otworz zamkniety przytroczony woreczek%; \
     wez wszystko z niego%; \
+    otworz pierwszy odtroczony woreczek%;\
+    wez wszystko z niego%; \
+    otworz drugi odtroczony woreczek%;\
+    wez wszystko z niego%; \
     wloz zolte jasne kwiaty do pierwszego przytroczonego woreczka%; \
+    wloz zolte jasne kwiaty do pierwszego odtroczonego woreczka%; \
     wloz czterokanciaste rozgalezione lodygi do drugiego przytroczonego woreczka%; \
+    wloz czterokanciaste rozgalezione lodygi do drugiego odtroczonego woreczka%; \
     wloz kremowe owlosione kwiaty do trzeciego przytroczonego woreczka%; \
     wloz drobne ukwiecone galazki do czwartego przytroczonego woreczka%; \
     wloz kanciaste parzace lodygi do piatego przytroczonego woreczka%; \
@@ -78,6 +84,26 @@
     /send zamknij woreczki%;\
     /send daj %{ziolo} %{komu}%;\
 
+/def ziolo_daj_zapas = \
+    /let woreczek=%{1}%;\
+    /let ziolo=%{-2}%;\
+    /let komu=%{2}%;\
+    /if ({woreczek}=~1) \
+        /let woreczek pierwszy%;\
+    /elseif ({woreczek}=~2) \
+        /let woreczek drugi%;\
+    /elseif ({woreczek}=~3) \
+        /let woreczek trzeci%;\
+    /elseif ({woreczek}=~4) \
+        /let woreczek czwarty%;\
+    /else \
+        /let woreczek piaty%;\
+    /endif%;\
+    /send otworz %{woreczek} odtroczony woreczek%;\
+    /send wez %{ziolo} z niego%;\
+    /send zamknij woreczki%;\
+    /send daj %{ziolo} %{komu}%;\
+
 /def ziolo = \
     /let woreczek=%{1}%;\
     /let ziolo=%{2}%;\
@@ -100,8 +126,6 @@
     /if ({co}!~NULL) \
         /send %{co} %{ziolo}%;\
     /endif
-
-
 
 /def dell = \
     przestan walczyc%; \
@@ -126,7 +150,7 @@
 /def przel = \
     przestan walczyc%; \
     opusc bron%; \
-    otworz trzeci przytroczony woreczek%; \
+    otworz piaty przytroczony woreczek%; \
     wez kremowy owlosiony ususzony kwiat z niego%; \
     sproszkuj kremowy owlosiony ususzony kwiat%; \
     wloz ziola do niego%;\
