@@ -34,7 +34,7 @@
 /def -mregexp -t' wiedziony sila potezniejsza niz .* wola, oddaje .*, cofajac sie szybko w panicznym leku\\.' _blaviken_wybranie_broni_1 = \
     /warn %{PL} ODDAL BRON ZJAWIE!
 
-/def -t'Nie mogac oprzec sie rzuconemu urokowi *, cofajac sie szybko w panicznym leku.' _blaviken_wybranie_broni_2 = \
+/def -mregexp -t'Nie mogac oprzec sie rzuconemu urokowi .*, cofajac sie szybko w panicznym leku.' _blaviken_wybranie_broni_2 = \
     /warn ODDALES BRON ZJAWIE!
 
 /def -mregexp -t'z calych sil skupia sie na widniejacym na czarnym zdobionym amulecie wizerunku tarczy\\.' _warn_sfera_1 = \

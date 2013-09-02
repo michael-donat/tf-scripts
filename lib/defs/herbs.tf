@@ -150,7 +150,7 @@
 /def przel = \
     przestan walczyc%; \
     opusc bron%; \
-    otworz piaty przytroczony woreczek%; \
+    otworz trzeci przytroczony woreczek%; \
     wez kremowy owlosiony ususzony kwiat z niego%; \
     sproszkuj kremowy owlosiony ususzony kwiat%; \
     wloz ziola do niego%;\

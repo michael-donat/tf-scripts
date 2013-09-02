@@ -107,8 +107,20 @@
 
 
 
-/def -aLg -mregexp -t'^Na rozkaz (.*) rzuca sie do ataku na ciebie!' _combat_event_attacks_me_on_order = \
+/def -aLg -p1 -mregexp -t'^Na rozkaz (.*) rzuca sie do ataku na ciebie!' _combat_event_attacks_me_on_order = \
     /echo -p >   @{Crgb025}Z rozkazu %{P1} @{Crgb500}ATAKUJE @{Crgb150}-- CIEBIE! --
+
+/def -aLg -p10 -mregexp -t'^Na rozkaz ([A-Z][a-z]*) ([A-Z][a-z]*) rzuca sie do ataku na (.*)!' _combat_event_attacks_on_order_1 = \
+    /test displayAttack({P2}, {P3}, strcat(' -> via rozkaz ', {P1}))
+
+/def -aLg -p10 -mregexp -t'^Na rozkaz ([A-Z][a-z]*) (.*) rzuca sie do ataku na (.*)!' _combat_event_attacks_on_order_2 = \
+    /test displayAttack({P2}, {P3}, strcat(' -> via rozkaz ', {P1}))
+
+/def -aLg -p10 -mregexp -t'^Na rozkaz ([a-z]* [a-z]* [a-z]*) ([A-Z][a-z]*) rzuca sie do ataku na (.*)!' _combat_event_attacks_on_order_3 = \
+    /test displayAttack({P2}, {P3}, strcat(' -> via rozkaz ', {P1}))
+
+/def -aLg -p10 -mregexp -t'^Na rozkaz ([a-z]* [a-z]* [a-z]*) ([a-z]* [a-z]* [a-z]*) rzuca sie do ataku na (.*)!' _combat_event_attacks_on_order_4 = \
+    /test displayAttack({P2}, {P3}, strcat(' -> via rozkaz ', {P1}))
 
 /def -aLg -p1 -mregexp -t'^Z typowym krasnoludzkim zacietrzewieniem (.*) rzuca sie na (.*) nie baczac na to, ze moze niebawem przyjdzie mu dolaczyc do swych Przodkow\.$$' _combat_event_attacks_kpzabij = \
     /test displayAttack({P1}, {P2}, ' -> via kpzabij')
@@ -116,7 +128,7 @@
 /def -aLg -mregexp -t'^([a-z\s]*) atakuje (.*)(?:\.|!)$$' _combat_event_attacks = \
     /test displayAttack({P1}, {P2})
 
-/def -aLg -p1 -mregexp -t' rzuca sie do ataku na (.*)(?:!|\.)$$' _combat_event_attacks_chaos_atak = \
+/def -aLg -p2 -mregexp -t' rzuca sie do ataku na (.*)(?:!|\.)$$' _combat_event_attacks_chaos_atak = \
     /test displayAttack({PL}, {P1}, ' -> via chaos-atak')
 
 /def -aLg -p1 -mregexp -t' mruzac oczy w oczekiwaniu plynacej z walki rozkoszy rzuca sie na (.*)(?:!|\.)$$' _combat_event_attacks_sla-mczabij = \
@@ -311,3 +323,6 @@
     /endif%;\
     /let whom=$[tolower(replace(' ', '_', {whom}))]%;\
     /unset is_stunned_%{whom}
+
+/def -Fp100 -mregexp -t'Wskazujesz (.*) jako cel ataku.' _setting_target_from_pointing = \
+    /target %{P1}
