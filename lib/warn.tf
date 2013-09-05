@@ -31,10 +31,11 @@
 /def -ab -mregexp -F -t'Z zewnatrz .* glos woznicy: (.*)' _dylizans_1 = /info %{P1}
 /def -ab -t'* pedzacy dylizans powoli zatrzymuje sie.' _dylizans_2 = /info DYLIZANS
 
+
 /def -mregexp -t' wiedziony sila potezniejsza niz .* wola, oddaje .*, cofajac sie szybko w panicznym leku\\.' _blaviken_wybranie_broni_1 = \
     /warn %{PL} ODDAL BRON ZJAWIE!
 
-/def -mregexp -t'Nie mogac oprzec sie rzuconemu urokowi .*, cofajac sie szybko w panicznym leku.' _blaviken_wybranie_broni_2 = \
+/def -mregexp -t'(Nie mogac oprzec sie rzuconemu urokowi .*, cofajac sie szybko w panicznym leku|Czujesz, jak twe cialo ogarnia niemoc, a z twych bezwladnych dloni wypada bron).' _blaviken_wybranie_broni_2 = \
     /warn ODDALES BRON ZJAWIE!
 
 /def -mregexp -t'z calych sil skupia sie na widniejacym na czarnym zdobionym amulecie wizerunku tarczy\\.' _warn_sfera_1 = \
@@ -48,3 +49,7 @@
 
 /def -t'Otaczajaca * sfera znika z cichym szumem.' _warn_sfera_4 = \
     /warn %{*}
+
+/def -mregexp -t'przez (.*) bron zaczyna podrygiwac, wpadajac w dziwny rezonans z narastajacym w komnacie niskim, grobowym dzwiekiem. Nagle potezna magia wyrywa .* ja z dloni i rzuca gdzies w glab korytarza!' _blaviken_wyrwanie_1 = \
+    /warn WYRWALO BRON - %{P1}
+

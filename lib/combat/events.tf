@@ -31,6 +31,15 @@
 /def -mregexp -t'.* wydaje ci rozkaz ataku na (.*).' _combat_event_set_attack_target_from_order = \
     /test processTargetSet({P1})
 
+;
+;##############################      WYCOFKA ZJAW         ###########################
+;
+
+/def -aLg -Fp20 -mregexp -t' krotkim skinieniem dloni przyzywa (.*), kryjac sie za .* przed twoimi ciosami\.' _combat_event_hide_blaviken_me = \
+    /test displayRetreat({PL}, {P1}, 'twoimi', 'true')
+
+/def -aLg -Fp20 -mregexp -t' krotkim skinieniem dloni przyzywa (.*), kryjac sie za .* przed ciosami (.*)\.' _combat_event_hide_blaviken_others = \
+    /test displayRetreat({PL}, {P1}, {P2}, 'true')
 
 ;
 ;##############################      WYCOFKA POTEPOW      ###########################
@@ -65,7 +74,7 @@
     /test displayRetreat({PL}, {P1}, {P2}, 'false')
 
 /def -aLg -p20 -mregexp -t' unosi swoja .* i szybko przesuwa sie w twoja strone, bezskutecznie probujac skryc sie za toba przed atakami (.*)\.$$' _combat_event_retreat_behind_me_fail = \
-    /test displayRetreat({PL}, 'ciebie', {P3}, 'false')
+    /test displayRetreat({PL}, 'ciebie', {P2}, 'false')
 
 ;
 ;##############################      ZASLONY ZASLONY      ###########################
@@ -264,7 +273,7 @@
 /def -mregexp -p2 -t'(Powoli dochodzisz do siebie|Czujesz jak slabosc po zadanym ciosie w glowe mija|Udaje ci sie uwolnic z sieci|Powoli odzyskujesz swobode ruchow)' _combat_event_nostun = \
 	/_fast_bind_clear
 
-/def -mregexp -Fp120 -t'(.* wytraca ci (.*) z (rak|reki)|Uderzenie jest tak silne, ze bezwiednie puszczasz|zakleszczajac lewakiem twoj .* Czujesz potezne szarpniecie)' _combat_event_disarm = \
+/def -mregexp -Fp120 -t'(Przechodzi cie nagly dreszcz, gdy opuszczasz .*|.* wytraca ci (.*) z (rak|reki)|Uderzenie jest tak silne, ze bezwiednie puszczasz|zakleszczajac lewakiem twoj .* Czujesz potezne szarpniecie)' _combat_event_disarm = \
     /let label=$[strcat(decode_attr(" --*  WYTRACENIE *-- ", "BCbgred"), "  ")]%;\
     /set im_disarmed=1%;\
     /test _fast_bind_set({label},"")

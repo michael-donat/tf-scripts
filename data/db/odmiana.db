@@ -1770,3 +1770,4 @@
 /def _odmiana_wolfgar = /set _odmiana_wolfgar_dopelniacz=wolfgara%;/set _odmiana_wolfgar_biernik=wolfgara%;/set _odmiana_wolfgar_narzednik=wolfgarem
 /def _odmiana_gallar = /set _odmiana_gallar_dopelniacz=gallara%;/set _odmiana_gallar_biernik=gallara%;/set _odmiana_gallar_narzednik=gallarem
 /def _odmiana_bhalin = /set _odmiana_bhalin_dopelniacz=bhalina%;/set _odmiana_bhalin_biernik=bhalina%;/set _odmiana_bhalin_narzednik=bhalinem
+/def _odmiana_xav = /set _odmiana_xav_dopelniacz=xava%;/set _odmiana_xav_biernik=xava%;/set _odmiana_xav_narzednik=xavem
