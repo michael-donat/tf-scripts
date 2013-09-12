@@ -1,3 +1,6 @@
+/def przelot_susz = otworz trzeci przytroczony woreczek%;wez kremowe kwiaty z niego%;wloz ususzone kremowe kwiaty do niego%;zamknij woreczki
+/def przelot_chowaj = otworz trzeci przytroczony woreczek%;wloz ususzone kwiaty do niego%;zamknij woreczki
+
 /def ziola_sortuj = \
     otworz zamkniety przytroczony woreczek%; \
     wez wszystko z niego%; \
@@ -13,6 +16,8 @@
     wez wszystko z niego%; \
     otworz drugi odtroczony woreczek%;\
     wez wszystko z niego%; \
+    otworz trzeci odtroczony woreczek%;\
+    wez wszystko z niego%; \
     wloz zolte jasne kwiaty do pierwszego przytroczonego woreczka%; \
     wloz zolte jasne kwiaty do pierwszego odtroczonego woreczka%; \
     wloz czterokanciaste rozgalezione lodygi do drugiego przytroczonego woreczka%; \
@@ -25,6 +30,9 @@
     wloz ziola do pierwszego przytroczonego woreczka%; \
     wloz ziola do drugiego przytroczonego woreczka%; \
     wloz ziola do piatego przytroczonego woreczka%; \
+    wloz ziola do pierwszego odtroczonego woreczka%; \
+    wloz ziola do drugiego odtroczonego woreczka%; \
+    wloz ziola do trzeciego odtroczonego woreczka%; \
     zamknij woreczki
 
 /def ziola_chowaj = \
