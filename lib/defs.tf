@@ -205,3 +205,27 @@
 /def zdajkosz = wloz amulety do kosza%;wloz buty do kosza%;wloz okulary do kosza
 
 /def wkl = wez wszystko z ciala
+
+/def magiki = \
+  /set _przegladamy_magiki=14%; \
+  /def -F -aLg -mregexp -t'^$$' __delete_blank_lines %; \
+  /def -F -aLg -mregexp -t'(Zauwazasz|Nie ma tutaj|Slucham)' _przegladamy_magiki_catch = \
+    /set _przegladamy_magiki=$$[{_przegladamy_magiki}-1]%%; \
+    /if ({_przegladamy_magiki} == 0) \
+      /purge __delete_blank_lines%%; \
+      /purge _przegladamy_magiki_catch%%; \
+    /endif%; \
+  przejrzyj polprzezroczyste migotliwe dragi%; \
+  przejrzyj gwiezdne topory%; \
+  przejrzyj misterne obosieczne topory%; \
+  przejrzyj kunsztowne mithrylowe topory bojowe%; \
+  przejrzyj wielkie runiczne mloty wojenne%; \
+  przejrzyj zdobione jasniejace mloty bojowe%; \
+  przejrzyj gigantyczne granitowe mloty%; \
+  przejrzyj kosciane kilofy%; \
+  przejrzyj adamantytowe szpiczaste partyzany%; \
+  przejrzyj ogromne ogniste trojzeby%; \
+  przejrzyj szkarlatne dlugie talwary%; \
+  przejrzyj poszczerbione obureczne miecze%; \
+  przejrzyj waskie kunsztowne sihille%; \
+  przejrzyj snieznobiale lsniace sztylety
