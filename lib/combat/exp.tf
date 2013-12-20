@@ -132,6 +132,10 @@
 
 /def rinde = /ruiny
 
+/def kiki = \
+    /test _exp_set("pierwszego pajeczaka", "drugiego pajeczaka", "trzeciego pajeczaka", "czwartego pajeczaka", "piatego pajeczaka", "szostego pajeczaka")%;\
+    /def key_f6 = sprawdz polnoc
+
 
 /def -t'*Oto Rivanon von Willgenstein, rycerz z mroznej polnocy.' _expo_location_rivanon = /rivanon
 /def -t'*Mustafa Ali IV*' _exp_location_mustafa = /mustafa

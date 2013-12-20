@@ -1772,3 +1772,4 @@
 /def _odmiana_bhalin = /set _odmiana_bhalin_dopelniacz=bhalina%;/set _odmiana_bhalin_biernik=bhalina%;/set _odmiana_bhalin_narzednik=bhalinem
 /def _odmiana_xav = /set _odmiana_xav_dopelniacz=xava%;/set _odmiana_xav_biernik=xava%;/set _odmiana_xav_narzednik=xavem
 /def _odmiana_vitrim = /set _odmiana_vitrim_dopelniacz=vitrima%;/set _odmiana_vitrim_biernik=vitrima%;/set _odmiana_vitrim_narzednik=vitrimem
+/def _odmiana_torek = /set _odmiana_torek_dopelniacz=toreka%;/set _odmiana_torek_biernik=toreka%;/set _odmiana_torek_narzednik=torekiem

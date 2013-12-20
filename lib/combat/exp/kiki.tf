@@ -1,0 +1,3 @@
+Przezroczysta wysmukla zjawa kobiety sklada rece w krzyz na piersiach i powoli zsuwa je do siebie, zamykajac dlonie w piesci. Po chwili, gwaltownym ruchem wyrzuca rece w kierunkuYanasha, wypuszczajac z ich wnetrza migotliwy pyl, ktory wpada mu w oczy.
+
+Dzierzona przez Hunverta bron zaczyna podrygiwac, wpadajac w dziwny rezonans z narastajacym w komnacie niskim, grobowym dzwiekiem. Nagle potezna magia wyrywa mu ja z dloni i rzuca gdzies w glab korytarza!
