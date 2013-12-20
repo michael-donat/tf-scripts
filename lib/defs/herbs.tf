@@ -18,6 +18,8 @@
     wez wszystko z niego%; \
     otworz trzeci odtroczony woreczek%;\
     wez wszystko z niego%; \
+    otworz czwarty odtroczony woreczek%;\
+    wez ziola z niego%;\
     wloz zolte jasne kwiaty do pierwszego przytroczonego woreczka%; \
     wloz zolte jasne kwiaty do pierwszego odtroczonego woreczka%; \
     wloz czterokanciaste rozgalezione lodygi do drugiego przytroczonego woreczka%; \
@@ -33,6 +35,7 @@
     wloz ziola do pierwszego odtroczonego woreczka%; \
     wloz ziola do drugiego odtroczonego woreczka%; \
     wloz ziola do trzeciego odtroczonego woreczka%; \
+    wloz ziola do czwartego odtroczonego woreczka%; \
     zamknij woreczki
 
 /def ziola_chowaj = \
@@ -66,11 +69,24 @@
     /ziola_sortuj
 
 /def ziola_sprawdz = \
+    /echo PIERWSZY PAS%;\
     zajrzyj do pierwszego przytroczonego woreczka%;\
+    /echo DRUGI PAS%;\
     zajrzyj do drugiego przytroczonego woreczka%;\
+    /echo TRZECI PAS%;\
     zajrzyj do trzeciego przytroczonego woreczka%;\
+    /echo CZWARTY PAS%;\
     zajrzyj do czwartego przytroczonego woreczka%;\
+    /echo PIATY PAS%;\
     zajrzyj do piatego przytroczonego woreczka%;\
+    /echo PIERWSZY RECE%;\
+    zajrzyj do pierwszego odtroczonego woreczka%;\
+    /echo DRUGI RECE%;\
+    zajrzyj do drugiego odtroczonego woreczka%;\
+    /echo TRZECI RECE%;\
+    zajrzyj do trzeciego odtroczonego woreczka%;\
+    /echo CZWARTY RECE%;\
+    zajrzyj do czwartego odtroczonego woreczka
 
 /def ziolo_daj = \
     /let woreczek=%{1}%;\
