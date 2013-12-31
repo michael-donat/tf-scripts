@@ -26,6 +26,20 @@
     /def -Fp1000 -aL -mregexp -t'Miejscownik'		_save_odmiana_7 = \
         /repeat -1 1 /purge _save_odmiana_*%%;/write_odmiana
 
+/def manual_odmiana = \
+    /set mianownik=%{1}%;\
+    /set dopelniacz=%{2}%;\
+    /set biernik=%{3}%;\
+    /set narzednik=%{4}%;\
+    /if ({*}!~NULL) \
+        /write_odmiana%;\
+    /elseif \
+        /echo Mianownik:    %{mianownik}%;\
+        /echo Dopelniacz:   %{dopelniacz}%;\
+        /echo Biernik:      %{biernik}%;\
+        /echo Narzednik:    %{narzednik}%;\
+    /endif
+
 /def write_odmiana = \
     /echo Mianownik:    %{mianownik}%;\
     /echo Dopelniacz:   %{dopelniacz}%;\
