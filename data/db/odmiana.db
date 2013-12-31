@@ -1773,3 +1773,4 @@
 /def _odmiana_xav = /set _odmiana_xav_dopelniacz=xava%;/set _odmiana_xav_biernik=xava%;/set _odmiana_xav_narzednik=xavem
 /def _odmiana_vitrim = /set _odmiana_vitrim_dopelniacz=vitrima%;/set _odmiana_vitrim_biernik=vitrima%;/set _odmiana_vitrim_narzednik=vitrimem
 /def _odmiana_torek = /set _odmiana_torek_dopelniacz=toreka%;/set _odmiana_torek_biernik=toreka%;/set _odmiana_torek_narzednik=torekiem
+/def _odmiana_karid = /set _odmiana_karid_dopelniacz=karida%;/set _odmiana_karid_biernik=karida%;/set _odmiana_karid_narzednik=karidem

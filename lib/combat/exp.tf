@@ -95,7 +95,7 @@
 /def szpiedzy = /krwiak
 
 /def blavi = \
-    /test _exp_set("pierwsza zjawe", "druga zjawe", "trzecia zjawe", "czwarta zjawe", "piata zjawe")%;\
+    /test _exp_set("pierwsza zjawe", "druga zjawe", "trzecia zjawe", "czwarta zjawe", "piata zjawe", "urokliwa zjawe", "majestatyczna zjawe")%;\
     /def key_f6 = ob wglebienia%%;ob mozaike%%; wcisnij kafelek%%;przekrec rubin%%;ob oltarz%%;ob sarkofag%;\
     /def klucz = zloz pierwsza polkule z druga polkula%;\
     /def brama = otworz brame kula%;\
