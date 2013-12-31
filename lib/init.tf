@@ -20,6 +20,11 @@
 
 /def -ag -h'Redef' hide_redef
 
+/def _nkp5bind
+
+/def clearstate = \
+    /def _nkp5bind
+
 /targetting 1
 /move +
 /orders -

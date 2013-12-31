@@ -10,7 +10,7 @@
 /def _bind_kb_key_nkpDot    = /_movement_go_exec u
 /def _bind_kb_key_nkpMinus  = /_movement_go_exec wyjscie
 
-/def _bind_kb_key_nkp5      = /send zerknij
+/def _bind_kb_key_nkp5      = /send zerknij%;/_nkp5bind
 
 /def move = \
     /if ({1}=~"-") \

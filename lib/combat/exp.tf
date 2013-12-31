@@ -136,6 +136,18 @@
     /test _exp_set("pierwszego pajeczaka", "drugiego pajeczaka", "trzeciego pajeczaka", "czwartego pajeczaka", "piatego pajeczaka", "szostego pajeczaka")%;\
     /def key_f6 = sprawdz polnoc
 
+/def amu = \
+    /test _exp_set("szkielet", "nekromante", "ozywienca")%;\
+    /def _nkp5bind = wez kosci%%;wez czaszki%;\
+    /_exp_prompt AMULET TILEA
+
+/def kosa = \
+    /test _exp_set("hobgoblina", "ambulla", "demona")%;\
+    /_exp_prompt KOSA
+
+/def espa = \
+    /test _exp_set("szkielet", "licza", "kosciotrupa", "ozywienca")%;\
+    /_exp_prompt ESPA
 
 /def -t'*Oto Rivanon von Willgenstein, rycerz z mroznej polnocy.' _expo_location_rivanon = /rivanon
 /def -t'*Mustafa Ali IV*' _exp_location_mustafa = /mustafa
