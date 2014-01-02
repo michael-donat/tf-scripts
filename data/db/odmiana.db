@@ -1775,3 +1775,6 @@
 /def _odmiana_torek = /set _odmiana_torek_dopelniacz=toreka%;/set _odmiana_torek_biernik=toreka%;/set _odmiana_torek_narzednik=torekiem
 /def _odmiana_karid = /set _odmiana_karid_dopelniacz=karida%;/set _odmiana_karid_biernik=karida%;/set _odmiana_karid_narzednik=karidem
 /def _odmiana_nekromanta = /set _odmiana_nekromanta_dopelniacz=nekromante%;/set _odmiana_nekromanta_biernik=nekromante%;/set _odmiana_nekromanta_narzednik=nekromantaw
+/def _odmiana_tharr = /set _odmiana_tharr_dopelniacz=tharra%;/set _odmiana_tharr_biernik=tharra%;/set _odmiana_tharr_narzednik=tharrem
+/def _odmiana_troal = /set _odmiana_troal_dopelniacz=troala%;/set _odmiana_troal_biernik=troala%;/set _odmiana_troal_narzednik=troalem
+/def _odmiana_danth = /set _odmiana_danth_dopelniacz=dantha%;/set _odmiana_danth_biernik=dantha%;/set _odmiana_danth_narzednik=danthem

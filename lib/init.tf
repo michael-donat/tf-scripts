@@ -1,4 +1,6 @@
 
+/eval /set logdir=%{TFLOGDIR}
+
 ; init logging
 /load lib/init/log.tf
 
@@ -22,8 +24,11 @@
 
 /def _nkp5bind
 
-/def clearstate = \
+/def clear5 = \
     /def _nkp5bind
+
+/def clearstate = \
+    /clear5
 
 /targetting 1
 /move +

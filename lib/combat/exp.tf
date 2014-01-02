@@ -1,4 +1,5 @@
 /def _exp_set = \
+    /def _nkp5bind%;\
     /purge [0-9]%;\
     /let i=0%; \
     /while ({#}) \
@@ -54,6 +55,7 @@
 
 /def karawana = \
     /test _exp_set("pierwszego nomada", "wielblada", "drugiego wielblada", "poteznego wielblada")%;\
+    /def _nkp5bind = sprawdz polnoc%;\
     /_exp_prompt KARAWANA
 
 /def piraci = \
