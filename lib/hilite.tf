@@ -13,9 +13,9 @@
 ; Kolorowanie przybywa podaza
 ;--------------------------------------------------------------
 
-/def -aCgray11 -mregexp -t'(.*)(?:skradajac sie|) (przybywa|podaza)(ja|) (?:za toba |)(z|na|ze|sposrod) (.*)' _info_events_location_change_1 = /test substitute(strcat("= ", "%{P0}"))
-/def -aCgray11 -mregexp -t'Wraz z .* podazasz(?: skradajac sie|) za .* (na|do) *.' _info_events_location_change_2 = /test substitute(strcat("= ", "%{*}"))
-/def -aCgray11 -mregexp -t'Podazasz skradajac sie za .* (na|do) *.' _info_events_location_change_3 = /test substitute(strcat("= ", "%{*}"))
+/def -FaCgray11 -mregexp -t'(.*)(?:skradajac sie|) (przybywa|podaza)(ja|) (?:za toba |)(z|na|ze|sposrod) (.*)' _info_events_location_change_1 = /test substitute(strcat("= ", "%{P0}"))
+/def -FaCgray11 -mregexp -t'Wraz z .* podazasz(?: skradajac sie|) za .* (na|do) *.' _info_events_location_change_2 = /test substitute(strcat("= ", "%{*}"))
+/def -FaCgray11 -mregexp -t'Podazasz skradajac sie za .* (na|do) *.' _info_events_location_change_3 = /test substitute(strcat("= ", "%{*}"))
 
 ;------------------------------------------------------------------------
 ; Sprzet

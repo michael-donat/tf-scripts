@@ -1,5 +1,5 @@
 /set WRsign=@{BxCyellow}(@{BxCred}~WR~@{BxCyellow})@{n}
-/def _WR_player_sub = /substitute -p @{}%{PL}%{P1}%{WRsign}%{P3- }%{PR}%;/prompt_PVP %{P3} %{P1}
-/def -Fp3 -mregexp -t'((c|C)zarnowlosy czarnooki (?:mutant|mutantka|mezczyzna)|Arid)([*,.\] ]|$)' _player_sub_236 = /_WR_player_sub
-/def -Fp3 -mregexp -t'((p|P)onury brzuchaty (?:mutant|mutantka|ogr)|Maldun)([*,.\] ]|$)' _player_sub_237 = /_WR_player_sub
-/def -Fp3 -mregexp -t'((z|Z)walisty bezzebny (?:mutant|mutantka|mezczyzna)|NieznanyZImienia)([*,.\] ]|$)' _player_sub_238 = /_WR_player_sub
+/def _WR_player_sub = /substitute -p @{}%{PL}%{P1}%{WRsign}%{P3- }%{PR}%;/test prompt_PVP("%{P3}", "%{P1}")
+/def -Fp3 -mregexp -t'((c|C)zarnowlosy czarnooki (?:mutant|mutantka|mezczyzna)|Arid)(\]? i |\]?[*,.]|\]?$)' _player_sub_236 = /_WR_player_sub
+/def -Fp3 -mregexp -t'((p|P)onury brzuchaty (?:mutant|mutantka|ogr)|Maldun)(\]? i |\]?[*,.]|\]?$)' _player_sub_237 = /_WR_player_sub
+/def -Fp3 -mregexp -t'((z|Z)walisty bezzebny (?:mutant|mutantka|mezczyzna)|NieznanyZImienia)(\]? i |\]?[*,.]|\]?$)' _player_sub_238 = /_WR_player_sub

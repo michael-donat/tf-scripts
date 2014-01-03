@@ -10,6 +10,7 @@
 /load combat/defs.tf
 /load combat/exp.tf
 /load combat/subs/hits.tf
+/load combat/chase.tf
 
 ; status bar
 /load statusbar/init.tf
