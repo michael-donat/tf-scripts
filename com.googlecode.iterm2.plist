@@ -121,9 +121,9 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>940 221 924 485 0 0 1920 1058 </string>
+	<string>958 178 924 485 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1920 1054 0 0 1920 1058 </string>
+	<string>0 599 570 451 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 26 959 1032 0 0 1920 1058 </string>
 	<key>New Bookmarks</key>
@@ -1124,19 +1124,33 @@
 					<key>Text</key>
 					<string>0x1f</string>
 				</dict>
+				<key>0x30-0x220000</key>
+				<dict>
+					<key>Action</key>
+					<integer>13</integer>
+					<key>Text</key>
+					<string></string>
+				</dict>
+				<key>0x30-0x240000</key>
+				<dict>
+					<key>Action</key>
+					<integer>13</integer>
+					<key>Text</key>
+					<string></string>
+				</dict>
 				<key>0x31-0x220000</key>
 				<dict>
 					<key>Action</key>
-					<integer>10</integer>
+					<integer>13</integer>
 					<key>Text</key>
-					<string>^[a</string>
+					<string></string>
 				</dict>
 				<key>0x32-0x220000</key>
 				<dict>
 					<key>Action</key>
-					<integer>12</integer>
+					<integer>13</integer>
 					<key>Text</key>
-					<string>OMG</string>
+					<string></string>
 				</dict>
 				<key>0x32-0x40000</key>
 				<dict>
@@ -1145,12 +1159,26 @@
 					<key>Text</key>
 					<string>0x00</string>
 				</dict>
+				<key>0x33-0x220000</key>
+				<dict>
+					<key>Action</key>
+					<integer>13</integer>
+					<key>Text</key>
+					<string></string>
+				</dict>
 				<key>0x33-0x40000</key>
 				<dict>
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
 					<string>0x1b</string>
+				</dict>
+				<key>0x34-0x220000</key>
+				<dict>
+					<key>Action</key>
+					<integer>13</integer>
+					<key>Text</key>
+					<string></string>
 				</dict>
 				<key>0x34-0x40000</key>
 				<dict>
@@ -1159,6 +1187,13 @@
 					<key>Text</key>
 					<string>0x1c</string>
 				</dict>
+				<key>0x35-0x220000</key>
+				<dict>
+					<key>Action</key>
+					<integer>13</integer>
+					<key>Text</key>
+					<string></string>
+				</dict>
 				<key>0x35-0x40000</key>
 				<dict>
 					<key>Action</key>
@@ -1166,12 +1201,26 @@
 					<key>Text</key>
 					<string>0x1d</string>
 				</dict>
+				<key>0x36-0x220000</key>
+				<dict>
+					<key>Action</key>
+					<integer>13</integer>
+					<key>Text</key>
+					<string></string>
+				</dict>
 				<key>0x36-0x40000</key>
 				<dict>
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
 					<string>0x1e</string>
+				</dict>
+				<key>0x37-0x220000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[201~</string>
 				</dict>
 				<key>0x37-0x40000</key>
 				<dict>
@@ -1722,4 +1771,3 @@
 	<string>1.0.0.20131228</string>
 </dict>
 </plist>
-

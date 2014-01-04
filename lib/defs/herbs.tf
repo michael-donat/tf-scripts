@@ -130,8 +130,8 @@
 
 /def ziolo = \
     /let woreczek=%{1}%;\
-    /let ziolo=%{2}%;\
-    /let co=%{3}%;\
+    /let ziolo=%{-2}%;\
+    /let co=%{2}%;\
     /if ({woreczek}=~1) \
         /let woreczek pierwszy%;\
     /elseif ({woreczek}=~2) \
@@ -198,3 +198,6 @@
     wloz ziola do niego%;\
     dobadz broni%; \
     zamknij otwarte woreczki
+
+
+/def -Fp200 -mregexp -t'([Dd]robn(ych|e|y) ukwiecon(e|a|ych) galaz(ek|ka|ki|))([ .,])' _ziolo_Swietlik = /substitute -p %{PL}%{P1} @{BxCgreen}(Swietlik [zjedz = +spost])@{n}%{P5}%{PR}
