@@ -151,6 +151,18 @@
     /test _exp_set("szkielet", "licza", "kosciotrupa", "ozywienca")%;\
     /_exp_prompt ESPA
 
+/def opal = \
+    /test _exp_set("trolla", "drugiego trolla", "orka")%;\
+    /_exp_prompt OPAL
+
+/def adas = \
+    /test _exp_set("goblina", "orka", "trolla")%;\
+    /_exp_prompt ADAS
+
+/def cmen = \
+    /test _exp_set("ghasta", "upiora", "zjawe")%;\
+    /_exp_prompt CMENTARZ BRETONSKI
+
 /def -t'*Oto Rivanon von Willgenstein, rycerz z mroznej polnocy.' _expo_location_rivanon = /rivanon
 /def -t'*Mustafa Ali IV*' _exp_location_mustafa = /mustafa
 /def -t'Przechodzisz przez nie majac wrazenie, ze opuszczasz bezpieczne tereny i to nie wiadomo czy nie na zawsze...' _exp_location_mahakam = /mahak
