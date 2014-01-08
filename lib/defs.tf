@@ -215,6 +215,9 @@
       /purge __delete_blank_lines%%; \
       /purge _przegladamy_magiki_catch%%; \
     /endif%; \
+  przejrzyj srebrzyste kosy bojowe %;\
+  przejrzyj adamantytowe szpiczaste partyzany%; \
+  przejrzyj ogromne ogniste trojzeby%; \
   przejrzyj polprzezroczyste migotliwe dragi%; \
   przejrzyj gwiezdne topory%; \
   przejrzyj misterne obosieczne topory%; \
@@ -223,9 +226,8 @@
   przejrzyj zdobione jasniejace mloty bojowe%; \
   przejrzyj gigantyczne granitowe mloty%; \
   przejrzyj kosciane kilofy%; \
-  przejrzyj adamantytowe szpiczaste partyzany%; \
-  przejrzyj ogromne ogniste trojzeby%; \
   przejrzyj szkarlatne dlugie talwary%; \
   przejrzyj poszczerbione obureczne miecze%; \
   przejrzyj waskie kunsztowne sihille%; \
   przejrzyj snieznobiale lsniace sztylety
+

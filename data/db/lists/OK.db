@@ -33,5 +33,6 @@
 /def -Fp3 -mregexp -t'((b|B)ladoskory czerwononosy ogr|Zook)(\]? i |\]?[*,. ]|\]?$)' _player_sub_169 = /_OK_player_sub
 /def -Fp3 -mregexp -t'((d|D)lugoreki skoltuniony ogr|Zub)(\]? i |\]?[*,. ]|\]?$)' _player_sub_170 = /_OK_player_sub
 /def -Fp3 -mregexp -t'((e|E)nergiczny okraglutki ogr|KtosTam)(\]? i |\]?[*,. ]|\]?$)' _player_sub_171 = /_OK_player_sub
-/def -Fp3 -mregexp -t'((w|W)ielki zielonkawy ogr|KtosTam)(\]? i |\]?[*,. ]|\]?$)' _player_sub_172 = /_OK_player_sub
-/def -Fp3 -mregexp -t'((z|Z)ezowaty masywny ogr|KtosTam)(\]? i |\]?[*,. ]|\]?$)' _player_sub_173 = /_OK_player_sub
+/def -Fp3 -mregexp -t'((s|S)zpotawy dlugowlosy ogr|KtosTam)(\]? i |\]?[*,. ]|\]?$)' _player_sub_172 = /_OK_player_sub
+/def -Fp3 -mregexp -t'((w|W)ielki zielonkawy ogr|KtosTam)(\]? i |\]?[*,. ]|\]?$)' _player_sub_173 = /_OK_player_sub
+/def -Fp3 -mregexp -t'((z|Z)ezowaty masywny ogr|KtosTam)(\]? i |\]?[*,. ]|\]?$)' _player_sub_174 = /_OK_player_sub

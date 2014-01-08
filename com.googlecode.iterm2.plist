@@ -1119,6 +1119,217 @@
 			</array>
 			<key>Keyboard Map</key>
 			<dict>
+                <key>0x30-0x240000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[100~</string>
+</dict>
+<key>0x31-0x240000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[101~</string>
+</dict>
+<key>0x32-0x240000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[102~</string>
+</dict>
+<key>0x33-0x240000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[103~</string>
+</dict>
+<key>0x34-0x240000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[104~</string>
+</dict>
+<key>0x35-0x240000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[105~</string>
+</dict>
+<key>0x36-0x240000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[106~</string>
+</dict>
+<key>0x37-0x240000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[107~</string>
+</dict>
+<key>0x38-0x240000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[108~</string>
+</dict>
+<key>0x39-0x240000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[109~</string>
+</dict>
+<key>0x30-0x220000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[200~</string>
+</dict>
+<key>0x31-0x220000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[201~</string>
+</dict>
+<key>0x32-0x220000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[202~</string>
+</dict>
+<key>0x33-0x220000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[203~</string>
+</dict>
+<key>0x34-0x220000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[204~</string>
+</dict>
+<key>0x35-0x220000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[205~</string>
+</dict>
+<key>0x36-0x220000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[206~</string>
+</dict>
+<key>0x37-0x220000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[207~</string>
+</dict>
+<key>0x38-0x220000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[208~</string>
+</dict>
+<key>0x39-0x220000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[209~</string>
+</dict>
+<key>0x30-0x280000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[300~</string>
+</dict>
+<key>0x31-0x280000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[301~</string>
+</dict>
+<key>0x32-0x280000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[302~</string>
+</dict>
+<key>0x33-0x280000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[303~</string>
+</dict>
+<key>0x34-0x280000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[304~</string>
+</dict>
+<key>0x35-0x280000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[305~</string>
+</dict>
+<key>0x36-0x280000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[306~</string>
+</dict>
+<key>0x37-0x280000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[307~</string>
+</dict>
+<key>0x38-0x280000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[308~</string>
+</dict>
+<key>0x39-0x280000</key>
+<dict>
+ <key>Action</key>
+ <integer>10</integer>
+ <key>Text</key>
+ <string>[309~</string>
+</dict>
+
 				<key>0x2d-0x40000</key>
 				<dict>
 					<key>Action</key>

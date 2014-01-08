@@ -77,7 +77,8 @@
         /beep%;\
     /else \
         /let whom=$(/odmien_B_M %{whom_B})%;\
-        /let whom=$[decode_attr({whom_B}, $(/_team_get_name_color %{whom}))]%;\
+        /let whom=$(/_team_get_member_label_B %{whom})%;\
+;        /let whom=$[decode_attr({whom_B}, $(/_team_get_name_color %{whom}))]%;\
     /endif%;\
     /let who=$[decode_attr({who}, $(/_team_get_name_color %{who}))]%;\
     /echo -p >  >  >  %{who} @{Crgb500}ATAKUJE@{n} %{whom}%{how}
@@ -91,6 +92,9 @@
             /let info=~+-~+-~+-~+- RZUCA SIE NA ~+-~+-~+-~+- @{Crgb150} -- CIEBIE --%;\
             /let color=@{Cwhite}%;\
             /let linecolor=@{Cbgred}%;\
+            /defend_next siebie%;\
+            /set defend_next_from=$(/odmien_M_N %{who})%;\
+            /_combat_prompt_defence_after_break siebie%;\
         /else \
             /let info=probuje rzucic sie na @{Crgb150}-- CIEBIE --%;\
             /let color=@{Cred}%;\
@@ -247,7 +251,11 @@
     /endif
 
 /def cover_target_next = \
-    /send zaslon $(/odmien_M_B %{_combat_defence_next_target}) przed %{defend_next_from}
+    /if (%{_combat_defence_next_target}!~'TY') \
+        /send zaslon $(/odmien_M_B %{_combat_defence_next_target}) przed %{defend_next_from}%;\
+    /else \
+        /prompt_defence TY%;\
+    /endif
 
 /def cover_target = \
     /if ({_combat_defence_target}!/"") \
@@ -269,9 +277,14 @@
     /endif
 
 /def prompt_defence = \
-    /if ({_combat_defence_target}!/"") \
+    /if ({*}!/"") \
+        /let defenceTarget=%{*}%;\
+    /else \
+        /let defenceTarget=%{_combat_defence_target}%;\
+    /endif %;\
+    /if ({defenceTarget}!/"") \
         /if ({_team_leader}=~"-") \
-            /if ({_combat_defence_target}=~"TY") /let target=siebie %; /else /let target=$(/odmien_M_B %{_combat_defence_target}) %; /endif%;\
+            /if ({defenceTarget}=~"TY") /let target=siebie %; /else /let target=$(/odmien_M_B %{defenceTarget}) %; /endif%;\
             /if ({_combat_point_at_target_by_set}=1) /send wskaz %{target} jako cel obrony %;/endif%;\
             /if ({_combat_point_at_target_by_look}=1) /send popatrz opiekunczo na %{target} %;/endif%;\
         /endif%;\
@@ -282,10 +295,10 @@
     /prompt_defence %{_combat_defence_next_target}
 
 /def order_defence = \
-    /if ({_combat_defence_target}!/"") \
-        /let defenceTarget=%{_combat_defence_target}%;\
-    /else \
+    /if ({*}!/"") \
         /let defenceTarget=%{*}%;\
+    /else \
+        /let defenceTarget=%{_combat_defence_target}%;\
     /endif %;\
     /if ({defenceTarget}!/"") \
         /if ({defenceTarget}=~"TY") /let target=ciebie %; /else /let target=$(/odmien_M_B %{defenceTarget}) %; /endif%;\

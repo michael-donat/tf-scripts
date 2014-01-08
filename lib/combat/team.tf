@@ -86,3 +86,14 @@
         /let color=Crgb530%;\
     /endif%;\
     /echo %{color}
+
+/def _team_get_member_label_B = \
+    /let return=%{*}%;\
+    /if (_team_is_member({*})) \
+        /let number=$(/_team_get_number_by_name %{*})%;\
+        /let return=$(/odmien_M_B %{*})%;\
+        /let return=$[decode_attr($(/ucfirstname %{return}), $(/_team_get_name_color %{*}))]%;\
+        /let return=%{return} [%{number}]%;\
+    /endif%;\
+    /echo %{return}
+

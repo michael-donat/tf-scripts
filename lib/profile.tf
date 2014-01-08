@@ -42,6 +42,7 @@
 /def key_shift_nkp7=/zg 7
 /def key_shift_nkp8=/zg 8
 /def key_shift_nkp9=/zg 9
+/def key_shift_nkp0=/defend siebie
 
 /def key_ctrl_nkp1=/zr 1
 /def key_ctrl_nkp2=/zr 2
@@ -53,6 +54,17 @@
 /def key_ctrl_nkp8=/zr 8
 /def key_ctrl_nkp9=/zr 9
 /def key_ctrl_nkp0=/defend siebie%;/order_defence
+
+/def key_alt_nkp1=/d 1
+/def key_alt_nkp2=/d 2
+/def key_alt_nkp3=/d 3
+/def key_alt_nkp4=/d 4
+/def key_alt_nkp5=/d 5
+/def key_alt_nkp6=/d 6
+/def key_alt_nkp7=/d 7
+/def key_alt_nkp8=/d 8
+/def key_alt_nkp9=/d 9
+/def key_alt_nkp0=/defend siebie
 
 /def key_f16 = /toggle_orders
 

@@ -30,6 +30,7 @@
 /def _bind_kb_key_nkpEnt = /dokey NEWLINE
 
 ; custom bindings for ctrl+numeric
+/def -i -b'^[[100~' = /key_ctrl_nkp0
 /def -i -b'^[[101~' = /key_ctrl_nkp1
 /def -i -b'^[[102~' = /key_ctrl_nkp2
 /def -i -b'^[[103~' = /key_ctrl_nkp3
@@ -39,8 +40,9 @@
 /def -i -b'^[[107~' = /key_ctrl_nkp7
 /def -i -b'^[[108~' = /key_ctrl_nkp8
 /def -i -b'^[[109~' = /key_ctrl_nkp9
-/def -i -b'^[[110~' = /key_ctrl_nkp0
 
+
+/def -i -b'^[[200~' = /key_shift_nkp0
 /def -i -b'^[[201~' = /key_shift_nkp1
 /def -i -b'^[[202~' = /key_shift_nkp2
 /def -i -b'^[[203~' = /key_shift_nkp3
@@ -50,3 +52,14 @@
 /def -i -b'^[[207~' = /key_shift_nkp7
 /def -i -b'^[[208~' = /key_shift_nkp8
 /def -i -b'^[[209~' = /key_shift_nkp9
+
+/def -i -b'^[[300~' = /key_alt_nkp0
+/def -i -b'^[[301~' = /key_alt_nkp1
+/def -i -b'^[[302~' = /key_alt_nkp2
+/def -i -b'^[[303~' = /key_alt_nkp3
+/def -i -b'^[[304~' = /key_alt_nkp4
+/def -i -b'^[[305~' = /key_alt_nkp5
+/def -i -b'^[[306~' = /key_alt_nkp6
+/def -i -b'^[[307~' = /key_alt_nkp7
+/def -i -b'^[[308~' = /key_alt_nkp8
+/def -i -b'^[[309~' = /key_alt_nkp9
