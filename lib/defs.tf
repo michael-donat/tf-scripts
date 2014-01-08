@@ -229,3 +229,6 @@
   przejrzyj poszczerbione obureczne miecze%; \
   przejrzyj waskie kunsztowne sihille%; \
   przejrzyj snieznobiale lsniace sztylety
+
+/def code = \
+    /load code.tf
