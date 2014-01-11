@@ -27,6 +27,7 @@
     wloz kremowe owlosione kwiaty do trzeciego przytroczonego woreczka%; \
     wloz drobne ukwiecone galazki do czwartego przytroczonego woreczka%; \
     wloz kanciaste parzace lodygi do piatego przytroczonego woreczka%; \
+    wloz zoltoszare niepozorne korzenie do trzeciego przytroczonego woreczka%; \
     wloz ziola do trzeciego przytroczonego woreczka%; \
     wloz ziola do czwartego przytroczonego woreczka%; \
     wloz ziola do pierwszego przytroczonego woreczka%; \
