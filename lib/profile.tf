@@ -97,3 +97,6 @@
 /def key_pgup = /dokey_hpageback
 /def key_esc_pgdn = /dokey_page
 /def key_esc_pgup = /dokey_pageback
+
+/def winkeys = \
+    /load keyboards/win.tf

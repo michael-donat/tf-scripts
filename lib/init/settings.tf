@@ -18,6 +18,9 @@
 
 /def -Fp1000 -mregexp -t'^>' _usuwanie_prompta = \ /substitute %{PR}
 
+;below makes %; expand to newlines
+/set sub=on
+
 /def setcolors = \
     /send kolor tekst 250%;\
     /send kolor cel ataku 250%;\
