@@ -37,22 +37,22 @@
 /load warn.tf
 
 ; load external bits
-/load vendor/compatibility.tf
-/load vendor/ingwar/cechy.tf
-/load vendor/ingwar/zielnik.tf
+/load ../vendor/compatibility.tf
+/load ../vendor/ingwar/cechy.tf
+/load ../vendor/ingwar/zielnik.tf
 
-/load vendor/dhogrin/src/listy.tf
-/load vendor/dhogrin/src/spece.tf
-/load vendor/dhogrin/src/spece_npc.tf
-/load vendor/dhogrin/src/spece_bronie.tf
-/load vendor/dhogrin/src/map.tf
-/load vendor/dhogrin/src/postepy.tf
-/load vendor/dhogrin/src/skrzynia.tf
-/load vendor/dhogrin/src/magiki.tf
-/load vendor/dhogrin/src/ocena.tf
-/load vendor/dhogrin/src/licznik.tf
-/load vendor/dhogrin/src/stat.tf
-/load vendor/dhogrin/src/ruch_zliczanie.tf
+/load ../vendor/dhogrin/src/listy.tf
+/load ../vendor/dhogrin/src/spece.tf
+/load ../vendor/dhogrin/src/spece_npc.tf
+/load ../vendor/dhogrin/src/spece_bronie.tf
+/load ../vendor/dhogrin/src/map.tf
+/load ../vendor/dhogrin/src/postepy.tf
+/load ../vendor/dhogrin/src/skrzynia.tf
+/load ../vendor/dhogrin/src/magiki.tf
+/load ../vendor/dhogrin/src/ocena.tf
+/load ../vendor/dhogrin/src/licznik.tf
+/load ../vendor/dhogrin/src/stat.tf
+/load ../vendor/dhogrin/src/ruch_zliczanie.tf
 
 ; load databases
 /eval /load %{db_odmiana}

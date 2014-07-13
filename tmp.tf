@@ -1,0 +1,1 @@
+/def _bind_kb_key_nkp5 = /testuj%;/send pij%;/send zerknij

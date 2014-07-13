@@ -2,7 +2,7 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-SOURCE=$DIR/../lib/vendor/dhogrin/raw/listy
+SOURCE=$DIR/../vendor/dhogrin/raw/listy
 DESTINATION=$DIR/../data/db/lists/source
 RESULT=$DIR/../data/db/lists
 
