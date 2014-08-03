@@ -98,9 +98,7 @@
 
 /def blavi = \
     /test _exp_set("pierwsza zjawe", "druga zjawe", "trzecia zjawe", "czwarta zjawe", "piata zjawe", "urokliwa zjawe", "majestatyczna zjawe")%;\
-    /def key_f6 = ob wglebienia%%;ob mozaike%%; wcisnij kafelek%%;przekrec rubin%%;ob oltarz%%;ob sarkofag%;\
-    /def klucz = zloz pierwsza polkule z druga polkula%;\
-    /def brama = otworz brame kula%;\
+    /load combat/exp/blavi.tf%;\
     /_exp_prompt BLAVIKEN
 
 /def zywki = \
@@ -169,3 +167,4 @@
 /def -t'Glowna sala Swiatyni Wiecznego Ognia.' _exp_location_orson = /orson
 /def -t"'Profesor' vel Ralf Blunden, mezczyzna." _exp_location_profesor = /profesor
 /def -t'* drewniana prycze, wraz z przymocowanym do niej fragmentem podlogi*' = /krwiak
+

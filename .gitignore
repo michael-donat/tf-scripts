@@ -8,3 +8,4 @@ src/worlds
 atlassian-ide-plugin.xml
 mapper/tf-mapper*
 mapper/*.zip
+*.pyc
