@@ -37,3 +37,10 @@
 /pointing + - -
 
 /map -
+
+;load python stuff
+/def pyload = \
+    /python_load py.start%;\
+    /python_load gmcp
+
+/pyload
