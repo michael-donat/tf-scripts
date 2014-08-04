@@ -49,7 +49,7 @@ def roomInfo(json):
             debug(eval)
             tf.eval(eval)
 
-    except AttributeError as e:
+    except (AttributeError, KeyError) as e:
         debug('roomInfo error: %s ' % e.message)
         return
 
