@@ -51,12 +51,14 @@
     /if ({rebind}!~NULL) \
         /let direction=%{rebind}%;\
     /endif%;\
-    /if (_movement_disabled!=1) \
-        /let command=%{direction}%;\
-    /elseif (_movement_sneak==1) \
+    /if (_movement_disabled==1) \
+        /let command=;\
+    /elseif (_movement_mode==1) \
         /let command=przemknij sie %{direction} %;\
-    /elseif (_movement_sneak_team==1) \
+    /elseif (_movement_mode==2) \
         /let command=przemknij sie z druzyna %{direction} %;\
+    /elseif (_movement_mode==3) \
+        /let command=jedz na %{direction} %;\
     /endif%;\
     /send -h %{command}
 
@@ -94,3 +96,33 @@
   /let __exits=$[replace({_map_custom_current}, strcat("@{Crgb050}", {_map_custom_current}, "@{Crgb045}"), {__exits})]%; \
   /let __exits=$[replace("|", " ", {__exits})]%; \
   /set _map_bound_exit=$(/echo -p @{Crgb045}%{__exits})
+
+/def key_shift_right = \
+    /if (_movement_mode==1) \
+        /set _movement_mode=2%;\
+        /echo -p @{Crgb045} Move mode: Team sneak%;\
+    /elseif (_movement_mode==2) \
+        /set _movement_mode=3%;\
+        /echo -p @{Crgb045} Move mode: Cart%;\
+    /elseif (_movement_mode==3) \
+        /set _movement_mode=0%;\
+        /echo -p @{Crgb045} Move mode: Walk%;\
+    /else \
+        /set _movement_mode=1%;\
+        /echo -p @{Crgb045} Move mode: Sneak%;\
+    /endif
+
+/def key_shift_left = \
+    /if (_movement_mode==3) \
+        /set _movement_mode=2%;\
+        /echo -p @{Crgb045} Move mode: Sneak Team%;\
+    /elseif (_movement_mode==2) \
+        /set _movement_mode=1%;\
+        /echo -p @{Crgb045} Move mode: Sneak%;\
+    /elseif (_movement_mode==1) \
+        /set _movement_mode=0%;\
+        /echo -p @{Crgb045} Move mode: Walk%;\
+    /else \
+        /set _movement_mode=3%;\
+        /echo -p @{Crgb045} Move mode: Cart%;\
+    /endif
