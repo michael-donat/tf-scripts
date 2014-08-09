@@ -103,6 +103,7 @@
 
 /def zywki = \
     /test _exp_set("zywiolaka", "drugiego zywiolaka", "trzeciego zywiolaka")%;\
+    /def _nkp5bind = wez kamienie%%;wez kamyki%;\
     /_exp_prompt ZYWKI
 
 /def skavy = \

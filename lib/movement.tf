@@ -52,7 +52,11 @@
         /let direction=%{rebind}%;\
     /endif%;\
     /if (_movement_disabled==1) \
-        /let command=;\
+        /echo -p @{Crgb400} Move mode: Disabled%;\
+        /let command=%;\
+        /return%;\
+    /elseif (_movement_mode==0) \
+        /let command=%{direction}%;\
     /elseif (_movement_mode==1) \
         /let command=przemknij sie %{direction} %;\
     /elseif (_movement_mode==2) \
@@ -126,3 +130,12 @@
         /set _movement_mode=3%;\
         /echo -p @{Crgb045} Move mode: Cart%;\
     /endif
+
+
+/def -t'Siadasz na * bryczce.' _cart_enter_1 = \
+    /set _movement_mode=2%;\
+    /key_shift_right
+
+/def -t'Zsiadasz z *bryczki.' _cart_exit_1 = \
+    /set _movement_mode=3%;\
+    /key_shift_right
