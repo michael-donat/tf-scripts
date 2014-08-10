@@ -15,7 +15,7 @@
 
 /def -mregexp -t'Jego ([a-zA-Z]+).* oczy zwrocone sa gdzies w przestrzen' _exp_blavi_jednorozec = \
     /let _exp_blavi_jednorozec_color=%{P1}%;\
-    /def _exp_blavi_jednorozec_action=/send przestaw figurke jednorozca na %{_exp_blavi_jednorozec_color} pole
+    /def _exp_blavi_jednorozec_acti`on=/send przestaw figurke jednorozca na %{_exp_blavi_jednorozec_color} pole
 
 /def figurki = \
     /_exp_blavi_smok_action%;\

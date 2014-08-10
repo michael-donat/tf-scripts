@@ -57,6 +57,8 @@
         /set secho=1%;\
         /set sprefix=$[decode_attr(" > ")]%;\
         /set secho_attr=Crgb055%;\
+        /python_call util.echoOn%;\
     /else \
         /set secho=0%;\
+        /python_call util.echoOff%;\
     /endif

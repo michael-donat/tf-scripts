@@ -41,6 +41,7 @@
 ;load python stuff
 /def pyload = \
     /python_load py.start%;\
-    /python_load gmcp
+    /python_load gmcp%;\
+    /python_load util
 
 /pyload
