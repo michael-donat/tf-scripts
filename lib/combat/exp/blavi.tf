@@ -4,6 +4,8 @@
 
 /def -t'Zatopione w mroku, krecone schody.' _blavi_telepyrt = /_map_teleport 410c7658-9fc9-11e2-85de-9c4e368dac0c
 /def -t'Sala ceremonialna.' _blavi_telepyrt2 = /_map_teleport 7d3ece6c-cbd1-11e2-a5b3-9c4e368dac0c
+/def -t'Podnoze kreconych schodow.' _blavi_telepyrt3 = /_map_teleport 4226eba4-9fc9-11e2-85de-9c4e368dac0c
+
 
 /def -mregexp -t'\. (.*) oczy jarza sie delikatna poswiata' _exp_blavi_smok = \
     /let _exp_blavi_smok_color=$[tolower({P1})]%;\
@@ -15,7 +17,7 @@
 
 /def -mregexp -t'Jego ([a-zA-Z]+).* oczy zwrocone sa gdzies w przestrzen' _exp_blavi_jednorozec = \
     /let _exp_blavi_jednorozec_color=%{P1}%;\
-    /def _exp_blavi_jednorozec_acti`on=/send przestaw figurke jednorozca na %{_exp_blavi_jednorozec_color} pole
+    /def _exp_blavi_jednorozec_action=/send przestaw figurke jednorozca na %{_exp_blavi_jednorozec_color} pole
 
 /def figurki = \
     /_exp_blavi_smok_action%;\
@@ -29,3 +31,8 @@
 /def -t'Marmurowy kloc wyrasta z ziemi, pokryty mchem i zielonym zarostem, rozszerzajac sie do sporej*' _exp_blavi_zagadka = \
     /def c = /figurki%;\
     /echo -p @{Cgreen}[CUSTOM] /c = /figurki
+
+/def -t'Przez komnate przechodzi grozny, pelen wscieklosci pomruk, zas oczy posagow zapalaja sie krwistoczerwonym blaskiem.' _exp_blavi_warn = \
+    /warn BRONIE W DOL
+
+

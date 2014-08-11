@@ -62,20 +62,27 @@
     /elseif (_movement_mode==2) \
         /let command=przemknij sie z druzyna %{direction} %;\
     /elseif (_movement_mode==3) \
-        /let command=jedz na %{direction} %;\
+        /if ({direction}=/"d") \
+             /let command=zatrzymaj %{_cart_type}%;\
+        /elseif ({direction}=/"u") \
+             /let command=wstan%;\
+        /else \
+            /let command=jedz na %{direction} %;\
+        /endif%;\
     /endif%;\
     /send -h %{command}
 
 /def -F -agL -mregexp -t'(Mozesz sie stad udac na |Wykopany w ziemi tunel wiedzie w dwoch kierunkach: |Wykopany w ziemi tunel rozgalezia sie tutaj, zas jego odnogi wioda na |Wykop konczy sie tutaj, zas jedyne widoczne przejscie prowadzi na |Mozesz skierowac lodz na |Linia brzegowa ciagnie sie na |Krete, widmowe drozki prowadza na |(Jest|Sa) tutaj ([^ ]*) (widoczne|widocznych) (wyjsc|wyjscia|wyjscie): |Rozpadlina ciagnie sie na |Trakt wiedzie na |W mroku nocy dostrzegasz .* widoczn(e|ych) wyjsc(|ia|ie): |Trakt rozgalezia sie na |W gestych ciemnosciach dostrzegasz trakt wiodacy na |W gestych ciemnosciach dostrzegasz, ze trakt rozgalezia sie na |Sciezka prowadzi tutaj w .* (kierunkach|kierunku): |Szlak.* tutaj w .* kierunk.*: |Wyjsc.* prowadz.* tutaj w .* (kierunkach|kierunku): |Tunel.* ciagn.* na |Wedrowke przez rozlegle laki mozesz kontynuowac udajac sie na )' _movement_match_exists = \
-    /let _movement_exists=$[replace(". Mozna jednak z niego zejsc i udac sie na ", ", ", {PR})] %;\
-    /let _movement_exists=$[replace(". Jedyne inne widoczne wyjscie to: ", ", ", {_movement_exists})] %;\
-    /let _movement_exists=$[replace(" oraz ", ", ", {_movement_exists})] %;\
-    /let _movement_exists=$[replace(" lub ", ", ", {_movement_exists})] %;\
-    /let _movement_exists=$[replace(".", "", replace(" i ", ", ", {_movement_exists}))]%;\
-    /let _movement_exists_clean=$[replace(", ", " ", {_movement_exists})]%;\
-    /_statusbar_update_compass %{_movement_exists_clean}%;\
-    /set __movement_exits=%{_movement_exists}%; \
     /_movement_exists %{_movement_exists}
+;    /let _movement_exists=$[replace(". Mozna jednak z niego zejsc i udac sie na ", ", ", {PR})] %;\
+;    /let _movement_exists=$[replace(". Jedyne inne widoczne wyjscie to: ", ", ", {_movement_exists})] %;\
+;    /let _movement_exists=$[replace(" oraz ", ", ", {_movement_exists})] %;\
+;    /let _movement_exists=$[replace(" lub ", ", ", {_movement_exists})] %;\
+;    /let _movement_exists=$[replace(".", "", replace(" i ", ", ", {_movement_exists}))]%;\
+;    /let _movement_exists_clean=$[replace(", ", " ", {_movement_exists})]%;\
+;    /_statusbar_update_compass %{_movement_exists_clean}%;\
+;    /set __movement_exits=%{_movement_exists}%; \
+;    /_movement_exists %{_movement_exists}
 
 /def _movement_exists = \
     /_movement_exits_prepare%; \
@@ -132,10 +139,15 @@
     /endif
 
 
-/def -t'Siadasz na * bryczce.' _cart_enter_1 = \
+/def -mregexp -t'Siadasz na .* (bryczce|wozie)\.' _cart_enter_1 = \
+    /if ({P1}=/"bryczce") \
+        /set _cart_type=bryczke%;\
+    /else \
+        /set _cart_type=woz%;\
+    /endif %;\
     /set _movement_mode=2%;\
     /key_shift_right
 
-/def -t'Zsiadasz z *bryczki.' _cart_exit_1 = \
+/def -mregexp -t'Zsiadasz z .*(bryczki|wozu)\.' _cart_exit_1 = \
     /set _movement_mode=3%;\
     /key_shift_right

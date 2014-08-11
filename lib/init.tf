@@ -36,7 +36,7 @@
 
 /pointing + - -
 
-/map -
+/map +
 
 ;load python stuff
 /def pyload = \
@@ -45,3 +45,5 @@
     /python_load util
 
 /pyload
+
+

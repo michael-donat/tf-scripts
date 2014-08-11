@@ -24,3 +24,19 @@ def roomInfo(json):
     except (AttributeError, KeyError) as e:
         debug('roomInfo error: %s not found' % e.message)
         return
+
+def exitInfo(json):
+
+    try:
+        exits = json['exits']
+
+        tf.eval('/_statusbar_update_compass %s' % ' '.join(exits))
+
+        exits = ', '.join(exits)
+
+        tf.eval('/set __movement_exits=%s' % exits)
+
+        debug('exitinfo -> %s' % exits)
+
+    except:
+        return

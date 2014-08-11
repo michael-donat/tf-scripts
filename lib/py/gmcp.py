@@ -5,6 +5,7 @@ import json
 import sys
 
 from map import roomInfo
+from map import exitInfo
 from character import charInfo
 
 from util import debug
@@ -21,6 +22,7 @@ def handle(input):
 
     if(command == 'room.info'):
         roomInfo(args)
+        exitInfo(args)
     elif(command == 'char.state'):
         charInfo(args)
     else:

@@ -1779,3 +1779,5 @@
 /def _odmiana_troal = /set _odmiana_troal_dopelniacz=troala%;/set _odmiana_troal_biernik=troala%;/set _odmiana_troal_narzednik=troalem
 /def _odmiana_danth = /set _odmiana_danth_dopelniacz=dantha%;/set _odmiana_danth_biernik=dantha%;/set _odmiana_danth_narzednik=danthem
 /def _odmiana_brombur = /set _odmiana_brombur_dopelniacz=brombura%;/set _odmiana_brombur_biernik=brombura%;/set _odmiana_brombur_narzednik=bromburem
+/def _odmiana_balgrin = /set _odmiana_balgrin_dopelniacz=balgrina%;/set _odmiana_balgrin_biernik=balgrina%;/set _odmiana_balgrin_narzednik=balgrinem
+/def _odmiana_luntar = /set _odmiana_luntar_dopelniacz=luntara%;/set _odmiana_luntar_biernik=luntara%;/set _odmiana_luntar_narzednik=luntarem
