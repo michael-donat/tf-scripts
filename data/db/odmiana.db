@@ -1781,3 +1781,6 @@
 /def _odmiana_brombur = /set _odmiana_brombur_dopelniacz=brombura%;/set _odmiana_brombur_biernik=brombura%;/set _odmiana_brombur_narzednik=bromburem
 /def _odmiana_balgrin = /set _odmiana_balgrin_dopelniacz=balgrina%;/set _odmiana_balgrin_biernik=balgrina%;/set _odmiana_balgrin_narzednik=balgrinem
 /def _odmiana_luntar = /set _odmiana_luntar_dopelniacz=luntara%;/set _odmiana_luntar_biernik=luntara%;/set _odmiana_luntar_narzednik=luntarem
+/def _odmiana_barll = /set _odmiana_barll_dopelniacz=barlla%;/set _odmiana_barll_biernik=barlla%;/set _odmiana_barll_narzednik=barllem
+/def _odmiana_mereen = /set _odmiana_mereen_dopelniacz=mereena%;/set _odmiana_mereen_biernik=mereena%;/set _odmiana_mereen_narzednik=mereenem
+/def _odmiana_zora = /set _odmiana_zora_dopelniacz=zory%;/set _odmiana_zora_biernik=zore%;/set _odmiana_zora_narzednik=zora

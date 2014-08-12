@@ -5,7 +5,7 @@
 /def -t'Zatopione w mroku, krecone schody.' _blavi_telepyrt = /_map_teleport 410c7658-9fc9-11e2-85de-9c4e368dac0c
 /def -t'Sala ceremonialna.' _blavi_telepyrt2 = /_map_teleport 7d3ece6c-cbd1-11e2-a5b3-9c4e368dac0c
 /def -t'Podnoze kreconych schodow.' _blavi_telepyrt3 = /_map_teleport 4226eba4-9fc9-11e2-85de-9c4e368dac0c
-
+/def -t'Zamkniete masywne drzwi prowadzace na poludnie.' _blavi_telepyrt4 = /_map_teleport 57a23388-cbd1-11e2-a5b3-9c4e368dac0c
 
 /def -mregexp -t'\. (.*) oczy jarza sie delikatna poswiata' _exp_blavi_smok = \
     /let _exp_blavi_smok_color=$[tolower({P1})]%;\
@@ -32,7 +32,8 @@
     /def c = /figurki%;\
     /echo -p @{Cgreen}[CUSTOM] /c = /figurki
 
-/def -t'Przez komnate przechodzi grozny, pelen wscieklosci pomruk, zas oczy posagow zapalaja sie krwistoczerwonym blaskiem.' _exp_blavi_warn = \
-    /warn BRONIE W DOL
+/def -aCred -t'Przez komnate przechodzi grozny, pelen wscieklosci pomruk, zas oczy posagow zapalaja sie krwistoczerwonym blaskiem.' _exp_blavi_warn = \
 
+/def -mregexp -t' spoglada jak zahipnotyzowany w jeden ze szmaragdowych plomykow, tlacych sie posrod zamglonych ruin\.' _exp_blavi_poszedl = \
+    /warn %{PL} POSZEDL!
 

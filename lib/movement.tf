@@ -62,13 +62,7 @@
     /elseif (_movement_mode==2) \
         /let command=przemknij sie z druzyna %{direction} %;\
     /elseif (_movement_mode==3) \
-        /if ({direction}=/"d") \
-             /let command=zatrzymaj %{_cart_type}%;\
-        /elseif ({direction}=/"u") \
-             /let command=wstan%;\
-        /else \
-            /let command=jedz na %{direction} %;\
-        /endif%;\
+        /let command=jedz na %{direction} %;\
     /endif%;\
     /send -h %{command}
 
@@ -151,3 +145,14 @@
 /def -mregexp -t'Zsiadasz z .*(bryczki|wozu)\.' _cart_exit_1 = \
     /set _movement_mode=3%;\
     /key_shift_right
+
+/def key_shift_up = \
+    /if (_movement_mode==3) \
+        /send -h wstan%;\
+    /else \
+        /send -h usiadz na wozie%;\
+        /send -h usiadz na bryczce%;\
+    /endif
+
+/def key_shift_down = \
+    /send -h zatrzymaj %{_cart_type}

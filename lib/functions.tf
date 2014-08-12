@@ -52,10 +52,16 @@
 ;    /test echo({___lineTruScreen})
     /echo
 
-/def rawlog = /quote -S /showme 'vendor/dhogrin/raw/raw_log
+/def rawlog = /quote -S /showme '../vendor/dhogrin/raw/raw_log
 /def testlog = /quote -S /showme '../data/testlog
 
 /def getvariable = \
     /echo PRE%;\
     /eval /echo %%is_stunned_%{1}%;\
     /echo POST
+
+/def wwns = \
+    /python_call util.enterBoatWithCart
+
+/def zzzs = \
+    /send -h zjedz wozem ze statku
