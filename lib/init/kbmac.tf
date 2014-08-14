@@ -63,3 +63,10 @@
 /def -i -b'^[[307~' = /key_alt_nkp7
 /def -i -b'^[[308~' = /key_alt_nkp8
 /def -i -b'^[[309~' = /key_alt_nkp9
+
+/def -i -b'^[[501~' = /key_cmd_f
+/def -i -b'^[[502~' = /key_cmd_l
+/def -i -b'^[[503~' = /key_cmd_p
+/def -i -b'^[[504~' = /key_cmd_o
+/def -i -b'^[[505~' = /key_cmd_,
+/def -i -b'^[[506~' = /key_cmd_.

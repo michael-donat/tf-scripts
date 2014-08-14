@@ -44,6 +44,27 @@
     wloz ziola do niego%;\
     zamknij go
 
+/def ziola_woreczki2 = \
+    otworz zamkniety odtroczony woreczek%; \
+    wez wszystko z niego%; \
+    wloz go do plecaka%; \
+    otworz zamkniety odtroczony woreczek%; \
+    wez wszystko z niego%; \
+    wloz go do plecaka%; \
+    otworz zamkniety odtroczony woreczek%; \
+    wez wszystko z niego%; \
+    wloz go do plecaka%; \
+    otworz zamkniety odtroczony woreczek%; \
+    wez wszystko z niego%; \
+    wloz go do plecaka%; \
+    otworz zamkniety odtroczony woreczek%; \
+    wez wszystko z niego%; \
+    wloz go do plecaka%; \
+    otworz zamkniety odtroczony woreczek%; \
+    wez wszystko z niego%; \
+    wloz go do plecaka%; \
+    /ziola_sortuj
+
 /def ziola_woreczki = \
     otworz plecak%; \
     otworz zamkniety przytroczony woreczek%; \
