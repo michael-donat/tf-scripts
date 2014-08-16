@@ -86,7 +86,7 @@
     /_exp_prompt KORREDY
 
 /def fort = \
-    /test _exp_set("pierwszego zboja", "xamusa", "maxusa")%;\
+    /test _exp_set("pierwszego zboja", "pierwszego rybiookiego zboja", "drugiego rybiookiego zboja")%;\
     /_exp_prompt FORT
 
 /def krwiak = \

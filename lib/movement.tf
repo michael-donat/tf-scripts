@@ -133,7 +133,7 @@
     /endif
 
 
-/def -mregexp -t'Siadasz na .* (bryczce|wozie)\.' _cart_enter_1 = \
+/def -F -mregexp -t'Siadasz na .* (bryczce|wozie)\.' _cart_enter_1 = \
     /if ({P1}=/"bryczce") \
         /set _cart_type=bryczke%;\
     /else \
@@ -143,7 +143,7 @@
     /_map_bloker_enabled=0%;\
     /key_shift_right
 
-/def -mregexp -t'Zsiadasz z .*(bryczki|wozu)\.' _cart_exit_1 = \
+/def -F -mregexp -t'Zsiadasz z .*(bryczki|wozu)\.' _cart_exit_1 = \
     /set _movement_mode=3%;\
     /_map_bloker_enabled=1%;\
     /key_shift_right
