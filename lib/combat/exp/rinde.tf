@@ -28,6 +28,9 @@
 ;Czwarta plaskorzezba wykuta zostala w alabastrze.
 ;Ostatnia z plaskorzezb wykonana zostala z czerwonego marmuru.
 
+;Przygladasz sie uwaznie plaskorzezbie i ostroznie dotykasz palcami jej powierzchni. Ku twemu zdumieniu kamien nie jest wcale zimny. Wrecz przeciwnie - promieniuje od niego delikatne cieplo, a plaskorzezba szybko rozgrzewa sie od pod twoim dotykiem. Nie czekajac co bedzie dalej wciskasz ja mocno w sciane. Mimowolnie wzdrygasz sie, gdy z oddali dobiega cie zgrzyt jakiegos mechanizmu.
+
+
 /def klapa = \
     /def -msubstr -t'polnoc, poludniowy-zachod, wschod i poludnie' -n1 _rinde_klapa_kierunek1 = %%;\
         /test echo(decode_attr("          #    "), "Cwhite") %%;\

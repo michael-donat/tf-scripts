@@ -140,10 +140,12 @@
         /set _cart_type=woz%;\
     /endif %;\
     /set _movement_mode=2%;\
+    /_map_bloker_enabled=0%;\
     /key_shift_right
 
 /def -mregexp -t'Zsiadasz z .*(bryczki|wozu)\.' _cart_exit_1 = \
     /set _movement_mode=3%;\
+    /_map_bloker_enabled=1%;\
     /key_shift_right
 
 /def key_shift_up = \

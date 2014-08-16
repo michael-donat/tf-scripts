@@ -30,17 +30,17 @@ def charInfo(json):
 
 def hpColor(hp):
     if hp == 7:
-        return ('Crgb040', 'Cbgrgb040')
+        return ('Cbgrgb040', 'Crgb040')
     if hp == 6:
-        return ('Crgb350', 'Cbgrgb350')
+        return ('Cbgrgb350', 'Crgb350')
     if hp == 5:
-        return ('Crgb550', 'Crgb550')
+        return ('Cbgrgb550', 'Crgb550')
     if hp == 4:
-        return ('Crgb530', 'Cbgrgb530')
+        return ('Cbgrgb530', 'Crgb530')
     if hp == 3:
-        return ('Crgb510', 'Cbgrgb510')
+        return ('Cbgrgb510', 'Crgb510')
     if hp == 2:
-        return ('Crgb500', 'Cbgrgb500')
+        return ('Cbgrgb500', 'Crgb500')
     if hp == 1:
         return ('Cbgred', 'Cbgred')
 
