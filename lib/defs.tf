@@ -233,6 +233,8 @@
 
 /def port = /eval /echo '%_map_gmcp_location': '%_map_room_id'
 
+/def lap = /load keyboards/lap.tf
+
 /def code = \
     /load code.tf
 
