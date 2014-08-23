@@ -231,6 +231,11 @@
   przejrzyj waskie kunsztowne sihille%; \
   przejrzyj snieznobiale lsniace sztylety
 
+/def port = /eval /echo '%_map_gmcp_location': '%_map_room_id'
 
 /def code = \
     /load code.tf
+
+/alias zdaj ddbb%;wloz bronie do stojaka
+
+/def jedz = mm%;usiadz za stolem%;zamow zupe%;zamow zupe%;zamow zupe%;zamow zupe%;zamow zupe%;zamow zupe%;zamow zupe%;zamow zupe%;zamow zupe%;zamow zupe%;wstan%;mmm
