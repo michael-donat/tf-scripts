@@ -63,7 +63,6 @@
     otworz zamkniety odtroczony woreczek%; \
     wez wszystko z niego%; \
     wloz go do plecaka%; \
-    /ziola_sortuj
 
 /def ziola_woreczki = \
     otworz plecak%; \
@@ -87,7 +86,8 @@
     wez wszystko z niego%; \
     odtrocz otwarty przytroczony woreczek%; \
     wloz go do plecaka%; \
-    przytrocz woreczki%; \
+    /ziola_woreczki2%;\
+    przytrocz woreczki%;\
     /ziola_sortuj
 
 /def ziola_sprawdz = \

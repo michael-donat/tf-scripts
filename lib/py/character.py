@@ -3,6 +3,13 @@ __author__ = 'donatm'
 import tf
 from util import debug
 
+
+"""
+{"soaked":"2","intox":"0","improve":"0","fatigue":"
+    0","mana":"5","panic":"0","headache":"0","hp":"6","stuffed":"3","encumberance":"1"}
+
+"""
+
 def charInfo(json):
 
     debug('charInfo, received %s' % json)
@@ -25,6 +32,15 @@ def charInfo(json):
 
         tf.eval('/_statusbar_update_stamina %s' % stamina)
         debug('charInfo -> stamina to  %s' % stamina)
+    except Exception as e:
+        pass
+
+    try:
+        mana = int(json['mana'])
+
+        tf.eval('/_statusbar_update_mana %s' % mana)
+        debug('charInfo -> mana to  %s' % mana)
+
     except Exception as e:
         pass
 

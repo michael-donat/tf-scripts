@@ -1784,3 +1784,15 @@
 /def _odmiana_barll = /set _odmiana_barll_dopelniacz=barlla%;/set _odmiana_barll_biernik=barlla%;/set _odmiana_barll_narzednik=barllem
 /def _odmiana_mereen = /set _odmiana_mereen_dopelniacz=mereena%;/set _odmiana_mereen_biernik=mereena%;/set _odmiana_mereen_narzednik=mereenem
 /def _odmiana_zora = /set _odmiana_zora_dopelniacz=zory%;/set _odmiana_zora_biernik=zore%;/set _odmiana_zora_narzednik=zora
+/def _odmiana_drakan = /set _odmiana_drakan_dopelniacz=drakana%;/set _odmiana_drakan_biernik=drakana%;/set _odmiana_drakan_narzednik=drakanem
+/def _odmiana_squig = /set _odmiana_squig_dopelniacz=squiga%;/set _odmiana_squig_biernik=squiga%;/set _odmiana_squig_narzednik=squigiem
+/def _odmiana_aprokop = /set _odmiana_aprokop_dopelniacz=aprokopa%;/set _odmiana_aprokop_biernik=aprokopa%;/set _odmiana_aprokop_narzednik=aprokopem
+/def _odmiana_balwur = /set _odmiana_balwur_dopelniacz=balwura%;/set _odmiana_balwur_biernik=balwura%;/set _odmiana_balwur_narzednik=balwurem
+/def _odmiana_vandarel = /set _odmiana_vandarel_dopelniacz=vandarela%;/set _odmiana_vandarel_biernik=vandarela%;/set _odmiana_vandarel_narzednik=vandarelem
+/def _odmiana_zeep = /set _odmiana_zeep_dopelniacz=zeepa%;/set _odmiana_zeep_biernik=zeepa%;/set _odmiana_zeep_narzednik=zeepem
+/def _odmiana_shiori = /set _odmiana_shiori_dopelniacz=shiori%;/set _odmiana_shiori_biernik=shiori%;/set _odmiana_shiori_narzednik=shiori
+/def _odmiana_magrarg = /set _odmiana_magrarg_dopelniacz=magrarga%;/set _odmiana_magrarg_biernik=magrarga%;/set _odmiana_magrarg_narzednik=magrargiem
+/def _odmiana_tibauld = /set _odmiana_tibauld_dopelniacz=tibaulda%;/set _odmiana_tibauld_biernik=tibaulda%;/set _odmiana_tibauld_narzednik=tibauldem
+/def _odmiana_ataman = /set _odmiana_ataman_dopelniacz=atamana%;/set _odmiana_ataman_biernik=atamana%;/set _odmiana_ataman_narzednik=atamanem
+/def _odmiana_kelebor = /set _odmiana_kelebor_dopelniacz=kelebora%;/set _odmiana_kelebor_biernik=kelebora%;/set _odmiana_kelebor_narzednik=keleborem
+/def _odmiana_powietrzny = /set _odmiana_powietrzny_dopelniacz=powietrznego%;/set _odmiana_powietrzny_biernik=powietrzny%;/set _odmiana_powietrzny_narzednik=powietrznym

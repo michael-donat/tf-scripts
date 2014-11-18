@@ -1,5 +1,5 @@
 
-/def kto_stowarzyszenie = /send zapytaj ore o krasnoludy
+/def kto_stowarzyszenie = /send przejrzyj liste obecnych
 /alias kkto /kto_stowarzyszenie
 
 /alias uww uderz w brame

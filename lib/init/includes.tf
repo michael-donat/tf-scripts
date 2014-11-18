@@ -1,6 +1,7 @@
 ; loads everything to turn level description into numbers
 /load levels/stamina.tf
 /load levels/misc.tf
+/load levels/mana.tf
 
 ; loads combat related stuff
 /load combat/hp.tf
@@ -17,6 +18,7 @@
 /load statusbar/hp.tf
 /load statusbar/compass.tf
 /load statusbar/stamina.tf
+/load statusbar/mana.tf
 /load statusbar/cover.tf
 /load statusbar/order.tf
 /load statusbar/blocks.tf

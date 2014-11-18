@@ -31,15 +31,20 @@
 /eval /status_add -r2 "BM: ":: _statusbar_var_block_me:8
 /eval /status_add -r2 "DT: ":: _combat_defence_target::Cgreen
 
+/set _mana=1
+
 /eval /status_add -c -r3 "[ ":: _movement_compass_exit_sw:1 " ":1 _movement_compass_exit_s:1 " ":1 _movement_compass_exit_se:2 _movement_compass_exit_ot:1 "] "::
 /eval /status_add -r3 "WB: [":: _fast_bind_label:21 "]"
+/eval /status_add -r3 "  M: ":: _mana:1 "/8":7
 /eval /status_add -r3 " ":: _combat_orders_enabled_label:4
 /eval /status_add -r3 _movement_disabled_label:4
-/eval /status_add -r3 _statusbar_mail:6
-/eval /status_add -r3 _targetting_mode:5
-/eval /status_add -r3 _setting_target_mode:5
 /eval /status_add -r3 _map_tracking_enabled_label:5
 /eval /status_add -r3 "X: " _map_bound_exit::
+
+;/eval /status_add -r3 _statusbar_mail:6
+;/eval /status_add -r3 _targetting_mode:5
+;/eval /status_add -r3 _setting_target_mode:5
+
 ;/eval /status_add -r3 "R: [ ":: rozkaz_ataku:46:BC%kolor_alarm
 ;/eval /status_add -r3 "]  Bind: ":: bindings:35:BC%kolor_info
 ;/eval /status_add -r3 spacebreak::
